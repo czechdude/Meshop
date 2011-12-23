@@ -1,0 +1,82 @@
+﻿@model Meshop.Framework.Model.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Order</legend>
+    
+    
+    <div class="display-label">FullName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FullName)
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">City</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">PostalCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostalCode)
+    </div>
+
+    <div class="display-label">Country</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country)
+    </div>
+
+    <div class="display-label">Phone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Total) @ViewBag.Settings.CURRENCY_SIGN
+    </div>
+
+</fieldset>
+
+<fieldset>
+<label>Order Details</label>
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+    </tr>
+@foreach (var item in Model.OrderDetails)
+{
+    <tr>
+   <td>
+        @item.Product.Name 
+   </td> 
+   <td>
+        @item.UnitPrice @ViewBag.Settings.CURRENCY_SIGN     
+   </td>
+   <td>
+        @item.Quantity 
+   </td>
+   </tr> 
+}
+</table>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

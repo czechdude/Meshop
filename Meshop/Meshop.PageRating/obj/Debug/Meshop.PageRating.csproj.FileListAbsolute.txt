@@ -1,0 +1,10 @@
+C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.PageRating\Views\PageRating\Settings.cshtml
+C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.PageRating\Views\Web.config
+C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.PageRating\Views\PageRating\Index.cshtml
+C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.PageRating\Views\_ViewStart.cshtml
+C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.PageRating\Web.config
+C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.PageRating\Meshop.PageRating.dll
+C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.PageRating\Meshop.PageRating.pdb
+C:\Dokumenty\diplomka\Meshop\Meshop.PageRating\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumenty\diplomka\Meshop\Meshop.PageRating\obj\Debug\Meshop.PageRating.dll
+C:\Dokumenty\diplomka\Meshop\Meshop.PageRating\obj\Debug\Meshop.PageRating.pdb

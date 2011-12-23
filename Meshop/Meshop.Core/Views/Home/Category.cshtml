@@ -1,0 +1,17 @@
+﻿@using Meshop.Core.Models
+@using Meshop.Framework.Model
+@model CategoryModel
+           
+<h2>@Model.Category.Name</h2>
+
+@foreach (var cats in Model.Categories)
+{
+    <div style="float: left;margin-left: 10px;">@Html.ActionLink(@cats.Name,"Category",new {Controller = "Home",Area = "", id = cats.CategoryID})</div>
+}
+
+<div style="clear: both;">Product in category and subcategories</div>
+
+@foreach (var prod in Model.Products)
+{
+    <div style="float: left; margin-left: 10px;">@Html.ActionLink(@prod.Name,"Product",new {Controller = "Home",Area="",id = prod.ProductID})</div>
+}

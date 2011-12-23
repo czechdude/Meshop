@@ -1,0 +1,17 @@
+﻿@model Meshop.Framework.Model.Setting
+
+        <tr>
+            <td>
+            @Html.DisplayFor(item => item.Key)
+            @Html.HiddenFor(item => item.Key)
+            </td>  
+            <td class="editor-field">
+            @Html.EditorFor(item => item.Value)
+            @Html.ValidationMessageFor(item => item.Value)
+            </td>
+            <td>
+            @Html.DisplayFor(item => item.Description)
+            @Html.HiddenFor(item => item.Description)
+            @Html.HiddenFor(item => item.Type)
+            </td>
+        </tr>

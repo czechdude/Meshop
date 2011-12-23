@@ -1,0 +1,12 @@
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\Meshop.Framework.dll
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\Meshop.Framework.pdb
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\Castle.Core.dll
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\Castle.Windsor.dll
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\EntityFramework.dll
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\Castle.Core.xml
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\Castle.Windsor.pdb
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\Castle.Windsor.xml
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Release\EntityFramework.xml
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\obj\Release\ResolveAssemblyReference.cache
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\obj\Release\Meshop.Framework.dll
+C:\Dokumenty\diplomka\Meshop\Meshop.Framework\obj\Release\Meshop.Framework.pdb

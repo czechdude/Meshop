@@ -1,0 +1,24 @@
+﻿@model Meshop.Reviews.Models.Review
+
+<fieldset>
+    <legend>@T("Review")</legend>
+
+    <div class="display-label">@Html.LabelFor(m=>m.Text) </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Text)
+    </div>
+
+    <div class="display-label">ProductID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductID)
+    </div>
+
+    <div class="display-label">CustomerUserName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustomerUserName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ReviewID })
+
+</p>

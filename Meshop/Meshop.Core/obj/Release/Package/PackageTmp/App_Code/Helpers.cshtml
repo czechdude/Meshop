@@ -1,0 +1,32 @@
+﻿@inherits HelperPage
+@using System.Text.RegularExpressions
+@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@using System.Web.Routing
+
+@helper RecurseBasicCategory(Meshop.Framework.Model.BasicCategory item, System.Web.Mvc.HtmlHelper html)
+    {
+    <li id="id-@item.CategoryID">
+        
+        @{
+          var route =(Route) html.ViewContext.Controller.ControllerContext.RouteData.Route;
+          if (!Regex.IsMatch(route.Url, @"admin/", RegexOptions.IgnoreCase))
+          {
+              @html.ActionLink(item.Name, "Category", new { Area = "", Controller = "Home", id = item.CategoryID })
+          }
+          else
+          {
+              <a href="" >@item.Name</a>
+          }
+        }
+        
+        @if (item.Children.Count() > 0) {
+           <ul>
+              @foreach(var subData in item.Children) {
+                  @RecurseBasicCategory(subData,html);
+              }
+           </ul>
+            
+        }    
+    </li>
+}

@@ -1,0 +1,15 @@
+﻿@model Meshop.Framework.Model.BasicProduct
+
+@{
+    ViewBag.Title = T("Details of ") + Model.Name;
+}
+
+<h2>@Model.Name</h2>
+
+<div>Price: @Model.Price @ViewBag.Settings.CURRENCY_SIGN</div>
+
+@Html.ActionLink("Buy","AddToCart",new {Controller = "Home", Area="",id = Model.ProductID})
+
+@*
+widget or pluign cart method insert
+*@

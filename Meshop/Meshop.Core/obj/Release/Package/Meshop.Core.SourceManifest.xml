@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Dokumenty\diplomka\Meshop\Meshop.Core\obj\Release\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Dokumenty\diplomka\Meshop\Meshop.Core\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Dokumenty\diplomka\Meshop\Meshop.Core\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <setAcl path="C:\Dokumenty\diplomka\Meshop\Meshop.Core\obj\Release\Package\PackageTmp\App_Data" setAclResourceType="Directory" setAclAccess="Write" />
+  <dbFullSql path="C:\Dokumenty\diplomka\Meshop\Meshop.Core\obj\Release\AutoScripts\DatabaseConnection2-Deployment_SchemaOnly.sql" Transacted="True" />
+</sitemanifest>
