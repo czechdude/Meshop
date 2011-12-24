@@ -92,36 +92,36 @@
 \contentsline {subsection}{\numberline {5.4.5}Body roz\IeC {\v s}\IeC {\'\i }\IeC {\v r}en\IeC {\'\i }}{52}{subsection.5.4.5}
 \contentsline {subsubsection}{\numberline {5.4.5.1}Routy}{52}{subsubsection.5.4.5.1}
 \contentsline {subsubsection}{\numberline {5.4.5.2}Pohledy}{52}{subsubsection.5.4.5.2}
-\contentsline {subsubsection}{\numberline {5.4.5.3}Formul\IeC {\'a}\IeC {\v r}e}{52}{subsubsection.5.4.5.3}
-\contentsline {subsubsection}{\numberline {5.4.5.4}Controllery}{52}{subsubsection.5.4.5.4}
-\contentsline {subsubsection}{\numberline {5.4.5.5}Menu}{52}{subsubsection.5.4.5.5}
-\contentsline {subsubsection}{\numberline {5.4.5.6}Slu\IeC {\v z}by}{52}{subsubsection.5.4.5.6}
-\contentsline {subsubsection}{\numberline {5.4.5.7}Widgety}{53}{subsubsection.5.4.5.7}
-\contentsline {subsubsection}{\numberline {5.4.5.8}Entity}{53}{subsubsection.5.4.5.8}
-\contentsline {subsubsection}{\numberline {5.4.5.9}Frontend}{53}{subsubsection.5.4.5.9}
-\contentsline {subsubsection}{\numberline {5.4.5.10}Backend -- administrace}{53}{subsubsection.5.4.5.10}
-\contentsline {subsection}{\numberline {5.4.6}Co moduly nezajist\IeC {\'\i }}{53}{subsection.5.4.6}
-\contentsline {section}{\numberline {5.5}psan\IeC {\'\i } vlastn\IeC {\'\i }ho modulu}{53}{section.5.5}
-\contentsline {section}{\numberline {5.6}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } aplikace}{53}{section.5.6}
-\contentsline {section}{\numberline {5.7}Instalace modulu}{53}{section.5.7}
-\contentsline {section}{\numberline {5.8}Deinstalace modulu}{53}{section.5.8}
-\contentsline {chapter}{\numberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{55}{chapter.6}
-\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{57}{chapter.7}
-\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i }}{57}{section.7.1}
-\contentsline {section}{\numberline {7.2}Roz\IeC {\v s}\IeC {\'\i }\IeC {\v r}en\IeC {\'\i }}{57}{section.7.2}
-\contentsline {chapter}{\numberline {A}Testov\IeC {\'a}n\IeC {\'\i } zapln\IeC {\v e}n\IeC {\'\i } str\IeC {\'a}nky a odsazen\IeC {\'\i } odstavc\IeC {\r u}}{61}{appendix.A}
-\contentsline {chapter}{\numberline {B}Pokyny a n\IeC {\'a}vody k form\IeC {\'a}tov\IeC {\'a}n\IeC {\'\i } textu pr\IeC {\'a}ce}{63}{appendix.B}
-\contentsline {section}{\numberline {B.1}Vkl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } obr\IeC {\'a}zk\IeC {\r u}}{63}{section.B.1}
-\contentsline {section}{\numberline {B.2}Kreslen\IeC {\'\i } obr\IeC {\'a}zk\IeC {\r u}}{64}{section.B.2}
-\contentsline {section}{\numberline {B.3}Tabulky}{64}{section.B.3}
-\contentsline {section}{\numberline {B.4}Odkazy v textu}{65}{section.B.4}
-\contentsline {subsection}{\numberline {B.4.1}Odkazy na literaturu}{65}{subsection.B.4.1}
-\contentsline {subsection}{\numberline {B.4.2}Odkazy na obr\IeC {\'a}zky, tabulky a kapitoly}{67}{subsection.B.4.2}
-\contentsline {section}{\numberline {B.5}Rovnice, centrovan\IeC {\'a}, \IeC {\v c}\IeC {\'\i }slovan\IeC {\'a} matematika}{67}{section.B.5}
-\contentsline {section}{\numberline {B.6}K\IeC {\'o}dy programu}{68}{section.B.6}
-\contentsline {section}{\numberline {B.7}Dal\IeC {\v s}\IeC {\'\i } pozn\IeC {\'a}mky}{68}{section.B.7}
-\contentsline {subsection}{\numberline {B.7.1}\IeC {\v C}esk\IeC {\'e} uvozovky}{68}{subsection.B.7.1}
-\contentsline {chapter}{\numberline {C}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{69}{appendix.C}
-\contentsline {chapter}{\numberline {D}UML diagramy}{71}{appendix.D}
-\contentsline {chapter}{\numberline {E}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{73}{appendix.E}
-\contentsline {chapter}{\numberline {F}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{75}{appendix.F}
+\contentsline {subsubsection}{\numberline {5.4.5.3}Formul\IeC {\'a}\IeC {\v r}e}{53}{subsubsection.5.4.5.3}
+\contentsline {subsubsection}{\numberline {5.4.5.4}Controllery}{53}{subsubsection.5.4.5.4}
+\contentsline {subsubsection}{\numberline {5.4.5.5}Menu}{54}{subsubsection.5.4.5.5}
+\contentsline {subsubsection}{\numberline {5.4.5.6}Slu\IeC {\v z}by}{54}{subsubsection.5.4.5.6}
+\contentsline {subsubsection}{\numberline {5.4.5.7}Widgety}{55}{subsubsection.5.4.5.7}
+\contentsline {subsubsection}{\numberline {5.4.5.8}Entity}{55}{subsubsection.5.4.5.8}
+\contentsline {subsubsection}{\numberline {5.4.5.9}Frontend}{55}{subsubsection.5.4.5.9}
+\contentsline {subsubsection}{\numberline {5.4.5.10}Backend -- administrace}{55}{subsubsection.5.4.5.10}
+\contentsline {subsection}{\numberline {5.4.6}Co moduly nezajist\IeC {\'\i }}{55}{subsection.5.4.6}
+\contentsline {section}{\numberline {5.5}psan\IeC {\'\i } vlastn\IeC {\'\i }ho modulu}{55}{section.5.5}
+\contentsline {section}{\numberline {5.6}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } aplikace}{55}{section.5.6}
+\contentsline {section}{\numberline {5.7}Instalace modulu}{55}{section.5.7}
+\contentsline {section}{\numberline {5.8}Deinstalace modulu}{55}{section.5.8}
+\contentsline {chapter}{\numberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{57}{chapter.6}
+\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{59}{chapter.7}
+\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i }}{59}{section.7.1}
+\contentsline {section}{\numberline {7.2}Roz\IeC {\v s}\IeC {\'\i }\IeC {\v r}en\IeC {\'\i }}{59}{section.7.2}
+\contentsline {chapter}{\numberline {A}Testov\IeC {\'a}n\IeC {\'\i } zapln\IeC {\v e}n\IeC {\'\i } str\IeC {\'a}nky a odsazen\IeC {\'\i } odstavc\IeC {\r u}}{63}{appendix.A}
+\contentsline {chapter}{\numberline {B}Pokyny a n\IeC {\'a}vody k form\IeC {\'a}tov\IeC {\'a}n\IeC {\'\i } textu pr\IeC {\'a}ce}{65}{appendix.B}
+\contentsline {section}{\numberline {B.1}Vkl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } obr\IeC {\'a}zk\IeC {\r u}}{65}{section.B.1}
+\contentsline {section}{\numberline {B.2}Kreslen\IeC {\'\i } obr\IeC {\'a}zk\IeC {\r u}}{66}{section.B.2}
+\contentsline {section}{\numberline {B.3}Tabulky}{66}{section.B.3}
+\contentsline {section}{\numberline {B.4}Odkazy v textu}{67}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}Odkazy na literaturu}{67}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}Odkazy na obr\IeC {\'a}zky, tabulky a kapitoly}{69}{subsection.B.4.2}
+\contentsline {section}{\numberline {B.5}Rovnice, centrovan\IeC {\'a}, \IeC {\v c}\IeC {\'\i }slovan\IeC {\'a} matematika}{69}{section.B.5}
+\contentsline {section}{\numberline {B.6}K\IeC {\'o}dy programu}{70}{section.B.6}
+\contentsline {section}{\numberline {B.7}Dal\IeC {\v s}\IeC {\'\i } pozn\IeC {\'a}mky}{70}{section.B.7}
+\contentsline {subsection}{\numberline {B.7.1}\IeC {\v C}esk\IeC {\'e} uvozovky}{70}{subsection.B.7.1}
+\contentsline {chapter}{\numberline {C}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{71}{appendix.C}
+\contentsline {chapter}{\numberline {D}UML diagramy}{73}{appendix.D}
+\contentsline {chapter}{\numberline {E}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{75}{appendix.E}
+\contentsline {chapter}{\numberline {F}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{77}{appendix.F}

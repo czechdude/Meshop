@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  23 DEC 2011 23:37
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  24 DEC 2011 14:32
 entering extended mode
 **divispe2-thesis-2012.tex
-("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.tex"
+(C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
@@ -541,9 +541,9 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("C:\Dokumenty\diplomka\pøípravný projekt\k336_thesis_macros.sty"
+(C:\Dokumenty\diplomka\thesis\k336_thesis_macros.sty
 Two side layout redefined.
-("C:\Dokumenty\diplomka\pøípravný projekt\hyphen.tex"))
+(C:\Dokumenty\diplomka\thesis\hyphen.tex))
 Diplomova prace
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2009/09/23 v6.78v Hypertext links for LaTeX
@@ -676,7 +676,7 @@ Package: natbib 2009/07/16 8.31 (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count110
 )
-("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.aux")
+(C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 207.
 LaTeX Font Info:    ... okay on input line 207.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 207.
@@ -732,8 +732,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 LaTeX Info: Redefining \ref on input line 207.
 LaTeX Info: Redefining \pageref on input line 207.
 
-("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.out")
-("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.out")
+(C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.out)
+(C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.out)
 \@outlinefile=\write3
 \AtBeginShipoutBox=\box29
 
@@ -753,8 +753,8 @@ File: figures/zadani.png Graphic file (type png)
 
 LaTeX Warning: Float too large for page by 26.28572pt on input line 268.
 
-[1 <C:/Dokumenty/diplomka/pøípravný projekt/figures/zadani.png (PNG copy)>]
-[2{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}
+[1 <C:/Dokumenty/diplomka/thesis/figures/zadani.png (PNG copy)>] [2{C:/ProgramD
+ata/MiKTeX/2.8/pdftex/config/pdftex.map}
 
 
 
@@ -762,8 +762,8 @@ LaTeX Warning: Float too large for page by 26.28572pt on input line 268.
 <figures/LogoCVUT.pdf, id=514, 93.34875pt x 70.2625pt>
 File: figures/LogoCVUT.pdf Graphic file (type pdf)
 
-<use figures/LogoCVUT.pdf> [3 <C:/Dokumenty/diplomka/pøípravný projekt/figures/
-LogoCVUT.pdf>] [4
+<use figures/LogoCVUT.pdf> [3 <C:/Dokumenty/diplomka/thesis/figures/LogoCVUT.pd
+f>] [4
 
 ] [5] [6
 
@@ -779,7 +779,7 @@ jazyka s frame-workem provádím
 
 ] [10
 
-] ("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.toc"
+] (C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.toc
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\ot1lmr.fd"
@@ -809,16 +809,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [11] [12]
 [13])
 \tf@toc=\write4
- [14] ("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.lof")
+ [14] (C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.lof)
 \tf@lof=\write5
-[15
+ [15
 
-] [16
+]
+[16
 
-] ("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.lot")
+] (C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.lot)
 \tf@lot=\write6
-
-[17] [18
+ [17] [18
 
 ]
 Kapitola 1.
@@ -921,10 +921,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [18]
 Underfull \vbox (badness 1881) has occurred while \output is active []
 
- [19 <C:/Dokumenty/diplomka/pøípravný projekt/figures/usecasefront.png (PNG cop
-y)>]
-[20 <C:/Dokumenty/diplomka/pøípravný projekt/figures/usecaseback.png (PNG copy)
->] [21] [22] [23] <figures/datamodel.png, id=1006, 434.37282pt x 566.115pt>
+ [19 <C:/Dokumenty/diplomka/thesis/figures/usecasefront.png (PNG copy)>] [20 <C
+:/Dokumenty/diplomka/thesis/figures/usecaseback.png (PNG copy)>] [21] [22] [23]
+
+<figures/datamodel.png, id=1006, 434.37282pt x 566.115pt>
 File: figures/datamodel.png Graphic file (type png)
 
 <use figures/datamodel.png>
@@ -953,17 +953,17 @@ LaTeX Warning: Text page 25 contains only floats.
 Overfull \vbox (7.84248pt too high) has occurred while \output is active []
 
 
-[25 <C:/Dokumenty/diplomka/pøípravný projekt/figures/datamodel.png>]
+[25 <C:/Dokumenty/diplomka/thesis/figures/datamodel.png>]
 <figures/uow.png, id=1027, 543.02875pt x 426.59375pt>
 File: figures/uow.png Graphic file (type png)
  <use figures/uow.png>
-[26 <C:/Dokumenty/diplomka/pøípravný projekt/figures/factorymethod.png (PNG cop
-y)> <C:/Dokumenty/diplomka/pøípravný projekt/figures/pluginseq.png (PNG copy)>]
-[27 <C:/Dokumenty/diplomka/pøípravný projekt/figures/uow.png (PNG copy)>]
+[26 <C:/Dokumenty/diplomka/thesis/figures/factorymethod.png (PNG copy)> <C:/Dok
+umenty/diplomka/thesis/figures/pluginseq.png (PNG copy)>] [27 <C:/Dokumenty/dip
+lomka/thesis/figures/uow.png (PNG copy)>]
 <figures/di.png, id=1040, 531.9875pt x 241.90375pt>
 File: figures/di.png Graphic file (type png)
  <use figures/di.png>
-[28 <C:/Dokumenty/diplomka/pøípravný projekt/figures/di.png (PNG copy)>]
+[28 <C:/Dokumenty/diplomka/thesis/figures/di.png (PNG copy)>]
 <figures/servicelocator.png, id=1047, 537.00626pt x 334.24875pt>
 File: figures/servicelocator.png Graphic file (type png)
 
@@ -974,8 +974,7 @@ Overfull \hbox (8.0796pt too wide) in paragraph at lines 949--950
 r/m/n/10.95 . Samoz°e-
  []
 
-[29 <C:/Dokumenty/diplomka/pøípravný projekt/figures/servicelocator.png (PNG co
-py)>]
+[29 <C:/Dokumenty/diplomka/thesis/figures/servicelocator.png (PNG copy)>]
 Overfull \hbox (17.72214pt too wide) in paragraph at lines 973--974
 \T1/lmr/m/n/10.95 frame-work· a ap-likací s uºi-va-tel-skými rozhraními[[]]. Zá
 k-ladní prin-cip popisuje velmi jednoduchý
@@ -984,8 +983,7 @@ k-ladní prin-cip popisuje velmi jednoduchý
 <figures/mvc.png, id=1054, 330.23375pt x 220.825pt>
 File: figures/mvc.png Graphic file (type png)
  <use figures/mvc.png>
-[30 <C:/Dokumenty/diplomka/pøípravný projekt/figures/mvc.png (PNG copy)>]
-[31] [32]
+[30 <C:/Dokumenty/diplomka/thesis/figures/mvc.png (PNG copy)>] [31] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 1052--1052
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / coolthingoftheday . blogspo
 t . com / 2011 / 01 / sql-[]server-[]compact-[]4-[]vs-[]sql-[]server .
@@ -1041,8 +1039,7 @@ File: figures/struktura.png Graphic file (type png)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38 <C:/Dokumenty/diplomka/pøípravný projekt/figures/componentsextract.png (PNG
- copy)>]
+[38 <C:/Dokumenty/diplomka/thesis/figures/componentsextract.png (PNG copy)>]
 
 LaTeX Warning: Text page 39 contains only floats.
 
@@ -1050,8 +1047,8 @@ LaTeX Warning: Text page 39 contains only floats.
 Overfull \vbox (6.90279pt too high) has occurred while \output is active []
 
 
-[39 <C:/Dokumenty/diplomka/pøípravný projekt/figures/componentslow.png (PNG cop
-y)> <C:/Dokumenty/diplomka/pøípravný projekt/figures/struktura.png (PNG copy)>]
+[39 <C:/Dokumenty/diplomka/thesis/figures/componentslow.png (PNG copy)> <C:/Dok
+umenty/diplomka/thesis/figures/struktura.png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1101,8 +1098,8 @@ ut pro zabezpe£ení back-endu. D¥dí od \T1/lmtt/m/n/10.95 Authorize-
 [48] <figures/lifecycle.png, id=1431, 185.69376pt x 554.07pt>
 File: figures/lifecycle.png Graphic file (type png)
 
-<use figures/lifecycle.png> [49] [50 <C:/Dokumenty/diplomka/pøípravný projekt/f
-igures/lifecycle.png (PNG copy)>]
+<use figures/lifecycle.png> [49] [50 <C:/Dokumenty/diplomka/thesis/figures/life
+cycle.png (PNG copy)>]
 <figures/modulstruktura.png, id=1443, 173.14688pt x 258.9675pt>
 File: figures/modulstruktura.png Graphic file (type png)
 
@@ -1112,30 +1109,37 @@ Overfull \hbox (3.03242pt too wide) in paragraph at lines 1467--1468
 ºí sou-bor \T1/lmtt/m/n/10.95 PreApplicationInit.cs
  []
 
-[51 <C:/Dokumenty/diplomka/pøípravný projekt/figures/modulstruktura.png>]
-Overfull \hbox (299.35284pt too wide) in paragraph at lines 1505--1505
-[][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / weblogs . asp . net / manav
-i / archive / 2010 / 12 / 24 / inheritance-[]mapping-[]strategies-[]with-[]enti
-ty-[]framework-[]code-[]first-[]ctp5-[]part-[]1-[]table-[]per-[]hierarchy-[]tph
- .
+[51 <C:/Dokumenty/diplomka/thesis/figures/modulstruktura.png>] [52]
+Overfull \hbox (14.82289pt too wide) in paragraph at lines 1492--1492
+[][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / www . chrisvandesteeg . nl 
+/ 2010 / 11 / 22 / embedding-[]pre-[]compiled-[]razor-[]views-[]in-[]your-[]dll
+/$[][]\T1/lmr/m/n/9 >| 
  []
 
-[52] [53] [54
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (6.37332pt too wide) in paragraph at lines 1525--1526
+\T1/lmr/m/n/10.95 Controllery jsou v mod-ulech samoz°e-j-mostí. Jsou roz²i°itel
+né po-mocí t°ídy \T1/lmtt/m/n/10.95 PluginController
+ []
+
+[53] [54] [55] [56
 
 ]
 Kapitola 6.
 
-Overfull \hbox (4.51874pt too wide) in paragraph at lines 1546--1548
+Overfull \hbox (4.51874pt too wide) in paragraph at lines 1606--1608
 []\T1/lmr/m/n/10.95 Castle neb¥ºí na Medium Trust! http://msdn.microsoft.com/en
 -us/library/wyts434y.aspx 
  []
 
-[55] [56
+[57] [58
 
 ]
 Kapitola 7.
-("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.bbl" [57]
-[58
+(C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.bbl [59] [60
 
 ]
 Underfull \hbox (badness 7740) in paragraph at lines 86--91
@@ -1143,7 +1147,7 @@ Underfull \hbox (badness 7740) in paragraph at lines 86--91
 soft . com / en-[]us / library / dd381412(v = VS . 98 )
  []
 
-[59]
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 114--120
 \T1/lmr/m/n/10.95 Dos-tupné z: <[][]$\T1/lmtt/m/n/10.95 http : / / www . oracle
  . com / technetwork / articles / javase /
@@ -1167,77 +1171,77 @@ Underfull \hbox (badness 2735) in paragraph at lines 188--194
  : / / blog . csharpwebdeveloper . com / 2011 /
  []
 
-) [60]
+) [62]
 P\v {r}\'{\i }loha A.
-[61
+[63
 
-] [62
+] [64
 
 ]
 P\v {r}\'{\i }loha B.
 
-Package natbib Warning: Citation `CSTUG' on page 63 undefined on input line 160
+Package natbib Warning: Citation `CSTUG' on page 65 undefined on input line 166
 8.
 
 
-Package natbib Warning: Citation `latexdocweb' on page 63 undefined on input li
-ne 1608.
+Package natbib Warning: Citation `latexdocweb' on page 65 undefined on input li
+ne 1668.
 
 
-Package natbib Warning: Citation `latexwiki' on page 63 undefined on input line
- 1608.
+Package natbib Warning: Citation `latexwiki' on page 65 undefined on input line
+ 1668.
 
 File: figures/LogoCVUT.pdf Graphic file (type pdf)
-<use figures/LogoCVUT.pdf> [63]
+<use figures/LogoCVUT.pdf> [65]
 
-Package natbib Warning: Citation `ipe' on page 64 undefined on input line 1640.
+Package natbib Warning: Citation `ipe' on page 66 undefined on input line 1700.
 
 
-[64] [65] [66]
-Overfull \hbox (55.95735pt too wide) in paragraph at lines 1789--1790
+[66] [67] [68]
+Overfull \hbox (55.95735pt too wide) in paragraph at lines 1849--1850
 \T1/lmr/m/n/10.95 2010. Po-drob-nosti na-jdete ve zdro-jovém souboru to-hoto te
 xtu v ko-men-tá°i u p°íkazu []\T1/lmtt/m/n/10.95 \thebibliography\T1/lmr/m/n/10
 .95 . 
  []
 
-[67] [68]
+[69] [70]
 P\v {r}\'{\i }loha C.
-[69
+[71
 
-] [70
+] [72
 
 ]
 P\v {r}\'{\i }loha D.
-[71] [72
+[73] [74
 
 ]
 P\v {r}\'{\i }loha E.
-[73] [74
+[75] [76
 
 ]
 P\v {r}\'{\i }loha F.
 
-Package natbib Warning: Citation `infodp' on page 75 undefined on input line 18
-80.
+Package natbib Warning: Citation `infodp' on page 77 undefined on input line 19
+42.
 
-<figures/seznamcd.pdf, id=1608, 793.96625pt x 539.01375pt>
+<figures/seznamcd.pdf, id=1664, 793.96625pt x 539.01375pt>
 File: figures/seznamcd.pdf Graphic file (type pdf)
 
-<use figures/seznamcd.pdf> [75 <C:/Dokumenty/diplomka/pøípravný projekt/figures
-/seznamcd.pdf>] [76]
+<use figures/seznamcd.pdf> [77 <C:/Dokumenty/diplomka/thesis/figures/seznamcd.p
+df>] [78]
 
 Package natbib Warning: There were undefined citations.
 
-("C:\Dokumenty\diplomka\pøípravný projekt\divispe2-thesis-2012.aux")
+(C:\Dokumenty\diplomka\thesis\divispe2-thesis-2012.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 10298 strings out of 495285
- 141969 string characters out of 3179883
- 359343 words of memory out of 3000000
- 12783 multiletter control sequences out of 15000+200000
+ 10358 strings out of 495285
+ 142630 string characters out of 3179883
+ 401509 words of memory out of 3000000
+ 12803 multiletter control sequences out of 15000+200000
  80532 words of font info for 54 fonts, out of 3000000 for 9000
  20 hyphenation exceptions out of 8191
  38i,9n,51p,1443b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1260,9 +1264,9 @@ public/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/l
 msy10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmsy9.pfb><C
 :/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/Program F
 iles (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (94 pages, 2262504 bytes).
+Output written on divispe2-thesis-2012.pdf (96 pages, 2278708 bytes).
 PDF statistics:
- 1793 PDF objects out of 2073 (max. 8388607)
- 510 named destinations out of 1000 (max. 500000)
+ 1857 PDF objects out of 2073 (max. 8388607)
+ 550 named destinations out of 1000 (max. 500000)
  1086 words of extra memory for PDF output out of 10000 (max. 10000000)
 

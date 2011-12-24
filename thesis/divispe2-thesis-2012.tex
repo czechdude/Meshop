@@ -1478,15 +1478,74 @@ Metody zároveň hledají Routy pro aplikaci a adaptéry pro validační atribut
 V následujících podsekcích jsou probrány podrobně, ale s ohledem na omezení rozsahu, všechny body využité pro rozšíření aplikace pomocí modulů. Některé body jsou mají implicitní implementace již v jádru, aby byla zajištěna správná funkčnost i bez modulů. Během vývoje jsem dospěl k myšlence, že všechny části, které jsou v jádru implicitní, by měly být pro přehlednost také umístěny do oddělených modulů, ale to by vyžadovalo složité přepracování, na které nezbyl během vývoje čas.
 
 \subsubsection{Routy}
-
-
+Rozšíření routování v aplikaci funguje paralelně s pevně daným routováním jádra. Rozšíření spočívá v dědění rozhraní \texttt{IRoutes} třídou v modulu -- umístěnou v \texttt{Routes.cs}.
+Třída obsahuje předepsanou metodu, ve které jsou údaje o routách stejné jako v jádru aplikace -- viz ukázka \ref{list:route}. Načítání rout probíhá ve třídě \texttt{Modules} prohledáváním modulů a exekucí předepsaných metod ve třídách.
 
 \subsubsection{Pohledy}
+\label{subsec:pohledy}
+Pohledy poskytují místo pro rozšíření pomocí rodičovských tříd, které ale dědí i pohledy v jádru. Pohledy představují v modulech nový problém. Nemohou totiž být vyhledány jako standardní pohledy v původním adresáři \texttt{Views} v jádře. Jsou totiž umístěny spolu se sestaveními v adresáři modulu.
+Řešením je přepsání metod \texttt{View} a \texttt{PartialView} v kontroleru, které cesty k pohledům vracejí. Z tohoto důvodu vznikl controller \texttt{PluginController} určený ke specifikaci modulárními controllery. Idea je opět převzata z článku Mika Kolari\cite{kolari}.
 
+Moduly obsahují shodnou strukturu pohledů jako jádro a musí také obsahovat soubor \texttt{Web.config} s určením, kterou třídu specifikují a jaké \textit{namespaces} implicitně používají. Jde použít i soubor
+\texttt{\_ViewStart.cshtml} v adresáři \texttt{Shared} pro všechny pohledy. Soubor může měnit například základní šablonu \textit{layoutu}.
+
+Také jsem přemýšlel o variantě kompilovat pohledy přímo do sestavení, postup byl ale nutný naučit každého, kdo by vyvíjel nový modul. Šlo o process popsaný na blogu Chrise van de Steega\footnote{\url{http://www.chrisvandesteeg.nl/2010/11/22/embedding-pre-compiled-razor-views-in-your-dll/}}. Pro opuštění toto způsobu nahrává i výhoda možnosti úpravy pohledů v nezkompilovaných \textit{cshtml} souborech přímo na serveru.
 
 \subsubsection{Formuláře}
 
+Formuláře jsou obsaženy v pohledech, ale jejich vykreslení s modelem a vázání na model při příjmu je komplikované, proto jsem se zaměřil i na správnou implementaci formulářů v modulech. Mika Kolari\cite{kolari} úspěšně zkouší ve svém článku použít v modulech formulář. Jeho implementace se nachází v modulu \textsf{PageRating} upraveného tak, aby fungoval i v aplikaci e-shopu.
+
+Dále jsem se obával spojení formulářů a widgetů \ref{sec:widgets}. Při testování spolupráce se ale nevyskytl žádný problém. Pro formuláře ve widgetech není třeba žádný speciální postup.
+
+Ještě bych chtěl zmínit už zabudovanou funkčnost do formulářů přímo ve frameworku MVC. Jde o \textsf{Display} a \textsf{Editor Templates}. Na svém blogu ji popisuje Brad Wilson\footnote{\url{http://bitly.com/mvc2templates}}. Bohužel je návod ještě pro verzi MVC 2 a neobsahuje Razor šablony. Myšlenka spočívá v tom, že každá entita může mít svojí vlastní zobrazovací a formulářovou šablonu. Není tedy nutné vypisovat každý prvek entity do pohledu zvlášť. Ukázka \ref{list:settings} je z pohledu správy nastavení (šablona \texttt{Setting.cshtml}). Kód je ořezaný o HTML tagy tabulky. V souboru \texttt{Index.cshtml} je pak šablona použita na řádku \textbf{14} pomocí příkazu \texttt{Html.EditorForModel}. Framework rozpozná o jakou jde entitu podle deklarace modelu.
+
+\begin{lstlisting}[float=h!,language=HTML, caption={šablony pro formuláře}, label=list:settings]
+<!--Views/Settings/EditorTemplates/Setting.cshtml-->
+@model Meshop.Framework.Model.Setting
+	@Html.DisplayFor(item => item.Key)
+	@Html.HiddenFor(item => item.Key)
+	@Html.EditorFor(item => item.Value)
+	@Html.ValidationMessageFor(item => item.Value)
+
+<!--Views/Settings/Index.cshtml-->
+@model IList<Meshop.Framework.Model.Setting>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Settings</legend>
+        @Html.EditorForModel()
+        <input type="submit" value="Save" /> 
+        @CommonService.Message
+    </fieldset>
+}
+\end{lstlisting}
+
 \subsubsection{Controllery}
+
+Controllery jsou v modulech samozřejmostí. Jsou rozšiřitelné pomocí třídy \texttt{PluginController} zmíněné v části pohledů \ref{subsec:pohledy}. Bez dědění této třídy nebudou správně v modulech fungovat kvůli zmíněným pohledům.
+
+Controllery jsou do aplikace načítány opět přes třídu \texttt{Modules} a využívá se \textit{Dependency Injection}. Načítají se pouze controllery dědící od \texttt{PluginController}. Může nastat situace, že některý modul bude obsahovat controller se stejným názvem. Konfliktu se lze vyhnout použitím namespaces v odkazech (generovaných příkazem \texttt{Html.ActionLink}) i v routách.
+
+Stručná ukázka třídy \texttt{PluginController} \ref{list:plugincontroller} zobrazuje integraci připojení databáze a metod pro lokaci pohledů v modulech. Databázové spojení by mohlo být předěláno na šablonu Repository pro Unit testy. Týká se to všech jeho užití. V tom případě by se Repository \textit{injektovalo} ve třídě \texttt{Modules}. Co se týče hledání pohledů v modulech, využívá se reflexe a routovacího slovníku pro nalezení názvů adresářů a souboru. Výjimkové stavy jsou z ukázky pro přehlednost vypuštěny.
+
+\begin{lstlisting}[float=h!,language=CSharp, caption={třída PluginController}, label=list:plugincontroller]
+public abstract class PluginController : Controller
+{
+	protected DatabaseConnection2 db = new DatabaseConnection2();
+
+    public new ViewResult View()
+    {
+        return base.View(ConstructViewPath());
+    }
+    private string ConstructViewPath(string viewName = "")
+    {
+        string viewPath = Modules.Path + GetAssemblyName() +"/";
+        string ctrler = (string)RouteData.Values["Controller"];
+        if (viewName == "") viewName = (string)RouteData.Values["Action"];
+        return viewPath += "Views/" + ctrler  + "/" + viewName + ".cshtml";
+    }   
+}
+\end{lstlisting}
 
 \subsubsection{Menu}
 \label{sec:menu}
@@ -1503,7 +1562,7 @@ RenderPartial!!!
 
 \subsubsection{Entity}
 \label{subsec:pripojenientit}
-I entity se dají rozšířit, v základu aplikace nebylo této schopnosti využito, ale pro praktickou implementaci je toto třeba. Způsob rozšíření entit je rozdělen interně na 3 způsoby, ale vždy využívá mechanismu dědění původní entity. Detaily nastavení jsou probírány v článcích na blogu Morteza Manavi\footnote{\url{http://weblogs.asp.net/manavi/archive/2010/12/24/inheritance-mapping-strategies-with-entity-framework-code-first-ctp5-part-1-table-per-hierarchy-tph.aspx}}.
+I entity se dají rozšířit, v základu aplikace nebylo této schopnosti využito, ale pro praktickou implementaci je toto třeba. Způsob rozšíření entit je rozdělen interně na 3 způsoby, ale vždy využívá mechanismu dědění původní entity. Detaily nastavení jsou probírány v článcích na blogu Morteza Manavi\footnote{\url{http://bit.ly/CodeFirstInheritance}}.
 
 Jejich připojení demonstruje připojení entity \texttt{Review} z modulu \textsf{Reviews}. Implementovat injekci entit bylo možné jen díky článku publikovaném jako návodu na psaní modulů pro projekt NopCommerce \cite{NOPE}. Nikde jinde, ani v dokumentačních materiálech Entity Frameworku tato možnost zmíněna není, což považuji za velkou slabost dokumentace Entity Frameworku.
 
@@ -1878,7 +1937,9 @@ V souboru \verb|k336_thesis_macros.tex| je příkaz \verb|\uv{}| pro sázení č
 \chapter{Obsah přiloženého CD}
 \textbf{\large Tato příloha je povinná pro každou práci. Každá práce musí totiž obsahovat přiložené CD. Viz dále.}
 
-Může vypadat například takto. Váš seznam samozřejmě bude odpovídat typu vaší práce. (viz \cite{infodp}):
+Kompletní obsah práce na https://github.com/czechdude/Meshop
+
+Může vypadat například takto. Váš seznam samozřejmě bude odpovídat typu vaší práce. (viz \cite{infodp}): df
 
 \begin{figure}[h]
 \begin{center}

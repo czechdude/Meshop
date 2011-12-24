@@ -12,14 +12,7 @@ namespace Meshop.Framework.Module
 {
     public abstract class PluginController : Controller
     {
-        protected PluginController()
-        {
-            T = NullTranslator.Instance;
-              
-        }
-
-        public Translator T {  set; get; }
-
+ 
         protected DatabaseConnection2 db = new DatabaseConnection2();
 
         /**
