@@ -103,7 +103,7 @@ true, try, typeof, unchecked, unsafe,
 using, virtual, volatile, while, bool,
 byte, char, decimal, double, float,
 int, lock, object, sbyte, short, string,
-uint, ulong, ushort, void, set, get, where},
+uint, ulong, ushort, void, set, get, where, var},
 morecomment=[l]{//},
 morecomment=[s]{/*}{*/},
 morecomment=[l][keywordstyle4]{\#},
@@ -1032,6 +1032,7 @@ V této části budou probrány zajímavé použité knihovny platformy Microsof
 V první řadě je třeba zmínit hlavní knihovnu, na které je jádro aplikace postavené a tou je framework ASP.NET MVC 3. Něco málo o něm bylo řečeno už v kapitole Rešerše \ref{asp.net} a o jeho architektuře v předchozí sekci \ref{mvc}. Všechny jeho vlastnosti jsou detailně popsány na webových stránkách frameworku\footnote{\url{http://www.asp.net/mvc}} pomocí skvělých video a textových tutoriálech.
  
 \subsubsection{Entity Framework - Code First}
+\label{sec:ef}
 Microsoft přišel před několika lety s novým ORM frameworkem, který se stal soupeřem NHibernate. V poslední verzi 4 už je Entity Framework\footnote{\url{http://msdn.com/data/ef}} na použitelné úrovni. Entity Framework nabízí 3 různé způsoby, jak založit databázové úložiště. 
 
 \begin{itemize}
@@ -1422,7 +1423,7 @@ Jak už bylo zmíněno v sekci \ref{sec:atributy} o atributech frameworku, jde o
 
 
 \section{Moduly}
-
+\label{sec:moduly}
 Moduly jsou v aplikaci řešeny jako balíčky ze samostatných projektů. Projekty jsou kompilovány do dynamických knihoven a spolu s nezkompilovanými pohledy a konfiguračními soubory jsou nahrány do určeného adresáře jádra aplikace. 
 
 \subsection{Start aplikace}
@@ -1547,53 +1548,163 @@ public abstract class PluginController : Controller
 }
 \end{lstlisting}
 
+\subsubsection{Služby}
+\label{sec:services}
+Služby jsou určeny pro distribuci dat controllerům a pohledům. Definice jejich rozhraní jsou v sestavení Framework. Služby jsou rozděleny podle zaměření:
+
+\begin{itemize}
+\item \texttt{IProduct} -- služby týkající se produktu. Jde o vyhledávání produktu v seznamu a další funkce. Služby v tomto případě představují příklad modelu.
+\item \texttt{ICart} -- služba obsahuje všechny příkazy pro manipulaci s nákupním košíkem.
+\item \texttt{ICategory} -- služba pro práci s kategoriemi.
+\item \texttt{ICommon} -- služba poskytující funkce pohledům jak pro backend tak pro frontend. Jde o hodnoty z nastavení aplikace a informační zprávy. Zobrazení zprávy je vidět v ukázce \ref{list:settings} na řádku \textbf{16}. Služba je injektována do pohledů až za běhu aplikace při kompilaci pohledu s rodičem \texttt{BaseWebViewPage}.
+\item \texttt{IFront} -- služby pro stránky ve frontendu. Jedná se hlavně o výpis položek hlavního Menu.
+\item \texttt{IAdmin} -- služby pro stránky ve backendu. I zde se vypisují položky hlavního Menu.
+\item \texttt{ICheckout} -- služba umožňující výměnu procesu \textit{checkoutu} za jiný. V její implementaci lze změnit odkazy na controller zajišťující \textit{checkout}.
+\item \texttt{IListing} -- služby pro seznamy zboží vypsaných z kategorií. Tato služba nemá v základní aplikaci využití, protože zobrazování zboží nebylo nijak rozšiřováno.
+\end{itemize}
+ 
+Předpisy rozhraní by bylo samozřejmě nutné rozšířit v případě nasazení aplikace v ostrém prostředí. Služby jsou opět do controllerů \textit{injektovány} v třídě \texttt{Modules}. Pokud není implementace nalezena v modulech, použije se implicitní implementace v sestavení \textsf{Core}. Vzhledem k funkcím, které služby mají je možné s nimi nahradit modely.
+ 
 \subsubsection{Menu}
 \label{sec:menu}
 
+V aplikaci jsou dvě rozšiřitelná menu. Položky menu jsou odkazy na metody controllerů, které jsou označeny atributem \texttt{Menu}. Jejich hledání probíhá v seznamu \textit{controllerů} poskytnutým třídou \texttt{Modules}. Pro frontend a backend se načítají menu zvlášť. Implementace jsou ve službách \texttt{DefaultFront} a \texttt{DefaultAdmin} implementujících rozhraní \texttt{IFront} a \texttt{IAdmin}. Atribut má možnost pojmenování. Samozřejmostí je překlad názvu podle lokalizace aplikace. Ukázka užití atributu \ref{list:menu} popisuje metodu v \texttt{HomeController}. 
 
-\subsubsection{Služby}
-\label{sec:services}
- distribuce dat
+\begin{lstlisting}[float=h!,language=CSharp, caption={atribut \texttt{Menu}}, label=list:menu]
+[Menu(Name = "About")]
+public ActionResult About()
+{
+    return View();
+}
+\end{lstlisting}
+
 
 \subsubsection{Widgety}
 \label{sec:widgets}
 
-RenderPartial!!!
+Widgety jsou grafické prvky v layoutu webové stránky. Dají se odebírat, přidávat a přemísťovat na různá místa různých stránek. Tabulka \ref{tab:pozice} ukazuje možnosti umístění ve stránce i ve specifických pohledech. 
+
+Widgety fungují stejně jako běžné metody v controllerech, ale jsou opatřeny tagy \texttt{Child\-Action\-Only} a \texttt{Placement}. Potřebují mít tedy i vlastní pohled. Widgety zároveň mohou být v jádru i v modulech.
+
+\begin{itemize}
+\item \texttt{ChildActionOnly} -- vestavěný atribut, který dovoluje spustit metodu jako vnořenou, nejde volat přímo pomocí URL.
+\item \texttt{Placement} -- určuje na jakém místě se obsah metody objeví. Tabulka \ref{tab:pozice} ukazuje možnosti umístění pomocí parametrů \textit{Position} a \textit{Template} (pohled). Možnosti jsou zapsány v typech enum -- \texttt{PagePosition} a \texttt{PageTemplate}.
+\end{itemize}
+
+\begin{table}
+\centering
+\begin{tabular}[c]{|c|c|}
+\hline 
+\textbf{Position} & \textbf{Template} \\ 
+\hline 
+Left & Index \\ 
+\hline 
+Right & Product \\ 
+\hline 
+Bottom & Catalog \\ 
+\hline 
+Top & Cart \\ 
+\hline 
+Header & Login \\ 
+\hline 
+Footer & Address \\ 
+\hline 
+Document & Shipping \\ 
+\hline 
+• & Payment \\ 
+\hline 
+• & Search \\ 
+\hline 
+• & All \\ 
+\hline 
+\end{tabular}
+\caption{Možnosti umístění Widgetů}
+\label{tab:pozice}
+\end{table} 
+
+Widgety se načítají z controllerů podobně jako položky menu. Třída \texttt{DefaultWidgetter} se načte při načítání stránky, prohledá seznam controllerů a zjistí atributy jejich metod. Poté se na určitých místech ve stránce volají pomocí metody \texttt{WidgetPlace}. Ta je ovšem pouze delegátem a implementací je metoda \texttt{Compose} ve třídě \texttt{DefaultWidgetter}.
+
+V metodě \texttt{Compose} se poté volá vestavěná metoda \texttt{RenderAction}, která zajistí zobrazení widgetu. Aplikace takto ale prochází znova životním cyklem. Ten se provede tolikrát, kolik je na stránce widgetů. Může se tak jednat o zásadní zpomalení aplikace. Toto je ale jediný dostupný způsob, který poskytuje všechny možnosti akce controlleru i s modelem a formuláři.
+
+Zlepšením implementace by určitě bylo kešování seznamu widgetů a jiný způsob načítání. Pro ilustraci komplexnosti mechanismu je uveden sekvenční diagram \ref{fig:widgety}. Stereotyp \textit{<<recursion>>} představuje nové volání metody v controlleru, tedy nový životní cyklus.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.71]{figures/widgety}
+\caption{Sekvenční diagram zobrazování widgetů}
+\label{fig:widgety}
+\end{center}
+\end{figure}
 
 \subsubsection{Entity}
 \label{subsec:pripojenientit}
 I entity se dají rozšířit, v základu aplikace nebylo této schopnosti využito, ale pro praktickou implementaci je toto třeba. Způsob rozšíření entit je rozdělen interně na 3 způsoby, ale vždy využívá mechanismu dědění původní entity. Detaily nastavení jsou probírány v článcích na blogu Morteza Manavi\footnote{\url{http://bit.ly/CodeFirstInheritance}}.
 
-Jejich připojení demonstruje připojení entity \texttt{Review} z modulu \textsf{Reviews}. Implementovat injekci entit bylo možné jen díky článku publikovaném jako návodu na psaní modulů pro projekt NopCommerce \cite{NOPE}. Nikde jinde, ani v dokumentačních materiálech Entity Frameworku tato možnost zmíněna není, což považuji za velkou slabost dokumentace Entity Frameworku.
+Připojení demonstruje entita \texttt{Review} z modulu \textsf{Reviews}. Implementovat injekci entit bylo možné jen díky článku publikovaném jako návodu na psaní modulů pro projekt NopCommerce \cite{NOPE}. Nikde jinde, ani v dokumentačních materiálech Entity Frameworku tato možnost zmíněna není, což považuji za velkou slabost dokumentace Entity Frameworku.
 
-KODy!!!!!!!!!!
+Způsob implementace postupuje podle příkladu z článku \cite{NOPE}. Nejprve je třeba vytvořit třídu s entitou specifikující třídu \texttt{PluginEntity}, poté konfiguraci entity podle příkladu specifikující \texttt{Entity\-Type\-Configuration}. Oboje se budou injektovat do \texttt{DbContext} v metodě \texttt{OnModel\-Creating}. Dále je možné do aplikace nahrát prvotní obsah entity přes implementaci rozhraní \texttt{IDbSeed}, které se injektuje do souboru inicializace databáze. Databáze se bohužel stane nekompatibilní, protože se změní model, viz. popis Entity Frameworku \ref{sec:ef}.
 
+Dotazování na tyto modulární entity z \texttt{DbContext} pak probíhá jinak, rozdíl demonstruje ukázka \ref{list:rozdilentit}. Rozšiřující entita je získávána z \texttt{DbContext} na řádku \textbf{5} a z ní pak základní entita na řádku \textbf{6}. 
+
+Nevýhodou je nemožnost pracovat s rozšiřujícími entitami v jiných modulech o jádře ani nemluvě.
+
+\begin{lstlisting}[float=h!,language=CSharp, caption={rozdíl použití základní a rozšiřující entity}, label=list:rozdilentit]
+[ChildActionOnly]
+[Placement(Position = PagePosition.Document, Template = PageTemplate.Index)]
+public ActionResult Widget()
+{
+    var review = db.Set<Review>().First();
+    ViewBag.CustomerMail = review.Customer.Email;
+    return PartialView(review);
+}
+\end{lstlisting}
 
 \subsubsection{Frontend}
 
+Frontend je rozšiřitelný pomocí výše zmiňovaných bodů. Základem rozšiřování je upravování pohledů frontendu, které nejsou zkompilované. Další možnost je dopisování controllerů a jejich pohledů. Odkazy na akce se přidají následně do menu frontendu
+
 \subsubsection{Backend -- administrace}
+\label{subsub:backend}
+Backend, nebo-li administrace, je rozšiřitelná stejně jako frontend s tím rozdílem, že musí být zabezpečená atributem \texttt{Admin}. Nemůže totiž dědit současně od \texttt{PluginController} a \texttt{AdminController}. \texttt{PluginController} má proto přednost. Nabízí se možnost vytvoření \texttt{AdminPluginController}, který by dědil od jedné třídy a obsahoval manuálně dopsané \textit{metody} a \textit{properties} druhé třídy. 
+
+Controller se poté opět musí přidat do menu backendu stejným atributem \texttt{Menu}, rozdíl spočívá v detekci atributu \texttt{Admin}. 
+
+\subsection{Omezení modulů}
+
+Omezení byla postupně zmiňována v podsekcích Modulů \ref{sec:moduly}. Zde jsou shrnuty.
+
+\begin{itemize}
+\item Entity -- rozšíření entit je možné pouze v rámci modulu Mimo něj Entita viditelná není. Viz. \ref{subsec:pripojenientit}. Pokud by se entita deklarovala jinde, dojde ke konfliktům a duplikaci.
+\item Widgety -- omezené umístěním na určená místa a omezují výkonnost aplikace, viz. \ref{sec:widgets}.
+\item AdminPluginController -- zmíněný výše v \ref{subsub:backend}. Přesněji jde o vícenásobnou dědičnost, která není v .NET možná. Je třeba sáhnout k rozhraní a duplicitní implementaci.
+\item Služby -- rozšíření služeb musí být provedeno ve frameworku aplikace, který je třeba znova zkompilovat. Modulárním způsobem je možné pouze implementovat rozhraní.
+\item Kopie do modulu -- všem souborům, které se v modulech nekompilují je třeba nastavit manuálně kopírování do adresáře se zkompilovaným modulem.
+\end{itemize}
 
 
-\subsection{Co moduly nezajistí}
-
-
-\section{psaní vlastního modulu}
-postup
 
 \section{Spuštění aplikace}
 
-závislosti MVC z WPI do Visual Studia, IIS Express taky SQL server compact
+Spuštění aplikace rozlišuje nejméně dva způsoby. Jedním je debug mód, který se spouští přímo ve Visual Studiu a druhým je mód release, který je určený pro ostrý provoz na serveru.
 
-postup
+Pro spuštění ve Visual Studiu je třeba následovat některý z instalačních tutoriálú pro ASP.NET MVC 3. Nejlepší je přímo na oficiální stránce\footnote{\url{http://asp.net/mvc/mvc3}}. Nejlepší volbou je stažení \textit{Web Platform Installer} (WPI) z odkazu v návodu. Ten nabídne instalaci všech základních částí včetně Visual Studia ve verzi zdarma. Poté při otevření \textsf{solution} (balík projektů celé aplikace pro Visual Studio) se vyřeší závislosti na jiných knihovnách potřebných k běhu aplikace.
 
-\section{Instalace modulu}
-postup
+Pro urychlení instalací doplňků je vhodné zaškrtnout při instalaci WPI i instalaci serveru IIS Express a databázového enginu SQL Server Compact.
 
-\section{Deinstalace modulu}
-postup
+Pro spuštění na serveru IIS nebo na hostingu je třeba, aby byl server vybaven stejnými technologiemi, tedy ASP.NET 4, MVC 3 a SQL Server Compact. V případě nepřítomnosti frameworku MVC 3 je možné jej nahrát přímo s aplikací. Postup pro nahrání aplikace na IIS je dostupný také v tutoriálech na oficiálních stránkách\footnote{\url{http://www.asp.net/mvc/overview/deployment}}.
 
-problém při opětovném nahrávání modulu - hází chybu Controller not found pro widgety - je třeba vygenerovat všechny dll, alespoň v IIS Express ve Visual Studiu.
+Také je důležité, aby server poskytoval plná práva \textbf{Full Trust} z důvodu používání IoC kontejneru Castle Windsor, který je vyžaduje. Dále je nutné povolit zápis do adresáře \texttt{App\_Data}, kde je uložen databázový soubor a také zápis do adresáře modulů \texttt{extensions/temp}.
 
+
+
+\subsection{Instalace a odebrání modulu}
+Při instalaci nebo odebírání modulů je třeba vypráznit \textsf{Application Pool} (keš) v IIS příkazem \textsf{Recycle} a restartovat aplikaci. Případně pomůže také přehrát DLL soubory.
+
+Instalace modulu se provádí zkompilováním modulu a spolu se soubory pohledů a dalšími se nakopíruje do aplikace do adresáře \texttt{extensions/plugins/Meshop.\{Modul\}}. Knihovna modulu v tomto případě musí mít název \texttt{Meshop.\{Modul\}.dll}. Zkompiluje se tak v případě názvu projektu modulu \textsf{Meshop.\{Modul\}}. Při spuštění se adresáře pluginů zkopírují do adresáře \texttt{extensions/temp} ze kterých se načtou.
+
+Při odebírání modulu je nutné kromě vymazání keše a restartu aplikace také vymazání adresáře pluginu z obou adresářů \texttt{extensions/temp} i \texttt{extensions/plugins}.
+
+Data v databázi se při změně v modulech vymažou a načtou se data z třídy \texttt{Database\-Initializer} a tříd implementujích rozhraní \texttt{IDbSeed}. Toto chování je bohužel nastaveno z důvodu absence funkce \textsf{Migrations} v Entity Frameworku 4.1, viz. \ref{sec:ef}.
 
 %*****************************************************************************
 \chapter{Testování}
@@ -1622,7 +1733,7 @@ Nedostatek - roztroušená dokumentace po internetu v návodech, MSDN je posklá
 Zhodnocení splnění cílů práce a vlastního přínosu práce (při formulaci je třeba vzít v potaz zadání práce).
 
 \section{Rozšíření}
-Diskuse dalšího možného pokračování práce.
+Diskuse dalšího možného pokračování práce. dědění modulů, katalogizace.
 
 
 %*****************************************************************************

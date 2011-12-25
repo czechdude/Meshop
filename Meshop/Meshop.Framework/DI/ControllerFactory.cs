@@ -23,19 +23,11 @@ namespace Meshop.Framework.DI
         {
             if (controllerType == null)
             {
-                throw new HttpException(404,
-                    String.Format(
-                        CultureInfo.CurrentCulture,
-                        "No controller found!",
-                        requestContext.HttpContext.Request.Path));
+                throw new HttpException(404,"No controller found!");
             }
             if (!typeof(IController).IsAssignableFrom(controllerType))
             {
-                throw new ArgumentException(
-                    String.Format(
-                        CultureInfo.CurrentCulture,
-                        "Wrong Controller Type!"),
-                    "controllerType");
+                throw new ArgumentException("Wrong Controller Type!");
             } 
             return (IController)_container.Resolve(controllerType);
         }

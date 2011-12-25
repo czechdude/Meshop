@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DatabaseConnection2-Web.config Connection String" description="DatabaseConnection2 Connection String used in web.config by the application to access the database." defaultvalue="Data Source=|DataDirectory|DB.sdf" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Dokumenty\\diplomka\\Meshop\\Meshop\.Core\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DatabaseConnection2']/@connectionString" />
-  </parameter>
-</parameters>

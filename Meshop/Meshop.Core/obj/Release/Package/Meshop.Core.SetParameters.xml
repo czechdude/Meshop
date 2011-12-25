@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <setParameter name="IIS Web Application Name" value="Modular Eshop/Meshop.Core_deploy" />
-  <setParameter name="DatabaseConnection2-Deployment Connection String" value="" />
-  <setParameter name="DatabaseConnection2-Web.config Connection String" value="Data Source=|DataDirectory|DB.sdf" />
-</parameters>
