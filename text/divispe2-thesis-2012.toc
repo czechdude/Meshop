@@ -107,19 +107,12 @@
 \contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{63}{chapter.7}
 \contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i }}{63}{section.7.1}
 \contentsline {section}{\numberline {7.2}Roz\IeC {\v s}\IeC {\'\i }\IeC {\v r}en\IeC {\'\i }}{63}{section.7.2}
-\contentsline {chapter}{\numberline {A}Testov\IeC {\'a}n\IeC {\'\i } zapln\IeC {\v e}n\IeC {\'\i } str\IeC {\'a}nky a odsazen\IeC {\'\i } odstavc\IeC {\r u}}{67}{appendix.A}
-\contentsline {chapter}{\numberline {B}Pokyny a n\IeC {\'a}vody k form\IeC {\'a}tov\IeC {\'a}n\IeC {\'\i } textu pr\IeC {\'a}ce}{69}{appendix.B}
-\contentsline {section}{\numberline {B.1}Vkl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } obr\IeC {\'a}zk\IeC {\r u}}{69}{section.B.1}
-\contentsline {section}{\numberline {B.2}Kreslen\IeC {\'\i } obr\IeC {\'a}zk\IeC {\r u}}{70}{section.B.2}
-\contentsline {section}{\numberline {B.3}Tabulky}{70}{section.B.3}
-\contentsline {section}{\numberline {B.4}Odkazy v textu}{71}{section.B.4}
-\contentsline {subsection}{\numberline {B.4.1}Odkazy na literaturu}{71}{subsection.B.4.1}
-\contentsline {subsection}{\numberline {B.4.2}Odkazy na obr\IeC {\'a}zky, tabulky a kapitoly}{73}{subsection.B.4.2}
-\contentsline {section}{\numberline {B.5}Rovnice, centrovan\IeC {\'a}, \IeC {\v c}\IeC {\'\i }slovan\IeC {\'a} matematika}{73}{section.B.5}
-\contentsline {section}{\numberline {B.6}K\IeC {\'o}dy programu}{74}{section.B.6}
-\contentsline {section}{\numberline {B.7}Dal\IeC {\v s}\IeC {\'\i } pozn\IeC {\'a}mky}{74}{section.B.7}
-\contentsline {subsection}{\numberline {B.7.1}\IeC {\v C}esk\IeC {\'e} uvozovky}{74}{subsection.B.7.1}
-\contentsline {chapter}{\numberline {C}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{75}{appendix.C}
-\contentsline {chapter}{\numberline {D}UML diagramy}{77}{appendix.D}
-\contentsline {chapter}{\numberline {E}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{79}{appendix.E}
-\contentsline {chapter}{\numberline {F}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{81}{appendix.F}
+\contentsline {chapter}{\numberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{67}{appendix.A}
+\contentsline {chapter}{\numberline {B}UML diagramy}{69}{appendix.B}
+\contentsline {chapter}{\numberline {C}Screenshoty aplikace}{71}{appendix.C}
+\contentsline {chapter}{\numberline {D}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{73}{appendix.D}
+\contentsline {section}{\numberline {D.1}Instalace prost\IeC {\v r}ed\IeC {\'\i }}{73}{section.D.1}
+\contentsline {section}{\numberline {D.2}Instalace aplikace}{73}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i }}{73}{section.D.3}
+\contentsline {section}{\numberline {D.4}Moduly}{73}{section.D.4}
+\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD}{75}{appendix.E}

@@ -1,0 +1,23 @@
+﻿@using System.Text.RegularExpressions
+@if(Request.IsAuthenticated) {
+    <text>Welcome <strong>@User.Identity.Name</strong>! 
+     @if (FrontService.IsAdmin(User))
+     {
+         var route =(Route) ViewContext.Controller.ControllerContext.RouteData.Route;
+         if ( !Regex.IsMatch(route.Url,@"admin/",RegexOptions.IgnoreCase))
+         {
+            @Html.ActionLink("Dashboard", "Index", new { Area = "Admin", Controller = "AdminHome" })
+         }
+         else
+         {
+             @Html.ActionLink("Frontend", "Index", new { Area = "", Controller = "Home" })  
+         }
+         
+     }
+      
+    [ @Html.ActionLink("Log Off", "LogOff", new { Area = "", Controller = "Account" }) ]</text>
+}
+else
+{
+    @:[ @Html.ActionLink("Log On", "LogOn", new { Area = "", Controller = "Account" }) ]
+}

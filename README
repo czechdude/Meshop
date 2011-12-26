@@ -1,0 +1,44 @@
+--------------------------------------------------------------------------------
+ČVUT Praha                                                            CTU Prague
+Fakulta Elektrotechnická                       Faculty of Electrical Engineering
+Diplomová práce                                                  Master's Thesis
+Modulární E-shop                                                  Modular E-shop
+Bc. Petr Diviš
+vedoucí Ing. Božena Mannová, Ph.D.
+2012
+--------------------------------------------------------------------------------
+CZ:
+Toto DVD/repozitář obsahuje kompletní zdrojový kód, text i zkompilované soubory.
+
+Kompletní znění práce najdete v souboru text/divispe2-thesis-2012.pdf.
+
+Struktura:
+Adresář SRC obsahuje kompletní balík projektů (solution). Ten lze otevřít 
+ve Visual Studiu a spustit.
+Adresář TEXT obsahuje soubory s vlastním textem práce v PDF formátu a ve formátu
+LATEX s veškerými potřebnými soubory pro kompilaci LATEX do PDF.
+Adresář WEB obsahuje zkompilovanou aplikaci připravenou pro nasazení 
+na webhosting nebo vlastní IIS server s nainstalovanými závislostmi.
+
+
+Požadavky, instalace, spouštění:
+
+
+
+--------------------------------------------------------------------------------
+EN:
+This DVD/repository contains complete source code, text and compiled files.
+
+Complete thesis text is available in Czech in the file 
+text/divispe2-thesis-2012.pdf. English version is not available.
+
+The structure:
+The directory SRC contains complete solution. It can be opened in Visual Studio
+and run after solving required dependencies.
+The directory TEXT contains files with the text of the thesis in PDF format and
+in LATEX formatted files needed for compilation to PDF.
+The directory WEB contains compiled source code ready for deployment to
+a hosting or to own custom IIS server with necessary dependencies resolved.
+
+Requirements, deployment, run:
+
