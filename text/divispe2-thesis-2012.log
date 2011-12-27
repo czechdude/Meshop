@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  26 DEC 2011 22:27
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  27 DEC 2011 13:34
 entering extended mode
 **divispe2-thesis-2012.tex
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.tex
@@ -859,18 +859,6 @@ File: t1lmtt.fd 2007/01/14 v1.3 Font defs for Latin Modern
 ) [5
 
 ]
-Overfull \hbox (7.11052pt too wide) in paragraph at lines 413--414
-\T1/lmr/m/n/10.95 b¥ºný kód posky-tu-jící obec-nou funk£nost £asto se-lek-tivn¥
- p°episován nebo konkretizován
- []
-
-
-Overfull \hbox (9.93765pt too wide) in paragraph at lines 413--414
-\T1/lmr/m/n/10.95 uºi-va-tel-ským kó-dem, coº posky-tuje poºadovanou funkcional
--itu. Frame-worky jsou speciál-
- []
-
-
 Overfull \hbox (0.94032pt too wide) in paragraph at lines 416--416
 []\T1/lmr/bx/n/14.4 Re²er²ní zpra-cov-ání vhod-ných im-ple-men-ta£ních prost°ed
 í 
@@ -904,14 +892,14 @@ Overfull \hbox (11.85065pt too wide) in paragraph at lines 565--566
 ru do housin-gového cen-tra. Výhodou
  []
 
-[15] [16] [17] <figures/usecasefront.png, id=878, 373.395pt x 599.23875pt>
+[15] [16] [17] <figures/usecasefront.png, id=886, 373.395pt x 599.23875pt>
 File: figures/usecasefront.png Graphic file (type png)
 
 <use figures/usecasefront.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/usecaseback.png, id=879, 285.065pt x 407.5225pt>
+<figures/usecaseback.png, id=887, 285.065pt x 407.5225pt>
 File: figures/usecaseback.png Graphic file (type png)
 
 <use figures/usecaseback.png>
@@ -923,21 +911,21 @@ Underfull \vbox (badness 1881) has occurred while \output is active []
 
  [19 <C:/Dokumenty/diplomka/text/figures/usecasefront.png (PNG copy)>] [20 <C:/
 Dokumenty/diplomka/text/figures/usecaseback.png (PNG copy)>] [21] [22] [23]
-<figures/datamodel.png, id=961, 434.37282pt x 566.115pt>
+<figures/datamodel.png, id=969, 434.37282pt x 566.115pt>
 File: figures/datamodel.png Graphic file (type png)
 
 <use figures/datamodel.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/factorymethod.png, id=967, 530.98375pt x 268.00125pt>
+<figures/factorymethod.png, id=975, 530.98375pt x 268.00125pt>
 File: figures/factorymethod.png Graphic file (type png)
 
 <use figures/factorymethod.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/pluginseq.png, id=970, 533.995pt x 287.0725pt>
+<figures/pluginseq.png, id=978, 533.995pt x 287.0725pt>
 File: figures/pluginseq.png Graphic file (type png)
 
 <use figures/pluginseq.png>
@@ -953,17 +941,17 @@ Overfull \vbox (7.84248pt too high) has occurred while \output is active []
 
 
 [25 <C:/Dokumenty/diplomka/text/figures/datamodel.png>]
-<figures/uow.png, id=982, 543.02875pt x 426.59375pt>
+<figures/uow.png, id=990, 543.02875pt x 426.59375pt>
 File: figures/uow.png Graphic file (type png)
  <use figures/uow.png>
 [26 <C:/Dokumenty/diplomka/text/figures/factorymethod.png (PNG copy)> <C:/Dokum
 enty/diplomka/text/figures/pluginseq.png (PNG copy)>] [27 <C:/Dokumenty/diplomk
 a/text/figures/uow.png (PNG copy)>]
-<figures/di.png, id=995, 531.9875pt x 241.90375pt>
+<figures/di.png, id=1003, 531.9875pt x 241.90375pt>
 File: figures/di.png Graphic file (type png)
  <use figures/di.png>
 [28 <C:/Dokumenty/diplomka/text/figures/di.png (PNG copy)>]
-<figures/servicelocator.png, id=1002, 537.00626pt x 334.24875pt>
+<figures/servicelocator.png, id=1010, 537.00626pt x 334.24875pt>
 File: figures/servicelocator.png Graphic file (type png)
 
 <use figures/servicelocator.png>
@@ -979,7 +967,7 @@ Overfull \hbox (17.72214pt too wide) in paragraph at lines 973--974
 k-ladní prin-cip popisuje velmi jednoduchý
  []
 
-<figures/mvc.png, id=1009, 330.23375pt x 220.825pt>
+<figures/mvc.png, id=1017, 330.23375pt x 220.825pt>
 File: figures/mvc.png Graphic file (type png)
  <use figures/mvc.png>
 [30 <C:/Dokumenty/diplomka/text/figures/mvc.png (PNG copy)>] [31] [32]
@@ -1009,7 +997,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 1095
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
-<figures/componentsextract.png, id=1110, 699.61375pt x 537.00626pt>
+<figures/componentsextract.png, id=1118, 699.61375pt x 537.00626pt>
 File: figures/componentsextract.png Graphic file (type png)
 
 <use figures/componentsextract.png>
@@ -1020,7 +1008,7 @@ Overfull \hbox (19.22841pt too wide) in paragraph at lines 1101--1102
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/componentslow.png, id=1111, 587.19376pt x 293.095pt>
+<figures/componentslow.png, id=1119, 587.19376pt x 293.095pt>
 File: figures/componentslow.png Graphic file (type png)
 
 <use figures/componentslow.png>
@@ -1031,7 +1019,7 @@ Overfull \hbox (4.8791pt too wide) in paragraph at lines 1109--1110
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] <figures/struktura.png, id=1126, 185.94469pt x 299.61937pt>
+[37] <figures/struktura.png, id=1134, 185.94469pt x 299.61937pt>
 File: figures/struktura.png Graphic file (type png)
 
 <use figures/struktura.png>
@@ -1094,12 +1082,12 @@ Overfull \hbox (21.49527pt too wide) in paragraph at lines 1418--1419
 ut pro zabezpe£ení back-endu. D¥dí od \T1/lmtt/m/n/10.95 Authorize-
  []
 
-[48] <figures/lifecycle.png, id=1386, 185.69376pt x 554.07pt>
+[48] <figures/lifecycle.png, id=1394, 185.69376pt x 554.07pt>
 File: figures/lifecycle.png Graphic file (type png)
 
 <use figures/lifecycle.png> [49] [50 <C:/Dokumenty/diplomka/text/figures/lifecy
 cle.png (PNG copy)>]
-<figures/modulstruktura.png, id=1398, 173.14688pt x 258.9675pt>
+<figures/modulstruktura.png, id=1406, 173.14688pt x 258.9675pt>
 File: figures/modulstruktura.png Graphic file (type png)
 
 <use figures/modulstruktura.png>
@@ -1124,7 +1112,7 @@ Overfull \hbox (6.37332pt too wide) in paragraph at lines 1526--1527
 né po-mocí t°ídy \T1/lmtt/m/n/10.95 PluginController
  []
 
-[53] [54] [55] <figures/widgety.png, id=1488, 634.37pt x 485.815pt>
+[53] [54] [55] <figures/widgety.png, id=1496, 634.37pt x 485.815pt>
 File: figures/widgety.png Graphic file (type png)
 
 <use figures/widgety.png>
@@ -1185,35 +1173,70 @@ Underfull \hbox (badness 2735) in paragraph at lines 188--194
 P\v {r}\'{\i }loha A.
 [67
 
-] [68
-
-]
+] [68]
 P\v {r}\'{\i }loha B.
-[69] [70
+[69
+
+] [70
 
 ]
 P\v {r}\'{\i }loha C.
-[71] [72
+<figures/frontend1.png, id=1626, 665.48625pt x 429.10312pt>
+File: figures/frontend1.png Graphic file (type png)
+
+<use figures/frontend1.png>
+<figures/frontend2.png, id=1627, 665.48625pt x 632.3625pt>
+File: figures/frontend2.png Graphic file (type png)
+
+<use figures/frontend2.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/backend1.png, id=1628, 685.05937pt x 353.82187pt>
+File: figures/backend1.png Graphic file (type png)
+
+<use figures/backend1.png>
+Overfull \hbox (9.76817pt too wide) in paragraph at lines 1844--1845
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/backend2.png, id=1629, 684.30656pt x 356.0803pt>
+File: figures/backend2.png Graphic file (type png)
+
+<use figures/backend2.png>
+Overfull \hbox (9.27885pt too wide) in paragraph at lines 1851--1852
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[71 <C:/Dokumenty/diplomka/text/figures/frontend1.png>] [72 <C:/Dokumenty/diplo
+mka/text/figures/frontend2.png>] [73 <C:/Dokumenty/diplomka/text/figures/backen
+d1.png> <C:/Dokumenty/diplomka/text/figures/backend2.png>] [74
 
 ]
 P\v {r}\'{\i }loha D.
-[73] [74
+[75] [76
 
 ]
 P\v {r}\'{\i }loha E.
-<figures/cd.png, id=1636, 88.07906pt x 69.25874pt>
+<figures/cd.png, id=1660, 88.07906pt x 69.25874pt>
 File: figures/cd.png Graphic file (type png)
  <use figures/cd.png>
-[75 <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
+[77 <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux) ) 
 Here is how much of TeX's memory you used:
- 10360 strings out of 495285
- 142697 string characters out of 3179883
- 401848 words of memory out of 3000000
- 12807 multiletter control sequences out of 15000+200000
+ 10386 strings out of 495285
+ 143205 string characters out of 3179883
+ 401849 words of memory out of 3000000
+ 12823 multiletter control sequences out of 15000+200000
  77223 words of font info for 52 fonts, out of 3000000 for 9000
  18 hyphenation exceptions out of 8191
- 38i,9n,51p,1443b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,51p,1442b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/
 MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.8/
 fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips
@@ -1233,9 +1256,9 @@ ic/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmro1
 rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files
  (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKT
 eX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (93 pages, 2189369 bytes).
+Output written on divispe2-thesis-2012.pdf (95 pages, 2354069 bytes).
 PDF statistics:
- 1817 PDF objects out of 2073 (max. 8388607)
- 549 named destinations out of 1000 (max. 500000)
- 1019 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1842 PDF objects out of 2073 (max. 8388607)
+ 555 named destinations out of 1000 (max. 500000)
+ 1039 words of extra memory for PDF output out of 10000 (max. 10000000)
 

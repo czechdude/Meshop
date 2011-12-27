@@ -109,10 +109,10 @@
 \contentsline {section}{\numberline {7.2}Roz\IeC {\v s}\IeC {\'\i }\IeC {\v r}en\IeC {\'\i }}{63}{section.7.2}
 \contentsline {chapter}{\numberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{67}{appendix.A}
 \contentsline {chapter}{\numberline {B}UML diagramy}{69}{appendix.B}
-\contentsline {chapter}{\numberline {C}Screenshoty aplikace}{71}{appendix.C}
-\contentsline {chapter}{\numberline {D}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{73}{appendix.D}
-\contentsline {section}{\numberline {D.1}Instalace prost\IeC {\v r}ed\IeC {\'\i }}{73}{section.D.1}
-\contentsline {section}{\numberline {D.2}Instalace aplikace}{73}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i }}{73}{section.D.3}
-\contentsline {section}{\numberline {D.4}Moduly}{73}{section.D.4}
-\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD}{75}{appendix.E}
+\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zky aplikace}{71}{appendix.C}
+\contentsline {chapter}{\numberline {D}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{75}{appendix.D}
+\contentsline {section}{\numberline {D.1}Instalace prost\IeC {\v r}ed\IeC {\'\i }}{75}{section.D.1}
+\contentsline {section}{\numberline {D.2}Instalace aplikace}{75}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i }}{75}{section.D.3}
+\contentsline {section}{\numberline {D.4}Moduly}{75}{section.D.4}
+\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD}{77}{appendix.E}

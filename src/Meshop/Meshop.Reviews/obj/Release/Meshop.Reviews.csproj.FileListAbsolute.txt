@@ -10,3 +10,15 @@ C:\Dokumenty\diplomka\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Mesho
 C:\Dokumenty\diplomka\Meshop\Meshop.Reviews\obj\Release\ResolveAssemblyReference.cache
 C:\Dokumenty\diplomka\Meshop\Meshop.Reviews\obj\Release\Meshop.Reviews.dll
 C:\Dokumenty\diplomka\Meshop\Meshop.Reviews\obj\Release\Meshop.Reviews.pdb
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Web.config
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Views\Web.config
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Views\Reviews\Widget.cshtml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Views\Reviews\Index.cshtml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Views\AdminReviews\Index.cshtml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Views\_ViewStart.cshtml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Views\AdminReviews\Web.config
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Meshop.Reviews.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Reviews\Meshop.Reviews.pdb
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Reviews\obj\Release\ResolveAssemblyReference.cache
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Reviews\obj\Release\Meshop.Reviews.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Reviews\obj\Release\Meshop.Reviews.pdb

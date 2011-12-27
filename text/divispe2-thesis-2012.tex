@@ -277,7 +277,7 @@ unicode=true,
 
 \acknowledgements
 \noindent
-V první řadě bych chtěl poděkovat své vedoucí Ing. Boženě Mannové, Ph.D. za vstřícný přístup, poskytnutí konzultací a její připomínky. Nesmím také zapomenout na Ing. Tomáše Černého, který vedl přínosná cvičení Architektury softwarových systémů a doporučil nám výbornou literaturu. Dále bych chtěl poděkovat své rodině za podporu a pochopení při studiu i při psaní této práce. V poslední řadě bych chtěl poděkovat všem, kteří pomáhali s opravou pravopisných chyb v této práci.
+V první řadě bych chtěl poděkovat své vedoucí Ing. Boženě Mannové, Ph.D. za vstřícný přístup, poskytnutí konzultací a její připomínky. Nesmím také zapomenout na Ing. Tomáše Černého, který vedl přínosná cvičení předmětu Architektury softwarových systémů a doporučil nám výbornou literaturu. Dále bych chtěl poděkovat své rodině za podporu a pochopení při studiu i při psaní této práce. V poslední řadě bych chtěl poděkovat všem, kteří pomáhali s opravou pravopisných chyb v této práci.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%   Prohlaseni / Declaration 
@@ -406,11 +406,11 @@ Také nebude cílem vývoj komplexního a vše zahrnujícího e-shopu, ale jen j
 Podle článku IEEE Recommended Practice for Architectural Description of Software-Intensive Systems \cite{IEEE1471} je architektura uspořádání systému, rozděleného do komponent, jejich vztahů mezi nimi, mezi prostředím a principy vedoucími návrh a vývoj. Doporučuji také článek Petera Eelese, který pojem softwarové architektury rozebírá podrobně \footnote{\url{http://www.ibm.com/developerworks/rational/library/feb06/eeles/}}.
 
 
-\item \textbf{Modularita} je definována jako dekompozice systému do jednotlivých komponent a podsystémů, které jsou rozdělitelné a kombinovatelné\cite{POSA}. Odpovídá to úrovni spárování komponent a zároveň stupni prolnutí, který pravidla systémové architektury dovolují vytvořit mezi komponenty systému. V softwarovém inženýrství se modularita vykládá jako úroveň oddělení a spolupráce komponent, nazývaných moduly, které jsou mezi sebou zaměnitelné. Moduly konceptuálně představují oddělení zájmů (SoC - Separation of Concerns) a definují logické hranice mezi komponenty. Systém propojuje moduly pomocí rozhraní. Každý modul má definované svoje rozhraní, přes které poskytuje a vyžaduje služby. Implementace zajišťuje napojení na rozhraní a funkčnost modulu. Modul má přístup k rozhraní jiných modulů. Koncepce modularity výrazně zlepšuje přehlednost a udržovatelnost systému\cite{POSA}\cite{wiki:modular-programming}. 
+\item \textbf{Modularita} je definována jako dekompozice systému do jednotlivých komponent a podsystémů, které jsou rozdělitelné a kombinovatelné\cite{POSA}. Odpovídá to úrovni spárování komponent a zároveň stupni prolnutí, který pravidla systémové architektury dovolují vytvořit mezi komponenty systému. V softwarovém inženýrství se modularita vykládá jako úroveň oddělení a spolupráce komponent, nazývaných moduly, které jsou mezi sebou zaměnitelné. Moduly konceptuálně představují oddělení zájmů -- SOC a definují logické hranice mezi komponenty. Systém propojuje moduly pomocí rozhraní. Každý modul má definované svoje rozhraní, přes které poskytuje a vyžaduje služby. Implementace zajišťuje napojení na rozhraní a funkčnost modulu. Modul má přístup k rozhraní jiných modulů. Koncepce modularity výrazně zlepšuje přehlednost a udržovatelnost systému\cite{POSA}\cite{wiki:modular-programming}. 
 
 \item \textbf{Návrhový vzor} systematicky pojmenovává, motivuje a vysvětluje všeobecný návrh, který cílí na opakující se návrhový problém v objektově-orientovaných systémech. Popisuje problém, řešení, kdy toto řešení lze aplikovat a jeho následky. Také poskytuje implementační rady a příklady. Řešení je obecné uspořádání objektů a tříd, které řeší daný problém. Toto řešení je upraveno a implementováno tak, aby řešilo problém v určitém prostředí\cite{GOF}. Často se jedná o řešení využívající objektově orientovaného návrhu a je představováno obecnými objekty, třídami, jejich spoluprací a vztahy mezi nimi. Nedají se proto dobře využít ve funkcionálním programování. \cite{wiki:design-pattern-computer-science}
 
-\item \textbf{Framework} je předpřipravený softwarový systém, určený k dokončení a spuštění. Framework určuje architekturu pro skupinu podsystémů a poskytuje základní stavební bloky pro jejich vytvoření. Také definuje své části, které musí být přizpůsobeny pro dosažení požadované funkčnosti. V objektově orientovaném prostředí se framework skládá z \textit{abstraktních} a \textit{konkrétních tříd}. Spuštění takového frameworku spočívá ve skládání a dědění těchto existujících tříd. \cite{POSA}. Podle Wikipedie je abstrakcí, ve které je běžný kód poskytující obecnou funkčnost často selektivně přepisován nebo konkretizován uživatelským kódem, což poskytuje požadovanou funkcionalitu. Frameworky jsou speciálním případem softwarových knihoven, které zahrnují znovupoužitelnost a jejich kód je odstíněn dobře definovaným API. Od běžných softwarových knihoven se frameworky liší následujícími vlastnostmi. Běh programu řídí framework a ne, část aplikace, která framework volá. Framework má vlastní výchozí chování a nejedná se o volání prázdných příkazů. Framework může být rozšířen uživatelem, který pomocí vhodného kódu určuje specifickou funkčnost. Vlastní kód frameworku není účelem upravovat ale rozšiřovat. \cite{wiki:software-framework} 
+\item \textbf{Framework} je předpřipravený softwarový systém, určený k dokončení a spuštění. Framework určuje architekturu pro skupinu podsystémů a poskytuje základní stavební bloky pro jejich vytvoření. Také definuje své části, které musí být přizpůsobeny pro dosažení požadované funkčnosti. V objektově orientovaném prostředí se framework skládá z \textit{abstraktních} a \textit{konkrétních tříd}. Spuštění takového frameworku spočívá ve skládání a dědění těchto existujících tříd. \cite{POSA}. Podle Wikipedie je abstrakcí, ve které je běžný kód poskytující obecnou funkčnost často selektivně přepisován nebo specifikován uživatelským kódem, což poskytuje požadovanou funkcionalitu. Frameworky jsou speciálním případem softwarových knihoven, které zahrnují znovupoužitelnost a jejich kód je odstíněn dobře definovaným API. Od běžných softwarových knihoven se frameworky liší následujícími vlastnostmi. Běh programu řídí framework a ne, část aplikace, která framework volá. Framework má vlastní výchozí chování a nejedná se o volání prázdných příkazů. Framework může být rozšířen uživatelem, který pomocí vhodného kódu určuje specifickou funkčnost. Vlastní kód frameworku není účelem upravovat ale rozšiřovat. \cite{wiki:software-framework} 
 \end{itemize}
 
 \section{Rešeršní zpracování vhodných implementačních prostředí}
@@ -449,7 +449,7 @@ Perl je interpretovaný programovací jazyk pro tvorbu CGI skriptů již od roku
 Python je další dynamický interpretovaný programovací jazyk, který spatřil světlo světa před dvaceti lety. Je implementován v jazyce C. Velmi často je distribuován přímo v Linuxových distribucích, proto je známější Linuxovým uživatelům. Je v něm implementován aplikační server Zope, na kterém také beží některé z jeho frameworků, které jsou volně dostupné pro webové aplikace. Nejznámější je asi framework Django, který podporuje moderní metody vývoje a pomáhá vytvářet rychle aplikace, které jsou výkonné, čisté a neopakuje se v nich kód\cite{wiki:python}.
 
 \subsection{Ruby on Rails}
-Ruby on Rails je webový framework, který vznikl na projektu Basecamp díky dánskému programátorovi David Heinemeier Hanssonovi. Framework je založený na jazyce Ruby a jeho architektura je opět MVC. Vše od Ajaxu v šablonách po napojení databáze v modelech je založeno na jazyce Ruby. Základní princip frameworku je "Convention over Configuration", což znamená, že se nejprve je nutné podívat jak věci fungují v základu a poté je případně změnit v konfiguraci. Framework také obsahuje routování URL na komponenty v aplikaci, návrhový vzor Active Record pro řízení dat a spolupracuje s javascriptovým frameworkem Prototype kvůli funkčnosti Ajaxu\cite{wiki:ror}. 
+Ruby on Rails je webový framework, který vznikl na projektu Basecamp díky dánskému programátorovi David Heinemeier Hanssonovi. Framework je založený na jazyce Ruby a jeho architektura je opět MVC. Vše od AJAXu v šablonách po napojení databáze v modelech je založeno na jazyce Ruby. Základní princip frameworku je "Convention over Configuration", což znamená, že se nejprve je nutné podívat jak věci fungují v základu a poté je případně změnit v konfiguraci. Framework také obsahuje routování URL na komponenty v aplikaci, návrhový vzor Active Record pro řízení dat a spolupracuje s javascriptovým frameworkem Prototype kvůli funkčnosti AJAXu\cite{wiki:ror}. 
 
 \section{Rešeršní zpracování existujících implementací}
 
@@ -490,7 +490,7 @@ CubeCart\footnote{\url{http://www.cubecart.com/}} je komerční řešení aplika
 Společnost NetDirect nabízí řešení internetových obchodů na klíč\footnote{\url{http://www.shopcentrik.cz/}} využívající stejné jádro a jejich produkt je velmi rozšířený zejména v českém prostředí. Jeho možnosti jsou velmi rozsáhlé a většinou se jedná o individuální řešení. Obchod je naprogramovaný na platformě Microsoft.NET a jeho služby využívají firmy jako Adidas, Best či Autobenex.
 
 \subsection{Shopio}
-Internetový obchod Shopio\footnote{\url{http://www.shopio.cz/}} nabízí svoje řešení napsané v jazyku PHP v několika variantách rozdělených podle množství funkcí a využívá databáze MYSQL. Jeho možnosti jsou podobné jako u jiných hotových řešení. Předností je integrace platebních metod tuzemských finančních domů a způsob dopravy je také připraven pro české obchodníky. SEO a marketingové nástroje jsou samozřejmostí.
+Internetový obchod Shopio\footnote{\url{http://www.shopio.cz/}} nabízí svoje řešení napsané v jazyku PHP v několika variantách rozdělených podle množství funkcí a využívá databáze MySQL. Jeho možnosti jsou podobné jako u jiných hotových řešení. Předností je integrace platebních metod tuzemských finančních domů a způsob dopravy je také připraven pro české obchodníky. SEO a marketingové nástroje jsou samozřejmostí.
 
 \subsection{oXyShop}
 Tento internetový obchod\footnote{\url{http://www.oxyshop.cz/}} je implementován na platformě Java EE a nabízí několik variant připravených řešení až po komplexní modulární systémy, které stojí miliony korun. Předností tohoto produktu je možnost škálovat výkon podle zatížení díky rozložení zátěže serverů do clusteru. Tento e-shop se může pochlubit oceněním Křišťálová Lupa a používá jej například známý prodejce výpočetní techniky Czech Computer.
@@ -1044,11 +1044,11 @@ Microsoft přišel před několika lety s novým ORM frameworkem, který se stal
 
 \end{itemize}
 
-Model, přes který se převádí databáze na entity a naopak se jmenuje \textit{Entity Data Model} (EDM) a staví na známém E-R modelu od Dr. Petera Chena. K dotazování na databázi se využívá jazyka LINQ, který poskytuje nápovědu při psaní kódu a kontrolu syntaxe během kompilace. Entity Framework je postavený nad ADO.NET provider modelem a proto jsou přes něj dostupné všechny funkce. Díky tomu také se může aplikace připojit na různé databáze od MSSQL přes DB2 po Oracle\cite{efintro}.
+Model, přes který se převádí databáze na entity a naopak se jmenuje \textit{Entity Data Model} (EDM) a staví na známém ER modelu od Dr. Petera Chena. K dotazování na databázi se využívá jazyka LINQ, který poskytuje nápovědu při psaní kódu a kontrolu syntaxe během kompilace. Entity Framework je postavený nad ADO.NET provider modelem a proto jsou přes něj dostupné všechny funkce. Díky tomu také se může aplikace připojit na různé databáze od MS SQL přes DB2 po Oracle\cite{efintro}.
 
 
 \subsubsection{SQL Compact Edition}
-Nejedná se o knihovnu, ale o databázi, ale je třeba o ní ztratit pár slov, protože byla použita v aplikaci. Je to nejmenší verze z nabízených databází Microsoftu a je přednastavená při vytváření základní šablony aplikace ve frameworku MVC3 ve Visual Studiu. V projektu jde o verzi SQL Server Compact Edition 4.
+Nejedná se o knihovnu, ale o databázi, ale je třeba o ní ztratit pár slov, protože byla použita v aplikaci. Je to nejmenší verze z nabízených databází Microsoftu a je přednastavená při vytváření základní šablony aplikace ve frameworku MVC 3 ve Visual Studiu. V projektu jde o verzi SQL Server Compact Edition 4.
 
 Jde o databázi uloženou v jednom souboru společně s aplikací, její možnosti jsou omezené. Nevýhodou je, že nejde profilovat dotazy do databáze pomocí profesionálních databázových nástrojů jako je SQL Server Management Studio. Na druhou stranu je zdarma a obsahuje kompaktní databázový systém přímo v jednom souboru, takže není třeba databázový systém instalovat. Microsoft bohužel nenabízí srovnání s ostatními verzemi, ale našel jsem dokument, který se tímto zabývá \footnote{\url{http://coolthingoftheday.blogspot.com/2011/01/sql-server-compact-4-vs-sql-server.html}}. Jinak srovnání a další dostupné verze, mezi nimiž je třeba zmínit edici Express, která je zdarma, je dostupné online na webových stránkách MS SQL Serveru\footnote{\url{http://www.microsoft.com/sqlserver/en/us/product-info/compare.aspx}}.
 
@@ -1773,8 +1773,47 @@ dědění modulů, katalogizace.
 \chapter{Seznam použitých zkratek}
 
 \begin{description}
+\item[ADO.NET] ActiveX Data Objects .NET
+\item[AJAX] Asynchronous JavaScript and XML
+\item[APEK] Asociace pro Elektronickou Komerci
 \item[API] Application Programming Interface
-\item[IIS] 
+\item[ASP.NET] Active Server Pages .NET
+\item[CGI] Common Gate Interface
+\item[CMS] Content Management System
+\item[CSS] Cascading Style Sheets
+\item[DDL] Data Definition Language
+\item[DI] Dependency Injection
+\item[DVD] Digital Versatile (Video) Disc
+\item[ECMA] European Computer Manufacturers Association 
+\item[EDM] Entity Data Model
+\item[EE] Enterprise Edition
+\item[EF] Entity Framework
+\item[ER] Entity-Relationship
+\item[HTML] HyperText Markup Language
+\item[HTTP] HyperText Transfer Protocol
+\item[IEEE] Institute of Electrical and Electronics Engineers 
+\item[IDE] Integrated Development Environment
+\item[IIS] Internet Information Services
+\item[IOC] Inversion of Control
+\item[IT] Information Technology
+\item[LINQ] Language Integrated Query
+\item[MSDN] Microsoft Developer Network
+\item[MVC] Model-View-Controller
+\item[NAS] Network Attached Storage
+\item[ORM] Object-Relational Mapping
+\item[PHP] Hypertext Preprocessor
+\item[SAP] Systeme, Anwendungen, Produkte in der Datenverarbeitung
+\item[SEO] Search Engine Optimization
+\item[SMS] Short Message Service
+\item[SOC] Separation of Concerns
+\item[SQL] Structured Query Language
+\item[SSL] Secure Sockets Layer
+\item[URI] Uniform Resource Identifier
+\item[URL] Uniform Resource Locator
+\item[UX] User eXperience
+\item[WPI] Web Platform Installer
+\item[XML] eXtensible Markup Language
+
 
 \end{description}
 
@@ -1784,8 +1823,35 @@ dědění modulů, katalogizace.
 \textbf{\large Mám je sem ještě jednou dát?}
 
 %*****************************************************************************
-\chapter{Screenshoty aplikace}
+\chapter{Ukázky aplikace}
 
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.65,angle=0]{figures/frontend1}
+\caption{Ukázka frontendu bez modulů}
+\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.65,angle=0]{figures/frontend2}
+\caption{Ukázka frontendu s moduly}
+\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.65,angle=0]{figures/backend1}
+\caption{Ukázka backendu bez modulů}
+\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.65,angle=0]{figures/backend2}
+\caption{Ukázka backendu s moduly}
+\end{center}
+\end{figure}
 
 %*****************************************************************************
 \chapter{Instalační a uživatelská příručka}
