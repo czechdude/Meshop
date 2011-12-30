@@ -1,0 +1,46 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/f:Global.asax.cs" caret="1287" fromTop="30" />
+      <File id="B8E0669A-8E95-4971-B227-953306668D4A/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/d:Views/d:Project1/f:Index.cshtml" caret="56" fromTop="4" />
+      <File id="B8E0669A-8E95-4971-B227-953306668D4A/d:Controllers/f:ReviewsController.cs" caret="0" fromTop="0" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/f:Routes.cs" caret="198" fromTop="8" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/f:Web.config" caret="0" fromTop="0" />
+      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/f:PreApplicationInit.cs" caret="2862" fromTop="19" />
+      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:DI/f:ControllerFactory.cs" caret="947" fromTop="18" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/d:Controllers/f:Project1Controller.cs" caret="232" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/f:Routes.cs" caret="900" fromTop="24" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/f:Routes.cs" caret="503" fromTop="17" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/f:Routes.cs" caret="198" fromTop="8" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/d:Views/d:Project1/f:Index.cshtml" caret="56" fromTop="4" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/d:Controllers/f:Project1Controller.cs" caret="314" fromTop="15" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/d:Controllers/f:Project1Controller.cs" caret="232" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

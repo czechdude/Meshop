@@ -3,4 +3,5 @@
   <Module PersistentId="FD4C4E8B-6246-4CB7-8168-4AA127D98D72" ModuleId="Meshop.Core" />
   <Module PersistentId="B8E0669A-8E95-4971-B227-953306668D4A" ModuleId="Meshop.Reviews" />
   <Module PersistentId="9CD24CF0-41BE-443F-9409-F2AF52ACF347" ModuleId="Meshop.PageRating" />
+  <Module PersistentId="A92EBA83-0C40-45E6-9C67-250621335967" ModuleId="Meshop.Project1" />
 </Modules>

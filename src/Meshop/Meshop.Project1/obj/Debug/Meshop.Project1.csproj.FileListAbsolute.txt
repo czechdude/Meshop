@@ -1,0 +1,9 @@
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Project1\Web.config
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Project1\Views\Web.config
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Project1\packages.config
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Project1\Views\Project1\Index.cshtml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Project1\Meshop.Project1.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Core\extensions\plugins\Meshop.Project1\Meshop.Project1.pdb
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Project1\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Project1\obj\Debug\Meshop.Project1.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Project1\obj\Debug\Meshop.Project1.pdb

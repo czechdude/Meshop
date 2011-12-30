@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  27 DEC 2011 13:34
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  30 DEC 2011 11:44
 entering extended mode
 **divispe2-thesis-2012.tex
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.tex
@@ -367,6 +367,9 @@ Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
 \extratabsurround=\skip49
 \backup@length=\skip50
 )
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen110
+)
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
@@ -521,14 +524,14 @@ Package color Info: Driver file: pdftex.def on input line 130.
 \lst@gtempboxa=\box26
 \lst@token=\toks18
 \lst@length=\count96
-\lst@currlwidth=\dimen110
+\lst@currlwidth=\dimen111
 \lst@column=\count97
 \lst@pos=\count98
-\lst@lostspace=\dimen111
-\lst@width=\dimen112
+\lst@lostspace=\dimen112
+\lst@width=\dimen113
 \lst@newlines=\count99
 \lst@lineno=\count100
-\lst@maxwidth=\dimen113
+\lst@maxwidth=\dimen114
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -566,7 +569,7 @@ O)
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\oberdiek\xcolor-patch.sty"
 Package: xcolor-patch 2008/09/08 xcolor patch
 ))
-\@linkdim=\dimen114
+\@linkdim=\dimen115
 \Hy@linkcounter=\count103
 \Hy@pagecounter=\count104
 
@@ -646,8 +649,8 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 )))
 \Fld@menulength=\count105
-\Field@Width=\dimen115
-\Fld@charsize=\dimen116
+\Field@Width=\dimen116
+\Fld@charsize=\dimen117
 \Field@toks=\toks19
 Package hyperref Info: Hyper figures OFF on input line 4346.
 Package hyperref Info: Link nesting OFF on input line 4351.
@@ -677,31 +680,31 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count110
 )
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 207.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 207.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 217.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 217.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 207.
-LaTeX Font Info:    ... okay on input line 207.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 207.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 217.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
@@ -709,18 +712,18 @@ File: t1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
-\scratchdimen=\dimen117
+\scratchdimen=\dimen118
 \scratchbox=\box28
 \nofMPsegments=\count112
 \nofMParguments=\count113
 \everyMPshowfont=\toks20
 \MPscratchCnt=\count114
-\MPscratchDim=\dimen118
+\MPscratchDim=\dimen119
 \MPnumerator=\count115
 \everyMPtoPDFconversion=\toks21
 )
 \c@lstlisting=\count116
-Package hyperref Info: Link coloring ON on input line 207.
+Package hyperref Info: Link coloring ON on input line 217.
  ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
@@ -729,8 +732,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count117
 )
-LaTeX Info: Redefining \ref on input line 207.
-LaTeX Info: Redefining \pageref on input line 207.
+LaTeX Info: Redefining \ref on input line 217.
+LaTeX Info: Redefining \pageref on input line 217.
 
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.out)
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.out)
@@ -747,11 +750,11 @@ Jmeno: Bc. Petr Divi\IeC {\v s}
 Nazev prace: Modul\IeC {\'a}rn\IeC {\'\i } E-shop
 Vedouci prace: Ing. Bo\IeC {\v z}ena Mannov\IeC {\'a}, Ph.D.
 ***************************************************
-<figures/zadani.png, id=467, 669.50125pt x 1003.75pt>
+<figures/zadani.png, id=487, 669.50125pt x 1003.75pt>
 File: figures/zadani.png Graphic file (type png)
  <use figures/zadani.png>
 
-LaTeX Warning: Float too large for page by 26.28572pt on input line 268.
+LaTeX Warning: Float too large for page by 26.28572pt on input line 278.
 
 [1 <C:/Dokumenty/diplomka/text/figures/zadani.png (PNG copy)>] [2{C:/ProgramDat
 a/MiKTeX/2.8/pdftex/config/pdftex.map}
@@ -759,7 +762,7 @@ a/MiKTeX/2.8/pdftex/config/pdftex.map}
 
 
 ]
-<figures/LogoCVUT.pdf, id=478, 93.34875pt x 70.2625pt>
+<figures/LogoCVUT.pdf, id=498, 93.34875pt x 70.2625pt>
 File: figures/LogoCVUT.pdf Graphic file (type pdf)
 
 <use figures/LogoCVUT.pdf> [3 <C:/Dokumenty/diplomka/text/figures/LogoCVUT.pdf>
@@ -769,17 +772,10 @@ File: figures/LogoCVUT.pdf Graphic file (type pdf)
 
 ] [7] [8
 
+] [9] [10
+
 ]
-Overfull \hbox (2.60512pt too wide) in paragraph at lines 302--304
-\T1/lmr/m/n/10.95 vhod-nými frame-worky. Po zv-olení vhod-ného pro-gramovacího 
-jazyka s frame-workem provádím
- []
-
-[9
-
-] [10
-
-] (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.toc
+(C:\Dokumenty\diplomka\text\divispe2-thesis-2012.toc
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\ot1lmr.fd"
@@ -806,14 +802,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 4.
- [11] [12])
+ [11] [12]
+[13])
 \tf@toc=\write4
-
-[13] [14
-
-] (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.lof)
+ [14] (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.lof)
 \tf@lof=\write5
- [15] [16
+ [15
+
+] [16
 
 ]
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.lot)
@@ -823,7 +819,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 Kapitola 1.
 
-Overfull \hbox (10.6344pt too wide) in paragraph at lines 355--356
+Overfull \hbox (10.6344pt too wide) in paragraph at lines 367--368
 []\T1/lmr/m/n/10.95 Proto p°i²la my²lenka dy-nam-icky roz²i°itel-ného in-ter-ne
 -tového ob-chodu, který bude schopný
  []
@@ -835,23 +831,23 @@ Kapitola 2.
 [3
 
 ]
-Overfull \hbox (0.8113pt too wide) in paragraph at lines 388--389
+Overfull \hbox (0.8113pt too wide) in paragraph at lines 400--401
 \T1/lmr/m/n/10.95 Cílem práce je navrhnout a im-ple-men-to-vat ap-likaci in-ter
 -ne-tového ob-chodu s vyuºitím vhodné
  []
 
 [4]
 Kapitola 3.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 404.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 416.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 406.
+(Font)              <9> on input line 418.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 406.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 406.
+(Font)              <5> on input line 418.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 418.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmtt.fd"
@@ -859,13 +855,13 @@ File: t1lmtt.fd 2007/01/14 v1.3 Font defs for Latin Modern
 ) [5
 
 ]
-Overfull \hbox (0.94032pt too wide) in paragraph at lines 416--416
+Overfull \hbox (0.94032pt too wide) in paragraph at lines 428--428
 []\T1/lmr/bx/n/14.4 Re²er²ní zpra-cov-ání vhod-ných im-ple-men-ta£ních prost°ed
 í 
  []
 
 [6] [7]
-Overfull \hbox (4.40054pt too wide) in paragraph at lines 462--463
+Overfull \hbox (4.40054pt too wide) in paragraph at lines 474--475
 \T1/lmr/m/n/10.95 nap°ík-lad pod-pora zm¥ny vzh-ledu, více-jazy£nost, více m¥n,
  pod-pora SSL, rekla-mace, moºnost
  []
@@ -875,31 +871,31 @@ Overfull \hbox (4.40054pt too wide) in paragraph at lines 462--463
 ]
 Kapitola 4.
 
-Overfull \hbox (1.17577pt too wide) in paragraph at lines 517--518
+Overfull \hbox (1.17577pt too wide) in paragraph at lines 529--530
 \T1/lmr/m/n/10.95 Z hlediska p°ís-tupu po-ten-cionál-ního ob-chod-níka k ap-lik
 aci in-ter-ne-tového ob-chodu lze rozd¥lit
  []
 
 [13]
-Overfull \hbox (2.05751pt too wide) in paragraph at lines 531--532
+Overfull \hbox (2.05751pt too wide) in paragraph at lines 543--544
 []\T1/lmr/m/n/10.95 Za spe-cial-itu lze po-vaºo-vat moºnost volby, kde se bu-do
 u jed-notlivé funk£ní prvky nacházet
  []
 
-[14]
-Overfull \hbox (11.85065pt too wide) in paragraph at lines 565--566
-[]\T1/lmr/m/n/10.95 Poslední variantou je umíst¥ní vlast-ního fyz-ick-ého serve
-ru do housin-gového cen-tra. Výhodou
+[14] [15]
+Overfull \hbox (0.15717pt too wide) in paragraph at lines 603--604
+[]\T1/lmr/bx/n/10.95 p°ihla²ovací for-mulá° \T1/lmr/m/n/10.95 -- zák-ladní p°ih
+-la²o-vací for-mulá° zo-brazu-jící se nep°ih-lá²enému
  []
 
-[15] [16] [17] <figures/usecasefront.png, id=886, 373.395pt x 599.23875pt>
+[16] [17] <figures/usecasefront.png, id=921, 373.395pt x 599.23875pt>
 File: figures/usecasefront.png Graphic file (type png)
 
 <use figures/usecasefront.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/usecaseback.png, id=887, 285.065pt x 407.5225pt>
+<figures/usecaseback.png, id=922, 285.065pt x 407.5225pt>
 File: figures/usecaseback.png Graphic file (type png)
 
 <use figures/usecaseback.png>
@@ -907,32 +903,36 @@ File: figures/usecaseback.png Graphic file (type png)
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18]
-Underfull \vbox (badness 1881) has occurred while \output is active []
+Underfull \vbox (badness 1867) has occurred while \output is active []
 
  [19 <C:/Dokumenty/diplomka/text/figures/usecasefront.png (PNG copy)>] [20 <C:/
 Dokumenty/diplomka/text/figures/usecaseback.png (PNG copy)>] [21] [22] [23]
-<figures/datamodel.png, id=969, 434.37282pt x 566.115pt>
+<figures/datamodel.png, id=1004, 434.37282pt x 566.115pt>
 File: figures/datamodel.png Graphic file (type png)
 
 <use figures/datamodel.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/factorymethod.png, id=975, 530.98375pt x 268.00125pt>
+<figures/factorymethod.png, id=1010, 530.98375pt x 268.00125pt>
 File: figures/factorymethod.png Graphic file (type png)
 
 <use figures/factorymethod.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/pluginseq.png, id=978, 533.995pt x 287.0725pt>
+<figures/pluginseq.png, id=1013, 533.995pt x 287.0725pt>
 File: figures/pluginseq.png Graphic file (type png)
 
 <use figures/pluginseq.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24]
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 903.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmss.fd"
+File: t1lmss.fd 2007/01/14 v1.3 Font defs for Latin Modern
+) [24]
 
 LaTeX Warning: Text page 25 contains only floats.
 
@@ -941,43 +941,43 @@ Overfull \vbox (7.84248pt too high) has occurred while \output is active []
 
 
 [25 <C:/Dokumenty/diplomka/text/figures/datamodel.png>]
-<figures/uow.png, id=990, 543.02875pt x 426.59375pt>
+<figures/uow.png, id=1025, 543.02875pt x 426.59375pt>
 File: figures/uow.png Graphic file (type png)
  <use figures/uow.png>
 [26 <C:/Dokumenty/diplomka/text/figures/factorymethod.png (PNG copy)> <C:/Dokum
 enty/diplomka/text/figures/pluginseq.png (PNG copy)>] [27 <C:/Dokumenty/diplomk
 a/text/figures/uow.png (PNG copy)>]
-<figures/di.png, id=1003, 531.9875pt x 241.90375pt>
+<figures/di.png, id=1039, 531.9875pt x 241.90375pt>
 File: figures/di.png Graphic file (type png)
  <use figures/di.png>
 [28 <C:/Dokumenty/diplomka/text/figures/di.png (PNG copy)>]
-<figures/servicelocator.png, id=1010, 537.00626pt x 334.24875pt>
+<figures/servicelocator.png, id=1046, 537.00626pt x 334.24875pt>
 File: figures/servicelocator.png Graphic file (type png)
 
 <use figures/servicelocator.png>
-Overfull \hbox (8.0796pt too wide) in paragraph at lines 949--950
+Overfull \hbox (8.0796pt too wide) in paragraph at lines 961--962
 \T1/lmr/m/n/10.95 voláním ur£ité metody dodá t°íd¥ \T1/lmtt/m/n/10.95 Výpis \T1
 /lmr/m/n/10.95 im-ple-mentaci \T1/lmtt/m/n/10.95 Implementace Vyhledávání\T1/lm
 r/m/n/10.95 . Samoz°e-
  []
 
 [29 <C:/Dokumenty/diplomka/text/figures/servicelocator.png (PNG copy)>]
-Overfull \hbox (17.72214pt too wide) in paragraph at lines 973--974
+Overfull \hbox (17.72214pt too wide) in paragraph at lines 987--988
 \T1/lmr/m/n/10.95 frame-work· a ap-likací s uºi-va-tel-skými rozhraními[[]]. Zá
 k-ladní prin-cip popisuje velmi jednoduchý
  []
 
-<figures/mvc.png, id=1017, 330.23375pt x 220.825pt>
+<figures/mvc.png, id=1053, 330.23375pt x 220.825pt>
 File: figures/mvc.png Graphic file (type png)
  <use figures/mvc.png>
 [30 <C:/Dokumenty/diplomka/text/figures/mvc.png (PNG copy)>] [31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / coolthingoftheday . blogspo
 t . com / 2011 / 01 / sql-[]server-[]compact-[]4-[]vs-[]sql-[]server .
  []
 
 
-Overfull \hbox (0.50368pt too wide) in paragraph at lines 1053--1054
+Overfull \hbox (0.50368pt too wide) in paragraph at lines 1067--1068
 []\T1/lmr/m/n/10.95 Jde o databázi uloºe-nou v jed-nom souboru spole£n¥ s ap-li
 kací, její moºnosti jsou omezené.
  []
@@ -987,39 +987,34 @@ kací, její moºnosti jsou omezené.
 ]
 Kapitola 5.
 
-Overfull \hbox (0.75139pt too wide) in paragraph at lines 1093--1094
+Overfull \hbox (0.75139pt too wide) in paragraph at lines 1108--1109
 \T1/lmr/m/n/10.95 Z d·vodu velké sloºi-tosti struk-tury ap-likace je zde pop-sá
 n di-a-gram kom-po-nent, který graficky
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 1095
-.
-("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmss.fd"
-File: t1lmss.fd 2007/01/14 v1.3 Font defs for Latin Modern
-)
-<figures/componentsextract.png, id=1118, 699.61375pt x 537.00626pt>
+<figures/componentsextract.png, id=1154, 699.61375pt x 537.00626pt>
 File: figures/componentsextract.png Graphic file (type png)
 
 <use figures/componentsextract.png>
-Overfull \hbox (19.22841pt too wide) in paragraph at lines 1101--1102
+Overfull \hbox (19.22841pt too wide) in paragraph at lines 1116--1117
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/componentslow.png, id=1119, 587.19376pt x 293.095pt>
+<figures/componentslow.png, id=1155, 587.19376pt x 293.095pt>
 File: figures/componentslow.png Graphic file (type png)
 
 <use figures/componentslow.png>
-Overfull \hbox (4.8791pt too wide) in paragraph at lines 1109--1110
+Overfull \hbox (4.8791pt too wide) in paragraph at lines 1124--1125
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] <figures/struktura.png, id=1134, 185.94469pt x 299.61937pt>
+[37] <figures/struktura.png, id=1169, 185.94469pt x 299.61937pt>
 File: figures/struktura.png Graphic file (type png)
 
 <use figures/struktura.png>
@@ -1059,45 +1054,45 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (9.53915pt too wide) in paragraph at lines 1366--1367
-[]\T1/lmr/m/n/10.95 Ostatní im-ple-men-tace týka-jící se p°ek-ládání se nachází
- v sou-borech v adresá°i \T1/lmtt/m/n/10.95 Translation
+Overfull \hbox (15.62244pt too wide) in paragraph at lines 1383--1384
+[]\T1/lmr/m/n/10.95 Ostatní im-ple-men-tace, týka-jící se p°ek-ládání, se nachá
+zí v sou-borech v adresá°i \T1/lmtt/m/n/10.95 Translation
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1397
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / www . pluralsight-[]trainin
 g . net / microsoft / Courses / TableOfContents ? courseName =
  []
 
 
-Overfull \hbox (12.6338pt too wide) in paragraph at lines 1380--1382
+Overfull \hbox (12.6338pt too wide) in paragraph at lines 1397--1399
 \T1/lmr/m/n/10.95 delegáta, proto se ne-musí pouºí-vat stat-ická t°ída zp·-sobe
 m \T1/lmtt/m/n/10.95 @Translator.Translate("text")\T1/lmr/m/n/10.95 ,
  []
 
 [47]
-Overfull \hbox (21.49527pt too wide) in paragraph at lines 1418--1419
+Overfull \hbox (21.49527pt too wide) in paragraph at lines 1435--1436
 []\T1/lmtt/m/n/10.95 AdminAttribute \T1/lmr/m/n/10.95 -- jiº vý²e zmín¥ný atrib
 ut pro zabezpe£ení back-endu. D¥dí od \T1/lmtt/m/n/10.95 Authorize-
  []
 
-[48] <figures/lifecycle.png, id=1394, 185.69376pt x 554.07pt>
+[48] <figures/lifecycle.png, id=1429, 185.69376pt x 554.07pt>
 File: figures/lifecycle.png Graphic file (type png)
 
 <use figures/lifecycle.png> [49] [50 <C:/Dokumenty/diplomka/text/figures/lifecy
 cle.png (PNG copy)>]
-<figures/modulstruktura.png, id=1406, 173.14688pt x 258.9675pt>
+<figures/modulstruktura.png, id=1441, 173.14688pt x 258.9675pt>
 File: figures/modulstruktura.png Graphic file (type png)
 
 <use figures/modulstruktura.png>
-Overfull \hbox (3.03242pt too wide) in paragraph at lines 1468--1469
-\T1/lmr/m/n/10.95 ses-tavení je²t¥ neº se spustí samotná ap-likace. K tomu slou
-ºí sou-bor \T1/lmtt/m/n/10.95 PreApplicationInit.cs
+Overfull \hbox (6.07407pt too wide) in paragraph at lines 1485--1486
+\T1/lmr/m/n/10.95 ses-tavení, je²t¥ neº se spustí samotná ap-likace. K tomu slo
+uºí sou-bor \T1/lmtt/m/n/10.95 PreApplicationInit.cs
  []
 
 [51 <C:/Dokumenty/diplomka/text/figures/modulstruktura.png>] [52]
-Overfull \hbox (14.82289pt too wide) in paragraph at lines 1493--1493
+Overfull \hbox (14.82289pt too wide) in paragraph at lines 1510--1510
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / www . chrisvandesteeg . nl 
 / 2010 / 11 / 22 / embedding-[]pre-[]compiled-[]razor-[]views-[]in-[]your-[]dll
 /$[][]\T1/lmr/m/n/9 >| 
@@ -1107,16 +1102,16 @@ Overfull \hbox (14.82289pt too wide) in paragraph at lines 1493--1493
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (6.37332pt too wide) in paragraph at lines 1526--1527
+Overfull \hbox (6.37332pt too wide) in paragraph at lines 1543--1544
 \T1/lmr/m/n/10.95 Controllery jsou v mod-ulech samoz°e-j-mostí. Jsou roz²i°itel
 né po-mocí t°ídy \T1/lmtt/m/n/10.95 PluginController
  []
 
-[53] [54] [55] <figures/widgety.png, id=1496, 634.37pt x 485.815pt>
+[53] [54] [55] <figures/widgety.png, id=1531, 634.37pt x 485.815pt>
 File: figures/widgety.png Graphic file (type png)
 
 <use figures/widgety.png>
-Overfull \hbox (14.8907pt too wide) in paragraph at lines 1633--1634
+Overfull \hbox (14.8907pt too wide) in paragraph at lines 1650--1651
  [] 
  []
 
@@ -1124,7 +1119,7 @@ Overfull \hbox (14.8907pt too wide) in paragraph at lines 1633--1634
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [56] [57 <C:/Dokumenty/diplomka/text/figures/widgety.png (PNG copy)>]
-Overfull \hbox (8.902pt too wide) in paragraph at lines 1679--1680
+Overfull \hbox (8.902pt too wide) in paragraph at lines 1696--1697
 []\T1/lmr/m/n/10.95 AdminPluginController -- zmín¥ný vý²e v [][]5.4.5.10[][]. P
 °es-n¥ji jde o ví-cená-sob-nou d¥di£nost,
  []
@@ -1133,19 +1128,37 @@ Overfull \hbox (8.902pt too wide) in paragraph at lines 1679--1680
 
 ]
 Kapitola 6.
-[61] [62
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 1763--1764
 
-]
+ []
+
+[62]
+Overfull \hbox (6.28488pt too wide) in paragraph at lines 1821--1822
+\T1/lmr/m/n/10.95 p°i prvním na£ítání a pouºití zkom-pilo-vaného pohledu p°i da
+l²ích na£ítáních. To-muto zpoºd¥ní
+ []
+
+[63]
+Overfull \hbox (1.20859pt too wide) in paragraph at lines 1849--1850
+\T1/lmr/m/n/10.95 <[][]$\T1/lmtt/m/n/10.95 http : / / www . yourpersonaljewelle
+r . co . uk/$[][]\T1/lmr/m/n/10.95 >, který na£etl stránku bez grafiky v rozmez
+í
+ []
+
+[64]
 Kapitola 7.
-(C:\Dokumenty\diplomka\text\divispe2-thesis-2012.bbl [63] [64
+[65
 
-]
+] (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.bbl [66]
 Underfull \hbox (badness 7740) in paragraph at lines 86--91
 \T1/lmr/m/n/10.95 Dos-tupné z: <[][]$\T1/lmtt/m/n/10.95 http : / / msdn . micro
 soft . com / en-[]us / library / dd381412(v = VS . 98 )
  []
 
-[65]
+[67
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 114--120
 \T1/lmr/m/n/10.95 Dos-tupné z: <[][]$\T1/lmtt/m/n/10.95 http : / / www . oracle
  . com / technetwork / articles / javase /
@@ -1169,96 +1182,104 @@ Underfull \hbox (badness 2735) in paragraph at lines 188--194
  : / / blog . csharpwebdeveloper . com / 2011 /
  []
 
-) [66]
+) [68]
 P\v {r}\'{\i }loha A.
-[67
-
-] [68]
-P\v {r}\'{\i }loha B.
 [69
 
-] [70
-
-]
-P\v {r}\'{\i }loha C.
-<figures/frontend1.png, id=1626, 665.48625pt x 429.10312pt>
+] [70]
+P\v {r}\'{\i }loha B.
+<figures/frontend1.png, id=1680, 665.48625pt x 429.10312pt>
 File: figures/frontend1.png Graphic file (type png)
 
 <use figures/frontend1.png>
-<figures/frontend2.png, id=1627, 665.48625pt x 632.3625pt>
+<figures/frontend2.png, id=1681, 665.48625pt x 632.3625pt>
 File: figures/frontend2.png Graphic file (type png)
 
 <use figures/frontend2.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backend1.png, id=1628, 685.05937pt x 353.82187pt>
+<figures/backend1.png, id=1682, 685.05937pt x 353.82187pt>
 File: figures/backend1.png Graphic file (type png)
 
 <use figures/backend1.png>
-Overfull \hbox (9.76817pt too wide) in paragraph at lines 1844--1845
+Overfull \hbox (9.76817pt too wide) in paragraph at lines 1988--1989
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backend2.png, id=1629, 684.30656pt x 356.0803pt>
+<figures/backend2.png, id=1683, 684.30656pt x 356.0803pt>
 File: figures/backend2.png Graphic file (type png)
 
 <use figures/backend2.png>
-Overfull \hbox (9.27885pt too wide) in paragraph at lines 1851--1852
+Overfull \hbox (9.27885pt too wide) in paragraph at lines 1995--1996
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[71 <C:/Dokumenty/diplomka/text/figures/frontend1.png>] [72 <C:/Dokumenty/diplo
-mka/text/figures/frontend2.png>] [73 <C:/Dokumenty/diplomka/text/figures/backen
-d1.png> <C:/Dokumenty/diplomka/text/figures/backend2.png>] [74
+[71
+
+ <C:/Dokumenty/diplomka/text/figures/frontend1.png>] [72 <C:/Dokumenty/diplomka
+/text/figures/frontend2.png>] [73 <C:/Dokumenty/diplomka/text/figures/backend1.
+png> <C:/Dokumenty/diplomka/text/figures/backend2.png>] [74
 
 ]
-P\v {r}\'{\i }loha D.
+P\v {r}\'{\i }loha C.
 [75] [76
 
 ]
-P\v {r}\'{\i }loha E.
-<figures/cd.png, id=1660, 88.07906pt x 69.25874pt>
+P\v {r}\'{\i }loha D.
+<figures/cd.png, id=1714, 88.07906pt x 69.25874pt>
 File: figures/cd.png Graphic file (type png)
  <use figures/cd.png>
 [77 <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux) ) 
 Here is how much of TeX's memory you used:
- 10386 strings out of 495285
- 143205 string characters out of 3179883
- 401849 words of memory out of 3000000
- 12823 multiletter control sequences out of 15000+200000
+ 10411 strings out of 495285
+ 143706 string characters out of 3179883
+ 403257 words of memory out of 3000000
+ 12830 multiletter control sequences out of 15000+200000
  77223 words of font info for 52 fonts, out of 3000000 for 9000
- 18 hyphenation exceptions out of 8191
- 38i,9n,51p,1442b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/
-MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.8/
-fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips
-/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-ec.e
-nc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program
- Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86
-)/MiKTeX 2.8/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.
-8/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/typ
-e1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm
-/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr12.pfb><
-C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr6.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiK
-TeX 2.8/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts
-/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/publ
-ic/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmro1
-0.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmss10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files
- (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKT
-eX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (95 pages, 2354069 bytes).
+ 19 hyphenation exceptions out of 8191
+ 38i,10n,51p,1447b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): n
+ame{subsection.3.3.6} has been referenced but does not exist, replaced by a fix
+ed one
+
+pdfTeX warning (dest): name{subsection.3.3.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program
+ Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/Mi
+KTeX 2.8/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.8/fo
+nts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/l
+m/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx10.pf
+b><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx12.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x
+86)/MiKTeX 2.8/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2
+.8/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/typ
+e1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm
+/lmr6.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr8.pfb><C:
+/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr9.pfb><C:/Program File
+s (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiK
+TeX 2.8/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fon
+ts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/pu
+blic/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lms
+y9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/
+Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt9.pfb>
+Output written on divispe2-thesis-2012.pdf (95 pages, 2377381 bytes).
 PDF statistics:
- 1842 PDF objects out of 2073 (max. 8388607)
- 555 named destinations out of 1000 (max. 500000)
- 1039 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1898 PDF objects out of 2073 (max. 8388607)
+ 568 named destinations out of 1000 (max. 500000)
+ 1079 words of extra memory for PDF output out of 10000 (max. 10000000)
 

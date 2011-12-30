@@ -11,6 +11,7 @@
 % One-page layout: (proof-)reading on display
 %%%% \documentclass[11pt,oneside,a4paper]{book}
 % Two-page layout: final printing
+% openany - kapitoly bez vynechání stránky
 \documentclass[11pt,twoside,a4paper]{book}   
 %=-=-=-=-=-=-=-=-=-=-=-=--=%
 % The user of this template may find useful to have an alternative to these 
@@ -45,6 +46,8 @@
 \usepackage{subfigure}
 
 \usepackage{array}
+
+\usepackage{multirow}
 
 \usepackage{textcomp}
 \usepackage[usenames]{color}
@@ -201,7 +204,14 @@ unicode=true,
 \let\oldUrl\url
 \renewcommand\url[1]{<\texttt{\oldUrl{#1}}>}
 
-
+%start kapitol na levé straně
+%\makeatletter
+%\renewcommand*\cleardoublepage{
+%  \clearpage\if@twoside
+%     \ifodd\c@page \hbox{}\newpage\if@twocolumn\hbox{}%
+%     \newpage\fi\fi\fi
+%  }
+%\makeatother
 
 
 \begin{document}
@@ -260,7 +270,7 @@ unicode=true,
 % Ve vysledne svazane praci bude nahrazena skutecnym 
 % oficialnim zadanim vasi prace.
 {
-\pagenumbering{roman} \cleardoublepage \thispagestyle{empty}
+\pagenumbering{roman} \oldcleardoublepage \thispagestyle{empty}
 \begin{figure}
 \begin{center}
 \includegraphics[width=15cm]{figures/zadani.png}
@@ -289,7 +299,7 @@ V první řadě bych chtěl poděkovat své vedoucí Ing. Boženě Mannové, Ph.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%    Abstract 
  
 \abstractpage
-This thesis deals with a working concept of internet e-commerce application, which addapts modular software architecture.  First the research on existing open-source and commercial solutions is done, then the research on programming languages and their development platforms with matching frameworks is performed. After choosing a suitable programming language with a framework the analysis and design of the implementation is described in depth. Then there are described the way of the implementation and necessary compromises when programming into the chosen language platform. After that the comparison with the existing solutions is done. In the conclusion results of the thesis are evaluated and compared with the defined goals.
+This thesis deals with a working concept of internet e-commerce application, which addapts modular software architecture.  First the research on existing open-source and commercial solutions is done, then the research on programming languages and their development platforms with matching frameworks is performed. After choosing a suitable programming language with a framework the analysis and design of the implementation is described in depth. Then there are described the way of the implementation and necessary compromises when programming into the chosen language platform. After that the comparison with the existing solutions is done. In the conclusion results of the thesis are evaluated, compared with the defined goals and possible extensions of the modular e-commerce are proposed.
 
 
 % Prace v cestine musi krome abstraktu v anglictine obsahovat i
@@ -300,7 +310,7 @@ This thesis deals with a working concept of internet e-commerce application, whi
 \vskip 2.75\baselineskip
 
 \noindent
-V této práci se zabývám internetovým obchodem, který si klade za cíl mít modulární softwarovou architekturu. Nejprve provádím rešerši mezi již existujícími komerčními i open-source internetovými obchody, dále provádím rešerši vhodných programovacích jazyků s vhodnými frameworky. Po zvolení vhodného programovacího jazyka s frameworkem provádím analýzu a návrh implementace. Poté popisuji způsob implementace a nutné kompromisy při programování do zvoleného jazyka. V dalším bodě práce provádím srovnání mého řešení s již existujícími řešeními. V předposledním bodě navrhuji další pokračování ve vývoji modulárního e-shopu. Na závěr hodnotím výsledky práce a porovnávám je s vytyčenými cíli.
+Tato práce se zabývá internetovým obchodem, který si klade za cíl mít modulární softwarovou architekturu. Nejprve je provedena rešerše mezi již existujícími komerčními i open-source internetovými obchody. Dále rešerše zpracovává výběr ze současných programovacích jazyků s vhodnými frameworky. Po zvolení vhodného programovacího jazyka s frameworkem je provedena analýza a návrh implementace. Poté je popsán způsob implementace a nutné kompromisy při programování do zvoleného jazyka. V dalším bodě práce je implementované řešení otestováno a porovnáno s již existujícími řešeními. V závěru jsou zhodnoceny výsledky práce, porovnány s vytyčenými cíli a je naznačeno další možné pokračování vývoje modulárního e-shopu.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Obsah / Table of Contents 
@@ -342,11 +352,13 @@ V této práci se zabývám internetovým obchodem, který si klade za cíl mít
 % \include{2_teorie}
 % atd...
 
+%start kapitol na levé straně
+
 %*****************************************************************************
 \chapter{Úvod}
-Internetových obchodů existuje nepřeberné množství. Nakupování na internetu se stalo fenoménem posledních 10ti let a vypadá to, že se bude jen nadále rozšiřovat. Jen v České republice se tržby internetových obchodů za poslední období Vánoc roku 2010 prodalo zboží za přibližně 13 miliard korun a průměrný nárůst obratu oproti období Vánoc z roku 2009 byl neuvěřitelných 40\% \cite{vanocenainternetu}.  Od počátku internetového nakupování se toto odvětví neustále rozšiřuje a vyvíjí. Roste s ním nejen kvalita služeb nabízených obchodníky, ale i uživatelská přívětivost internetových obchodů a jejich systémů. To vše díky rychle se vyvíjejícím technologiím a silně konkurenčnímu prostředí internetového podnikání.
+Internetových obchodů existuje nepřeberné množství. Nakupování na internetu se stalo fenoménem posledních 10ti let a vypadá to, že se bude jen nadále rozšiřovat. Jen v České republice se tržby internetových obchodů za poslední období Vánoc roku 2010 prodalo zboží za přibližně 13 miliard korun a průměrný nárůst obratu oproti období Vánoc z roku 2009 byl neuvěřitelných 40\% \cite{vanocenainternetu}. Od počátku internetového nakupování se toto odvětví neustále rozšiřuje a vyvíjí. Roste s ním nejen kvalita služeb nabízených obchodníky, ale i uživatelská přívětivost internetových obchodů a jejich systémů. To vše díky rychle se vyvíjejícím technologiím a silně konkurenčnímu prostředí internetového podnikání.
 
-Pro tým popř. jednotlivce vyvíjející internetový obchod, ať už jako komerční či open-source produkt, je proto zásadní výběr programového vybavení a platformy, na které bude tento produkt zakládat a rozvíjet. Je třeba počítat s požadavky obchodníků a rychlým vývojem trhu s těmito softwarovými produkty. Nově vznikající webové standardy, inovované vlastnosti programovacích a grafických prostředí rychle prostupují mezi vývojáře a jen ti, kteří dokáží pružně reagovat a tyto novinky nabídnout ve svých produktech, udrží aktuálnost a konkurenceschopnost v moři jiných internetových obchodů.
+Pro tým nebo jednotlivce vyvíjející internetový obchod, ať už jako komerční či open-source produkt, je proto zásadní výběr programového vybavení a platformy, na které bude tento produkt zakládat a rozvíjet. Je třeba počítat s požadavky obchodníků a rychlým vývojem trhu s těmito softwarovými produkty. Nově vznikající webové standardy, inovované vlastnosti programovacích a grafických prostředí rychle prostupují mezi vývojáře a jen ti, kteří dokáží pružně reagovat a tyto novinky nabídnout ve svých produktech, udrží aktuálnost a konkurenceschopnost v moři jiných internetových obchodů.
 
 \section*{Proč modulární?}
 
@@ -354,22 +366,22 @@ Návrh a implementace individuálního řešení internetového obchodu obchodn�
 
 Proto přišla myšlenka dynamicky rozšiřitelného internetového obchodu, který bude schopný rychlejšímu přizpůsobení požadavkům obchodníků a bude možné rozšířit jeho jádro o další funkce a technologie bez většího zásahu v kódu samotného jádra.
 
-Již v úvodu je třeba předem říct, že tento program není vytvářen za účelem nasazení v komerčním prostředí, ale klade si za cíl ověřit, že je tvorba takového modulárního internetového obchodu možná a soustředí se na samotné možnosti rozšiřitelnosti jako takové na vhodně zvolené vývojové platformě.
+Již v úvodu je třeba říct, že tento program není vytvářen za účelem nasazení v komerčním prostředí. Klade si za cíl ověřit, že je tvorba takového modulárního internetového obchodu možná a soustředí se na samotné možnosti rozšiřitelnosti jako takové na vhodně zvolené vývojové platformě.
 
 %TODO: do závěru?
-Vývoj finálního produktu pro obchodníky vyžaduje mnohem delší časový interval, více lidských zdrojů, více zkušeností s vývojem internetových aplikací a nadmíru kvalitní znalost vývojového prostředí, do kterého je nutné celý projekt dobře navrhnout a dlouhodobě otestovat, což je podle nabytých zkušeností nejlepší v ostrém produkčním prostředí. Vzhledem k tomu, že během této práce probíhalo seznamování se se zvoleným vývojovým prostředím, objevuje se v práci všeobecně známý vývojový fenomén "nalezení lepšího způsobu, když je hotovo".
+Vývoj finálního produktu pro obchodníky vyžaduje mnohem delší časový interval, více lidských zdrojů, více zkušeností s vývojem internetových aplikací a nadmíru kvalitní znalost vývojového prostředí, do kterého je nutné celý projekt dobře navrhnout a dlouhodobě otestovat. Podle nabytých zkušeností je nejlepší vývoj určený pro ostré produkční prostředí. Vzhledem k tomu, že během této práce probíhalo seznamování se se zvoleným vývojovým prostředím, objevuje se v práci všeobecně známý vývojový fenomén \uv{nalezení lepšího způsobu, když je hotovo}.
 
 
 \section{Popis struktury práce}
 %TODO: zkontrolovat kapitoly
-Tato práce představuje popis problému a vymezuje cíle a požadavky v kapitole \ref{sec:popisproblemu}. Kapitola \ref{sec:reserse} provádí rešerši na aktuální nabídku dostupných typových internetových obchodů jak komerčních, tak open-source. Dále provádí rešerši všech vhodných implementačních prostředí. Analýza v kapitole \ref{sec:analyza} se soustředí na systematický rozbor modulárního e-shopu do podstatných detailů, potřebných k nutnému porozumění fungování aplikace e-shopu. Včetně různých alternativ a volby implementačního prostředí z již v předchozí kapitole představených. V kapitole \ref{sec:realizace} je následně popsána implementace se zaměřením na nestandardní řešení. Implementace využívá vlastností zvolené implementační platformy a softwarové architektury, kterou dále rozšiřuje na modulární. Vytvořená aplikace je v kapitole \ref{sec:testovani} otestována, je vyzkoušeno nasazení na webový server a jsou změřeny hodnoty porovnávající rychlosti běhu základní aplikace a rychlosti aplikace s připojenými moduly.
+Tato práce představuje popis problému a vymezuje cíle a požadavky v kapitole \ref{sec:popisproblemu}. Kapitola \ref{sec:reserse} provádí rešerši na aktuální nabídku dostupných typových internetových obchodů jak komerčních, tak open-source. Dále provádí rešerši všech vhodných implementačních prostředí. Analýza v kapitole \ref{sec:analyza} se soustředí na systematický rozbor modulárního e-shopu do podstatných detailů, potřebných k nutnému porozumění fungování aplikace e-shopu včetně různých alternativ. V kapitole \ref{sec:analyza} je popsána také volba implementačního prostředí vybraného z prostředí zmíněných v předchozí kapitole \ref{sec:reserse}. V kapitole \ref{sec:realizace} je následně popsána implementace se zaměřením na nestandardní řešení. Implementace využívá vlastností zvolené implementační platformy a softwarové architektury, kterou dále rozšiřuje na modulární. Vytvořená aplikace je v kapitole \ref{sec:testovani} otestována, je vyzkoušeno nasazení na webový server a jsou změřeny hodnoty porovnávající rychlosti běhu základní aplikace a rychlosti aplikace s připojenými moduly. V závěru \ref{sec:zaver} je zhodnoceno splnění cílů práce a jsou navržena další možná pokračování. 
 
 
 %*****************************************************************************
 \chapter{Popis řešeného problému}
 \label{sec:popisproblemu}
 
-V této kapitole je probrán problém návrhu elektronického obchodu a s ním spojené problémy a specifika elektronického obchodování. Kapitola popisuje nejen, co je cílem práce, ale i, co cílem práce není.
+V této kapitole je probrán problém návrhu elektronického obchodu a s ním spojené problémy a specifika elektronického obchodování. Kapitola popisuje nejen, co je cílem práce, ale i to, co cílem práce není.
 
 \section{Popis problému}
 
@@ -379,15 +391,15 @@ Začínající prodejci mají proto před sebou složitou volbu. Nabízí se jim
 
 Podnikatelé se speciálními požadavky na internetový obchodní systém musí volit řešení v podobě tvorby internetového obchodu na míru. Jejich rozhodnutí spočívá ve volbě firmy, která se zabývá programováním těchto řešení.
 
-Naopak společnosti zabývající se velkoobchodním prodejem mají přesné požadavky na internetový obchod. Často mají svoje vlastní IT oddělení, které vytváří a spravuje firemní internetový obchod, který zajišťuje prodej dalším firmám a volitelně i koncovým zákazníkům. Pro takové společnosti není problém přizpůsobovat systém měnícím se požadavkům.
+Naopak společnosti, zabývající se velkoobchodním prodejem, mají přesné požadavky na internetový obchod. Často mají svoje vlastní IT oddělení, které vytváří a spravuje firemní internetový obchod, který zajišťuje prodej dalším firmám a volitelně i koncovým zákazníkům. Pro takové společnosti není problém přizpůsobovat systém měnícím se požadavkům.
 
-V každém případě se obchodní model společností vyvíjí a mění a s ním se mění i požadavky na internetový obchodní systém. V případě změny požadavků je třeba reagovat změnou funkčnosti systému, kterou je třeba doplnit nebo změnit. Aby byla zaručena rozšiřitelnost a zůstaly nízké náklady, je vhodné zvolit modulární architekturu takového systému. Aplikace může být poté distribuována prodejcům s jimi požadovanými funkcemi dodanými pomocí rozšiřitelných modulů, ale přitom bude mít stejné jádro.
+V každém případě se obchodní model společností vyvíjí a mění a s ním i požadavky na internetový obchodní systém. V případě změny požadavků je třeba reagovat změnou funkčnosti systému, kterou je třeba doplnit nebo změnit. Aby byla zaručena rozšiřitelnost a zůstaly nízké náklady, je vhodné zvolit modulární architekturu takového systému. Aplikace může být poté distribuována prodejcům s jimi požadovanými funkcemi dodanými pomocí rozšiřitelných modulů, ale přitom bude mít stejné jádro.
 
 \section{Vymezení cílů práce}
 
 Cílem práce je navrhnout a implementovat aplikaci internetového obchodu s využitím vhodné modulární architektury. Případně bude třeba modularitu v nemodulární architektuře definovat. Výběr programovacího jazyka bude záviset na jeho vhodnosti pro webovou aplikaci obchodu a schopnosti implementovat danou modulární architekturu. Také bude brán zřetel na podporu a vývoj jazyka do budoucna a jeho sledování trendů. Implementace bude demonstrovat využití modularity aplikace záměnou různých modulů. Upřesnění požadavků na aplikaci bude provedeno analýzou. 
 
-Práce se nebude nezabývat řešením přívětivosti uživatelského rozhraní a jeho grafického vzhledu, protože to není jejím stěžejním tématem a bezpochyby by to vyžadovalo významné rozšíření rozsahu práce.
+Práce se nebude zabývat řešením přívětivosti uživatelského rozhraní a jeho grafického vzhledu, protože to není jejím stěžejním tématem a bezpochyby by to vyžadovalo významné rozšíření rozsahu práce.
 
 Také nebude cílem vývoj komplexního a vše zahrnujícího e-shopu, ale jen jeho jádra s moduly demonstrujícími funkčnost.
 
@@ -401,7 +413,7 @@ Také nebude cílem vývoj komplexního a vše zahrnujícího e-shopu, ale jen j
 
 \section{Vymezení pojmů}
 \begin{itemize}
-\item \textbf{Architektura} je pojem předefinovávaný velmi často. Martin Fowler ve své knize \cite{PEAA} ani nedává přesnou definici. Jen říká, že mají dva společné prvky. A to - rozložení systému na části na nejvyšší úrovni a rozhodnutí, která se těžko mění. Také říká, že systém má ve většině případů více než jednu architekturu a pohled na to, co je architektonicky důležité, se mění během životního cyklu systému.
+\item \textbf{Architektura} je velmi často předefinovávaný pojem. Martin Fowler ve své knize \cite{PEAA} ani nedává přesnou definici. Jen říká, že mají dva společné prvky. A to - rozložení systému na části na nejvyšší úrovni a rozhodnutí, která se těžko mění. Také říká, že systém má ve většině případů více než jednu architekturu a pohled na to, co je architektonicky důležité, se mění během životního cyklu systému.
 
 Podle článku IEEE Recommended Practice for Architectural Description of Software-Intensive Systems \cite{IEEE1471} je architektura uspořádání systému, rozděleného do komponent, jejich vztahů mezi nimi, mezi prostředím a principy vedoucími návrh a vývoj. Doporučuji také článek Petera Eelese, který pojem softwarové architektury rozebírá podrobně \footnote{\url{http://www.ibm.com/developerworks/rational/library/feb06/eeles/}}.
 
@@ -410,7 +422,7 @@ Podle článku IEEE Recommended Practice for Architectural Description of Softwa
 
 \item \textbf{Návrhový vzor} systematicky pojmenovává, motivuje a vysvětluje všeobecný návrh, který cílí na opakující se návrhový problém v objektově-orientovaných systémech. Popisuje problém, řešení, kdy toto řešení lze aplikovat a jeho následky. Také poskytuje implementační rady a příklady. Řešení je obecné uspořádání objektů a tříd, které řeší daný problém. Toto řešení je upraveno a implementováno tak, aby řešilo problém v určitém prostředí\cite{GOF}. Často se jedná o řešení využívající objektově orientovaného návrhu a je představováno obecnými objekty, třídami, jejich spoluprací a vztahy mezi nimi. Nedají se proto dobře využít ve funkcionálním programování. \cite{wiki:design-pattern-computer-science}
 
-\item \textbf{Framework} je předpřipravený softwarový systém, určený k dokončení a spuštění. Framework určuje architekturu pro skupinu podsystémů a poskytuje základní stavební bloky pro jejich vytvoření. Také definuje své části, které musí být přizpůsobeny pro dosažení požadované funkčnosti. V objektově orientovaném prostředí se framework skládá z \textit{abstraktních} a \textit{konkrétních tříd}. Spuštění takového frameworku spočívá ve skládání a dědění těchto existujících tříd. \cite{POSA}. Podle Wikipedie je abstrakcí, ve které je běžný kód poskytující obecnou funkčnost často selektivně přepisován nebo specifikován uživatelským kódem, což poskytuje požadovanou funkcionalitu. Frameworky jsou speciálním případem softwarových knihoven, které zahrnují znovupoužitelnost a jejich kód je odstíněn dobře definovaným API. Od běžných softwarových knihoven se frameworky liší následujícími vlastnostmi. Běh programu řídí framework a ne, část aplikace, která framework volá. Framework má vlastní výchozí chování a nejedná se o volání prázdných příkazů. Framework může být rozšířen uživatelem, který pomocí vhodného kódu určuje specifickou funkčnost. Vlastní kód frameworku není účelem upravovat ale rozšiřovat. \cite{wiki:software-framework} 
+\item \textbf{Framework} je předpřipravený softwarový systém, určený k dokončení a spuštění. Framework určuje architekturu pro skupinu podsystémů a poskytuje základní stavební bloky pro jejich vytvoření. Také definuje své části, které musí být přizpůsobeny pro dosažení požadované funkčnosti. V objektově orientovaném prostředí se framework skládá z \textit{abstraktních} a \textit{konkrétních tříd}. Spuštění takového frameworku spočívá ve skládání a dědění těchto existujících tříd. \cite{POSA}. Podle Wikipedie je abstrakcí, ve které je běžný kód poskytující obecnou funkčnost často selektivně přepisován nebo specifikován uživatelským kódem, což poskytuje požadovanou funkcionalitu. Frameworky jsou speciálním případem softwarových knihoven, které zahrnují znovupoužitelnost a jejich kód je odstíněn dobře definovaným API. Od běžných softwarových knihoven se frameworky liší následujícími vlastnostmi. Běh programu řídí framework a nikoliv, část aplikace, která framework volá. Framework má vlastní výchozí chování a nejedná se o volání prázdných příkazů. Framework může být rozšířen uživatelem, který pomocí vhodného kódu určuje specifickou funkčnost. Vlastní kód frameworku není účelem upravovat ale rozšiřovat. \cite{wiki:software-framework} 
 \end{itemize}
 
 \section{Rešeršní zpracování vhodných implementačních prostředí}
@@ -418,15 +430,15 @@ Podle článku IEEE Recommended Practice for Architectural Description of Softwa
 Webové aplikace jsou uloženy na serverech, které je poskytují klientům. Servery přijímají požadavky a většinou odpovídají zasláním stránek HTML v textové podobě, nebo jiných binárních dat, jako jsou obrázky, soubory, atd. Na serveru běží aplikace, která se o vyřizování požadavků stará. Podle programového vybavení serveru je třeba vybrat programovací jazyk či platformu, na kterých jsou webové aplikace postavené.
 
 \subsection{Jazyk PHP a jeho frameworky}
-Jde o skriptovací jazyk původně navržený pro vývoj dynamických webových stránek.Kód je vkládán do HTML obsahu a je interpretován za běhu, nedochází tedy k překladu.
+Jde o skriptovací jazyk, původně navržený pro vývoj dynamických webových stránek.Kód je vkládán do HTML obsahu a je interpretován za běhu, nedochází tedy k překladu.
  Ke svému běhu vyžaduje interpret, který bývá součástí webového serveru a generuje webové stránky za běhu z php skriptů. PHP procesor je dostupný pro většinu webových serverů na všech možných operačních systémech. Syntaxí byl PHP inspirován jazyky C, CGI, Perl a Python. I když šlo zpočátku o procedurální jazyk, od verze 3  je podporován i objektově orientovaný vývoj. Licenčně jde o volný software.\cite{phpmanual}
  
-PHP díky své dostupnosti, praktičnosti a rychlosti umožnil vývoj mnoha frameworků, které nabízejí snadnější vytváření komponent a navrhování struktur pro rychlejší aplikační vývoj. Mnohé frameworky existují dlouho a nabízejí funkčnost podobnou aplikačním platformám od Oracle a Microsoftu. Mezi známé a zavedené frameworky patří například Zend Framework, CakePHP, Symfony a také český Nette. Nejčastější webový server, na kterém je php provozováno je Apache spolu s kombinací databáze MySQL. Na serverech s PHP fungují i významné světové portály jako je Facebook, Wikipedia. Použitím PHP vzniklo také plno open source správců obsahu jako je MediaWiki, Drupal, Joomla, Wordpress, či Moodle. Nevýhodou PHP je, že neodděluje serverovou část od klientské a v základu je vývoj webových aplikací komplikovaný. \cite{wiki:frameworks}
+PHP díky své dostupnosti, praktičnosti a rychlosti umožnil vývoj mnoha frameworků, které nabízejí snadnější vytváření komponent a navrhování struktur pro rychlejší aplikační vývoj. Mnohé frameworky existují dlouho a nabízejí funkčnost podobnou aplikačním platformám od Oracle a Microsoftu. Mezi známé a zavedené frameworky patří například Zend Framework, CakePHP, Symfony a také český Nette. Nejčastější webový server, na kterém je php provozováno je Apache spolu s kombinací databáze MySQL. Na serverech s PHP fungují i významné světové portály jako je Facebook, Wikipedia a další. Použitím PHP vzniklo také plno open source správců obsahu jako je MediaWiki, Drupal, Joomla, Wordpress, či Moodle. Nevýhodou PHP je, že neodděluje serverovou část od klientské a v základu je vývoj webových aplikací komplikovaný. \cite{wiki:frameworks}
  
 
 \subsection{Platforma Microsoft .NET}
 \label{asp.net}
-Dalším z často používaných programovacích nástrojů je kompletní vývojové prostředí od firmy Microsoft. Ta začala konkurovat jazyku PHP svým vlastním skriptovacím jazykem ASP, který později přenesla na vývojovou platformu .NET a přejmenovala jej na ASP.NET. ASP.NET  je přeložena do bytekódu platformy .NET , který slouží jako mezistupeň překladu z vyšších programovacích jazyků platformy (ASP.NET, C\# , Visual Basic.NET, J\#, a další) do strojového kódu\cite{netframework}.  Díky společnému bytekódu lze programovat projekty pro webové prostředí i v ostatních jazycích .NET. Výhodou je také předkompilovávání do dll knihoven, které zrychlí běh aplikace, protože se nemusí opakovaně parsovat skripty jako u PHP. Dalšími výhodami je nativní podpora šablon, takže se redukuje duplikování kódu. Dále ASP.NET poskytuje velké množství ovládacích prvků a knihoven, které významně urychlí vývoj. Jako produkt Microsoftu je nejčastěji nasazován na serveru IIS v prostředí Windows, ale existují i další servery, které umožňují nasazení řešení díky dalším interesovaným firmám.\cite{aspnet}
+Dalším z často používaných programovacích nástrojů je kompletní vývojové prostředí od firmy Microsoft. Ta začala konkurovat jazyku PHP svým vlastním skriptovacím jazykem ASP, který později přenesla na vývojovou platformu .NET a přejmenovala jej na ASP.NET. ASP.NET  je přeložena do bytekódu platformy .NET , který slouží jako mezistupeň překladu z vyšších programovacích jazyků platformy (ASP.NET, C\# , Visual Basic.NET, J\#, a další) do strojového kódu\cite{netframework}.  Díky společnému bytekódu lze programovat projekty pro webové prostředí i v ostatních jazycích .NET. Výhodou je také předkompilovávání do dll knihoven, které zrychlí běh aplikace, protože se nemusí opakovaně parsovat skripty jako u PHP. Dalšími výhodami je nativní podpora šablon, takže se redukuje duplikování kódu. Dále ASP.NET poskytuje velké množství ovládacích prvků a knihoven, které významně urychlí vývoj. Jako produkt Microsoftu je nejčastěji nasazován na serveru IIS v prostředí Windows, ale existují i jiné servery, které umožňují nasazení řešení díky dalším interesovaným firmám.\cite{aspnet}
 
 ASP.NET nabízí k programování webových aplikací dva frameworky - WebForms a MVC. 
 WebForms pracují na principu desktopového grafického rozhraní a snaží se obejít bezestavovost protokolu HTTP. Aplikace se řídí událostmi a  zachovává stav. Používá se kombinace HTML a JavaScriptu pomocí dvou základních metod ViewState a SessionState. ViewState využívá posílání stavu ve skrytých polích formulářů, což může při špatném použití způsobit přenos nadměrného množství dat. Druhá metoda SessionState udržuje stav na serveru pomocí session, což může při nesprávném použití zatěžovat server.
@@ -436,7 +448,7 @@ MVC framework je klasická Model-View-Controller architektura připravená pro p
 \subsection{Platforma Java EE a frameworky}
 Java platforma Enterprise Edition je často používaná platforma pro serverové aplikace napsané v jazyce Java. Je to edice obohacená o balíčky důležité pro aplikační server, které rozšiřují funkčnost a umožňují tak programátorům soustředit se na řídící logiku místo integrování funkčností běžných na serverových aplikacích. Aplikace proto zvládají transakce, zabezpečení, škálovatelnost, paralelní běh a správu komponent, které se do aplikace přidávají.
 
-Pro aplikační servery podporující Javu je také dostupné množství komponent, jak přímo od Oracle (dříve Sun Microsystems), tak od dalších organizací. Mezi nimi jsou například serverové komponenty Enterprise Java Beans, které umožňují tvorbu modulárních podnikových aplikací a oddělují bussiness logiku aplikace od prezentační. Dále mezi ně patří Java Server Faces, což je MVC framework využívající XML pro oddělení uživatelského rozhraní a bussiness logiky. Mezi aplikace od dalších organizací patří populární Spring a JBoss Seam frameworky, které jsou ekvivalentem pro nativní komponenty implementované v Java EE. Podporují současné techniky programování jako je inverzní řízení (ioc), aspektově orientované programování, objektově relační mapování, architekturu MVC a také unit testy \cite{javaweb}\cite{wiki:frameworks}.
+Pro aplikační servery podporující Javu je také dostupné množství komponent, jak přímo od Oracle (dříve Sun Microsystems), tak od dalších organizací. Mezi nimi jsou například serverové komponenty Enterprise Java Beans, které umožňují tvorbu modulárních podnikových aplikací a oddělují bussiness logiku aplikace od prezentační. Dále mezi ně patří Java Server Faces, což je MVC framework využívající XML pro oddělení uživatelského rozhraní a bussiness logiky. Mezi aplikace od dalších organizací patří populární Spring a JBoss Seam frameworky, které jsou ekvivalentem pro nativní komponenty implementované v Java EE. Podporují současné techniky programování jako je \textit{Inversion of control}, aspektově orientované programování, objektově relační mapování, architekturu MVC a také unit testy \cite{javaweb}\cite{wiki:frameworks}.
 
 Jako vývojové prostředí se nejčastěji používají open-source programy jako Eclipse IDE nebo NetBeans IDE, které buď plně podporují Java EE, nebo jsou pro ně dostupné pluginy usnadňující vývoj. Komerčním programem je např. velmi kvalitní IntelliJ IDEA od společnosti JetBrains\cite{wiki:ide}.
 
@@ -446,28 +458,28 @@ Perl je interpretovaný programovací jazyk pro tvorbu CGI skriptů již od roku
 
 
 \subsection{Python}
-Python je další dynamický interpretovaný programovací jazyk, který spatřil světlo světa před dvaceti lety. Je implementován v jazyce C. Velmi často je distribuován přímo v Linuxových distribucích, proto je známější Linuxovým uživatelům. Je v něm implementován aplikační server Zope, na kterém také beží některé z jeho frameworků, které jsou volně dostupné pro webové aplikace. Nejznámější je asi framework Django, který podporuje moderní metody vývoje a pomáhá vytvářet rychle aplikace, které jsou výkonné, čisté a neopakuje se v nich kód\cite{wiki:python}.
+Python je další dynamický interpretovaný programovací jazyk, který spatřil světlo světa před dvaceti lety. Je implementován v jazyce C. Velmi často je distribuován přímo v Linuxových distribucích, proto je známější Linuxovým uživatelům. Je v něm implementován aplikační server Zope, na kterém také beží některé z jeho frameworků a které jsou volně dostupné pro webové aplikace. Nejznámější je asi framework Django, který podporuje moderní metody vývoje, pomáhá vytvářet rychle výkonné a čisté aplikace bez opakujícího se kódu\cite{wiki:python}.
 
 \subsection{Ruby on Rails}
-Ruby on Rails je webový framework, který vznikl na projektu Basecamp díky dánskému programátorovi David Heinemeier Hanssonovi. Framework je založený na jazyce Ruby a jeho architektura je opět MVC. Vše od AJAXu v šablonách po napojení databáze v modelech je založeno na jazyce Ruby. Základní princip frameworku je "Convention over Configuration", což znamená, že se nejprve je nutné podívat jak věci fungují v základu a poté je případně změnit v konfiguraci. Framework také obsahuje routování URL na komponenty v aplikaci, návrhový vzor Active Record pro řízení dat a spolupracuje s javascriptovým frameworkem Prototype kvůli funkčnosti AJAXu\cite{wiki:ror}. 
+Ruby on Rails je webový framework, jenž vznikl na projektu Basecamp díky dánskému programátorovi Davidovi Heinemeier Hanssonovi. Framework je založený na jazyce Ruby a jeho architektura je opět MVC. Vše od AJAXu v šablonách po napojení databáze v modelech je založeno na jazyce Ruby. Základní princip frameworku je \uv{Convention over Configuration}, což znamená, že je nejprve nutné podívat se jak věci fungují v základu a poté je případně změnit v konfiguraci. Framework také obsahuje routování URL na komponenty v aplikaci, návrhový vzor Active Record pro řízení dat a spolupracuje s javascriptovým frameworkem Prototype kvůli funkčnosti AJAXu\cite{wiki:ror}. 
 
 \section{Rešeršní zpracování existujících implementací}
 
-Internet doslova přetéká řešeními pro internetové obchody, je jich nespočet zdarma k použití a ještě větší množství placených. Zde uvádím jen malý výběr povedených aplikací jak zdarma tak placených. Většina z nich je naprogramována objektově v jazyku PHP bez využití frameworků a to jim ubírá na přehlednosti při přidávání funkčnosti pomocí modulů, které některé z níže jmenovaných podporují. Mezi komerčními řešeními se jako programovací jazyk objevuje nejen PHP, ale i rozsáhlé webové aplikační platformy jako je Microsoft ASP.NET a Java Enterprise Edition.
+Internet doslova přetéká řešeními pro internetové obchody. Je jich nespočet zdarma k použití a ještě větší množství placených. Zde uvádím jen malý výběr povedených aplikací jak zdarma tak placených. Většina z nich je naprogramována objektově v jazyku PHP bez využití frameworků a to jim ubírá na přehlednosti při přidávání funkčnosti pomocí modulů, které některé z níže jmenovaných podporují. Mezi komerčními řešeními se jako programovací jazyk objevuje nejen PHP, ale i rozsáhlé webové aplikační platformy jako je Microsoft ASP.NET a Java Enterprise Edition.
 
 \subsection{Open-source řešení}
 
 \subsubsection{NopCommerce}
 \label{nop}
-Jde o internetový obchod napsaný pro platformu Microsoft ASP.NET s použitím poslední verze MVC frameworku\footnote{\url{http://www.nopcommerce.com/}}. Jeho výhoda spočívá v možnosti přidávání zásuvných modulů, které je třeba doprogramovat. I tak ale nabízí velké množství funkcí. Mezi klíčovým jsou například podpora změny vzhledu, vícejazyčnost, více měn, podpora SSL, reklamace, možnost sestavení produktů, import/export údajů, slevy, daně, různé platby, dopravy (hlavně americké), seznam oblíbených produktů a další a další. Jde o velice schopný modulární systém, s dobrou škálovatelností. Nyní se nachází ve verzi 2.2 a vývoj je stále aktivní díky komunitě z celého světa.
+Jde o internetový obchod napsaný pro platformu Microsoft ASP.NET s použitím poslední verze MVC frameworku\footnote{\url{http://www.nopcommerce.com/}}. Jeho výhoda spočívá v možnosti přidávání zásuvných modulů, které je třeba doprogramovat. I tak ale nabízí velké množství funkcí. Mezi klíčové patří například podpora změny vzhledu, vícejazyčnost, více měn, podpora SSL, reklamace, možnost sestavení produktů, import/export údajů, slevy, daně, různé platby, dopravy (hlavně americké), seznam oblíbených produktů a další a další. Jde o velice schopný modulární systém, s dobrou škálovatelností. Nyní se nachází ve verzi 2.2 a vývoj je stále aktivní díky komunitě z celého světa.
 
 \subsubsection{osCommerce}
 
-Velmi populární řešení internetováho obchodu, které je zdarma dostupné jako volný software\footnote{\url{http://www.oscommerce.com/}}. Naprogramováno je objektově v PHP s podporou databáze MySQL. Poskytuje komplexní řešení pro nabídku,prodej i administraci zboží. Velká vývojářská komunita přispívá do osCommerce tvorbou rozšiřujících modulů, kterých je přes 6 tisíc. Moduly jsou dostupné jako placené ale i zdarma.  Nevýhodou je, že moduly je třeba instalovat manuálně a přepisovat kód jádra aplikace. Dokumentace popisující vytváření modulů je minimální.
+Velmi populární řešení internetováho obchodu, které je zdarma dostupné jako volný software\footnote{\url{http://www.oscommerce.com/}}. Naprogramováno je objektově v PHP s podporou databáze MySQL. Poskytuje komplexní řešení pro nabídku, prodej i administraci zboží. Velká vývojářská komunita přispívá do osCommerce tvorbou rozšiřujících modulů, kterých je přes 6 tisíc. Moduly jsou dostupné jako placené ale i zdarma.  Nevýhodou je, že moduly je třeba instalovat manuálně a přepisovat kód jádra aplikace. Dokumentace popisující vytváření modulů je minimální.
 
 \subsubsection{Quick cart}
 
-Polská společnost Open Solution nabízí tuto aplikaci jako freeware, nebo v rozšířenějších placených verzích\footnote{\url{http://opensolution.org/}}. Quick cart je naprogramován v jazyku PHP, nevyžaduje SQL databázi a je neustále vyvíjen. V jeho základní verzi umožňuje kromě základních funkcí úpravu vzhledu pomocí šablon, doplnění dalších světových jazyků, výběr měn a další. Nevýhodou je, že nepodporuje tvorbu modulů. Na webu výrobce je dostupných pouze několik modifikací přidávajících funkčnost. 
+Polská společnost Open Solution nabízí tuto aplikaci jako freeware, nebo v rozšířenějších placených verzích\footnote{\url{http://opensolution.org/}}. Quick cart je naprogramován v jazyku PHP, nevyžaduje SQL databázi a je neustále vyvíjen. V jeho základní verzi umožňuje kromě základních funkcí úpravu vzhledu pomocí šablon, doplnění dalších světových jazyků, výběr měn a další. Nevýhodou je absence podpory tvorby modulů. Na webu výrobce je dostupných pouze několik modifikací přidávajících funkčnost. 
 
 \subsubsection{Zen.cart}
 
@@ -486,16 +498,16 @@ Další volně dostupná řešení jsou například rozšíření pro známé CM
 
 CubeCart\footnote{\url{http://www.cubecart.com/}} je komerční řešení aplikace internetového obchodu chlubící se kvalitním produktem a velkým počtem zákazníků. Aplikace odporuje tvorbu vlastních šablon a zásuvných modulů. Množství hotových modulů lze dokoupit u vývojové firmy i u komunitních vývojářů. Aplikace je opět naprogramována v jazyku PHP.
 
-\subsection{ShopCentrik}
-Společnost NetDirect nabízí řešení internetových obchodů na klíč\footnote{\url{http://www.shopcentrik.cz/}} využívající stejné jádro a jejich produkt je velmi rozšířený zejména v českém prostředí. Jeho možnosti jsou velmi rozsáhlé a většinou se jedná o individuální řešení. Obchod je naprogramovaný na platformě Microsoft.NET a jeho služby využívají firmy jako Adidas, Best či Autobenex.
+\subsubsection{ShopCentrik}
+Společnost NetDirect nabízí řešení internetových obchodů na klíč\footnote{\url{http://www.shopcentrik.cz/}}. Obchody využívají stejné jádro a jejich produkt je velmi rozšířený zejména v českém prostředí. Jeho možnosti jsou velmi rozsáhlé a většinou se jedná o individuální řešení. Obchod je naprogramovaný na platformě Microsoft.NET a jeho služby využívají firmy jako Adidas, Best či Autobenex.
 
-\subsection{Shopio}
+\subsubsection{Shopio}
 Internetový obchod Shopio\footnote{\url{http://www.shopio.cz/}} nabízí svoje řešení napsané v jazyku PHP v několika variantách rozdělených podle množství funkcí a využívá databáze MySQL. Jeho možnosti jsou podobné jako u jiných hotových řešení. Předností je integrace platebních metod tuzemských finančních domů a způsob dopravy je také připraven pro české obchodníky. SEO a marketingové nástroje jsou samozřejmostí.
 
-\subsection{oXyShop}
+\subsubsection{oXyShop}
 Tento internetový obchod\footnote{\url{http://www.oxyshop.cz/}} je implementován na platformě Java EE a nabízí několik variant připravených řešení až po komplexní modulární systémy, které stojí miliony korun. Předností tohoto produktu je možnost škálovat výkon podle zatížení díky rozložení zátěže serverů do clusteru. Tento e-shop se může pochlubit oceněním Křišťálová Lupa a používá jej například známý prodejce výpočetní techniky Czech Computer.
 
-\subsection{Zoner inShop4} 
+\subsubsection{Zoner inShop4} 
 Internetový obchod Zoner inShop4\footnote{\url{http://www.inshop.cz/}} pochází od známého českého softwarového a nakladatelského domu Zoner. Je vyvíjený na platformě Microsoft .NET a má již 11ti letou historii. Také nabízí napojení všech možných účetních systémů, plateb a dopravců. Neustále se vyvíjí a je aktualizovaný. Jednou z jeho mnoha referencí je například Plzeňský Prazdroj s napojením na interní firemní systém SAP. Licence nabízí formou měsíčních poplatků.
 
 
@@ -506,7 +518,7 @@ Internetový obchod Zoner inShop4\footnote{\url{http://www.inshop.cz/}} pocház�
 \label{sec:analyza}
 
 
-Tato kapitola analyzuje požadavky na aplikaci a možnosti zvolené platformy vzhledem k implementaci obchodu. V závislosti na analýze souběžně tato kapitola představuje návrh řešení aplikace. Požadavky jsou rozděleny tak, aby korespondovaly se zadáním. Tedy na základní požadavky, které jsou potřebné pro jádro obchodu a dále na pokročilé požadavky, které jsou vhodné pro rozšíření aplikace pomocí modulů.
+Tato kapitola analyzuje požadavky na aplikaci a možnosti zvolené platformy vzhledem k implementaci obchodu. V závislosti na analýze tato kapitola souběžně představuje návrh řešení aplikace. Požadavky jsou rozděleny tak, aby korespondovaly se zadáním. Tedy na základní požadavky, které jsou potřebné pro jádro obchodu a dále na pokročilé požadavky vhodné pro rozšíření aplikace pomocí modulů.
 
 \section{Požadavky uživatelů}
 \label{potreby3}
@@ -520,27 +532,27 @@ Pro minimální běh aplikace potřebuje alespoň spravovat zboží a vyřizovat
 
 Pokud by obchodník chtěl prodávat ve více zemích, nebo získat zákazníky mluvícími jinými jazyky, bude požadovat i vícejazyčnost. S tou se do seznamu požadavků dostávají další funkce umožnující práci s cenami v jiných měnách. 
 
-Dalšími specifickými požadavky mohou být například napojení na firemní účetnictví a různé daňové sazby a jiné manipulace s cenami. Což se týká i napojení na skladové systémy a propagaci skladových zásob na stránky s informacemi o zboží. Následné platby a způsoby dodání mohou vyžadovat integraci s platebními systémy bankovních ústavů a systémy spedičních společností, se kterými má obchodník uzavřené smlouvy.
+Dalšími specifickými požadavky mohou být například napojení na firemní účetnictví, definice různých daňových sazeb a přepočítávání cen podle vlastních kritérií. Což se týká i napojení na skladové systémy a propagaci skladových zásob na stránky s informacemi o zboží. Následné platby a způsoby dodání mohou vyžadovat integraci s platebními systémy bankovních ústavů a systémy spedičních společností, se kterými má obchodník uzavřené smlouvy.
 
 V dnešní době patří mezi časté požadavky obchodníků také integrace obchodu do webových služeb porovnávajících ceny zboží, díky kterým se mohou propagovat a přitáhnout tak zákazníky do svého obchodu.
 
-Předpokládaný pozitivní obchodní vývoj prodejce s sebou nese rozvoj požadavků obchodníka na elektronické obchodování, proto je na místě nabídnout další rozšíření jeho starší aplikace podle jeho specifických požadavků. Tyto požadavky je možné realizovat napojením dalších modulů do stávající aplikace bez toho, aby se musel zásadně měnit datový model obchodu. Takže chceme aplikovat rozšíření formou nadstavby místo zásadní přestavby a vývoje nové aplikace abychom zamezili dělání stejných věcí vícekrát a přicházeli tak o čas a peníze. V případě druhé strany, tedy obchodníka, určitě nestojíme o investování do stejné věci dvakrát.
+Předpokládaný pozitivní obchodní vývoj prodejce s sebou nese rozvoj požadavků obchodníka na elektronické obchodování, proto je na místě nabídnout další rozšíření jeho starší aplikace podle jeho specifických požadavků. Tyto požadavky je možné realizovat napojením dalších modulů do stávající aplikace bez toho, aby se musel zásadně měnit datový model obchodu. Takže chceme aplikovat rozšíření formou nadstavby, místo zásadní přestavby a vývoje nové aplikace, abychom zamezili dělání stejných věcí vícekrát a přicházeli tak o čas a peníze. V případě druhé strany, tedy obchodníka, určitě nestojíme o investování do stejné věci dvakrát.
 
 Z důvodu bezpečnosti a integrity aplikace mu není vhodné povolit jako laikovi zasahovat do integrace rozšiřitelných funkčností - modulů. Jako kompromis mu můžeme povolit upravovat některá nastavení modulů.
 
-Za specialitu lze považovat možnost volby, kde se budou jednotlivé funkční prvky nacházet a případná změna vzhledu. I když tato funkčnost patří do univerzálních systémů pro správu obsahu a jiných univerzálních řešení "na vše".
+Za specialitu lze považovat možnost volby, kde se budou jednotlivé funkční prvky nacházet a případná změna vzhledu. I když tato funkčnost patří do univerzálních systémů pro správu obsahu a jiných univerzálních řešení \uv{na vše}.
 
 
 \subsection{Požadavky zákazníka}
 \label{potreby2}
 
-Zákazník přichází na webové stránky proto, aby zjistil informace o produktu a případně produkt zakoupil. To je základní požadavek na aplikaci. Další specifikace těchto požadavků se týkají různých způsobů dodávky a platby za zboží. Další rozšíření je vylepšení uživatelského komfortu, zavedení možnosti komunikace s obchodníkem a diskuse s dalšími zákazníky, kteří se také o produkt zajímají, tedy sociální funkce. Můžeme také zavést zákaznické volby pro práci se zbožím jako jsou hledací a filtrovací funkce, nebo ukládání zboží do vlastních seznamů. Ještě větším rozšířením může být zavedení nebo integrace webů sociálních a jiných prodejních služeb. Samozřejmostí je možnost prohlížení historie objednávek a případných reklamací.
+Zákazník přichází na webové stránky proto, aby zjistil informace o produktu a případně produkt zakoupil. To je základní požadavek na aplikaci. Další specifikace těchto požadavků se týkají různých způsobů dodávky a platby za zboží. Další rozšíření je vylepšení uživatelského komfortu, zavedení možnosti komunikace s obchodníkem a diskuse s dalšími zákazníky, kteří se také o produkt zajímají, tedy sociální funkce. Můžeme také zavést zákaznické volby pro práci se zbožím, jako jsou hledací a filtrovací funkce nebo ukládání zboží do vlastních seznamů. Ještě větším rozšířením může být zavedení nebo integrace webů sociálních a jiných prodejních služeb. Samozřejmostí je možnost prohlížení historie objednávek a případných reklamací.
 
-V případě vícejazyčného webu zákazník určitě ocení možnost převodu mezi měnovými kurzy. Zrovna tak je v dnešní době zvykem informovat zákazníka o stavu objednávky pohybu zboží nejen formou emailových, ale i SMS zpráv.
+V případě vícejazyčného webu zákazník určitě ocení možnost převodu mezi měnovými kurzy. Zrovna tak je v dnešní době zvykem informovat zákazníka o stavu objednávky a pohybu zboží nejen formou emailových, ale i SMS zpráv.
 
 
 \section{Požadavky na hardware}
-Z hlediska hardwarových požadavků je třeba probrat problém z několika úhlů. Nejprve musíme rozhodnout jestli je nutné se vůbec touto otázkou zaobírat, protože většina aplikací internetových obchodů běží na sdílených hosting serverech třetích firem bez větších problémů.
+Z hlediska hardwarových požadavků je třeba probrat problém z několika úhlů. Nejprve musíme rozhodnout, jestli je nutné se vůbec touto otázkou zaobírat, protože většina aplikací internetových obchodů běží na sdílených hosting serverech třetích firem bez větších problémů.
 
 Proto lze požadavky přetransformovat na požadavky na hosting či vlastní server.
 
@@ -550,11 +562,11 @@ Rozhodnutí zda zvolit hosting nebo si pořídit vlastní server záleží na po
 Hosting lze rozdělit do 3 kategorií.
 
 \begin{itemize}
-\item \textbf{Sdílený web hosting} je webový prostor poskytovaný hostingovou firmou na serveru, který hostuje desítky až tisíce jiných webových aplikací, které mezi sebou sdílí zátěž serveru. Toto se hodí pro nenáročné aplikace, které navštíví pár desítek uživatelů denně. Tento hosting má omezené parametry podle platformy, kterou hostuje a programu, který má zákazník zaplacený. Pro velké aplikace je tato varianta hostingu hodně omezující.
+\item \textbf{Sdílený web hosting} je webový prostor poskytovaný hostingovou firmou na serveru, který hostuje desítky až tisíce jiných webových aplikací. Aplikace na sdíleném hostingu mezi sebou sdílí zátěž serveru. Toto se hodí pro nenáročné aplikace s návštěvností pár desítek uživatelů denně. Tento hosting má omezené parametry podle platformy, kterou hostuje a programu, který má zákazník zaplacený. Pro velké aplikace je tato varianta hostingu hodně omezující.
 
 \item \textbf{Virtuální server hosting} už je lepší varianta poskytovaná také hostingovou firmou. Dává zákazníkovi neomezené možnosti co se nastavení parametrů týče. Hardwarový server je sdílený většinou mezi dvěma až deseti jinými zákazníky a proto aplikace dostává k dispozici více systémových prostředků jako je výpočetní výkon a operační paměť potřebné pro bezproblémový běh náročnějších aplikací. Tyto prostředky jsou zpravidla pevně vyhrazené. Výhodou tohoto hostingového programu je lepší technická vybavenost serveru a možnost instalovat vlastní rozšiřující balíčky do systému včetně pravidelných aktualizací hostingovou firmou. Každý zákazník má totiž svůj virtuální operační systém. Virtuální servery mají také tu výhodu, že na nich zákazník může spustit více svých aplikací pod různými doménami s vlastními databázemi a dalšími službami.
 
-\item \textbf{Dedikovaný server hosting}  je nejpokročilejší varianta, kterou mohou hostingové firmy nabídnout. Jedná se o vlastní hardwarový server, který je pouze pro jednoho zákazníka, který si na něm může spouštět a nasazovat vlastní řešení a je jen na něm, co se serverovým výkonem podnikne. Taková varianta je nejdražší z programů hostingů a proto je vhodná pro náročné zákazníky očekávající klidně stovky přístupů za vteřinu. 
+\item \textbf{Dedikovaný server hosting}  je nejpokročilejší varianta, kterou mohou hostingové firmy nabídnout. Jedná se o vlastní hardwarový server určený pouze pro jednoho zákazníka. Ten si na něm může spouštět a nasazovat vlastní řešení. Je jen na něm, co se serverovým výkonem podnikne. Taková varianta je nejdražší z programů hostingů, a proto je vhodná pro náročné zákazníky očekávající klidně stovky přístupů za vteřinu. 
 
 \end{itemize}
 
@@ -562,9 +574,7 @@ Výhodou všech těchto programů je servis serverů a řešení potíží hosti
 
 Dalšími variantami jsou hosting na cloudu, který balancuje rozložení požadavků na více fyzických serverů v případě náhlých výkyvů zátěže. Jde v současné době o nastupující trend, kterého využívají korporátní zákazníci popřípadě si sami taková řešení fyzicky zřizují.
 
-Poslední variantou je umístění vlastního fyzického serveru do housingového centra. Výhodou je úplná kontrola nad serverem a to i fyzická. Nevýhodou je nutná znalost potřebných parametrů při pořizování hardware a také při instalování a udržování systému. Pokud se jedná o jediný server udržovaný zákazníkem jsou potřeba zkušenosti a znalosti pro údržbu a zabezpečení serveru.
-
-\cite{hostingy}
+Poslední variantou je umístění vlastního fyzického serveru do housingového centra. Výhodou je úplná kontrola nad serverem a to i fyzická. Nevýhodou je nutná znalost potřebných parametrů při pořizování hardware a také při instalování a udržování systému. Pokud se jedná o jediný server udržovaný zákazníkem jsou potřeba zkušenosti a znalosti pro údržbu a zabezpečení serveru \cite{hostingy}.
 
 Dále jsou možné další méně časté varianty umístění aplikace na jiné aplikační servery. Příkladem budiž různé linuxové distribuce na diskových serverech NAS nebo na domácích routerech. Tato řešení ale nejsou optimalizovaná na běh složitějších aplikací a proto je lze považovat za nouzová nebo pro osobní potřeby. 
 
@@ -582,15 +592,15 @@ Do základu e-shopu patří:
 \begin{itemize}
 \item \textbf{frontend} -- část pro zákazníky, určená pro procházení a prodej zboží. Obsahuje vybrané informace viditelné veřejně všem návštěvníkům webu.
 \item \textbf{backend} -- zaheslovaná část pouze pro pověřené osoby, tedy správce a obchodníky. Obsahuje všechna nastavení a správu dat, také prodejní informace atd.
-\item \textbf{autentizace správců} -- důležité zabezpečení backendu přihlášením uživatele s přihlašovacím jménem a heslem. Nepovolané osoby se tak do této části e-shopu nedostanou.
-\item \textbf{lokalizace} -- obchodu do více jazyků. V základu je bez nutnosti překladu využíván jediný hlavní jazyk aplikace.
-\item \textbf{autentizace zákazníků} -- přihlašování zákazníků při nákupech, aby mohli zadat svoji adresu a další iniciály pro urychlení vyřízení objednávek pro příští nákup. Zároveň jsou chráněna i informace, které si předává obchodník se zákazníkem jako jsou informace o objednávkách a reklamacích.
+\item \textbf{autentizace správců} -- důležité zabezpečení backendu přihlášením uživatele s přihlašovacím jménem a heslem. Nepovolané osoby se do této části e-shopu nedostanou.
+\item \textbf{lokalizace} -- přeložení obchodu do více jazyků. V základu je bez nutnosti překladu využíván jediný hlavní jazyk aplikace.
+\item \textbf{autentizace zákazníků} -- přihlašování zákazníků při nákupech, aby mohli zadat svoji adresu a další iniciály pro urychlení vyřízení objednávek pro příští nákup. Zároveň jsou chráněny i informace, které si předává obchodník se zákazníkem jako jsou informace o objednávkách a reklamacích.
 \item \textbf{autorizace} -- rozlišení přístupových práv zákazníků a správců po přihlášení do systému obchodu.
 \item \textbf{katalog zboží} -- základní katalog zboží zajišťující přehledné třídění zboží do kategorií.
 \item \textbf{produktová karta} -- základní informace o zboží, které budou zastupovat jednotlivé produkty (kód zboží, název, cena, popis ...).
 \item \textbf{informační stránky} -- další stránky, které neposkytují přímo informace o zboží, ale jsou důležité pro informování zákazníka o nákupu, obchodních podmínkách, kontaktech na obchodníka, atd.
 \item \textbf{objednání} -- standardní proces objednání zboží, díky kterému získá obchodník informace od zákazníka, které zboží objednává, jak ho chce doručit a jakým způsobem za něj zaplatí.
-\item \textbf{přihlašovací formulář} -- základní přihlašovací formulář, který se zobrazí nepřihlášenému uživateli, který chce provédst nějakou ze zabezpečených operací jako například objednání zboží.
+\item \textbf{přihlašovací formulář} -- základní přihlašovací formulář zobrazující se nepřihlášenému uživateli, který chce provést nějakou ze zabezpečených operací jako například objednání zboží.
 \item \textbf{menu} -- standardní menu v hlavičce, které poskytuje základní orientaci při navigaci po webových stránkách obchodu. Může obsahovat například odkazy na obchodní informace, kontakty, obsah nákupního košíku, či katalog zboží.
 \item \textbf{registrace zákazníka} -- důležitý registrační proces, který umožní uchování dat od zákazníka v e-shopu a poskytne je zákazníkovi opět při přihlášení pomocí zvoleného přihlašovacího jména a hesla.
 \item \textbf{nákupní košík} -- povinná vlastnost e-shopu, chovající se jako skutečný nákupní košík, do kterého v obchodě vkládáme vybrané zboží, abychom ho poté mohli zaplatit u pokladny. V případě e-shopu ovšem potřebujeme vědět nejen jaké je v košíku zboží, ale i způsob dopravy k zákazníkovi a způsobu platby, viz. \textit{objednání}.
@@ -606,17 +616,17 @@ V této části probereme možné body rozšíření. Pokud bychom chtěli dosá
 V aplikaci byly vzaty v úvahu tyto body rozšíření:
 
 \begin{itemize}
-\item \textbf{zboží} -- Informace o zboží budou rozšiřitelné o jakékoli položky. Zároveň by byla vhodná možnost vytváření variant zboží jako jsou barvy a velikosti. Samozřejmostí je dostupnost informacích zboží v modulech.
+\item \textbf{zboží} -- informace o zboží budou rozšiřitelné o jakékoli položky. Zároveň by byla vhodná možnost vytváření variant zboží jako jsou barvy a velikosti. Samozřejmostí je dostupnost informací o zboží v modulech.
 \item \textbf{kategorie} -- stejně jako zboží, informace o kategoriích budou rozšiřitelné a dostupné v modulech. Například o cesty k ilustračním obrázkům.
 \item \textbf{menu} -- do menu v hlavičce bude možnost vkládat další položky s odkazy na informace a jiné doplňkové funkce.
 \item \textbf{administrace} -- v administraci půjde spravovat nastavení a informace obsažené v modulech, pokud budou obsahovat administrační část. Tato část v modulech bude také zabezpečená.
-\item \textbf{layout} -- rozložení položek z modulů na stránce v různých částech obchodních procesů, tak jak si zvolí tvůrce modulu.
+\item \textbf{layout} -- rozložení položek z modulů na stránce v různých částech obchodních procesů, tak, jak si zvolí tvůrce modulu.
 \item \textbf{vícejazyčnost} -- do e-shopu půjde nastavit libovolný počet překladů limitovaný jen přeložením výrazů do všech jazyků.
 \item \textbf{zákaznický účet} -- data ze zákaznického účtu aktuálního zákazníka budou k dispozici každému modulu.
 \item \textbf{data} -- všechna data budou dostupná pro moduly a zároveň půjdou data z modulů vkládat do databáze aplikace a rozšiřovat tak datový model.
-\item \textbf{vzhled} -- grafický vzhled se bude dát moct měnit nezávisle na aplikační logice. Jeho vrstva bude oddělená od databáze i od samotné aplikace.
+\item \textbf{vzhled} -- grafický vzhled se bude dát měnit nezávisle na aplikační logice. Jeho vrstva bude oddělená od databáze i od samotné aplikace.
 \item \textbf{šablony} -- se vzhledem úzce souvisí šablony, které budou rozšiřitelné bez potřeby změny aplikační logiky.
-\item \textbf{routování} -- tedy adresy URL, které odkazují na jednotlivá místa v aplikaci ať už stránky nebo funkčnosti. Tyto adresy budou moci být nastavitelné přímo na místa v modulech. 
+\item \textbf{routování} -- tedy adresy URL, které odkazují na jednotlivá místa v aplikaci, ať už stránky nebo funkčnosti. Tyto adresy budou moci být nastavitelné přímo na místa v modulech. 
 \end{itemize}
 
 
@@ -668,7 +678,7 @@ Zákazník získal informace, které hledal.
 \begin{description}
 \item 1.1 Zákazník vyhledá zboží pomocí hledání
 \item 2.1 Zákazník vyfiltruje zboží pomocí parametrů
-\item 3.1 Zákazník klikne na odkaz "Koupit" a tím vloží zboží do košíku.
+\item 3.1 Zákazník klikne na odkaz \uv{Koupit} a tím vloží zboží do košíku.
 \end{description}
 
 
@@ -692,7 +702,7 @@ Zákazník je registrovaný v systému.
 \subsubsection*{Hlavní příběh:}
 
 \begin{enumerate}
-\item Zákazník klikne na odkaz "Registrovat".
+\item Zákazník klikne na odkaz \uv{Registrovat}.
 \item Zákazník vyplní osobní údaje.
 \item Zákazník potvrdí registrační údaje.
 \end{enumerate}
@@ -700,7 +710,7 @@ Zákazník je registrovaný v systému.
 \subsubsection*{Rozšíření:}
 
 \begin{description}
-\item 3.1 Zákazník se odhlásí kliknutím na odkaz "Odhlásit".
+\item 3.1 Zákazník se odhlásí kliknutím na odkaz \uv{Odhlásit}.
 \end{description}
 
 \subsection{Scénář 3 - Nákup zboží}
@@ -725,10 +735,10 @@ Zákazník má potvrzeno, že je zboží objednané.
 \subsubsection*{Hlavní příběh:}
 
 \begin{enumerate}
-\item Zákazník klikne na odkaz "Koupit" a vloží tak zboží do košíku.
-\item Zákazník zkontroluje obsah košíku a klikne na odkaz "Objednat".
+\item Zákazník klikne na odkaz \uv{Koupit} a vloží tak zboží do košíku.
+\item Zákazník zkontroluje obsah košíku a klikne na odkaz \uv{Objednat}.
 \item Zákazník vyplní údaje a zvolí způsob dopravy a platby.
-\item Zákazník zkontroluje údaje a odešle je kliknutím na tlačítko "Potvrdit".
+\item Zákazník zkontroluje údaje a odešle je kliknutím na tlačítko \uv{Potvrdit}.
 \item Zákazník dostane potvrzení od systému, že objednávka byla přijata.
 \end{enumerate}
 
@@ -736,7 +746,7 @@ Zákazník má potvrzeno, že je zboží objednané.
 
 \begin{description}
 \item 1.1 Zákazník vloží do košíku další zboží.
-\item 2.1 Zákazník si přečte obchodní podmínky pod odkazem "Obchodní podmínky".
+\item 2.1 Zákazník si přečte obchodní podmínky pod odkazem \uv{Obchodní podmínky}.
 \item 5.1 Správce obchodu kontaktuje zákazníka v případě komplikací s objednávkou.
 \end{description}
 
@@ -761,15 +771,15 @@ Správce je přihlášený a může spravovat administraci.
 \subsubsection*{Hlavní příběh:}
 
 \begin{enumerate}
-\item Správce klikne na odkaz "Přihlásit".
+\item Správce klikne na odkaz \uv{Přihlásit}.
 \item Správce zadá přihlašovací údaje do načteného formuláře a potvrdí jej.
-\item Správce klikne na odkaz "Administrace".
+\item Správce klikne na odkaz \uv{Administrace}.
 \end{enumerate}
 
 \subsubsection*{Rozšíření:}
 
 \begin{description}
-\item 3.1 Správce se odhlásí kliknutím na odkaz "Odhlásit".
+\item 3.1 Správce se odhlásí kliknutím na odkaz \uv{Odhlásit}.
 \end{description}
 
 \subsection{Scénář 5 - Vložení kategorie}
@@ -792,10 +802,10 @@ V katalogu je nová kategorie.
 \subsubsection*{Hlavní příběh:}
 
 \begin{enumerate}
-\item Správce klikne na odkaz "Katalog".
-\item Správce klikne na odkaz "Vložit kategorii".
+\item Správce klikne na odkaz \uv{Katalog}.
+\item Správce klikne na odkaz \uv{Vložit kategorii}.
 \item Správce vyplní informace o nové kategorii a zvolí nadřazenou kategorii.
-\item Správce potvrdí informace kliknutí na tlačítko "Vložit".
+\item Správce potvrdí informace kliknutí na tlačítko \uv{Vložit}.
 \end{enumerate}
 
 \subsubsection*{Rozšíření:}
@@ -824,23 +834,23 @@ V katalogu je nové zboží.
 \subsubsection*{Hlavní příběh:}
 
 \begin{enumerate}
-\item Správce klikne na odkaz "Produkty".
-\item Správce klikne na odkaz "Vložit produkt".
+\item Správce klikne na odkaz \uv{Produkty}.
+\item Správce klikne na odkaz \uv{Vložit produkt}.
 \item Správce vyplní informace o novém zboží a zvolí nadřazenou kategorii.
-\item Správce potvrdí informace kliknutí na tlačítko "Vložit".
+\item Správce potvrdí informace kliknutí na tlačítko \uv{Vložit}.
 \end{enumerate}
 
 \subsubsection*{Rozšíření:}
 
 \begin{description}
-\item  3.1 Klikem s podrženým CTRL může zvolit správce více kategorií.
+\item  3.1 Klikem s podrženou klávesou CTRL může zvolit správce více kategorií.
 \end{description}
 
 \section{Datový model}
 
 Z důvodu uchování informací o zboží, o zákaznících, o objednávkách a dalších; je třeba zavést základní datový model, který se bude moci dále rozšiřovat.
 
-Na Obrázku \ref{fig:datamodel} jsou znázorněné důležité entity propojené vazbami mezi sebou. Diagram pochází z aplikace Visual Studio, ve které byl e-shop kompletně naprogramován včetně návrhu datového modelu, viz. \ref{implprost}. Z diagramu vyplývá že, že datový model je pouze minimální. Základní entity jako je  \texttt{BasicProduct} (zboží) a \texttt{BasicCategory} (kategorie) obsahují minimum vlastností pro reprezentaci v e-shopu. Kategorie je organizována ve stromové struktuře katalogu. Zboží je obsaženo v kategoriích a volitelně může být obsaženo ve více kategoriích.
+Na Obrázku \ref{fig:datamodel} jsou znázorněné důležité entity propojené vazbami mezi sebou. Diagram pochází z aplikace Visual Studio, ve které byl e-shop kompletně naprogramován včetně návrhu datového modelu, viz. \ref{implprost}. Z diagramu vyplývá, že datový model je pouze minimální. Základní entity jako je  \texttt{BasicProduct} (zboží) a \texttt{BasicCategory} (kategorie) obsahují minimum vlastností pro reprezentaci v e-shopu. Kategorie je organizována ve stromové struktuře katalogu. Zboží je obsaženo v kategoriích a volitelně může být obsaženo ve více kategoriích.
 	
 Zboží se při nákupu ukládá uživateli do košíku \texttt{CartItem} s informacemi o množství a datumu. Při vytvoření objednávky se položky z košíku přesunou do detailu objednávky \texttt{OrderDetail} a ty se pak agregují do samotné entity objednávky \texttt{Order} spolu s informacemi o zákazníkovi. Volitelně, pokud je zákazník přihlášený se objednávka přiřadí k přihlášenému zákazníkovi \texttt{Customer}. 
 	
@@ -859,7 +869,7 @@ Poslední důležité entity jsou zdroje \texttt{Resource} obsahující překlad
 
 \section{Návrhové vzory}
 
-Pro rozsáhlou aplikaci navrženou v objektově orientovaném programovacím jazyce jsou návrhové vzory nutností. Neustále se opakující problémy při návrhu složitých aplikací jako je tato vyžadují analýzu všech známých návrhových vzorů. V následujících sekcích si představíme všechny vhodné vzory a probereme jejich klady a zápory a důvody proč byly či nebyly vybrány. Všechny vzory jsou čerpány z literatury \cite{GOF} a \cite{PEAA}.
+Pro rozsáhlou aplikaci navrženou v objektově orientovaném programovacím jazyce jsou návrhové vzory nutností. Neustále se opakující problémy při návrhu složitých aplikací jako je tato vyžadují analýzu všech známých návrhových vzorů. V následujících sekcích si představíme všechny vhodné vzory a probereme jejich klady, zápory a důvody, proč byly či nebyly vybrány. Všechny vzory jsou čerpány z literatury \cite{GOF} a \cite{PEAA}.
 
 \subsection{Factory method}
 Tento návrhový vzor se uplatní při vytváření instancí různých implementací rozhraní. Patří mezi vytvářecí návrhové vzory. Jeho využití je probíráno už v dalším vzoru \textit{Plugin}. Využití vzoru \textit{Factory method} spočívá v tom, že volaná metoda je továrnou na instance, které nemusí být ve třídě specifikované, ale využívají se pouze jejich předpisy v podobě rozhraní nebo abstraktních tříd. To přináší do kódu flexibilitu. Samotná metoda také nemusí být specifikovaná, její konkrétní podobu jí mohou dát až zdědění potomci.
@@ -890,9 +900,9 @@ David Rice a Matt Foemmel popisují návrhový vzor \textit{pluginu} jako vhodn�
 Způsob konfigurace se liší implementaci od implementace, ale jednoduchou formou konfigurace je textový soubor XML s tagy označujícími konkrétní plugin, třeba formou cesty v souborovém systému ke zkompilované dynamické knihovně. Další formou konfigurace může být konvence, podle které se budou platné pluginy nacházet v určitém adresáři aplikace.
 
 \subsection{Unit of Work}
-Tento návrhový vzor se hodí na udržování seznamu datových objektů, které byly změněny aplikací a vyřizuje jejich správné zapsání do databáze a zároveň řeší konflikty při paralelních přístupech. Vzor se pro aplikaci hodí vzhledem k objemu předpokládaných transakcí s databází. Zvolená ORM vrstva ho bude obsahovat již implementovaný.
+Tento návrhový vzor se hodí na udržování seznamu datových objektů, které byly změněny aplikací a vyřizuje jejich správné zapsání do databáze a zároveň řeší konflikty při paralelních přístupech. Vzor se pro aplikaci hodí vzhledem k objemu předpokládaných transakcí s databází. Zvolená ORM vrstva \textsf{Entity Framework} ho již má implementovaný.
 
-Diagram \ref{fig:uow} popisuje registraci změněného objektu v Unit of Work. Tuto registraci musí uživatel při změně objektu provédst sám. Toto to je volitelné proto, aby objekt Unit of Work nemusel zbytečně zapisovat všechny změny, které se do databáze promítnout nemusejí. Objekt Unit of Work takto registruje všechny nové, změněné nebo smazané objekty pro pozdější promítnutí do databáze.
+Diagram \ref{fig:uow} popisuje registraci změněného objektu v Unit of Work. Tuto registraci musí uživatel při změně objektu provédst sám. Toto to je volitelné proto, aby objekt Unit of Work nemusel zbytečně zapisovat všechny změny, které se do databáze promítnout nemusí. Objekt Unit of Work takto registruje všechny nové, změněné nebo smazané objekty pro pozdější promítnutí do databáze.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.7]{figures/uow}
@@ -904,7 +914,9 @@ Diagram \ref{fig:uow} popisuje registraci změněného objektu v Unit of Work. T
 
 \subsection{Repository}
 
-Jedná se o další návrhový vzor pro odstínění přístupu k databázi. Jeho předností je, že umožní plně objektově orientovaný způsob dotazování a všechno spojené s dotazy na databázi zapouzdřuje v sobě. Různé datové zdroje tak můžou být odstíněny za vrstvou potřebného počtu \textit{repozitářů}. Programátor používající \textit{repository} se tak může plně soustředit na práci s objekty, které potřebuje. Další výhodou je, že je konkrétní \textit{repository} vyměnitelné za jiné, které poskytuje jiná data nebo nepřistupuje k databázi. Toto je vhodné pro unit testy. Urychlí se tak běh testů. Zároveň je to perfektní příprava pro \textit{Dependency Injection}, které představíme dále. Další informace lze nalézt v \citep{PEAA}.
+Jedná se o další návrhový vzor pro odstínění přístupu k databázi. Jeho předností je, že umožní plně objektově orientovaný způsob dotazování a všechno spojené s dotazy na databázi zapouzdřuje v sobě. Různé datové zdroje tak můžou být odstíněny za vrstvou potřebného počtu \textit{repositories}. Programátor používající \textit{repository} se tak může plně soustředit na práci s objekty, které potřebuje. Další výhodou je, že je konkrétní \textit{repository} vyměnitelné za jiné, které poskytuje jiná data nebo nepřistupuje k databázi. Toto je vhodné pro unit testy. Urychlí se tak běh testů. Zároveň je to perfektní příprava pro \textit{Dependency Injection}, které představíme dále. Další informace lze nalézt v \citep{PEAA}.
+
+Vzor Repository nebyl do aplikace implementován, protože by vytvářel další vrstvu, kterou zastupuje Entity Framework s implementací vzoru Unit of work.
 
 \subsection{Inversion of Control}
 
@@ -913,7 +925,7 @@ V současnosti velmi používaná metoda pro ovládání aplikace, která řeš�
 \textit{Inversion of Control} neboli česky \textit{převrácení ovládání}, je často používaný mechanismus ve frameworcích, které řídí program svojí hlavní programovou smyčkou a programátor se jen stará o doplňování funkcí a specifikací abstraktních tříd. Dříve bylo zvykem mít v programu vlastní hlavní ovládací smyčku. Pod pojmem \textit{Inversion of Control} se dá představit spousta věcí a spousta z nich bude správná, proto byly zavedeny již zmíněné úzce zaměřené vzory \textit{Dependency Injection} a \textit{Service Locator}, které si nyní ve stručnosti představíme.
 
 \subsubsection{Dependency Injection}
-Tento návrhový vzor spočívá ve vkládání závislostí - konkrétních rozhraní - do tříd pomocí řídící třídy, která zná všechny potřebné informace. Řídící třída se většinou nazývá "kontejner". Obrázek \ref{fig:di} vzor názorně ilustruje. Separátní objekt \texttt{Kontejner} obsadí proměnnou ve třídě \texttt{Výpis} s vhodnou implementací rozhraní \texttt{Vyhledávání}.
+Tento návrhový vzor spočívá ve vkládání závislostí - konkrétních rozhraní - do tříd pomocí řídící třídy, která zná všechny potřebné informace. Řídící třída se většinou nazývá \uv{kontejner}. Obrázek \ref{fig:di} vzor názorně ilustruje. Separátní objekt \texttt{Kontejner} obsadí proměnnou ve třídě \texttt{Výpis} s vhodnou implementací rozhraní \texttt{Vyhledávání}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -924,19 +936,19 @@ Tento návrhový vzor spočívá ve vkládání závislostí - konkrétních roz
 \end{figure}
 
 
-Metody jak dostat závislá rozhraní do třídy jsou tři.
+Metody, jak dostat závislá rozhraní do třídy, jsou tři.
 
 \begin{itemize}
-\item Constructor injection -- parametr v konstruktoru při vytváření instance třídy slouží jako prostor pro Dependency Injection. Nevýhoda je, že závislost lze vyřešit jen při vytváření instance na počátku. Výhodou je, že třída má zaručeno naplnění závislosti.
-\item Setter injection -- vyřešení závislosti pomocí setteru. výhoda je, že se kvůli závislosti nemusí měnit konstruktor třídy. Nevýhoda je zřejmá. Je nutné dávat pozor na včasné naplnění závislosti. Toto se bohužel nepozná při sestavování, ale až při běhu.
-\item Interface injection -- tato metoda není tak obvyklá a spočívá v implementaci injekčních rozhraní obsahujících potřebné informace. Další vlastnosti a detaily této metody jsou uvedeny v článku \cite{injection}.
+\item \textbf{Constructor injection} -- parametr v konstruktoru při vytváření instance třídy slouží jako prostor pro Dependency Injection. Nevýhoda je, že závislost lze vyřešit jen při vytváření instance na počátku. Výhodou je, že třída má zaručeno naplnění závislosti.
+\item \textbf{Setter injection} -- vyřešení závislosti pomocí setteru. Výhoda je, že se kvůli závislosti nemusí měnit konstruktor třídy. Nevýhoda je zřejmá. Je nutné dávat pozor na včasné naplnění závislosti. To se bohužel nepozná při sestavování, ale až při běhu.
+\item \textbf{Interface injection} -- tato metoda není tak obvyklá a spočívá v implementaci injekčních rozhraní obsahujících potřebné informace. Další vlastnosti a detaily této metody jsou uvedeny v článku \cite{injection}.
 \end{itemize}
 
 Pro tento návrhový vzor existují hotová řešení pro každý objektově orientovaný jazyk v podobě IoC Containerů.
 
 \subsubsection{Service Locator}
 
-Další velmi podobný vzor pro řešení závislostí. Jeho nevýhodou je, že jde hůře testovat unit testy. Následující obrázek \ref{fig:servicelocator} popisuje způsob chování.
+Další velmi podobný vzor pro řešení závislostí. Jeho nevýhodou je složitější způsob testování unit testy. Následující obrázek \ref{fig:servicelocator} popisuje způsob chování.
 
 \begin{figure}[h!]
 \begin{center}
@@ -956,6 +968,7 @@ Od vzoru \textit{Service Locator} se v poslední době ustupuje vzhledem k poža
 \section{Architektura}
 Požadavky na architekturu jsou vzhledem k rozsáhlosti aplikace a její komplikovanosti velmi specifické. Jedná se o webovou aplikaci a tedy můžeme vybrat jako základ některý ze známých architektonických vzorů. 
 
+\begin{samepage}
 Webové architektury se vytvářejí nejčastěji jako 2 nebo 3 úrovňové. Aplikace je tak rozdělena do částí starajících se o 
 
 \begin{enumerate}
@@ -963,6 +976,7 @@ Webové architektury se vytvářejí nejčastěji jako 2 nebo 3 úrovňové. Apl
 \item Práci s daty v aplikaci
 \item Prezentaci výstupu uživateli
 \end{enumerate}
+\end{samepage}
 
 Dvouúrovňová architektura je pouze spojením některých dvou z výše zmíněných částí. O celku nerozlišujícím mezi těmito částmi nelze pak mluvit o architektuře, ale jde o amatérský počin bez smysluplného uspořádání, kterým si většina z programátorů webových aplikací zajisté sama prošla.
 
@@ -1026,10 +1040,10 @@ Zvoleným prostředím byla po provedení  Rešerše v kapitole \ref{sec:reserse
 
 \subsection{Rozšiřující knihovny pro platformu .NET}
 \label{subsec:roz}
-V této části budou probrány zajímavé použité knihovny platformy Microsoft.NET použité v této práci. Některé z těchto knihoven jsou lehce integrovatelné do projektů pomocí speciálního balíčkovacího systému \textbf{NuGet}\footnote{\url{http://nuget.org/}}, který je dostupný jako rozšíření pro Visual Studio. \textit{NuGet} poskytuje rozšíření, která se snadno instalují jedním kliknutím a sám se postará o jejich nastavení. Rozšíření pro systém \textit{NuGet} jsou poskytovány jak nezávislými vývojáři, tak přímo od Microsoftu. Knihovnu pro \textit{NuGet} může napsat každý snadno a rychle.
+V této části budou probrány zajímavé knihovny platformy Microsoft.NET použité v této práci. Některé z těchto knihoven jsou lehce integrovatelné do projektů pomocí speciálního balíčkovacího systému \textbf{NuGet}\footnote{\url{http://nuget.org/}}, který je dostupný jako rozšíření pro Visual Studio. \textit{NuGet} poskytuje rozšíření, která se snadno instalují jedním kliknutím a sám se postará o jejich nastavení. Rozšíření pro systém \textit{NuGet} jsou poskytovány jak nezávislými vývojáři, tak přímo od Microsoftu. Knihovnu pro \textit{NuGet} může napsat každý snadno a rychle.
 
 \subsubsection{ASP.NET MVC 3}
-V první řadě je třeba zmínit hlavní knihovnu, na které je jádro aplikace postavené a tou je framework ASP.NET MVC 3. Něco málo o něm bylo řečeno už v kapitole Rešerše \ref{asp.net} a o jeho architektuře v předchozí sekci \ref{mvc}. Všechny jeho vlastnosti jsou detailně popsány na webových stránkách frameworku\footnote{\url{http://www.asp.net/mvc}} pomocí skvělých video a textových tutoriálech.
+V první řadě je třeba zmínit hlavní knihovnu, na které je jádro aplikace postavené a tou je framework ASP.NET MVC 3. Něco málo o něm bylo řečeno už v kapitole Rešerše \ref{asp.net} a o jeho architektuře v předchozí sekci \ref{mvc}. Všechny jeho vlastnosti jsou detailně popsány na webových stránkách frameworku\footnote{\url{http://www.asp.net/mvc}} pomocí skvělých videí a textových tutoriálech.
  
 \subsubsection{Entity Framework - Code First}
 \label{sec:ef}
@@ -1038,28 +1052,29 @@ Microsoft přišel před několika lety s novým ORM frameworkem, který se stal
 \begin{itemize}
 \item Jedním způsobem je \textit{Code First}. Spočívá v nulovém návrhu databáze. Proto se mu říká \textit{Code First} (\textit{nejdříve kód}). Nejprve se navrhnou entity ve formě tříd a jejich vztahy se navážou přes otypované parametry. Jakákoli změna entit je detekována a databáze se podle pravidel přeorganizuje. V další verzi 4.2 se představí vlastnost zvaná \textit{Migrations}, která dokáže opravit změny v databázi bez nutnosti přehrávání celé databáze, což byla velice kritizovaná vlastnost. Musela se řešit zálohováním dat nebo zapsáním pevných iniciálních dat do kódu. Jinak se Microsoft snaží tento způsob návrhu databáze upřednostňovat ve všech svých tutoriálech.
 
-\item Další způsob je \textit{Model First}. Jde o způsob, který předpokládá, že má programátor již hotový model databáze ve formátu vhodném pro Entity Framework. Z modelu se vygenerují třídy zastupující entity a dále se pokračuje jako při prvním způsobu. 
+\item Další způsob je \textit{Model First}. Jde o způsob, jenž předpokládá, že má programátor již hotový model databáze ve formátu vhodném pro Entity Framework. Z modelu se vygenerují třídy zastupující entity a dále se pokračuje jako při prvním způsobu. 
 
 \item Poslední třetí způsob je \textit{Database First}. Tento případ předpokládá, že programátor má přístup k již existující databázi. Z ní se potom vygenerují opět entity.
 
 \end{itemize}
 
-Model, přes který se převádí databáze na entity a naopak se jmenuje \textit{Entity Data Model} (EDM) a staví na známém ER modelu od Dr. Petera Chena. K dotazování na databázi se využívá jazyka LINQ, který poskytuje nápovědu při psaní kódu a kontrolu syntaxe během kompilace. Entity Framework je postavený nad ADO.NET provider modelem a proto jsou přes něj dostupné všechny funkce. Díky tomu také se může aplikace připojit na různé databáze od MS SQL přes DB2 po Oracle\cite{efintro}.
+Model, přes který se převádí databáze na entity a naopak se jmenuje \textit{Entity Data Model} (EDM) a staví na známém ER modelu od Dr. Petera Chena. K dotazování na databázi se využívá jazyka LINQ, který poskytuje nápovědu při psaní kódu a kontrolu syntaxe během kompilace. Entity Framework je postavený nad ADO.NET provider modelem a proto jsou přes něj dostupné všechny funkce. Díky tomu se také může aplikace připojit na různé databáze od MS SQL přes DB2 po Oracle\cite{efintro}.
 
 
 \subsubsection{SQL Compact Edition}
-Nejedná se o knihovnu, ale o databázi, ale je třeba o ní ztratit pár slov, protože byla použita v aplikaci. Je to nejmenší verze z nabízených databází Microsoftu a je přednastavená při vytváření základní šablony aplikace ve frameworku MVC 3 ve Visual Studiu. V projektu jde o verzi SQL Server Compact Edition 4.
+Nejedná se o knihovnu, ale o databázi a je třeba o ní ztratit pár slov, protože byla použita v aplikaci. Je to nejmenší verze z nabízených databází Microsoftu a je přednastavená při vytváření základní šablony aplikace ve frameworku MVC 3 ve Visual Studiu. V projektu jde o verzi SQL Server Compact Edition 4.
 
-Jde o databázi uloženou v jednom souboru společně s aplikací, její možnosti jsou omezené. Nevýhodou je, že nejde profilovat dotazy do databáze pomocí profesionálních databázových nástrojů jako je SQL Server Management Studio. Na druhou stranu je zdarma a obsahuje kompaktní databázový systém přímo v jednom souboru, takže není třeba databázový systém instalovat. Microsoft bohužel nenabízí srovnání s ostatními verzemi, ale našel jsem dokument, který se tímto zabývá \footnote{\url{http://coolthingoftheday.blogspot.com/2011/01/sql-server-compact-4-vs-sql-server.html}}. Jinak srovnání a další dostupné verze, mezi nimiž je třeba zmínit edici Express, která je zdarma, je dostupné online na webových stránkách MS SQL Serveru\footnote{\url{http://www.microsoft.com/sqlserver/en/us/product-info/compare.aspx}}.
+Jde o databázi uloženou v jednom souboru společně s aplikací, její možnosti jsou omezené. Nevýhodou je, že nejde profilovat dotazy do databáze pomocí profesionálních databázových nástrojů jako je SQL Server Management Studio. Na druhou stranu je zdarma a obsahuje kompaktní databázový systém přímo v jednom souboru, takže není třeba databázový systém instalovat. Microsoft bohužel nenabízí srovnání s ostatními verzemi, ale našel jsem dokument, který se tímto zabývá \footnote{\url{http://coolthingoftheday.blogspot.com/2011/01/sql-server-compact-4-vs-sql-server.html}}. Srovnání a další dostupné verze (mezi nimiž je třeba zmínit edici Express, která je zdarma) jsou dostupné online na webových stránkách MS SQL Serveru\footnote{\url{http://www.microsoft.com/sqlserver/en/us/product-info/compare.aspx}}.
 
 
 \subsubsection{Castle Windsor}
 Tato knihovna je jedním z mnoha \textit{Inversion of Control kontejnerů} pro ASP.NET framework. Byla vybrána z důvodu potřeby použít IoC kvůli načítání funkcí z modulů. Pro Castle Windsor hovoří dobrá dokumentace\footnote{\url{http://stw.castleproject.org/Windsor.MainPage.ashx}} a množství možností. Důležitá je možnost načítat implementace rozhraní pomocí reflexe ze \textit{sestavení} (\textit{assemblies}). Funguje na principu vzoru \textit{Dependency Injection}. Nejprve se vytvoří \texttt{Container}, do něho se registrují rozhraní a jejich implementace. Poté se závislosti při běhu programu řeší na požádání.
 
-\subsection{Paged List}
-Pro stránkování byla využita knihovna \textit{Paged List}\footnote{\url{https://github.com/TroyGoode/PagedList}}. Její přednosti jsou, že usnadní práci při vytváření odstránkovaných seznamů a nabízí možnosti nastavení vzhledu stránkovacích odkazů na pohyb mezi stránkami.
+\subsubsection{Paged List}
+Pro stránkování byla využita knihovna \textit{Paged List}\footnote{\url{https://github.com/TroyGoode/PagedList}}. Její předností je usnadněná práce při vytváření odstránkovaných seznamů. Dále nabízí možnosti nastavení vzhledu stránkovacích odkazů na pohyb mezi stránkami.
 
 \subsubsection{Glimpse}
+\label{glimpse}
 Tato vynikající knihovna\footnote{\url{http://getglimpse.com/}} je takový doktor na všechno. Je to diagnostický nástroj zabudovaný přímo do aplikace. Načte se na požádání s rozhraním webové aplikace jako další okno a obsahuje důležité informace, které debugger Visual Studia nezná. Díky němu se dají aplikace napsané v MVC frameworku ladit jednoduše a rychle. Knihovna zamezí spoustu problémům a ušetří pár zničených klávesnic a monitorů u více vznětlivých webových vývojářů.
 
 \subsection{Ostatní použité technologie}
@@ -1134,7 +1149,9 @@ Pro přehlednost stojí za zmínku základní adresářová struktura projektu p
 
 V adresářích s předponou \textsf{App\_} jsou zdroje používané pro databázové soubory, textové prostředky -- \textsf{resources} a sdílené třídy. Adresář \textsf{Areas} obsahuje \textit{oblasti} oddělené od sdílených tříd v projektu pomocí \textsf{namespace}. Adresáře \textsf{Content} a \textsf{Scripts} obsahují soubory pro zobrazení a client-side skripty. 
 
-Ostatní adresáře jsou jasné podle jejich pojmenování a obsahují třídy a prvky popsané níže. Soubor \textsf{Global.asax} je startovním souborem zastupující modul \textsf{Startup}. Nepovinný soubor \textsf{PreApplicationInit.cs} obsahuje prvky pro inicializaci sestavení modulů při startu aplikace. Soubor \textsf{Web.config} je XML konfigurace aplikace, kterou používá IIS web server. \textsf{Packages.config} je XML soubor pro systém \textit{NuGet} balíčků s výpisem instalovaných knihoven z \textit{Nuget} repozitáře.
+Ostatní adresáře jsou jasné podle jejich pojmenování a obsahují třídy a prvky popsané níže. Soubor \textsf{Global.asax} je startovním souborem zastupující modul \textsf{Startup}. 
+
+Nepovinný soubor \textsf{PreApplicationInit.cs} obsahuje prvky pro inicializaci sestavení modulů při startu aplikace. Soubor \textsf{Web.config} je XML konfigurace aplikace, kterou používá IIS web server. \textsf{Packages.config} je XML soubor pro systém \textit{NuGet} balíčků s výpisem instalovaných knihoven z \textit{Nuget} repozitáře.
 
 
 \subsection{Global.asax}
@@ -1161,13 +1178,13 @@ public class MvcApplication : HttpApplication
 }
 \end{lstlisting}
 
-V metodě \texttt{Application\_start} se registrují jednotlivé části frameworku MVC a komponenty vlastního frameworku aplikace, které mění standardní funkčnost. Detaily jednotlivých částí jsou probrány v následujících podsekcích, v další sekci rozšíření \ref{sec:roz} a připojení modulů \ref{subsec:pripojenimodulu}. Po ukončení aplikace, což probíhá u webových aplikací zřídkakdy, se spustí metoda \texttt{Application\_End}, která zavolá v tomto případě metodu pro uvolnění registrovaných dat v IoC kontejneru z paměti.
+V metodě \texttt{Application\_start} se registrují jednotlivé části frameworku MVC a komponenty vlastního frameworku aplikace, které mění standardní funkčnost. Detaily jednotlivých částí jsou probrány v následujících podsekcích, v další sekci rozšíření \ref{sec:roz} a připojení modulů \ref{subsec:pripojenimodulu}. Po ukončení aplikace, což probíhá u webových aplikací zřídkakdy, se spustí metoda \texttt{Application\_End}, která v tomto případě zavolá metodu pro uvolnění registrovaných dat v IoC kontejneru z paměti.
 
 
 \subsection{Controller}
 Controller\footnote{\url{http://msdn.microsoft.com/en-us/library/system.web.mvc.controller.aspx}} je abstraktní třída, která poskytuje metody odpovídající na HTTP požadavky, viz. architektura \ref{mvc}. Specifikací této třídy implementujeme vlastní metody, které poskytují uživateli obsah z \textsf{Model}ů  pomocí pohledů -- \textsf{View}. 
 
-V ukázce kódu \ref{list:controller} je vidět jak se provádí specifikace. Metoda \texttt{Index} vrací výsledek \texttt{ActionResult} pomocí metody \texttt{View} s parametrem dat z modelu. Framework MVC zpracuje tento výsledek pomocí vnitřních mechanizmů a odešle zpracovaný pohled. 
+V ukázce kódu \ref{list:controller} je vidět, jak se provádí specifikace. Metoda \texttt{Index} vrací výsledek \texttt{ActionResult} pomocí metody \texttt{View} s parametrem dat z modelu. Framework MVC zpracuje tento výsledek pomocí interních funkcí a odešle zpracovaný pohled. 
 
 \begin{lstlisting}[float=h!,language=CSharp, caption={Controller}, label=list:controller]
 public class HomeController : Controller {  
@@ -1211,11 +1228,11 @@ Za zmínku stojí silně a dynamicky typované proměnné -- \textit{silně typo
 Pokud se vrátíme k ukázce \ref{list:razor}, můžeme si všimnout použití výše zmíněných prvků. Silně otypovaný model obsahující list entit na řádku \textbf{1}. Přepnutí do jazyka \textsf{Razor} pomocí \texttt{@} na řádku \textbf{2}. Použití dynamické sdílené proměnné \texttt{ViewBag} na řádku \textbf{3}. Ta je i následně na řádku \textbf{5} použita pro výpis. Na řádku \textbf{6} je použita vlastní implementace překládání textu, o které si řekneme více v sekci \ref{subsec:lokalizace}. Snad jen zmíním část implementace v pohledech. \texttt{T} je vlastní parametr ve vlastní verzi rodičovské třídy \texttt{WebViewPage} plněný singletonem \texttt{TranslationResolver}. Na řádku \textbf{8} je ukázka standardního helperu MVC. \textbf{12}. řádek pak ukazuje možnosti iterace v šablonách a kombinaci HTML s \textsf{Razor}. \textbf{14}. řádek je ukázka volání vlastního \texttt{Helperu}.
 
 \subsection{Model}
-Modely jsou ve frameworku MVC celkem komplikované, protože data reprezentují i sbírají od uživatelů z formulářů a přes Entity Framework (v našem případě) je ukládají do nebo načítají z databáze. Pro jejich úplné pochopení doporučuji prostudování kapitol 4,6 a 13 z knihy \cite{MVC1}.
+Modely jsou ve frameworku MVC celkem komplikované, protože data reprezentují i sbírají od uživatelů z formulářů a přes Entity Framework (v tomto případě) je ukládají nebo načítají z databáze. Pro jejich úplné pochopení doporučuji prostudování kapitol 4,6 a 13 z knihy \cite{MVC1}.
 
 Ve zkratce jsou modely sady entit pro práci se specifickými \textsf{pohledy} a nemusí  odpovídat tabulkám v databázi. Modelem může být entita nebo třída obsahující entity a parametry. V předchozí ukázce kódu \textsf{pohledu} \ref{list:razor} je modelem list entit, které se podle požadavků vypíší na obrazovku do formuláře nebo jako text. V následujícím kódu \ref{list:model} je ukázka modelu obsahující entity pro zobrazení v \textsf{Pohledu}. 
 
-V další ukázce \ref{list:entita} je kód entity sloužící zároveň i jako model. Je zde zároveň vidět, jaké entita používá doplňkové \textsf{atributy} pro specifikaci názvu pole, který je možné přeložit -- atribut \texttt{TranslateName}, dále jsou zde atributy pro upřesnění Entity Frameworku jaké má  aplikovat omezení a klíče v DDL pro databázi. Více o atributech v sekci Validace dat \ref{sec:validacedat} a Atributy \ref{sec:atributy}.
+V další ukázce \ref{list:entita} je kód entity sloužící zároveň i jako model. Je zde zároveň vidět, jaké entita používá doplňkové \textsf{atributy} pro specifikaci názvu pole, který je možné přeložit -- atribut \texttt{TranslateName}. Dále jsou zde atributy pro upřesnění Entity Frameworku, jaké má  aplikovat omezení a klíče v DDL pro databázi. Více o atributech v sekci Validace dat \ref{sec:validacedat} a Atributy \ref{sec:atributy}.
 
 \begin{lstlisting}[float=h!,language=CSharp, caption={Model z více entit}, label=list:model]
 public class CategoryModel
@@ -1274,7 +1291,7 @@ Routy se registrují už při startu aplikace, proto je třeba inicializovat reg
 
 \subsection{Areas}
 \label{sec:areas}
-Pomocí \textsf{Areas}, česky \textit{oblastí}, lze oddělit strukturálně komponenty aplikace. Slouží také pro udržení přehlednosti a zamezení konfliktů se stejnými názvy tříd protože jsou v jiném \textit{namespace}. Jejich registrace se provádí pouze do komponenty \textsf{Routes}. Konfigurace je uložena v souboru AdminAreaRegistration.cs -- předpona je podle oblasti ve které se soubor nachází, viz. Obrázek \ref{fig:struktura}. \textit{Oblast} obsahuje všechny základní prvky MVC architektury, stejně jako \textit{root} adresář.
+Pomocí \textsf{Areas}, česky \textit{oblastí}, lze oddělit strukturálně komponenty aplikace. Slouží také pro udržení přehlednosti a zamezení konfliktů se stejnými názvy tříd, protože jsou v jiném \textit{namespace}. Jejich registrace se provádí pouze do komponenty \textsf{Routes}. Konfigurace je uložena v souboru AdminAreaRegistration.cs -- předpona je podle oblasti, ve které se soubor nachází, viz. Obrázek \ref{fig:struktura}. \textit{Oblast} obsahuje všechny základní prvky MVC architektury, stejně jako \textit{root} adresář.
 
 \subsection{Filtry}
 Filtry ve frameworku slouží pro spouštění funkcí před nebo po \textit{akcích} v \textit{controllerech}. Dělí se na lokální -- přímo napsané v controlleru a globální -- aplikované pomocí registrace \textsf{Filter Atributů}. Více o filtrech se lze dozvědět v kapitole 13 knihy \cite{MVC2}.
@@ -1295,7 +1312,7 @@ protected override void OnActionExecuting(ActionExecutingContext ctx)
 
 \subsection{Validace dat}
 \label{sec:validacedat}
-Validace dat slouží ke kontrole dat při přijímání formulářů. Ve verzi MVC 3 je dokonce validace prováděna už při vyplňování u uživatele v prohlížeči pomocí pluginu \textit{JQuery Validate}. Funguje dokonce i vzdálená kontrola například zda je přezdívka už obsazená. Validace dat se ve frameworku MVC zapisuje do modelů pomocí atributů, viz. kód entity \ref{list:entita}. Jsou zde vidět validační atributy typu \texttt{Required} -- \textit{vyžadováno}. Validace je poskytována přes třídy \texttt{ModelValidationProvider} a \texttt{ValidationAtrribute} které se dají rozšiřovat a tím se zabývají kapitoly 6 a 13 knihy \cite{MVC1}.
+Validace dat slouží ke kontrole dat při přijímání formulářů. Ve verzi MVC 3 je dokonce validace prováděna už při vyplňování u uživatele v prohlížeči pomocí pluginu \textit{JQuery Validate}. Funguje dokonce i vzdálená kontrola, například zda je přezdívka už obsazená. Validace dat se ve frameworku MVC zapisuje do modelů pomocí atributů, viz. kód entity \ref{list:entita}. Jsou zde vidět validační atributy typu \texttt{Required} -- \textit{vyžadováno}. Validace je poskytována přes třídy \texttt{ModelValidationProvider} a \texttt{ValidationAtrribute}, které se dají rozšiřovat a tím se zabývají kapitoly 6 a 13 knihy \cite{MVC1}.
 
 \subsection{Atributy}
 \label{sec:atributy}
@@ -1308,12 +1325,12 @@ Nepříjemné je, že \texttt{MembershipProvider} si standardně vytváří v da
 
 Standardní autorizace se dělí na \textsf{Windows} a \textsf{Forms} autentizaci, v běžných aplikacích je vhodná spíše \textsf{Forms} autentizace, protože se při ní \textit{nemusí} vytvářet uživatelské účty Windows. Autorizace je udržována přes statickou třídu \texttt{FormsAuthentication} pomocí Cookies, které ukládá u uživatele v prohlížeči.
 
-Pro autentizaci je vhodné mít vyhrazený extra \texttt{controller} propagující komponentu autentizace přes \textsf{pohledy} k uživateli. Jde vlastně o roli \textsf{modelu}. Autorizaci je poté třeba zavédst do aplikace pomocí nastavení v hlavním konfiguračním souboru \textsf{Web.config}. Více lze najít v obou knihách \cite{MVC1} \cite{MVC2} i v tutoriálech\footnote{\url{http://www.asp.net/mvc/tutorials}} a detaily v dokumentaci na MSDN\footnote{\url{http://msdn.microsoft.com/en-us/library/6tc47t75.aspx}}.
+Pro autentizaci je vhodné mít vyhrazený extra \texttt{controller} propagující komponentu autentizace přes \textsf{pohledy} k uživateli. Jde vlastně o roli \textsf{modelu}. Autorizaci je poté třeba zavést do aplikace pomocí nastavení v hlavním konfiguračním souboru \textsf{Web.config}. Více lze najít v obou knihách \cite{MVC1} \cite{MVC2} i v tutoriálech\footnote{\url{http://www.asp.net/mvc/tutorials}} a detaily v dokumentaci na MSDN\footnote{\url{http://msdn.microsoft.com/en-us/library/6tc47t75.aspx}}.
 
 \subsection{Autentizace}
 Autentizace je složitější nadstavba autorizace. Stará se o řízení přístupu uživatelů k prostředkům. Kontroluje oprávnění uživatelů podle jejich rolí a práv. V ASP.NET je opět standardní implementovaná cesta, která nemusí vyhovovat všem ze stejných důvodů jako v případě autorizace.
 
-Při nastavení autentizace jsou potřeba vhodné třídy zapsat do konfiguračního souboru \textsf{Web.config}. Jde o implementace tříd \texttt{RoleProvider} a \texttt{ProfileProvider}. Více se lze o způsobech rozšíření i nasazení hotových řešení lze dočíst opět v knihách \cite{MVC1} a \cite{MVC2} a na MSDN\footnote{\url{http://msdn.microsoft.com/en-us/library/317sza4k.aspx}}\footnote{\url{http://msdn.microsoft.com/en-us/library/ta63b872.aspx}}.
+Při nastavení autentizace jsou potřeba vhodné třídy zapsat do konfiguračního souboru \textsf{Web.config}. Jde o implementace tříd \texttt{RoleProvider} a \texttt{ProfileProvider}. Více se lze o způsobech rozšíření i nasazení hotových řešení dočíst opět v knihách \cite{MVC1} a \cite{MVC2} a na MSDN\footnote{\url{http://msdn.microsoft.com/en-us/library/317sza4k.aspx}}\footnote{\url{http://msdn.microsoft.com/en-us/library/ta63b872.aspx}}.
 
 \section{Rozšiřující úpravy jádra}
 \label{sec:roz}
@@ -1321,9 +1338,9 @@ V této části si probereme nutná rozšíření základu aplikace jako jsou sp
 
 
 \subsection{Propojení modelů s databází}
-Již dříve bylo zmíněno, že se modely připojují k databázi přes \textit{objektově-relační mapování}, které zastupuje v Entity Frameworku \textit{Entity Data Model}. Entity Framework kopíruje mechanismus připojení z nižší vrstvy ADO.NET a staví na něm. Jedná se o třídu \texttt{DbContext}, která specifikuje \texttt{ObjectContext} a zpřístupňuje mapování. Ukázka kódu \ref{list:dbcontext} popisuje část nutnou k propojení s databází způsobem \textit{Code First}. Deklarací \textit{properties} generického typu \texttt{DbSet<>} říkáme, které entity chceme namapovat do databáze jako tabulky. Specialitou je přepsání tohoto typu s parametrem dědícím od třídy \texttt{PluginEntity}, který slouží jako místo prostředek pro práci se zásuvnými entitami.
+Již dříve bylo zmíněno, že se modely připojují k databázi přes \textit{objektově-relační mapování}, které zastupuje v Entity Frameworku \textit{Entity Data Model}. Entity Framework kopíruje mechanismus připojení z nižší vrstvy ADO.NET a staví na něm. Jedná se o třídu \texttt{DbContext}, která specifikuje \texttt{ObjectContext} a zpřístupňuje mapování. Ukázka kódu \ref{list:dbcontext} popisuje nutnou část k propojení s databází způsobem \textit{Code First}. Deklarací \textit{properties} generického typu \texttt{DbSet<>} říkáme, které entity chceme namapovat do databáze jako tabulky. Specialitou je přepsání tohoto typu s parametrem dědícím od třídy \texttt{PluginEntity}, který slouží jako místo prostředek pro práci se zásuvnými entitami.
 
-Metoda \texttt{OnModelCreating} vkládá prostor pro konfiguraci Entity Frameworku pomocí odebírání defaultních nastavení. Entity Framework totiž ctí heslo \uv{konvence nad konfiguraci}, což znamená, že sám od sebe funguje a pouze v případě potřeby změny je možné nastavení odebrat -- což ukazuje řádek \textbf{17}. Další pokračování metody je popsáno dále v \ref{subsec:pripojenientit}, protože obsahuje část pro připojení entit z modulů.
+Metoda \texttt{OnModelCreating} vkládá prostor pro konfiguraci Entity Frameworku pomocí odebírání defaultních nastavení. Entity Framework totiž ctí heslo \uv{konvence nad konfiguraci}, což znamená, že sám od sebe funguje a pouze v případě potřeby změny je možné nastavení odebrat -- což ukazuje řádek \textbf{17}. Další pokračování metody je popsáno v \ref{subsec:pripojenientit}, protože obsahuje část pro připojení entit z modulů.
 
 \begin{lstlisting}[float=h!,language=CSharp, caption={Specifikace třídy DbContext}, label=list:dbcontext]
 public class DatabaseConnection2 : DbContext
@@ -1351,7 +1368,7 @@ public class DatabaseConnection2 : DbContext
 
 \subsection{Lokalizace}
 \label{subsec:lokalizace}
-Standardně se v aplikaci používají statické zdroje, které už uživatel aplikace nemůže dále jednoduše upravovat, proto byl z důvodu větší flexibility a možnosti přidání více jazyků do hotové aplikace předělán celý systém vyhledávání překladů řetězců -- tzv. \textsl{Resources}. Všechny základní aplikace nebo rady na stackoverflow.com řeší lokalizaci pouze pomocí standardní cesty. Aplikace ale potřebuje mít uložené řetězce v databázi a načítat si je do vlastní aplikační cache, aby byly omezeny dotazy na databázi. Jediné možné řešení jsem našel na webu MSDN \cite{resources} pro starou verzi ASP.NET frameworku, která naštěstí ale funguje i v poslední verzi 4.0.
+Standardně se v aplikaci používají statické zdroje, které už uživatel aplikace nemůže dále jednoduše upravovat. Proto byl, z důvodu větší flexibility a možnosti přidání více jazyků do hotové aplikace, předělán celý systém vyhledávání překladů řetězců -- tzv. \textsl{Resources}. Všechny základní aplikace nebo rady na stackoverflow.com řeší lokalizaci pouze pomocí standardní cesty. Aplikace ale potřebuje mít uložené řetězce v databázi a načítat si je do vlastní aplikační cache, aby byly omezeny dotazy na databázi. Jediné možné řešení jsem našel na webu MSDN \cite{resources} pro starou verzi ASP.NET frameworku, která naštěstí ale funguje i v poslední verzi 4.0.
 
 Načítání \texttt{DBResourceProvider} se provádí v konfiguračním souboru \textsf{web.config} hlavního sestavení \textsf{Core} tagem \ref{list:locfig} s nastavením \texttt{Factory}. V tomto nastavení pozná aplikace podle nastaveného jazyka v prohlížeči návštěvníka, jaký má použít překlad.
 
@@ -1363,7 +1380,7 @@ Načítání \texttt{DBResourceProvider} se provádí v konfiguračním souboru 
 </system.web>
 \end{lstlisting}
 
-Ostatní implementace týkající se překládání se nachází v souborech v adresáři \texttt{Translation} v sestavení \textsf{Framework}. Jde o třídy popisované v tutorialu MSDN\cite{resources}. Další implementace se týká pohledů a popisků v entitách a stavových zpráv v aplikaci.
+Ostatní implementace, týkající se překládání, se nachází v souborech v adresáři \texttt{Translation} v sestavení \textsf{Framework}. Jde o třídy popisované v tutorialu MSDN\cite{resources}. Další implementace se týká pohledů a popisků v entitách a stavových zpráv v aplikaci.
 
 Problémem bylo použití lokalizačních atributů pro entity, které jsou kontrolovány při startu aplikace Entity Frameworkem. Ten atributy entit rovnou načítá, pokud se databáze musí vytvářet znova. Proto byla zavedena ještě jedna třída specifikující \texttt{DbContext}, kterou používají \texttt{Resources} jen pro sebe. To ale úplně nezamezilo pádům aplikace, proto byla ve třídě \texttt{DBResourcesModel} do těla metody \texttt{GetResourceByCultureAndKey} načítající překlady pomocí Entity Frameworku přidána klauzule \textit{try-catch} pro odchycení výjimky způsobující pád. Entity tak dostanou původní pojmenování přímo z kódu. To se ale přeloží při použití entit ve formulářích, které jsou generovány podle atributů entit -- tzv. \textit{scaffolding}.
 
@@ -1377,7 +1394,7 @@ Entity využívají následující lokalizační atributy:
 
 Ty jsou do spouštěné aplikace registrovány pomocí adaptérů v souboru \textsf{Global.asax}. Standardních atributů frameworku .NET využívaných v Entity Frameworku je ovšem více, tyto představují pouze \textit{proof-of-concept}, že i texty v atributech lze překládat. Důležité také je, že atributy jsou překládány i pro entity v modulech. Více o atributech použitelných pro entity a modely na MSDN\footnote{\url{http://msdn.microsoft.com/en-us/library/system.componentmodel.dataannotations.aspx}} . Tyto atributy jsou ale standardní a je třeba je podle již hotových přepsat, aby překládaly chybové texty.
 
-Do pohledů byly překlady implementovány díky přepsání rodiče všech pohledů \texttt{Web\-View\-Page} vlastní třídou \texttt{BaseWebViewPage} obsahující \textit{property} \texttt{T} která má jako datový typ delegáta, proto se nemusí používat statická třída způsobem \texttt{@Translator.Translate("text")}, ale stačí použít krátkou verzi \texttt{@T("text")}. Podobně je použit \textit{Gettext} překlad v jazyku \textsf{PHP}. Delegáty prakticky vysvětluje například MSDN tutoriál\footnote{\url{http://msdn.microsoft.com/en-us/library/aa288459.aspx}} nebo videotutorial pro studenty zdarma (registrace na Dreamspark\footnote{\url{http://www.dreamspark.com}} nutná) dostupný na Pluralsight\footnote{\url{http://www.pluralsight-training.net/microsoft/Courses/TableOfContents?courseName=csharp-fundamentals}}.
+Do pohledů byly překlady implementovány díky přepsání rodiče všech pohledů \texttt{Web\-View\-Page} vlastní třídou \texttt{BaseWebViewPage} obsahující \textit{property} \texttt{T}, která má jako datový typ delegáta, proto se nemusí používat statická třída způsobem \texttt{@Translator.Translate("text")}, ale stačí použít krátkou verzi \texttt{@T("text")}. Podobně je použit \textit{Gettext} překlad v jazyku \textsf{PHP}. Delegáty prakticky vysvětluje například MSDN tutoriál\footnote{\url{http://msdn.microsoft.com/en-us/library/aa288459.aspx}} nebo videotutorial pro studenty zdarma (registrace na Dreamspark\footnote{\url{http://www.dreamspark.com}} nutná) dostupný na Pluralsight\footnote{\url{http://www.pluralsight-training.net/microsoft/Courses/TableOfContents?courseName=csharp-fundamentals}}.
 Konkrétní metoda volající překladač z přepsaných \texttt{Resources} je dosazena do \textit{property} v \texttt{BaseWebViewPage} pomocí singletonu \texttt{TranslationResolver}.
 
 \subsection{Frontend}
@@ -1447,9 +1464,9 @@ Pro pochopení modulární části je vhodné projít si způsob jakým je aplik
 
 \subsection{Struktura modulu}
 Každý modul musí mít danou strukturu, aby mohl být načten jádrem a správně fungovat.
-Na obrázku \ref{fig:modulstruktura} je struktura vzorového modulu. Projekt je založený na standardní šabloně \textsf{ASP.NET MVC 3 Web Application}. Je třeba ji ale upravit aby se nespouštěla samostatně, ale kompilovala se do adresáře \texttt{extension/plugins} v hlavním projektu \textsf{Core}. Toto se nastavuje v \texttt{Properties - Build - Output Path}. V \texttt{Properties} je třeba nastavit také záložku \texttt{Web}. Musíme tam nastavit volbu \texttt{Use Custom Web Server} na vymyšlenou hodnotu. Konečně se musí změnit nastavení v Properties pod Solution Explorer (kliknutím na položku projektu) v položce \texttt{Always Start When Debugging} na \texttt{False}.
+Na obrázku \ref{fig:modulstruktura} je struktura vzorového modulu. Projekt je založený na standardní šabloně \textsf{ASP.NET MVC 3 Web Application}. Je třeba ji ale upravit, aby se nespouštěla samostatně, ale kompilovala se do adresáře \texttt{extension/plugins} v hlavním projektu \textsf{Core}. Toto se nastavuje v \texttt{Properties - Build - Output Path}. V \texttt{Properties} je třeba nastavit také záložku \texttt{Web}. Volba \texttt{Use Custom Web Server} se musí nastavit na vymyšlenou hodnotu. Konečně se musí změnit nastavení v Properties pod Solution Explorer (kliknutím na položku projektu) v položce \texttt{Always Start When Debugging} na \texttt{False}.
 
-Také se musí do \texttt{References} přidat odkaz na projekt \textsf{Framework}, aby se mohly využívat jeho třídy a rozhraní. Dále se musí všechny soubory, které se nekompilují (zpravidla \texttt{Web.config}, \texttt{*.cshtml}, javacript, CSS a média), ve vlastnostech souboru změnit v položce \texttt{Copy to Output Directory} na \texttt{Copy Always}, protože by se jinak samy k aplikaci nepřidaly.
+Také se musí do \texttt{References} přidat odkaz na projekt \textsf{Framework}, aby se daly využívat jeho třídy a rozhraní. Všem referencím je ale nutné zakázat kopírování na výstup ve vlastnostech. Všechny reference musí být uloženy na jednom místě v adresáři \texttt{bin} hlavního projektu \textsf{Core}. Dále se musí změnit vlastnosti všech souborů, které se nekompilují (zpravidla \texttt{Web.config}, \texttt{*.cshtml}, javacript, CSS a média). Ve vlastnostech u položky \texttt{Copy to Output Directory} je třeba nastavit \texttt{Copy Always}, protože by se jinak samy k aplikaci nepřidaly.
 
 Další nastavení projektu budou ještě postupně přidávány, ale ve stručnosti jsou upraveny všechny soubory \texttt{Web.config}, \texttt{\_ViewStart.cshtml} a nový je soubor \texttt{Routes.cs}. Změny v souborech oproti standardnímu nastavení budou dále popsány. Soubory \texttt{Web.config} jsou v modulech jen pro přepsání rodiče pohledů a na import základních \textit{assemblies} a \textit{namespaces}.
 \begin{figure}[h!]
@@ -1465,7 +1482,7 @@ Další nastavení projektu budou ještě postupně přidávány, ale ve stručn
 
 Připojování modulů je v aplikaci poloautomatické. Ve vývojovém režimu jde zcela automatizovat již výše zmíněným upravením nastavení při kompilování a spouštěním přímo v adresáři celého balíku projektů -- \textit{Solution}. To probíhá automaticky při spouštění při vývoji přímo z Visual Studia na vývojovém serveru IIS Express.
 
-Po dlouhém hledání se mi podařilo najít článek Shannona Deminicka \cite{Shazwazza}, který se zabývá připojováním sestavení do jiných sestavení až po zkompilování. Proto jsem použil postup v něm navržený. Jde o systematické prohledávání daných adresářů a načítání tříd z nalezených sestavení ještě než se spustí samotná aplikace. K tomu slouží soubor \texttt{PreApplicationInit.cs} popsaný výše v sekci \ref{sec:startapp}. vnitřní metoda celé moduly kopíruje do spouštěcího dočasného adresáře, protože se v původním adresáři zamknou a nejdou otevřít. Zároveň je třeba nastavit v balíčku \textsf{Core} v souboru \texttt{Web.config} v tagu \texttt{probing} atribut \texttt{privatePath} na adresář s dočasně nahranými moduly, aby mělo prostředí .NET informaci o dalším adresáři s dynamickými knihovnami.
+Po dlouhém hledání se mi podařilo najít článek Shannona Deminicka \cite{Shazwazza}, který se zabývá připojováním sestavení do jiných sestavení až po zkompilování. Proto jsem použil postup v něm navržený. Jde o systematické prohledávání daných adresářů a načítání tříd z nalezených sestavení, ještě než se spustí samotná aplikace. K tomu slouží soubor \texttt{PreApplicationInit.cs} popsaný výše v sekci \ref{sec:startapp}. vnitřní metoda celé moduly kopíruje do spouštěcího dočasného adresáře, protože se v původním adresáři zamknou a nejdou otevřít. Zároveň je třeba nastavit v balíčku \textsf{Core} v souboru \texttt{Web.config} v tagu \texttt{probing} atribut \texttt{privatePath} na adresář s dočasně nahranými moduly, aby mělo prostředí .NET informaci o dalším adresáři s dynamickými knihovnami.
 
 Při kopírování sestavení do dočasného adresáře je vhodné ho při každé další kompilaci promazat. To se provede automaticky nastavením v Properties projektu modulu v záložce Build Events. Příkaz \texttt{rd /s /q "$(TargetDir)/../../temp/$(ProjectName)"} provede jeho smazání. Cesta je samozřejmě závislá na umístění projektu a adresáře pro moduly.
 
@@ -1476,7 +1493,7 @@ Metody zároveň hledají Routy pro aplikaci a adaptéry pro validační atribut
 
 \subsection{Body rozšíření}
 
-V následujících podsekcích jsou probrány podrobně, ale s ohledem na omezení rozsahu, všechny body využité pro rozšíření aplikace pomocí modulů. Některé body jsou mají implicitní implementace již v jádru, aby byla zajištěna správná funkčnost i bez modulů. Během vývoje jsem dospěl k myšlence, že všechny části, které jsou v jádru implicitní, by měly být pro přehlednost také umístěny do oddělených modulů, ale to by vyžadovalo složité přepracování, na které nezbyl během vývoje čas.
+V následujících podsekcích jsou probrány podrobně, ale s ohledem na omezení rozsahu, všechny body využité pro rozšíření aplikace pomocí modulů. Některé body mají implicitní implementace již v jádru, aby byla zajištěna správná funkčnost i bez modulů. Během vývoje jsem dospěl k myšlence, že všechny části, které jsou v jádru implicitní, by měly být pro přehlednost také umístěny do oddělených modulů, ale to by vyžadovalo složité přepracování, na které nezbyl během vývoje čas.
 
 \subsubsection{Routy}
 Rozšíření routování v aplikaci funguje paralelně s pevně daným routováním jádra. Rozšíření spočívá v dědění rozhraní \texttt{IRoutes} třídou v modulu -- umístěnou v \texttt{Routes.cs}.
@@ -1490,7 +1507,7 @@ Pohledy poskytují místo pro rozšíření pomocí rodičovských tříd, kter�
 Moduly obsahují shodnou strukturu pohledů jako jádro a musí také obsahovat soubor \texttt{Web.config} s určením, kterou třídu specifikují a jaké \textit{namespaces} implicitně používají. Jde použít i soubor
 \texttt{\_ViewStart.cshtml} v adresáři \texttt{Shared} pro všechny pohledy. Soubor může měnit například základní šablonu \textit{layoutu}.
 
-Také jsem přemýšlel o variantě kompilovat pohledy přímo do sestavení, postup byl ale nutný naučit každého, kdo by vyvíjel nový modul. Šlo o process popsaný na blogu Chrise van de Steega\footnote{\url{http://www.chrisvandesteeg.nl/2010/11/22/embedding-pre-compiled-razor-views-in-your-dll/}}. Pro opuštění toto způsobu nahrává i výhoda možnosti úpravy pohledů v nezkompilovaných \textit{cshtml} souborech přímo na serveru.
+Také jsem přemýšlel o variantě kompilovat pohledy přímo do sestavení, postup byl ale nutný naučit každého, kdo by vyvíjel nový modul. Šlo o proces popsaný na blogu Chrise van de Steega\footnote{\url{http://www.chrisvandesteeg.nl/2010/11/22/embedding-pre-compiled-razor-views-in-your-dll/}}. Pro opuštění tohoto způsobu nahrává i výhoda možnosti úpravy pohledů v nezkompilovaných \textit{cshtml} souborech přímo na serveru.
 
 \subsubsection{Formuláře}
 
@@ -1498,7 +1515,7 @@ Formuláře jsou obsaženy v pohledech, ale jejich vykreslení s modelem a váz�
 
 Dále jsem se obával spojení formulářů a widgetů \ref{sec:widgets}. Při testování spolupráce se ale nevyskytl žádný problém. Pro formuláře ve widgetech není třeba žádný speciální postup.
 
-Ještě bych chtěl zmínit už zabudovanou funkčnost do formulářů přímo ve frameworku MVC. Jde o \textsf{Display} a \textsf{Editor Templates}. Na svém blogu ji popisuje Brad Wilson\footnote{\url{http://bitly.com/mvc2templates}}. Bohužel je návod ještě pro verzi MVC 2 a neobsahuje Razor šablony. Myšlenka spočívá v tom, že každá entita může mít svojí vlastní zobrazovací a formulářovou šablonu. Není tedy nutné vypisovat každý prvek entity do pohledu zvlášť. Ukázka \ref{list:settings} je z pohledu správy nastavení (šablona \texttt{Setting.cshtml}). Kód je ořezaný o HTML tagy tabulky. V souboru \texttt{Index.cshtml} je pak šablona použita na řádku \textbf{14} pomocí příkazu \texttt{Html.EditorForModel}. Framework rozpozná o jakou jde entitu podle deklarace modelu.
+Ještě bych chtěl zmínit už zabudovanou funkčnost do formulářů přímo ve frameworku MVC. Jde o \textsf{Display} a \textsf{Editor Templates}. Na svém blogu ji popisuje Brad Wilson\footnote{\url{http://bitly.com/mvc2templates}}. Bohužel je návod ještě pro verzi MVC 2 a neobsahuje Razor šablony. Myšlenka spočívá v tom, že každá entita může mít svojí vlastní zobrazovací a formulářovou šablonu. Není tedy nutné vypisovat každý prvek entity do pohledu zvlášť. Ukázka \ref{list:settings} je z pohledu správy nastavení (šablona \texttt{Setting.cshtml}). Kód je ořezaný o HTML tagy tabulky. V souboru \texttt{Index.cshtml} je pak šablona použita na řádku \textbf{14} pomocí příkazu \texttt{Html.EditorForModel}. Framework rozpozná, o jakou jde entitu podle deklarace modelu.
 
 \begin{lstlisting}[float=h!,language=HTML, caption={šablony pro formuláře}, label=list:settings]
 <!--Views/Settings/EditorTemplates/Setting.cshtml-->
@@ -1563,7 +1580,7 @@ Služby jsou určeny pro distribuci dat controllerům a pohledům. Definice jeji
 \item \texttt{IListing} -- služby pro seznamy zboží vypsaných z kategorií. Tato služba nemá v základní aplikaci využití, protože zobrazování zboží nebylo nijak rozšiřováno.
 \end{itemize}
  
-Předpisy rozhraní by bylo samozřejmě nutné rozšířit v případě nasazení aplikace v ostrém prostředí. Služby jsou opět do controllerů \textit{injektovány} v třídě \texttt{Modules}. Pokud není implementace nalezena v modulech, použije se implicitní implementace v sestavení \textsf{Core}. Vzhledem k funkcím, které služby mají je možné s nimi nahradit modely.
+Předpisy rozhraní by bylo samozřejmě nutné rozšířit v případě nasazení aplikace v ostrém prostředí. Služby jsou opět do controllerů \textit{injektovány} v třídě \texttt{Modules}. Pokud není implementace nalezena v modulech, použije se implicitní implementace v sestavení \textsf{Core}. Díky funkcím, kterými služby disponují, je možné nahradit modely službami.
  
 \subsubsection{Menu}
 \label{sec:menu}
@@ -1638,7 +1655,7 @@ Zlepšením implementace by určitě bylo kešování seznamu widgetů a jiný z
 
 \subsubsection{Entity}
 \label{subsec:pripojenientit}
-I entity se dají rozšířit, v základu aplikace nebylo této schopnosti využito, ale pro praktickou implementaci je toto třeba. Způsob rozšíření entit je rozdělen interně na 3 způsoby, ale vždy využívá mechanismu dědění původní entity. Detaily nastavení jsou probírány v článcích na blogu Morteza Manavi\footnote{\url{http://bit.ly/CodeFirstInheritance}}.
+I entity se dají rozšířit. V základu aplikace nebylo této schopnosti využito, ale pro praktickou implementaci je toto třeba. Způsob rozšíření entit je rozdělen interně na 3 způsoby, ale vždy využívá mechanismu dědění původní entity. Detaily nastavení jsou probírány v článcích na blogu Morteza Manavi\footnote{\url{http://bit.ly/CodeFirstInheritance}}.
 
 Připojení demonstruje entita \texttt{Review} z modulu \textsf{Reviews}. Implementovat injekci entit bylo možné jen díky článku publikovaném jako návodu na psaní modulů pro projekt NopCommerce \cite{NOPE}. Nikde jinde, ani v dokumentačních materiálech Entity Frameworku tato možnost zmíněna není, což považuji za velkou slabost dokumentace Entity Frameworku.
 
@@ -1646,7 +1663,7 @@ Způsob implementace postupuje podle příkladu z článku \cite{NOPE}. Nejprve 
 
 Dotazování na tyto modulární entity z \texttt{DbContext} pak probíhá jinak, rozdíl demonstruje ukázka \ref{list:rozdilentit}. Rozšiřující entita je získávána z \texttt{DbContext} na řádku \textbf{5} a z ní pak základní entita na řádku \textbf{6}. 
 
-Nevýhodou je nemožnost pracovat s rozšiřujícími entitami v jiných modulech o jádře ani nemluvě.
+Nevýhodou je nemožnost pracovat s rozšiřujícími entitami v jiných modulech, o jádře ani nemluvě.
 
 \begin{lstlisting}[float=h!,language=CSharp, caption={rozdíl použití základní a rozšiřující entity}, label=list:rozdilentit]
 [ChildActionOnly]
@@ -1674,7 +1691,7 @@ Controller se poté opět musí přidat do menu backendu stejným atributem \tex
 Omezení byla postupně zmiňována v podsekcích Modulů \ref{sec:moduly}. Zde jsou shrnuty.
 
 \begin{itemize}
-\item Entity -- rozšíření entit je možné pouze v rámci modulu Mimo něj Entita viditelná není. Viz. \ref{subsec:pripojenientit}. Pokud by se entita deklarovala jinde, dojde ke konfliktům a duplikaci.
+\item Entity -- rozšíření entit je možné pouze v rámci modulu. Mimo něj Entita viditelná není. Viz. \ref{subsec:pripojenientit}. Pokud by se entita deklarovala jinde, dojde ke konfliktům a duplikaci.
 \item Widgety -- omezené umístěním na určená místa a omezují výkonnost aplikace, viz. \ref{sec:widgets}.
 \item AdminPluginController -- zmíněný výše v \ref{subsub:backend}. Přesněji jde o vícenásobnou dědičnost, která není v .NET možná. Je třeba sáhnout k rozhraní a duplicitní implementaci.
 \item Služby -- rozšíření služeb musí být provedeno ve frameworku aplikace, který je třeba znova zkompilovat. Modulárním způsobem je možné pouze implementovat rozhraní.
@@ -1698,7 +1715,7 @@ Také je důležité, aby server poskytoval plná práva \textbf{Full Trust}\foo
 
 
 \subsection{Instalace a odebrání modulu}
-Při instalaci nebo odebírání modulů je třeba vypráznit \textsf{Application Pool} (keš) v IIS příkazem \textsf{Recycle} a restartovat aplikaci. Případně pomůže také přehrát DLL soubory.
+Při instalaci nebo odebírání modulů je třeba vypráznit \textsf{Application Pool} (keš) v IIS příkazem \textsf{Recycle}. Toto se ale ukázalo jako nefunkční řešení v případě nepřekompilování projektu \textsf{Meshop.Core}. Proto se musí vymazat aplikace z adresáře \texttt{C:\symbol{92}Windows\symbol{92}Microsoft.NET\\\symbol{92}Framework\symbol{92}v4.0.30319\symbol{92}Temporary ASP.NET Files\symbol{92}} .
 
 Instalace modulu se provádí zkompilováním modulu a spolu se soubory pohledů a dalšími se nakopíruje do aplikace do adresáře \texttt{extensions/plugins/Meshop.\{Modul\}}. Knihovna modulu v tomto případě musí mít název \texttt{Meshop.\{Modul\}.dll}. Zkompiluje se tak v případě názvu projektu modulu \textsf{Meshop.\{Modul\}}. Při spuštění se adresáře pluginů zkopírují do adresáře \texttt{extensions/temp} ze kterých se načtou.
 
@@ -1710,34 +1727,164 @@ Data v databázi se při změně v modulech vymažou a načtou se data z třídy
 \chapter{Testování}
 \label{sec:testovani}
 
-Výkon Render Partial
+Při a po vývoji aplikace probíhalo několik různých testování. Během vývoje byly postupně testovány všechny implementované funkce a jejich vzájemná součinnost. Pomocí těchto implementačních testů byla odhalena různá omezení, byly opraveny četné chyby a ošetřeny výjimky.
 
-UX test - Honza, Hozna
+Zajímavější ovšem bylo testování nasazení na ostrý webový server, testování výkonu a uživatelský test.
 
-Castle neběží na Medium Trust!
+\section{Testování nasazení}
 
+Nasazení na ostrý webový server by se podle předpokladů nemělo zásadně lišit od vývojového prostředí. Při testování byla použita finální verze aplikace včetně testovacích modulů \textsf{Reviews} a \textsf{PageRating}. Otestovány byly webhosting \emph{Aspone.cz}\footnote{\url{http://www.aspone.cz/}} a vlastní IIS server na osobním počítači.
+
+\subsection{Free webhosting Aspone.cz}
+Program \emph{Freehosting} na serveru \emph{Aspone.cz} je zdarma a poskytuje všechny potřebné služby pro aplikaci. Bylo provedeno zkušební nasazení a zkopírovány potřebné soubory (na DVD v adresáři \texttt{web}) na registrovanou službu s adresou \url{http://modular.aspone.cz}. Spuštění má proběhnout automaticky po nahrání souborů na privátní úložiště FTP.
+
+Při načítání webu z prohlížeče se vyskytla inicializační chyba. Knihovna \textbf{Castle Windsor}, použitá jako IOC kontejner, způsobila nezdokumentovanou chybu \uv{\emph{{System.Type\-Load\-Exception:} Inheritance security rules violated while overriding member}}. Z dotazů týkajících se této chyby na webu stackoverflow.com\footnote{\url{http://stackoverflow.com/questions/3928727/windsor-2-5-does-not-work-in-medium-trust}} vyplývá, že Castle Windsor nezvládne běžet v poslední verzi .NET frameworku s bezpečnostními omezeními na úrovni \textit{Medium Trust}. K běhu je potřeba oprávnění \textit{Full Trust}. 
+
+Při vybírání IOC kontejneru Castle Windsor nebylo toto omezení nikde v dokumentaci zmíněno. Z testování vyplynulo, že tento IOC kontejner není vhodný pro aplikaci běžící na jiné úrovni než \textit{Full Trust}. To by vyžadovalo pořízení placené varianty webhostingu Aspone.cz, které už \textit{Full Trust} podporují. Jiné hostingy\footnote{\url{http://www.web4u.cz}} bohužel nenabízejí \textit{Full Trust} ani v nejvyšších placených variantách.
+
+\subsection{Vlastní IIS server}
+Tato varianta testování byla zvolena po neúspěšném nasazení aplikace na webový hosting bez úrovně \textit{Full Trust}. Byl nainstalován IIS na systém Windows 7 Professional a byl doplněn o potřebné knihovny pomocí \textit{Instalační služby webové platformy} (WPI). Byly nainstalovány následující vyžadované knihovny:
 
 \begin{itemize}
- \item Způsob, průběh a výsledky testování.
- \item Srovnání s existujícími řešeními, pokud jsou známy.
-\end{itemize} 
+\item ASP.NET MVC 3
+\item Microsoft SQL Server Compact 4.0
+\item Jazykové sady ASP.NET MVC 3
+\end{itemize}
+
+Dále byl přidán nový \textit{Web}. Byla upravena oprávnění přístupu pro adresáře \texttt{App\_Data}, kvůli přístupu k databázi, a \texttt{extensions/temp}, aby mohl server vytvářet pracovní kopie modulů. Také byla nastavena \textit{Úroveň důvěryhodnosti rozhraní .NET} na \textbf{Full}. \textit{Fond aplikace} byl zvolen \textit{DefaultAppPool} s verzí rozhraní \textbf{v4.0(integrated)}. Aplikace byla nastavena tak, aby byla dostupná na adrese \textit{localhost}.
+
+Při testování byla nejprve spuštěna aplikace s moduly a všechny funkčnosti byly dostupné. V druhém kroku byly pluginy z adresáře odebrány a aplikace byla restartována, všechny funkčnosti také běžely v pořádku.
+
+\label{test:problem}
+Ve třetím kroku byly opět moduly přidány a aplikace byla restartována, jenže nastala chyba, která naznačovala, že moduly do aplikace nahrány nebyly. Byly prozkoumány všechny způsoby kešování a recyklace keše. Pomohlo až překompilování projektu jádra a přehrání souboru \texttt{Meshop.Core.dll}. Později při uživatelských testech s vývojáři byla nalezena další varianta. Jde o vymazání keše manuálně. Obnoví se tak Fond Aplikací IIS serveru. Keš aplikací je umístěna v adresáři 
+\\\texttt{C:\symbol{92}Windows\symbol{92}Microsoft.NET\symbol{92}Framework\symbol{92}v4.0.30319\symbol{92}Temporary ASP.NET Files\symbol{92}}. 
+\\Cesta se liší u 64-bitové verze serveru v adresáři -- \texttt{Framework64}. Pro správný běh stačí před smazáním aplikaci zastavit a poté ji již s moduly spustit. 
+
+Zajímavé je, že aplikace funguje po odebrání modulů i bez vymazání keše.\\
+
+
+
+Z testování nasazení aplikace na produkční server vyplývá, že jsou na server kladeny vyšší nároky. Jde o vlastní nastavení serveru a možnost manuálně mazat keš ASP.NET frameworku. Běžné webhostingové programy pro tuto aplikaci nestačí. Je třeba sáhnout po pokročilejších programech nebo zvolit vlastní řešení serveru.
+
+\section{Testování doby odpovědi}
+
+Doba odpovědi znamená dobu, za kterou se načte vyžádaná webová stránka. Testování probíhalo na vývojovém serveru IIS Express a na serveru IIS. Byly načítány stránky s obsahem z modulů i bez. Aplikace byla v jednom případě s moduly, ve druhém bez modulů. Následující tabulky \ref{tab:testIISE} a \ref{tab:testIIS} zobrazují doby odpovědí prvního načtení a dalších načtení. Před každým testováním byla vymazána keš.
+
+K měření byla využita funkce \textit{Timing} debugovacího modulu \textsf{Glimpse} přímo na stránce aplikace, viz. sekce \ref{glimpse}.
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}[c]{|c||c|c||c|c|}
+\hline
+ & \multicolumn{2}{c||}{\textbf{s moduly}} & \multicolumn{2}{|c|}{\textbf{bez modulů}} \\
+\hline 
+\multirow{2}{*}{\textbf{stránka}} & \textbf{1. načtení} & \textbf{2. načtení} & \textbf{1. načtení} & \textbf{2. načtení} \\ 
+& [ms] & [ms] & [ms] & [ms] \\
+\hline 
+Home         & 4,62s  & 323 & 3,23s & 241 \\ 
+\hline 
+About        & 217  & 185 & 178 & 133 \\ 
+\hline 
+Reviews      & 547  & 179 & -- & -- \\ 
+\hline 
+1. kategorie & 343  & 263 & 305 & 204 \\ 
+\hline 
+\end{tabular}
+\caption{Doba odpovědi v IIS Express}
+\label{tab:testIISE}
+\end{table} 
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}[c]{|c||c|c||c|c|}
+\hline
+ & \multicolumn{2}{c||}{\textbf{s moduly}} & \multicolumn{2}{|c|}{\textbf{bez modulů}} \\
+\hline 
+\multirow{2}{*}{\textbf{stránka}} & \textbf{1. načtení} & \textbf{2. načtení} & \textbf{1. načtení} & \textbf{2. načtení} \\ 
+& [ms] & [ms] & [ms] & [ms] \\
+\hline 
+Home         & 4,66s  & 165 & 4,2s & 203 \\ 
+\hline 
+About        & 230  & 115 & 140 & 114 \\ 
+\hline 
+Reviews      & 506  & 146 & -- & -- \\ 
+\hline 
+1. kategorie & 459  & 205 & 552 & 169 \\ 
+\hline 
+\end{tabular}
+\caption{Doba odpovědi v IIS}
+\label{tab:testIIS}
+\end{table} 
+
+Při měření dosahovaly další načtení stránek velmi podobných hodnot jako při druhém načtení. Rozdíl byl pouze v milisekundách. To je způsobeno dynamickou kompilací pohledu při prvním načítání a použití zkompilovaného pohledu při dalších načítáních. Tomuto zpoždění lze předejít zkompilováním pohledů přímo do \textit{assembly}, viz. sekce \ref{subsec:pohledy}.
+
+Další nepatrné zpoždění je pozorovatelné při načítání stránek v IIS Express v aplikaci s moduly a bez modulů. Na IIS serveru se ovšem toto zpoždění již neprojevuje. Pravděpodobně je to díky tomu, že je IIS optimalizovaný pro ostré nasazení. Může jít ovšem také o vytížení procesoru a vznikne tak rozdíl pár desítek ms. 
+
+V průměru se doba odpovědi pohybuje kolem 200ms u zkompilovaných pohledů, což je rychlá reakce z pohledu uživatele. Stránka \texttt{Home} obsahuje 3 widgety -- jeden z modulu \textsf{Reviews} -- a její doba odpovědi se zásadně neliší. Samozřejmě nelze vyloučit, že se doba odpovědi zvedne při implementaci dalších funkcí do aplikace. Dobu může zvednout i přidávání modulů a narůstání dotazů do databáze. Aplikaci je ale možné dále optimalizovat. 
+
+Závěrem testování doby odpovědi lze říci, že testovací moduly neprokázaly na serveru IIS zvýšenou reakční dobu díky kešování. Také byla vyvrácena hypotéza, že widgety zásadně prodlužují reakční dobu, viz. \ref{sec:widgets}.
+
+
+
+\section{Uživatelský test}
+Tento uživatelský test se týkal otestování tvorby modulu zkušenými vývojáři v prostředí platformy .NET a jeho nasazení na vývojové verzi aplikace. Testovaní vývojáři také zkoušeli moduly odebírat a přidávat.
+
+Vývojáři byli dva spolužáci, kteří používají platformu .NET na pokročilé úrovni a mají přehled o platformě i o Visual Studiu. Oba vývojáři dostali instrukce jak moduly instalovat a odebírat. Druhý vývojář také vytvořil základní strukturu modulu a úspěšně jej instaloval do aplikace. Testování probíhalo ve Visual Studiu 2010 a aplikace se spouštěla na vývojovém serveru IIS Express.
+
+První zkoušený vývojář prošel testem tak, že nainstaloval závislosti do Visual Studia a načetl projekty. Poté provedl spuštění aplikace i s moduly. V dalším kroku moduly odstranil a aplikaci opět spustil. Ve třetím kroku moduly do aplikace přidal a vznikl již dříve popisovaný problém \ref{test:problem}, který se vyřešil překompilováním knihovny jádra. Později bylo nalezeno umístění keše ASP.NET frameworku.
+
+Druhý vývojář testoval nasazení aplikace v připraveném Visual Studiu s nainstalovanými závislostmi a prošel všemi kroky stejně. Navíc ještě naprogramoval podle instrukcí vlastní modul, který pak přidal k aplikaci.
+
+Podle reakcí testovaných vývojářů lze říci, že je možné modulární aplikaci publikovat pro další vývojáře, kteří jí budou moci dále rozšířit.
+
+
+\section{Srovnání s existujícími řešeními}
+
+Nejbližší existující řešení je \textit{nopCommerce}, protože je také vyvíjeno pro platformu Microsoft .NET, viz. sekce \ref{nop}. 
+
+Aplikace \textit{nopCommerce} má velikou základnu uživatelů a proto jsou její chyby a nedostatky rychleji odhaleny. Je pro ni vyvinuto velké množství modulů a pracuje na ní tým 15-ti lidí už více jak 3 roky, z toho její zakladatel na plný úvazek.
+
+Aplikace \textit{nopCommerce} ale nebyla nainstalována lokálně. Byly vyzkoušeny pouze verze online uvedené v referencích. Nejrychlejší reakce měl první web \\ \url{http://www.yourpersonaljeweller.co.uk/}, který načetl stránku bez grafiky v rozmezí 165ms až 1s. Z toho lze usoudit, že je obchod i přes množství funkčností dobře optimalizovaný. Server IIS 6.0, na kterém aplikace běží, musí být také dobře optimalizovaný. Doba také navíc zahrnuje zpoždění přenosu dat ze vzdáleného serveru.
+
+Lze konstatovat, že při konstantním vývoji aplikace modulárního e-shopu více vývojáři, by se mohla stát v budoucnu konkurenceschopnou aplikaci \textit{nopCommerce}. Zatím se jedná pouze o testovací prototyp.
 
 
 %*****************************************************************************
 \chapter{Závěr}
 \label{sec:zaver}
 
-
-
 \section{Zhodnocení}
-\textbf{Zhodnocení splnění cílů práce a vlastního přínosu práce (při formulaci je třeba vzít v potaz zadání práce).}
 
-Nedostatek - roztroušená dokumentace po internetu v návodech, MSDN je poskládaná z fragmentů, knihy pomohly částečně, nezachází tak do hloubky.
+V této práci byla navrhnuta a úspěšně implementována aplikace e-shopu s využitím modulární architektury. Práce se soustředila na možnosti rozšiřitelnosti aplikace a ověřila, že je tvorba takového internetového obchodu možná. Všechny základní požadavky kladené na aplikaci z hlediska rozšiřitelnosti se podařilo splnit. Zvolená vývojová platforma Microsoft .NET poskytla nejen dostatek funkcí, ale i integrované nástroje v podobě kvalitního vývojového prostředí, jakým je \textit{Visual Studio}.
+
+Rešerše poskytla náhled do prostředí elektronického obchodování a bylo zjištěno, že nabídka elektronických obchodů je doslova obrovská. Byla nalezena velmi kvalitní ale i nekvalitní řešení. V testech bylo ověřeno, že i volně dostupné řešení elektronického obchodu může být kvalitní.
+
+Pro implementaci byla zvolena architektura MVC, kterou poskytuje platforma Microsoft .NET jako rozšiřující framework ASP.NET MVC ve verzi 3. Framework nabídl mnoho možností pro rozšíření a umožnil tvorbu modulární aplikace ve spolupráci s návrhovým vzorem \textit{Dependency injection} a funkcemi platformy Microsoft .NET. Platforma se ukázala jako dobře zvolená, protože je velmi rozšířená a její vývoj neustále pokračuje. Platforma je dobře zdokumentovaná a pro mnoho problémů je dostupné řešení na oficiálních i komunitních webových stránkách. Učící křivka ale vzhledem k rozsáhlosti platformy z počátku stoupá velmi pozvolna. S pokročilými funkcemi frameworku ASP.NET MVC 3 pomohla i zakoupená kniha \cite{MVC1}.
+
+Rozšíření jádra aplikace pomocí modulů bylo dosaženo přes body rozšíření. Lze tak mimo jiné rozšířit datový model aplikace, přidávat další webové stránky, doplňovat existující stránky, nebo je kompletně nahrazovat. 
+
+Testování prokázalo, že moduly nemají na aplikaci při načítání webových stránek vliv. Během testů byla objevena omezení, která vyžadují nasazení aplikace na webový server s vlastní správou nebo využití pokročilých webhostingových programů. Omezení se týkají externí knihovny Castle Windsor pro načítání modulů a webového serveru IIS. 
+
+Uživatelský test s vývojáři potvrdil, že je aplikaci možné poskytnout dalším vývojářům, kteří ji dál mohou rozšířit o další moduly a funkce. Dalším vývojem by tak mohl vzniknout z funkčního prototypu plnohodnotný modulární elektronický obchod.
+
+
+
+%Zhodnocení splnění cílů práce a vlastního přínosu práce 
+%(při formulaci je třeba vzít v potaz zadání práce)
 
 \section{Rozšíření}
-\textbf{Diskuse dalšího možného pokračování práce. }
 
-dědění modulů, katalogizace.
+Aplikace modulárního e-shopu byla implementována jako funkční prototyp. Poskytuje tak dostatek místa pro její další rozšíření. 
+
+Pokračování práce by se mohlo věnovat optimalizaci výkonu aplikace, zejména části načítání modulů a optimalizovat její funkce. Dále by bylo vhodné vyřešit omezení objevená při testování prototypu. To by si vyžádalo rešerši mezi dostupnými IoC kontejnery, jakým je i použitý Castle Windsor, a volbu toho nejvhodnějšího z hlediska výkonu, funkcí a omezení. Aplikace by také mohla být optimalizována implementací kešování zdrojů načítaných do webových stránek.
+
+Dalším vhodným rozšířením by mohl být systém pro katalogizaci dostupných modulů, jakým je například balíčkový systém \textit{NuGet} pro Visual Studio. %, zmíněný v sekci \ref{subsec:roz}.
+Systém by mohl dále umožnit rozšíření existujících modulů dalšími moduly.
+
+Z důvodu větší přehlednosti by bylo také praktické přesunout základní rozhraní z jádra do modulů. Pro úspěšné nasazení aplikace je ale nejdůležitější rozšíření o moduly, které z prototypu udělají v praxi použitelný elektronický obchod.
+
 
 
 %*****************************************************************************
@@ -1789,6 +1936,7 @@ dědění modulů, katalogizace.
 \item[EE] Enterprise Edition
 \item[EF] Entity Framework
 \item[ER] Entity-Relationship
+\item[FTP] File Transfer Protocol
 \item[HTML] HyperText Markup Language
 \item[HTTP] HyperText Transfer Protocol
 \item[IEEE] Institute of Electrical and Electronics Engineers 
@@ -1817,10 +1965,6 @@ dědění modulů, katalogizace.
 
 \end{description}
 
-
-%*****************************************************************************
-\chapter{UML diagramy}
-\textbf{\large Mám je sem ještě jednou dát?}
 
 %*****************************************************************************
 \chapter{Ukázky aplikace}
@@ -1855,10 +1999,16 @@ dědění modulů, katalogizace.
 
 %*****************************************************************************
 \chapter{Instalační a uživatelská příručka}
+
+Instrukce pro instalaci a spuštění aplikace jsou z textu práce pro přehlednost extrahovány do této přílohy.
+
 \section{Instalace prostředí}
+
+
 \section{Instalace aplikace}
 \section{Spuštění}
-\section{Moduly}
+\section{Práce s moduly}
+nový projekt - vypnout kopie referencí. vzorová struktura Reviews
 
 %*****************************************************************************
 \chapter{Obsah přiloženého DVD}

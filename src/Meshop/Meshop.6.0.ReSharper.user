@@ -1,12 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/d:DefaultServices/f:DefaultAdmin.cs" caret="0" fromTop="0" />
-      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Module/f:PluginController.cs" caret="890" fromTop="28" />
-      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Services/f:IProduct.cs" caret="0" fromTop="0" />
-      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Services/f:ICart.cs" caret="0" fromTop="0" />
-      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/d:Areas/d:Admin/d:Views/d:Settings/d:EditorTemplates/f:Setting.cshtml" caret="0" fromTop="0" />
-      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/d:Areas/d:Admin/d:Views/d:Settings/f:Index.cshtml" caret="0" fromTop="0" />
       <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/d:DefaultServices/f:DefaultCommon.cs" caret="0" fromTop="0" />
       <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Services/f:ICommon.cs" caret="0" fromTop="0" />
       <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Services/f:ICategory.cs" caret="0" fromTop="0" />
@@ -20,17 +14,21 @@
       <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:ViewEngine/f:BaseWebViewPage.cs" caret="0" fromTop="0" />
       <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Widgets/f:WidgetterResolver.cs" caret="0" fromTop="0" />
       <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/d:Views/d:Home/f:Index.cshtml" caret="513" fromTop="18" />
-      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Widgets/f:Widgetter.cs" caret="2011" fromTop="52" />
       <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/d:Controllers/f:HomeController.cs" caret="4331" fromTop="41" />
       <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Module/f:PluginEntity.cs" caret="55" fromTop="2" />
       <File id="B8E0669A-8E95-4971-B227-953306668D4A/d:Models/f:ReviewsModel.cs" caret="476" fromTop="15" />
       <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Model/f:BasicDbConnection.cs" caret="0" fromTop="0" />
       <File id="B8E0669A-8E95-4971-B227-953306668D4A/d:Controllers/f:ReviewsController.cs" caret="322" fromTop="12" />
       <File id="B8E0669A-8E95-4971-B227-953306668D4A/d:Controllers/f:AdminReviewsController.cs" caret="0" fromTop="0" />
-      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:DI/f:ControllerFactory.cs" caret="915" fromTop="29" />
-      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:DI/f:Modules.cs" caret="5785" fromTop="30" />
-      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/f:Global.asax.cs" caret="0" fromTop="0" />
       <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/d:Models/d:DeleteInFuture/f:DatabaseInitializer.cs" caret="8809" fromTop="40" />
+      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:Widgets/f:Widgetter.cs" caret="1993" fromTop="37" />
+      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/f:Global.asax.cs" caret="1287" fromTop="30" />
+      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:DI/f:Modules.cs" caret="0" fromTop="0" />
+      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/f:PreApplicationInit.cs" caret="2922" fromTop="36" />
+      <File id="F693D69C-369F-4927-96B3-7B3D3DE88535/d:DI/f:ControllerFactory.cs" caret="772" fromTop="27" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/d:Controllers/f:Project1Controller.cs" caret="232" fromTop="9" />
+      <File id="A92EBA83-0C40-45E6-9C67-250621335967/d:Views/d:Project1/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/f:Web.config" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
       <File id="FD4C4E8B-6246-4CB7-8168-4AA127D98D72/f:Global.asax.cs" caret="1736" fromTop="41" />

@@ -10,3 +10,15 @@ C:\Dokumenty\diplomka\Meshop\Meshop.Framework\bin\Debug\EntityFramework.xml
 C:\Dokumenty\diplomka\Meshop\Meshop.Framework\obj\Debug\ResolveAssemblyReference.cache
 C:\Dokumenty\diplomka\Meshop\Meshop.Framework\obj\Debug\Meshop.Framework.dll
 C:\Dokumenty\diplomka\Meshop\Meshop.Framework\obj\Debug\Meshop.Framework.pdb
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\Meshop.Framework.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\Meshop.Framework.pdb
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\Castle.Core.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\Castle.Windsor.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\EntityFramework.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\Castle.Core.xml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\Castle.Windsor.pdb
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\Castle.Windsor.xml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\bin\Debug\EntityFramework.xml
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\obj\Debug\Meshop.Framework.dll
+C:\Dokumenty\diplomka\src\Meshop\Meshop.Framework\obj\Debug\Meshop.Framework.pdb

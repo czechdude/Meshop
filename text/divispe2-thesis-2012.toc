@@ -23,10 +23,10 @@
 \contentsline {subsubsection}{\numberline {3.3.1.5}Open cart}{10}{subsubsection.3.3.1.5}
 \contentsline {subsection}{\numberline {3.3.2}Komer\IeC {\v c}n\IeC {\'\i } \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{10}{subsection.3.3.2}
 \contentsline {subsubsection}{\numberline {3.3.2.1}CubeCart}{10}{subsubsection.3.3.2.1}
-\contentsline {subsection}{\numberline {3.3.3}ShopCentrik}{10}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Shopio}{10}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}oXyShop}{10}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}Zoner inShop4}{11}{subsection.3.3.6}
+\contentsline {subsubsection}{\numberline {3.3.2.2}ShopCentrik}{10}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Shopio}{10}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}oXyShop}{10}{subsubsection.3.3.2.4}
+\contentsline {subsubsection}{\numberline {3.3.2.5}Zoner inShop4}{11}{subsubsection.3.3.2.5}
 \contentsline {chapter}{\numberline {4}Anal\IeC {\'y}za a n\IeC {\'a}vrh \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Po\IeC {\v z}adavky u\IeC {\v z}ivatel\IeC {\r u}}{13}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Po\IeC {\v z}adavky obchodn\IeC {\'\i }k\IeC {\r u}}{13}{subsection.4.1.1}
@@ -37,7 +37,7 @@
 \contentsline {section}{\numberline {4.4}Po\IeC {\v z}adavky z pohledu roz\IeC {\v s}i\IeC {\v r}itelnosti}{17}{section.4.4}
 \contentsline {section}{\numberline {4.5}Use Cases a Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{18}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r} 1 - Prohl\IeC {\'\i }\IeC {\v z}en\IeC {\'\i } zbo\IeC {\v z}\IeC {\'\i } v obchodu}{18}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r} 2 - Registrace z\IeC {\'a}kazn\IeC {\'\i }ka}{19}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r} 2 - Registrace z\IeC {\'a}kazn\IeC {\'\i }ka}{20}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r} 3 - N\IeC {\'a}kup zbo\IeC {\v z}\IeC {\'\i }}{21}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r} 4 - P\IeC {\v r}ihl\IeC {\'a}\IeC {\v s}en\IeC {\'\i } obchodn\IeC {\'\i }ka}{21}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r} 5 - Vlo\IeC {\v z}en\IeC {\'\i } kategorie}{22}{subsection.4.5.5}
@@ -60,9 +60,9 @@
 \contentsline {subsubsection}{\numberline {4.9.1.2}Entity Framework - Code First}{32}{subsubsection.4.9.1.2}
 \contentsline {subsubsection}{\numberline {4.9.1.3}SQL Compact Edition}{33}{subsubsection.4.9.1.3}
 \contentsline {subsubsection}{\numberline {4.9.1.4}Castle Windsor}{33}{subsubsection.4.9.1.4}
-\contentsline {subsection}{\numberline {4.9.2}Paged List}{34}{subsection.4.9.2}
-\contentsline {subsubsection}{\numberline {4.9.2.1}Glimpse}{34}{subsubsection.4.9.2.1}
-\contentsline {subsection}{\numberline {4.9.3}Ostatn\IeC {\'\i } pou\IeC {\v z}it\IeC {\'e} technologie}{34}{subsection.4.9.3}
+\contentsline {subsubsection}{\numberline {4.9.1.5}Paged List}{34}{subsubsection.4.9.1.5}
+\contentsline {subsubsection}{\numberline {4.9.1.6}Glimpse}{34}{subsubsection.4.9.1.6}
+\contentsline {subsection}{\numberline {4.9.2}Ostatn\IeC {\'\i } pou\IeC {\v z}it\IeC {\'e} technologie}{34}{subsection.4.9.2}
 \contentsline {chapter}{\numberline {5}Realizace}{37}{chapter.5}
 \contentsline {section}{\numberline {5.1}Komponenty aplikace}{37}{section.5.1}
 \contentsline {section}{\numberline {5.2}Pou\IeC {\v z}it\IeC {\'e} \IeC {\v c}\IeC {\'a}sti ASP.NET MVC 3}{37}{section.5.2}
@@ -104,15 +104,20 @@
 \contentsline {section}{\numberline {5.5}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } aplikace}{59}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1}Instalace a odebr\IeC {\'a}n\IeC {\'\i } modulu}{59}{subsection.5.5.1}
 \contentsline {chapter}{\numberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{61}{chapter.6}
-\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{63}{chapter.7}
-\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i }}{63}{section.7.1}
-\contentsline {section}{\numberline {7.2}Roz\IeC {\v s}\IeC {\'\i }\IeC {\v r}en\IeC {\'\i }}{63}{section.7.2}
-\contentsline {chapter}{\numberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{67}{appendix.A}
-\contentsline {chapter}{\numberline {B}UML diagramy}{69}{appendix.B}
-\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zky aplikace}{71}{appendix.C}
-\contentsline {chapter}{\numberline {D}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{75}{appendix.D}
-\contentsline {section}{\numberline {D.1}Instalace prost\IeC {\v r}ed\IeC {\'\i }}{75}{section.D.1}
-\contentsline {section}{\numberline {D.2}Instalace aplikace}{75}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i }}{75}{section.D.3}
-\contentsline {section}{\numberline {D.4}Moduly}{75}{section.D.4}
-\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD}{77}{appendix.E}
+\contentsline {section}{\numberline {6.1}Testov\IeC {\'a}n\IeC {\'\i } nasazen\IeC {\'\i }}{61}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Free webhosting Aspone.cz}{61}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Vlastn\IeC {\'\i } IIS server}{62}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Testov\IeC {\'a}n\IeC {\'\i } doby odpov\IeC {\v e}di}{63}{section.6.2}
+\contentsline {section}{\numberline {6.3}U\IeC {\v z}ivatelsk\IeC {\'y} test}{64}{section.6.3}
+\contentsline {section}{\numberline {6.4}Srovn\IeC {\'a}n\IeC {\'\i } s existuj\IeC {\'\i }c\IeC {\'\i }mi \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }mi}{64}{section.6.4}
+\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{65}{chapter.7}
+\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i }}{65}{section.7.1}
+\contentsline {section}{\numberline {7.2}Roz\IeC {\v s}\IeC {\'\i }\IeC {\v r}en\IeC {\'\i }}{66}{section.7.2}
+\contentsline {chapter}{\numberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{69}{appendix.A}
+\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zky aplikace}{71}{appendix.B}
+\contentsline {chapter}{\numberline {C}Instala\IeC {\v c}n\IeC {\'\i } a u\IeC {\v z}ivatelsk\IeC {\'a} p\IeC {\v r}\IeC {\'\i }ru\IeC {\v c}ka}{75}{appendix.C}
+\contentsline {section}{\numberline {C.1}Instalace prost\IeC {\v r}ed\IeC {\'\i }}{75}{section.C.1}
+\contentsline {section}{\numberline {C.2}Instalace aplikace}{75}{section.C.2}
+\contentsline {section}{\numberline {C.3}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i }}{75}{section.C.3}
+\contentsline {section}{\numberline {C.4}Pr\IeC {\'a}ce s moduly}{75}{section.C.4}
+\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD}{77}{appendix.D}

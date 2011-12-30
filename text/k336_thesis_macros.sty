@@ -47,10 +47,10 @@
 \def\ifndef#1{\expandafter\ifx\csname#1\endcsname\relax} % check whether macro is defined
 
 
-
+\let\oldcleardoublepage\cleardoublepage
 
 \newcommand\coverpagestarts
-{\cleardoublepage
+{\oldcleardoublepage
 \pagenumbering{roman}\thispagestyle{empty}\setcounter{page}{3}
 \begin{center}
 \large\rmfamily
@@ -128,7 +128,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\acknowledgements}{
-\cleardoublepage
+\oldcleardoublepage
 \vspace*{\fill}
 \noindent
 {\huge \textbf{%
@@ -139,7 +139,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\declaration}[1]{
-\cleardoublepage
+\oldcleardoublepage
 \vspace*{\fill}
 \noindent
 {\huge \textbf{%
@@ -161,11 +161,12 @@ I have no objection to usage of this work in compliance with the act \S 60 Záko
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\abstractpage}{
-\cleardoublepage
+\oldcleardoublepage
 \noindent
-%{\Huge \textbf{Abstract}}
+{\Huge \textbf{Abstract}}
 %\vspace{8ex}
-\chapter*{Abstract}
+\vskip 2.75\baselineskip
+%\chapter*{Abstract}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
