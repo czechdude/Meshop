@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  30 DEC 2011 11:44
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  30 DEC 2011 20:03
 entering extended mode
 **divispe2-thesis-2012.tex
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.tex
@@ -1233,31 +1233,25 @@ P\v {r}\'{\i }loha C.
 
 ]
 P\v {r}\'{\i }loha D.
-<figures/cd.png, id=1714, 88.07906pt x 69.25874pt>
+<figures/cd.png, id=1717, 88.07906pt x 69.25874pt>
 File: figures/cd.png Graphic file (type png)
  <use figures/cd.png>
 [77 <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux) ) 
 Here is how much of TeX's memory you used:
  10411 strings out of 495285
- 143706 string characters out of 3179883
+ 143696 string characters out of 3179883
  403257 words of memory out of 3000000
  12830 multiletter control sequences out of 15000+200000
  77223 words of font info for 52 fonts, out of 3000000 for 9000
  19 hyphenation exceptions out of 8191
  38i,10n,51p,1447b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): n
-ame{subsection.3.3.6} has been referenced but does not exist, replaced by a fix
-ed one
+ame{figure.C.2} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{subsection.3.3.5} has been referenced but does not 
-exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{subsection.3.3.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3.3} has been referenced but does not 
-exist, replaced by a fixed one
+pdfTeX warning (dest): name{figure.C.1} has been referenced but does not exist,
+ replaced by a fixed one
 
 {C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program
  Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/Mi
@@ -1277,9 +1271,9 @@ ts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/pu
 blic/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lms
 y9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/
 Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (95 pages, 2377381 bytes).
+Output written on divispe2-thesis-2012.pdf (95 pages, 2378476 bytes).
 PDF statistics:
- 1898 PDF objects out of 2073 (max. 8388607)
+ 1901 PDF objects out of 2073 (max. 8388607)
  568 named destinations out of 1000 (max. 500000)
  1079 words of extra memory for PDF output out of 10000 (max. 10000000)
 
