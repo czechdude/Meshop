@@ -23,7 +23,7 @@ na webhosting nebo vlastní IIS server s nainstalovanými závislostmi.
 
 Požadavky, instalace, spouštění:
 
-
+Nutné informace pro spuštění obsahuje příloha C v práci.
 
 --------------------------------------------------------------------------------
 EN:
@@ -32,7 +32,7 @@ This DVD/repository contains complete source code, text and compiled files.
 Complete thesis text is available in Czech in the file 
 text/divispe2-thesis-2012.pdf. English version is not available.
 
-The structure:
+Structure:
 The directory SRC contains complete solution. It can be opened in Visual Studio
 and run after solving required dependencies.
 The directory TEXT contains files with the text of the thesis in PDF format and
@@ -40,5 +40,39 @@ in LATEX formatted files needed for compilation to PDF.
 The directory WEB contains compiled source code ready for deployment to
 a hosting or to own custom IIS server with necessary dependencies resolved.
 
-Requirements, deployment, run:
+-----------------
+Requrements: 
+Windows XP or above, optionally IIS server.
 
+-----------------
+Deployment, run:
+Run Web Platform Installer available at http://www.asp.net/mvc and install everything.
+
+If you have Visual Studio 2010 of any edition, you can run this project.
+
+Open Meshop.sln and confirm all the warnings.
+
+In Solution Explorer window right click the Solution 'Meshop' line and choose the  Configuration Manager... option.
+
+Uncheck all project builds.
+
+Run the application with F5 or Start Debugging button.
+
+--------------------
+Module manipulation:
+
+The Meshop.Reviews project is example of a module.
+
+If you want to manipulate the modules, you have to first clean the ASP.NET cache located at C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\
+In case of 64bit server, the path differs in Framework64.
+
+The running environment must have also Full Trust level set. It is because of unresolved errors in IoC container Castle Windsor when running at lower level.
+
+Modules are set up to build to the extensions/plugins folder in the Core project.
+
+The modules folder must be named by the DLL module name, eg. \Meshop.Reviews\
+
+References in Modules must not be copied to plugins folder. Other files that do not compile must in contrary be copied to the plugins folder.
+
+For other module development follow the structure of Meshop.Reviews project.
+Create project in the solution from template ASP.NET MVC 3 Application and setup the  project properties the same as in Meshop.Reviews.

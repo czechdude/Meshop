@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  30 DEC 2011 20:03
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  30 DEC 2011 22:24
 entering extended mode
 **divispe2-thesis-2012.tex
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.tex
@@ -888,14 +888,14 @@ Overfull \hbox (0.15717pt too wide) in paragraph at lines 603--604
 -la²o-vací for-mulá° zo-brazu-jící se nep°ih-lá²enému
  []
 
-[16] [17] <figures/usecasefront.png, id=921, 373.395pt x 599.23875pt>
+[16] [17] <figures/usecasefront.png, id=919, 373.395pt x 599.23875pt>
 File: figures/usecasefront.png Graphic file (type png)
 
 <use figures/usecasefront.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/usecaseback.png, id=922, 285.065pt x 407.5225pt>
+<figures/usecaseback.png, id=920, 285.065pt x 407.5225pt>
 File: figures/usecaseback.png Graphic file (type png)
 
 <use figures/usecaseback.png>
@@ -907,21 +907,21 @@ Underfull \vbox (badness 1867) has occurred while \output is active []
 
  [19 <C:/Dokumenty/diplomka/text/figures/usecasefront.png (PNG copy)>] [20 <C:/
 Dokumenty/diplomka/text/figures/usecaseback.png (PNG copy)>] [21] [22] [23]
-<figures/datamodel.png, id=1004, 434.37282pt x 566.115pt>
+<figures/datamodel.png, id=1002, 434.37282pt x 566.115pt>
 File: figures/datamodel.png Graphic file (type png)
 
 <use figures/datamodel.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/factorymethod.png, id=1010, 530.98375pt x 268.00125pt>
+<figures/factorymethod.png, id=1008, 530.98375pt x 268.00125pt>
 File: figures/factorymethod.png Graphic file (type png)
 
 <use figures/factorymethod.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/pluginseq.png, id=1013, 533.995pt x 287.0725pt>
+<figures/pluginseq.png, id=1011, 533.995pt x 287.0725pt>
 File: figures/pluginseq.png Graphic file (type png)
 
 <use figures/pluginseq.png>
@@ -941,17 +941,17 @@ Overfull \vbox (7.84248pt too high) has occurred while \output is active []
 
 
 [25 <C:/Dokumenty/diplomka/text/figures/datamodel.png>]
-<figures/uow.png, id=1025, 543.02875pt x 426.59375pt>
+<figures/uow.png, id=1023, 543.02875pt x 426.59375pt>
 File: figures/uow.png Graphic file (type png)
  <use figures/uow.png>
 [26 <C:/Dokumenty/diplomka/text/figures/factorymethod.png (PNG copy)> <C:/Dokum
 enty/diplomka/text/figures/pluginseq.png (PNG copy)>] [27 <C:/Dokumenty/diplomk
 a/text/figures/uow.png (PNG copy)>]
-<figures/di.png, id=1039, 531.9875pt x 241.90375pt>
+<figures/di.png, id=1037, 531.9875pt x 241.90375pt>
 File: figures/di.png Graphic file (type png)
  <use figures/di.png>
 [28 <C:/Dokumenty/diplomka/text/figures/di.png (PNG copy)>]
-<figures/servicelocator.png, id=1046, 537.00626pt x 334.24875pt>
+<figures/servicelocator.png, id=1044, 537.00626pt x 334.24875pt>
 File: figures/servicelocator.png Graphic file (type png)
 
 <use figures/servicelocator.png>
@@ -967,7 +967,7 @@ Overfull \hbox (17.72214pt too wide) in paragraph at lines 987--988
 k-ladní prin-cip popisuje velmi jednoduchý
  []
 
-<figures/mvc.png, id=1053, 330.23375pt x 220.825pt>
+<figures/mvc.png, id=1051, 330.23375pt x 220.825pt>
 File: figures/mvc.png Graphic file (type png)
  <use figures/mvc.png>
 [30 <C:/Dokumenty/diplomka/text/figures/mvc.png (PNG copy)>] [31] [32]
@@ -992,7 +992,7 @@ Overfull \hbox (0.75139pt too wide) in paragraph at lines 1108--1109
 n di-a-gram kom-po-nent, který graficky
  []
 
-<figures/componentsextract.png, id=1154, 699.61375pt x 537.00626pt>
+<figures/componentsextract.png, id=1152, 699.61375pt x 537.00626pt>
 File: figures/componentsextract.png Graphic file (type png)
 
 <use figures/componentsextract.png>
@@ -1003,7 +1003,7 @@ Overfull \hbox (19.22841pt too wide) in paragraph at lines 1116--1117
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/componentslow.png, id=1155, 587.19376pt x 293.095pt>
+<figures/componentslow.png, id=1153, 587.19376pt x 293.095pt>
 File: figures/componentslow.png Graphic file (type png)
 
 <use figures/componentslow.png>
@@ -1014,7 +1014,7 @@ Overfull \hbox (4.8791pt too wide) in paragraph at lines 1124--1125
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] <figures/struktura.png, id=1169, 185.94469pt x 299.61937pt>
+[37] <figures/struktura.png, id=1167, 185.94469pt x 299.61937pt>
 File: figures/struktura.png Graphic file (type png)
 
 <use figures/struktura.png>
@@ -1077,12 +1077,12 @@ Overfull \hbox (21.49527pt too wide) in paragraph at lines 1435--1436
 ut pro zabezpe£ení back-endu. D¥dí od \T1/lmtt/m/n/10.95 Authorize-
  []
 
-[48] <figures/lifecycle.png, id=1429, 185.69376pt x 554.07pt>
+[48] <figures/lifecycle.png, id=1427, 185.69376pt x 554.07pt>
 File: figures/lifecycle.png Graphic file (type png)
 
 <use figures/lifecycle.png> [49] [50 <C:/Dokumenty/diplomka/text/figures/lifecy
 cle.png (PNG copy)>]
-<figures/modulstruktura.png, id=1441, 173.14688pt x 258.9675pt>
+<figures/modulstruktura.png, id=1439, 173.14688pt x 258.9675pt>
 File: figures/modulstruktura.png Graphic file (type png)
 
 <use figures/modulstruktura.png>
@@ -1107,7 +1107,7 @@ Overfull \hbox (6.37332pt too wide) in paragraph at lines 1543--1544
 né po-mocí t°ídy \T1/lmtt/m/n/10.95 PluginController
  []
 
-[53] [54] [55] <figures/widgety.png, id=1531, 634.37pt x 485.815pt>
+[53] [54] [55] <figures/widgety.png, id=1529, 634.37pt x 485.815pt>
 File: figures/widgety.png Graphic file (type png)
 
 <use figures/widgety.png>
@@ -1118,29 +1118,24 @@ Overfull \hbox (14.8907pt too wide) in paragraph at lines 1650--1651
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56] [57 <C:/Dokumenty/diplomka/text/figures/widgety.png (PNG copy)>]
-Overfull \hbox (8.902pt too wide) in paragraph at lines 1696--1697
-[]\T1/lmr/m/n/10.95 AdminPluginController -- zmín¥ný vý²e v [][]5.4.5.10[][]. P
-°es-n¥ji jde o ví-cená-sob-nou d¥di£nost,
- []
-
-[58] [59] [60
+[56] [57 <C:/Dokumenty/diplomka/text/figures/widgety.png (PNG copy)>] [58]
+[59] [60]
+Kapitola 6.
+[61
 
 ]
-Kapitola 6.
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 1763--1764
+Underfull \hbox (badness 10000) in paragraph at lines 1764--1765
 
  []
 
 [62]
-Overfull \hbox (6.28488pt too wide) in paragraph at lines 1821--1822
+Overfull \hbox (6.28488pt too wide) in paragraph at lines 1822--1823
 \T1/lmr/m/n/10.95 p°i prvním na£ítání a pouºití zkom-pilo-vaného pohledu p°i da
 l²ích na£ítáních. To-muto zpoºd¥ní
  []
 
 [63]
-Overfull \hbox (1.20859pt too wide) in paragraph at lines 1849--1850
+Overfull \hbox (1.20859pt too wide) in paragraph at lines 1850--1851
 \T1/lmr/m/n/10.95 <[][]$\T1/lmtt/m/n/10.95 http : / / www . yourpersonaljewelle
 r . co . uk/$[][]\T1/lmr/m/n/10.95 >, který na£etl stránku bez grafiky v rozmez
 í
@@ -1188,33 +1183,33 @@ P\v {r}\'{\i }loha A.
 
 ] [70]
 P\v {r}\'{\i }loha B.
-<figures/frontend1.png, id=1680, 665.48625pt x 429.10312pt>
+<figures/frontend1.png, id=1678, 665.48625pt x 429.10312pt>
 File: figures/frontend1.png Graphic file (type png)
 
 <use figures/frontend1.png>
-<figures/frontend2.png, id=1681, 665.48625pt x 632.3625pt>
+<figures/frontend2.png, id=1679, 665.48625pt x 632.3625pt>
 File: figures/frontend2.png Graphic file (type png)
 
 <use figures/frontend2.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backend1.png, id=1682, 685.05937pt x 353.82187pt>
+<figures/backend1.png, id=1680, 685.05937pt x 353.82187pt>
 File: figures/backend1.png Graphic file (type png)
 
 <use figures/backend1.png>
-Overfull \hbox (9.76817pt too wide) in paragraph at lines 1988--1989
+Overfull \hbox (9.76817pt too wide) in paragraph at lines 1989--1990
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backend2.png, id=1683, 684.30656pt x 356.0803pt>
+<figures/backend2.png, id=1681, 684.30656pt x 356.0803pt>
 File: figures/backend2.png Graphic file (type png)
 
 <use figures/backend2.png>
-Overfull \hbox (9.27885pt too wide) in paragraph at lines 1995--1996
+Overfull \hbox (9.27885pt too wide) in paragraph at lines 1996--1997
  [] 
  []
 
@@ -1229,51 +1224,48 @@ png> <C:/Dokumenty/diplomka/text/figures/backend2.png>] [74
 
 ]
 P\v {r}\'{\i }loha C.
-[75] [76
+[75] <figures/build.png, id=1717, 301.8778pt x 161.10187pt>
+File: figures/build.png Graphic file (type png)
 
-]
+<use figures/build.png> [76 <C:/Dokumenty/diplomka/text/figures/build.png>]
 P\v {r}\'{\i }loha D.
-<figures/cd.png, id=1717, 88.07906pt x 69.25874pt>
+<figures/cd.png, id=1734, 88.07906pt x 69.25874pt>
 File: figures/cd.png Graphic file (type png)
  <use figures/cd.png>
-[77 <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
+[77
+
+ <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux) ) 
 Here is how much of TeX's memory you used:
- 10411 strings out of 495285
- 143696 string characters out of 3179883
- 403257 words of memory out of 3000000
- 12830 multiletter control sequences out of 15000+200000
+ 10429 strings out of 495285
+ 143903 string characters out of 3179883
+ 403430 words of memory out of 3000000
+ 12837 multiletter control sequences out of 15000+200000
  77223 words of font info for 52 fonts, out of 3000000 for 9000
- 19 hyphenation exceptions out of 8191
+ 20 hyphenation exceptions out of 8191
  38i,10n,51p,1447b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): n
-ame{figure.C.2} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.C.1} has been referenced but does not exist,
- replaced by a fixed one
-
-{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program
- Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/Mi
-KTeX 2.8/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.8/fo
-nts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/l
-m/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx10.pf
-b><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx12.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x
-86)/MiKTeX 2.8/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2
-.8/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/typ
-e1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm
-/lmr6.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr8.pfb><C:
-/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr9.pfb><C:/Program File
-s (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiK
-TeX 2.8/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fon
-ts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/pu
-blic/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lms
-y9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/
-Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (95 pages, 2378476 bytes).
+{C:/Program Files (x86)/
+MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.8/
+fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips
+/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-ec.e
+nc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program
+ Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86
+)/MiKTeX 2.8/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.
+8/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/typ
+e1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm
+/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr12.pfb><
+C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr6.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiK
+TeX 2.8/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts
+/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/publ
+ic/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmro1
+0.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmss10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files
+ (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKT
+eX 2.8/fonts/type1/public/lm/lmtt9.pfb>
+Output written on divispe2-thesis-2012.pdf (95 pages, 2396177 bytes).
 PDF statistics:
- 1901 PDF objects out of 2073 (max. 8388607)
- 568 named destinations out of 1000 (max. 500000)
- 1079 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1921 PDF objects out of 2073 (max. 8388607)
+ 577 named destinations out of 1000 (max. 500000)
+ 1084 words of extra memory for PDF output out of 10000 (max. 10000000)
 

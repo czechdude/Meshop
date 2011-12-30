@@ -998,11 +998,11 @@ V této architektuře jsou důležité již dříve zmiňované prvky, tentokrá
 
 \begin{description}
 \item[Model] se v aplikaci stará o poskytování a změnu dat, ať už z databáze nebo z jiných zdrojů. Jde o objekt představující čistě data bez jakýchkoli vizuálních prvků.
-\item[View] česky \textit{pohled}, se stará o zobrazení modelu pomocí vizuálních prvků uživateli. Využívá k tomu technologie HTML a dalších doplňků. Data nemá možnost měnit.
-\item[Controller] česky \textit{řídící část}, starající se o zpracování požadavků přicházejících od uživatele. Po zpracování požadavku změní \textit{model} a nastaví správné zobrazení \textit{pohled}u.
+\item[View] (\textit{pohled}) se stará o zobrazení modelu pomocí vizuálních prvků uživateli. Využívá k tomu technologie HTML a dalších doplňků. Data nemá možnost měnit.
+\item[Controller] (\textit{řídící část}) se stará o zpracování požadavků přicházejících od uživatele. Po zpracování požadavku změní \textit{model} a nastaví správné zobrazení \textit{pohled}u.
 \end{description}
 
-Další podrobnější informace lze najít v \citep{PEAA}. Vzor MVC je implementován v různých frameworcích třetích stran u většiny zmíněných programovacích platformách v sekci \ref{sec:reserse}.
+Další podrobnější informace lze najít v \citep{PEAA}. Vzor MVC je implementován v různých frameworcích třetích stran u většiny zmíněných programovacích platforem v sekci \ref{sec:reserse}.
 
 \subsection{Modularita v Model View Controller}
 
@@ -1691,17 +1691,17 @@ Controller se poté opět musí přidat do menu backendu stejným atributem \tex
 Omezení byla postupně zmiňována v podsekcích Modulů \ref{sec:moduly}. Zde jsou shrnuty.
 
 \begin{itemize}
-\item Entity -- rozšíření entit je možné pouze v rámci modulu. Mimo něj Entita viditelná není. Viz. \ref{subsec:pripojenientit}. Pokud by se entita deklarovala jinde, dojde ke konfliktům a duplikaci.
-\item Widgety -- omezené umístěním na určená místa a omezují výkonnost aplikace, viz. \ref{sec:widgets}.
-\item AdminPluginController -- zmíněný výše v \ref{subsub:backend}. Přesněji jde o vícenásobnou dědičnost, která není v .NET možná. Je třeba sáhnout k rozhraní a duplicitní implementaci.
-\item Služby -- rozšíření služeb musí být provedeno ve frameworku aplikace, který je třeba znova zkompilovat. Modulárním způsobem je možné pouze implementovat rozhraní.
-\item Kopie do modulu -- všem souborům, které se v modulech nekompilují je třeba nastavit manuálně kopírování do adresáře se zkompilovaným modulem.
+\item \textbf{Entity} -- rozšíření entit je možné pouze v rámci modulu. Mimo něj Entita viditelná není. Viz. \ref{subsec:pripojenientit}. Pokud by se entita deklarovala jinde, dojde ke konfliktům a duplikaci.
+\item \textbf{Widgety} -- omezené umístěním na určená místa a omezují výkonnost aplikace, viz. \ref{sec:widgets}.
+\item \textbf{AdminPluginController} -- zmíněný výše v \ref{subsub:backend}. Přesněji jde o vícenásobnou dědičnost, která není v .NET možná. Je třeba sáhnout k rozhraní a duplicitní implementaci.
+\item \textbf{Služby} -- rozšíření služeb musí být provedeno ve frameworku aplikace, který je třeba znova zkompilovat. Modulárním způsobem je možné pouze implementovat rozhraní.
+\item \textbf{Kopie do modulu} -- všem souborům, které se v modulech nekompilují je třeba nastavit manuálně kopírování do adresáře se zkompilovaným modulem.
 \end{itemize}
 
 
 
 \section{Spuštění aplikace}
-
+\label{sec:spusteni}
 Spuštění aplikace rozlišuje nejméně dva způsoby. Jedním je debug mód, který se spouští přímo ve Visual Studiu a druhým je mód release, který je určený pro ostrý provoz na serveru.
 
 Pro spuštění ve Visual Studiu je třeba následovat některý z instalačních tutoriálú pro ASP.NET MVC 3. Nejlepší je přímo na oficiální stránce\footnote{\url{http://asp.net/mvc/mvc3}}. Nejlepší volbou je stažení \textit{Web Platform Installer} (WPI) z odkazu v návodu. Ten nabídne instalaci všech základních částí včetně Visual Studia ve verzi zdarma. Poté při otevření \textsf{solution} (balík projektů celé aplikace pro Visual Studio) se vyřeší závislosti na jiných knihovnách potřebných k běhu aplikace.
@@ -1715,6 +1715,7 @@ Také je důležité, aby server poskytoval plná práva \textbf{Full Trust}\foo
 
 
 \subsection{Instalace a odebrání modulu}
+\label{sec:instalace}
 Při instalaci nebo odebírání modulů je třeba vypráznit \textsf{Application Pool} (keš) v IIS příkazem \textsf{Recycle}. Toto se ale ukázalo jako nefunkční řešení v případě nepřekompilování projektu \textsf{Meshop.Core}. Proto se musí vymazat aplikace z adresáře \texttt{C:\symbol{92}Windows\symbol{92}Microsoft.NET\\\symbol{92}Framework\symbol{92}v4.0.30319\symbol{92}Temporary ASP.NET Files\symbol{92}} .
 
 Instalace modulu se provádí zkompilováním modulu a spolu se soubory pohledů a dalšími se nakopíruje do aplikace do adresáře \texttt{extensions/plugins/Meshop.\{Modul\}}. Knihovna modulu v tomto případě musí mít název \texttt{Meshop.\{Modul\}.dll}. Zkompiluje se tak v případě názvu projektu modulu \textsf{Meshop.\{Modul\}}. Při spuštění se adresáře pluginů zkopírují do adresáře \texttt{extensions/temp} ze kterých se načtou.
@@ -2007,7 +2008,7 @@ Operační systém musí být nejlépe Windows 7. Jsou možné i starší verze.
 Dále je nutné doinstalovat ASP.NET 4, Visual Studio 2010 nebo Visual Web Developer 2010.
 
 \begin{enumerate}
-\item Stáhněte instalační balík z webu \url{http://www.asp.net/mvc} -- Web Platform Installer (WPI), který následně spusťte.
+\item Stáhněte instalační balík z webu \url{http://www.asp.net/mvc} -- Web Platform Installer (WPI), který následně spusťte a obrňte se trpělivostí.
 % \begin{figure}
 % \begin{center}
 % \includegraphics[scale=0.65,angle=0]{figures/aspnetmvc}
@@ -2022,16 +2023,55 @@ Dále je nutné doinstalovat ASP.NET 4, Visual Studio 2010 nebo Visual Web Devel
 % \end{center}
 % \end{figure}
 
-\item 
+\item Spusťte Visual Studio 2010 Express, nebo pokud je vlastníte, tak některou z plných verzí.
+\item Načtěte soubor \texttt{Meshop.sln} a v případě edice \textit{Express} potvrďte všechna hlášení -- i chybová.
+
 \end{enumerate}
 
 
 
 
 \section{Instalace aplikace}
+Aplikace se instaluje pouhým přehráním do určeného adresáře webového serveru.
+Pokud nejde o webový hosting, musí se nastavit v IIS manageru (správci) příslušné nastavení. IIS server je zabudovaný ve Windows 7 Professional nebo ve Windows Server 2008.
+Pro~vyzkoušení aplikace ale plně postačí vývojové prostředí Visual Studio 2010.
+
+Nastavení webového serveru:
+\begin{enumerate}
+\item Spusťte IIS Manager (\texttt{InetMgr.exe})
+\item Přidejte aplikaci (\textit{Add Web Site}/\textit{Přidat web}) a zvolte cestu k aplikaci.
+\item Nastavte \textit{.NET Trust Level}/\textit{Úrovně důvěryhodnosti rozhraní .NET} na \textbf{Full}.
+\item Nastavte adresářům \texttt{App\_Data} a \texttt{extensions/temp} oprávnění na \textit{plný přístup} pro uživatele IIS\_IUSRS.
+\item Aplikace poběží na vámi zvolené adrese.
+\end{enumerate}
+
+Problémy s nasazením jsou popsány v kapitole Testování \ref{test:problem}.
+
+
 \section{Spuštění}
+Podrobný popis spuštění aplikace je v sekci \ref{sec:spusteni}. V případě spuštění projektu ve Visual Studiu bez kompilace postupujte následovně:
+
+\begin{enumerate}
+\item Načtěte soubor \texttt{Meshop.sln} do Visual Studia.
+\item Na položku \textit{Solution 'Meshop'} v okně \textit{Solution Explorer} klikněte pravým tlačítkem a vyberte položku \textit{Configuration Manager...} v kontextové nabídce, viz. obrázek \ref{fig:build}.
+ \begin{figure}[h!]
+ \begin{center}
+ \includegraphics[scale=0.85,angle=0]{figures/build} 
+ \caption{Zrušení kompilace Solution}
+ \label{fig:build}
+ \end{center}
+ \end{figure}
+
+\item V otevřeném okně zrušte \textbf{Build} všech projektů.
+\item Aplikaci spusťte tlačítkem \textit{Start Debugging} nebo klávesou \textbf{F5}.
+\end{enumerate}
+
+Případné problémy při manipulaci s moduly jsou řešeny v kapitole Testování \ref{test:problem}. 
+
 \section{Práce s moduly}
-nový projekt - vypnout kopie referencí. vzorová struktura Reviews
+Tvorbu modulů popisuje podrobně sekce Moduly \ref{sec:moduly}. Instalaci modulů pak sekce \ref{sec:instalace}. Problémy s moduly jsou řešeny v kapitole Testování \ref{test:problem}. Vzorová struktura modulu je dostupná v projektu \textsf{Meshop.Reviews}.
+
+
 
 %*****************************************************************************
 \chapter{Obsah přiloženého DVD}
