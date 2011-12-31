@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  30 DEC 2011 22:24
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  31 DEC 2011 20:05
 entering extended mode
 **divispe2-thesis-2012.tex
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.tex
@@ -861,7 +861,7 @@ Overfull \hbox (0.94032pt too wide) in paragraph at lines 428--428
  []
 
 [6] [7]
-Overfull \hbox (4.40054pt too wide) in paragraph at lines 474--475
+Overfull \hbox (4.40054pt too wide) in paragraph at lines 473--474
 \T1/lmr/m/n/10.95 nap°ík-lad pod-pora zm¥ny vzh-ledu, více-jazy£nost, více m¥n,
  pod-pora SSL, rekla-mace, moºnost
  []
@@ -870,32 +870,26 @@ Overfull \hbox (4.40054pt too wide) in paragraph at lines 474--475
 
 ]
 Kapitola 4.
-
-Overfull \hbox (1.17577pt too wide) in paragraph at lines 529--530
-\T1/lmr/m/n/10.95 Z hlediska p°ís-tupu po-ten-cionál-ního ob-chod-níka k ap-lik
-aci in-ter-ne-tového ob-chodu lze rozd¥lit
- []
-
 [13]
-Overfull \hbox (2.05751pt too wide) in paragraph at lines 543--544
+Overfull \hbox (2.05751pt too wide) in paragraph at lines 542--543
 []\T1/lmr/m/n/10.95 Za spe-cial-itu lze po-vaºo-vat moºnost volby, kde se bu-do
 u jed-notlivé funk£ní prvky nacházet
  []
 
 [14] [15]
-Overfull \hbox (0.15717pt too wide) in paragraph at lines 603--604
+Overfull \hbox (0.15717pt too wide) in paragraph at lines 602--603
 []\T1/lmr/bx/n/10.95 p°ihla²ovací for-mulá° \T1/lmr/m/n/10.95 -- zák-ladní p°ih
 -la²o-vací for-mulá° zo-brazu-jící se nep°ih-lá²enému
  []
 
-[16] [17] <figures/usecasefront.png, id=919, 373.395pt x 599.23875pt>
+[16] [17] <figures/usecasefront.png, id=921, 373.395pt x 599.23875pt>
 File: figures/usecasefront.png Graphic file (type png)
 
 <use figures/usecasefront.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/usecaseback.png, id=920, 285.065pt x 407.5225pt>
+<figures/usecaseback.png, id=922, 285.065pt x 407.5225pt>
 File: figures/usecaseback.png Graphic file (type png)
 
 <use figures/usecaseback.png>
@@ -907,28 +901,28 @@ Underfull \vbox (badness 1867) has occurred while \output is active []
 
  [19 <C:/Dokumenty/diplomka/text/figures/usecasefront.png (PNG copy)>] [20 <C:/
 Dokumenty/diplomka/text/figures/usecaseback.png (PNG copy)>] [21] [22] [23]
-<figures/datamodel.png, id=1002, 434.37282pt x 566.115pt>
+<figures/datamodel.png, id=1004, 434.37282pt x 566.115pt>
 File: figures/datamodel.png Graphic file (type png)
 
 <use figures/datamodel.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/factorymethod.png, id=1008, 530.98375pt x 268.00125pt>
+<figures/factorymethod.png, id=1010, 530.98375pt x 268.00125pt>
 File: figures/factorymethod.png Graphic file (type png)
 
 <use figures/factorymethod.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/pluginseq.png, id=1011, 533.995pt x 287.0725pt>
+<figures/pluginseq.png, id=1013, 533.995pt x 287.0725pt>
 File: figures/pluginseq.png Graphic file (type png)
 
 <use figures/pluginseq.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 903.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 902.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2007/01/14 v1.3 Font defs for Latin Modern
@@ -941,43 +935,43 @@ Overfull \vbox (7.84248pt too high) has occurred while \output is active []
 
 
 [25 <C:/Dokumenty/diplomka/text/figures/datamodel.png>]
-<figures/uow.png, id=1023, 543.02875pt x 426.59375pt>
+<figures/uow.png, id=1025, 543.02875pt x 426.59375pt>
 File: figures/uow.png Graphic file (type png)
  <use figures/uow.png>
 [26 <C:/Dokumenty/diplomka/text/figures/factorymethod.png (PNG copy)> <C:/Dokum
 enty/diplomka/text/figures/pluginseq.png (PNG copy)>] [27 <C:/Dokumenty/diplomk
 a/text/figures/uow.png (PNG copy)>]
-<figures/di.png, id=1037, 531.9875pt x 241.90375pt>
+<figures/di.png, id=1039, 531.9875pt x 241.90375pt>
 File: figures/di.png Graphic file (type png)
  <use figures/di.png>
 [28 <C:/Dokumenty/diplomka/text/figures/di.png (PNG copy)>]
-<figures/servicelocator.png, id=1044, 537.00626pt x 334.24875pt>
+<figures/servicelocator.png, id=1046, 537.00626pt x 334.24875pt>
 File: figures/servicelocator.png Graphic file (type png)
 
 <use figures/servicelocator.png>
-Overfull \hbox (8.0796pt too wide) in paragraph at lines 961--962
+Overfull \hbox (8.0796pt too wide) in paragraph at lines 960--961
 \T1/lmr/m/n/10.95 voláním ur£ité metody dodá t°íd¥ \T1/lmtt/m/n/10.95 Výpis \T1
 /lmr/m/n/10.95 im-ple-mentaci \T1/lmtt/m/n/10.95 Implementace Vyhledávání\T1/lm
 r/m/n/10.95 . Samoz°e-
  []
 
 [29 <C:/Dokumenty/diplomka/text/figures/servicelocator.png (PNG copy)>]
-Overfull \hbox (17.72214pt too wide) in paragraph at lines 987--988
+Overfull \hbox (17.72214pt too wide) in paragraph at lines 986--987
 \T1/lmr/m/n/10.95 frame-work· a ap-likací s uºi-va-tel-skými rozhraními[[]]. Zá
 k-ladní prin-cip popisuje velmi jednoduchý
  []
 
-<figures/mvc.png, id=1051, 330.23375pt x 220.825pt>
+<figures/mvc.png, id=1053, 330.23375pt x 220.825pt>
 File: figures/mvc.png Graphic file (type png)
  <use figures/mvc.png>
 [30 <C:/Dokumenty/diplomka/text/figures/mvc.png (PNG copy)>] [31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1066
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / coolthingoftheday . blogspo
 t . com / 2011 / 01 / sql-[]server-[]compact-[]4-[]vs-[]sql-[]server .
  []
 
 
-Overfull \hbox (0.50368pt too wide) in paragraph at lines 1067--1068
+Overfull \hbox (0.50368pt too wide) in paragraph at lines 1066--1067
 []\T1/lmr/m/n/10.95 Jde o databázi uloºe-nou v jed-nom souboru spole£n¥ s ap-li
 kací, její moºnosti jsou omezené.
  []
@@ -987,34 +981,34 @@ kací, její moºnosti jsou omezené.
 ]
 Kapitola 5.
 
-Overfull \hbox (0.75139pt too wide) in paragraph at lines 1108--1109
+Overfull \hbox (0.75139pt too wide) in paragraph at lines 1107--1108
 \T1/lmr/m/n/10.95 Z d·vodu velké sloºi-tosti struk-tury ap-likace je zde pop-sá
 n di-a-gram kom-po-nent, který graficky
  []
 
-<figures/componentsextract.png, id=1152, 699.61375pt x 537.00626pt>
+<figures/componentsextract.png, id=1154, 699.61375pt x 537.00626pt>
 File: figures/componentsextract.png Graphic file (type png)
 
 <use figures/componentsextract.png>
-Overfull \hbox (19.22841pt too wide) in paragraph at lines 1116--1117
+Overfull \hbox (19.22841pt too wide) in paragraph at lines 1115--1116
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/componentslow.png, id=1153, 587.19376pt x 293.095pt>
+<figures/componentslow.png, id=1155, 587.19376pt x 293.095pt>
 File: figures/componentslow.png Graphic file (type png)
 
 <use figures/componentslow.png>
-Overfull \hbox (4.8791pt too wide) in paragraph at lines 1124--1125
+Overfull \hbox (4.8791pt too wide) in paragraph at lines 1123--1124
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] <figures/struktura.png, id=1167, 185.94469pt x 299.61937pt>
+[37] <figures/struktura.png, id=1169, 185.94469pt x 299.61937pt>
 File: figures/struktura.png Graphic file (type png)
 
 <use figures/struktura.png>
@@ -1054,45 +1048,45 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (15.62244pt too wide) in paragraph at lines 1383--1384
+Overfull \hbox (15.62244pt too wide) in paragraph at lines 1382--1383
 []\T1/lmr/m/n/10.95 Ostatní im-ple-men-tace, týka-jící se p°ek-ládání, se nachá
 zí v sou-borech v adresá°i \T1/lmtt/m/n/10.95 Translation
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1397--1397
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1396
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / www . pluralsight-[]trainin
 g . net / microsoft / Courses / TableOfContents ? courseName =
  []
 
 
-Overfull \hbox (12.6338pt too wide) in paragraph at lines 1397--1399
+Overfull \hbox (12.6338pt too wide) in paragraph at lines 1396--1398
 \T1/lmr/m/n/10.95 delegáta, proto se ne-musí pouºí-vat stat-ická t°ída zp·-sobe
 m \T1/lmtt/m/n/10.95 @Translator.Translate("text")\T1/lmr/m/n/10.95 ,
  []
 
 [47]
-Overfull \hbox (21.49527pt too wide) in paragraph at lines 1435--1436
+Overfull \hbox (21.49527pt too wide) in paragraph at lines 1434--1435
 []\T1/lmtt/m/n/10.95 AdminAttribute \T1/lmr/m/n/10.95 -- jiº vý²e zmín¥ný atrib
 ut pro zabezpe£ení back-endu. D¥dí od \T1/lmtt/m/n/10.95 Authorize-
  []
 
-[48] <figures/lifecycle.png, id=1427, 185.69376pt x 554.07pt>
+[48] <figures/lifecycle.png, id=1429, 185.69376pt x 554.07pt>
 File: figures/lifecycle.png Graphic file (type png)
 
 <use figures/lifecycle.png> [49] [50 <C:/Dokumenty/diplomka/text/figures/lifecy
 cle.png (PNG copy)>]
-<figures/modulstruktura.png, id=1439, 173.14688pt x 258.9675pt>
+<figures/modulstruktura.png, id=1441, 173.14688pt x 258.9675pt>
 File: figures/modulstruktura.png Graphic file (type png)
 
 <use figures/modulstruktura.png>
-Overfull \hbox (6.07407pt too wide) in paragraph at lines 1485--1486
+Overfull \hbox (6.07407pt too wide) in paragraph at lines 1484--1485
 \T1/lmr/m/n/10.95 ses-tavení, je²t¥ neº se spustí samotná ap-likace. K tomu slo
 uºí sou-bor \T1/lmtt/m/n/10.95 PreApplicationInit.cs
  []
 
 [51 <C:/Dokumenty/diplomka/text/figures/modulstruktura.png>] [52]
-Overfull \hbox (14.82289pt too wide) in paragraph at lines 1510--1510
+Overfull \hbox (14.82289pt too wide) in paragraph at lines 1509--1509
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / www . chrisvandesteeg . nl 
 / 2010 / 11 / 22 / embedding-[]pre-[]compiled-[]razor-[]views-[]in-[]your-[]dll
 /$[][]\T1/lmr/m/n/9 >| 
@@ -1102,16 +1096,16 @@ Overfull \hbox (14.82289pt too wide) in paragraph at lines 1510--1510
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (6.37332pt too wide) in paragraph at lines 1543--1544
+Overfull \hbox (6.37332pt too wide) in paragraph at lines 1542--1543
 \T1/lmr/m/n/10.95 Controllery jsou v mod-ulech samoz°e-j-mostí. Jsou roz²i°itel
 né po-mocí t°ídy \T1/lmtt/m/n/10.95 PluginController
  []
 
-[53] [54] [55] <figures/widgety.png, id=1529, 634.37pt x 485.815pt>
+[53] [54] [55] <figures/widgety.png, id=1531, 634.37pt x 485.815pt>
 File: figures/widgety.png Graphic file (type png)
 
 <use figures/widgety.png>
-Overfull \hbox (14.8907pt too wide) in paragraph at lines 1650--1651
+Overfull \hbox (14.8907pt too wide) in paragraph at lines 1649--1650
  [] 
  []
 
@@ -1124,18 +1118,18 @@ Kapitola 6.
 [61
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1764--1765
+Underfull \hbox (badness 10000) in paragraph at lines 1763--1764
 
  []
 
 [62]
-Overfull \hbox (6.28488pt too wide) in paragraph at lines 1822--1823
+Overfull \hbox (6.28488pt too wide) in paragraph at lines 1821--1822
 \T1/lmr/m/n/10.95 p°i prvním na£ítání a pouºití zkom-pilo-vaného pohledu p°i da
 l²ích na£ítáních. To-muto zpoºd¥ní
  []
 
 [63]
-Overfull \hbox (1.20859pt too wide) in paragraph at lines 1850--1851
+Overfull \hbox (1.20859pt too wide) in paragraph at lines 1849--1850
 \T1/lmr/m/n/10.95 <[][]$\T1/lmtt/m/n/10.95 http : / / www . yourpersonaljewelle
 r . co . uk/$[][]\T1/lmr/m/n/10.95 >, který na£etl stránku bez grafiky v rozmez
 í
@@ -1160,90 +1154,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--120
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 175--179
+Underfull \hbox (badness 6236) in paragraph at lines 180--184
 \T1/lmr/m/n/10.95 tupné z: <[][]$\T1/lmtt/m/n/10.95 http : / / www . hostingy .
  cz / navody-[]a-[]tipy-[]jak-[]vybirat-[]webhosting .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--194
+Underfull \hbox (badness 10000) in paragraph at lines 193--199
 []\T1/lmr/m/n/10.95 Severns, S.  \T1/lmr/m/it/10.95 nop-Com-merce Plu-gin with 
 Data Ac-cess \T1/lmr/m/n/10.95 [on-line]. 2011.
  []
 
 
-Underfull \hbox (badness 2735) in paragraph at lines 188--194
+Underfull \hbox (badness 2735) in paragraph at lines 193--199
 \T1/lmr/m/n/10.95 [cit. 9.30.2011].  Dos-tupné z: <[][]$\T1/lmtt/m/n/10.95 http
  : / / blog . csharpwebdeveloper . com / 2011 /
  []
 
-) [68]
-P\v {r}\'{\i }loha A.
-[69
+[68]) [69] [70
 
-] [70]
+]
+P\v {r}\'{\i }loha A.
+[71] [72]
 P\v {r}\'{\i }loha B.
-<figures/frontend1.png, id=1678, 665.48625pt x 429.10312pt>
+<figures/frontend1.png, id=1690, 665.48625pt x 429.10312pt>
 File: figures/frontend1.png Graphic file (type png)
 
 <use figures/frontend1.png>
-<figures/frontend2.png, id=1679, 665.48625pt x 632.3625pt>
+<figures/frontend2.png, id=1691, 665.48625pt x 632.3625pt>
 File: figures/frontend2.png Graphic file (type png)
 
 <use figures/frontend2.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backend1.png, id=1680, 685.05937pt x 353.82187pt>
+<figures/backend1.png, id=1692, 685.05937pt x 353.82187pt>
 File: figures/backend1.png Graphic file (type png)
 
 <use figures/backend1.png>
-Overfull \hbox (9.76817pt too wide) in paragraph at lines 1989--1990
+Overfull \hbox (9.76817pt too wide) in paragraph at lines 1988--1989
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backend2.png, id=1681, 684.30656pt x 356.0803pt>
+<figures/backend2.png, id=1693, 684.30656pt x 356.0803pt>
 File: figures/backend2.png Graphic file (type png)
 
 <use figures/backend2.png>
-Overfull \hbox (9.27885pt too wide) in paragraph at lines 1996--1997
+Overfull \hbox (9.27885pt too wide) in paragraph at lines 1995--1996
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[71
+[73
 
- <C:/Dokumenty/diplomka/text/figures/frontend1.png>] [72 <C:/Dokumenty/diplomka
-/text/figures/frontend2.png>] [73 <C:/Dokumenty/diplomka/text/figures/backend1.
-png> <C:/Dokumenty/diplomka/text/figures/backend2.png>] [74
+ <C:/Dokumenty/diplomka/text/figures/frontend1.png>] [74 <C:/Dokumenty/diplomka
+/text/figures/frontend2.png>] [75 <C:/Dokumenty/diplomka/text/figures/backend1.
+png> <C:/Dokumenty/diplomka/text/figures/backend2.png>] [76
 
 ]
 P\v {r}\'{\i }loha C.
-[75] <figures/build.png, id=1717, 301.8778pt x 161.10187pt>
+[77] <figures/build.png, id=1729, 301.8778pt x 161.10187pt>
 File: figures/build.png Graphic file (type png)
 
-<use figures/build.png> [76 <C:/Dokumenty/diplomka/text/figures/build.png>]
+<use figures/build.png> [78 <C:/Dokumenty/diplomka/text/figures/build.png>]
 P\v {r}\'{\i }loha D.
-<figures/cd.png, id=1734, 88.07906pt x 69.25874pt>
+<figures/cd.png, id=1746, 88.07906pt x 69.25874pt>
 File: figures/cd.png Graphic file (type png)
  <use figures/cd.png>
-[77
+[79
 
  <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux) ) 
 Here is how much of TeX's memory you used:
- 10429 strings out of 495285
- 143903 string characters out of 3179883
- 403430 words of memory out of 3000000
- 12837 multiletter control sequences out of 15000+200000
+ 10435 strings out of 495285
+ 143978 string characters out of 3179883
+ 403486 words of memory out of 3000000
+ 12840 multiletter control sequences out of 15000+200000
  77223 words of font info for 52 fonts, out of 3000000 for 9000
  20 hyphenation exceptions out of 8191
- 38i,10n,51p,1447b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,51p,1438b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/
 MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.8/
 fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips
@@ -1263,9 +1257,9 @@ ic/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmro1
 rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files
  (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKT
 eX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (95 pages, 2396177 bytes).
+Output written on divispe2-thesis-2012.pdf (97 pages, 2398238 bytes).
 PDF statistics:
- 1921 PDF objects out of 2073 (max. 8388607)
- 577 named destinations out of 1000 (max. 500000)
+ 1934 PDF objects out of 2073 (max. 8388607)
+ 580 named destinations out of 1000 (max. 500000)
  1084 words of extra memory for PDF output out of 10000 (max. 10000000)
 

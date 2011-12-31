@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -152,21 +152,26 @@ onments\#Java}.
 \newblock \emph{Perl} [online]. 2011{\natexlab{d}}. [cit.~25.\,2.\,2011].
 \newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/Perl}.
 
-\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{e}})]{wiki:python}
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{e}})]{wiki:php}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Python} [online]. 2011{\natexlab{e}}. [cit.~13.\,10.\,2011].
+\newblock \emph{PHP} [online]. 2011{\natexlab{e}}. [cit.~18.\,2.\,2011].
+\newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/PHP}.
+
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{f}})]{wiki:python}
+{Přispěvatelé Wikipedie}.
+\newblock \emph{Python} [online]. 2011{\natexlab{f}}. [cit.~13.\,10.\,2011].
 \newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/Python}.
 
-\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{f}})]{wiki:ror}
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{g}})]{wiki:ror}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Ruby on rails} [online]. 2011{\natexlab{f}}.
+\newblock \emph{Ruby on rails} [online]. 2011{\natexlab{g}}.
   [cit.~13.\,10.\,2011].
 \newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/Ruby_on_Rails}.
 
 \bibitem[{Přispěvatelé
-  Wikipedie}(2011{\natexlab{g}})]{wiki:software-framework}
+  Wikipedie}(2011{\natexlab{h}})]{wiki:software-framework}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Software framework} [online]. 2011{\natexlab{g}}.
+\newblock \emph{Software framework} [online]. 2011{\natexlab{h}}.
   [cit.~25.\,2.\,2011].
 \newblock Dostupn{\'{e}} z:
   \url{http://en.wikipedia.org/wiki/Software_framework}.

@@ -364,9 +364,9 @@ Pro tým nebo jednotlivce vyvíjející internetový obchod, ať už jako komer�
 
 Návrh a implementace individuálního řešení internetového obchodu obchodníkům se specifickými požadavky je sice v několika parametrech odlišná, ale hodně parametrů a funkčností má podobných. Práce programátora se tak velice často opakuje i přesto, že pro společné vlastnosti a funkčnost používá kód již hotový, funkční a otestovaný. Roste tak nejen časová náročnost vývoje takového řešení na míru, ale i náklady na vývoj, nemluvě o demotivaci programátora, který musí nevyhnutelné opakující se rutiny provádět znova a znova.
 
-Proto přišla myšlenka dynamicky rozšiřitelného internetového obchodu, který bude schopný rychlejšímu přizpůsobení požadavkům obchodníků a bude možné rozšířit jeho jádro o další funkce a technologie bez většího zásahu v kódu samotného jádra.
+Proto přišla myšlenka dynamicky rozšiřitelného internetového obchodu, který bude schopný přizpůsobit se rychleji požadavkům obchodníků a bude možné rozšířit jeho funkce a technologie bez většího zásahu v kódu samotného jádra.
 
-Již v úvodu je třeba říct, že tento program není vytvářen za účelem nasazení v komerčním prostředí. Klade si za cíl ověřit, že je tvorba takového modulárního internetového obchodu možná a soustředí se na samotné možnosti rozšiřitelnosti jako takové na vhodně zvolené vývojové platformě.
+Již v úvodu je třeba říct, že tento program není vytvářen za účelem nasazení v komerčním prostředí. Klade si za cíl ověřit, že je tvorba takového modulárního internetového obchodu možná. Soustředí se na  možnosti rozšiřitelnosti na vhodně zvolené vývojové platformě.
 
 %TODO: do závěru?
 Vývoj finálního produktu pro obchodníky vyžaduje mnohem delší časový interval, více lidských zdrojů, více zkušeností s vývojem internetových aplikací a nadmíru kvalitní znalost vývojového prostředí, do kterého je nutné celý projekt dobře navrhnout a dlouhodobě otestovat. Podle nabytých zkušeností je nejlepší vývoj určený pro ostré produkční prostředí. Vzhledem k tomu, že během této práce probíhalo seznamování se se zvoleným vývojovým prostředím, objevuje se v práci všeobecně známý vývojový fenomén \uv{nalezení lepšího způsobu, když je hotovo}.
@@ -385,7 +385,7 @@ V této kapitole je probrán problém návrhu elektronického obchodu a s ním s
 
 \section{Popis problému}
 
-V současné době stále více obchodníků rozšiřuje svoje pole působnosti o internetové obchodování. Důvodem je snížení nákladů, lepší konkurenceschopnost a rozšíření obchodního radiusu na republikové, nebo dokonce celosvětové měřítko. Začínající maloobchodní prodejci nemohou dopředu určit vývoj prodeje zboží a požadavky na internetový obchod s tím spojené. Podnikatelé většinou neví, jak funguje elektronické obchodování a neznají svoje požadavky na internetový obchod. 
+V současné době stále více obchodníků rozšiřuje svoje pole působnosti o internetové obchodování. Důvodem je snížení nákladů, lepší konkurenceschopnost a rozšíření obchodního rozsahu na státní nebo dokonce celosvětové měřítko. Začínající maloobchodní prodejci nemohou dopředu určit vývoj prodeje zboží a požadavky na internetový obchod s tím spojené. Podnikatelé většinou neví, jak funguje elektronické obchodování a neznají svoje požadavky na internetový obchod. 
 
 Začínající prodejci mají proto před sebou složitou volbu. Nabízí se jim mnoho bezplatných open-source řešení, které si ovšem musí nainstalovat a spustit sami. Pokud ale nemají žádné zkušenosti s instalací takových řešení, musejí vyhledat pomoc od někoho, kdo má s takovými systémy zkušenosti. Často se jedná o řešení, které lze přizpůsobit individuálním požadavkům obchodníka pomocí modulů, nebo je možné funkčnost rozšířit doprogramováním systému programátorem. Další možností je pronájem hotového obchodu, který spravuje softwarová společnost. Pronajímatel tak platí určitý měsíční poplatek, za který dostane přístup k univerzálnímu obchodnímu systému se specifickou funkčností. Pokud nechce obchodník platit měsíční poplatek, může si většinou obchod koupit a získá tak přístup ke zdrojovým kódům a obchod si může nechat nainstalovat na vlastní server. 
 
@@ -397,7 +397,7 @@ V každém případě se obchodní model společností vyvíjí a mění a s ní
 
 \section{Vymezení cílů práce}
 
-Cílem práce je navrhnout a implementovat aplikaci internetového obchodu s využitím vhodné modulární architektury. Případně bude třeba modularitu v nemodulární architektuře definovat. Výběr programovacího jazyka bude záviset na jeho vhodnosti pro webovou aplikaci obchodu a schopnosti implementovat danou modulární architekturu. Také bude brán zřetel na podporu a vývoj jazyka do budoucna a jeho sledování trendů. Implementace bude demonstrovat využití modularity aplikace záměnou různých modulů. Upřesnění požadavků na aplikaci bude provedeno analýzou. 
+Cílem práce je navrhnout a implementovat aplikaci internetového obchodu s využitím vhodné modulární architektury. Případně bude třeba modularitu v architektuře definovat. Výběr programovacího jazyka bude záviset na jeho vhodnosti pro webovou aplikaci obchodu a schopnosti implementovat danou modulární architekturu. Také bude brán zřetel na podporu a vývoj jazyka do budoucna a jeho sledování trendů. Implementace bude demonstrovat využití modularity aplikace záměnou různých modulů. Upřesnění požadavků na aplikaci bude provedeno analýzou. 
 
 Práce se nebude zabývat řešením přívětivosti uživatelského rozhraní a jeho grafického vzhledu, protože to není jejím stěžejním tématem a bezpochyby by to vyžadovalo významné rozšíření rozsahu práce.
 
@@ -413,7 +413,7 @@ Také nebude cílem vývoj komplexního a vše zahrnujícího e-shopu, ale jen j
 
 \section{Vymezení pojmů}
 \begin{itemize}
-\item \textbf{Architektura} je velmi často předefinovávaný pojem. Martin Fowler ve své knize \cite{PEAA} ani nedává přesnou definici. Jen říká, že mají dva společné prvky. A to - rozložení systému na části na nejvyšší úrovni a rozhodnutí, která se těžko mění. Také říká, že systém má ve většině případů více než jednu architekturu a pohled na to, co je architektonicky důležité, se mění během životního cyklu systému.
+\item \textbf{Architektura} je velmi často předefinovávaný pojem. Martin Fowler ve své knize \cite{PEAA} ani nedává přesnou definici. Jen říká, že všechny definice mají dva společné prvky -- rozložení systému na části na nejvyšší úrovni a rozhodnutí, která se těžko mění. Také říká, že systém má ve většině případů více než jednu architekturu a pohled na to, co je architektonicky důležité, se mění během životního cyklu systému.
 
 Podle článku IEEE Recommended Practice for Architectural Description of Software-Intensive Systems \cite{IEEE1471} je architektura uspořádání systému, rozděleného do komponent, jejich vztahů mezi nimi, mezi prostředím a principy vedoucími návrh a vývoj. Doporučuji také článek Petera Eelese, který pojem softwarové architektury rozebírá podrobně \footnote{\url{http://www.ibm.com/developerworks/rational/library/feb06/eeles/}}.
 
@@ -422,7 +422,7 @@ Podle článku IEEE Recommended Practice for Architectural Description of Softwa
 
 \item \textbf{Návrhový vzor} systematicky pojmenovává, motivuje a vysvětluje všeobecný návrh, který cílí na opakující se návrhový problém v objektově-orientovaných systémech. Popisuje problém, řešení, kdy toto řešení lze aplikovat a jeho následky. Také poskytuje implementační rady a příklady. Řešení je obecné uspořádání objektů a tříd, které řeší daný problém. Toto řešení je upraveno a implementováno tak, aby řešilo problém v určitém prostředí\cite{GOF}. Často se jedná o řešení využívající objektově orientovaného návrhu a je představováno obecnými objekty, třídami, jejich spoluprací a vztahy mezi nimi. Nedají se proto dobře využít ve funkcionálním programování. \cite{wiki:design-pattern-computer-science}
 
-\item \textbf{Framework} je předpřipravený softwarový systém, určený k dokončení a spuštění. Framework určuje architekturu pro skupinu podsystémů a poskytuje základní stavební bloky pro jejich vytvoření. Také definuje své části, které musí být přizpůsobeny pro dosažení požadované funkčnosti. V objektově orientovaném prostředí se framework skládá z \textit{abstraktních} a \textit{konkrétních tříd}. Spuštění takového frameworku spočívá ve skládání a dědění těchto existujících tříd. \cite{POSA}. Podle Wikipedie je abstrakcí, ve které je běžný kód poskytující obecnou funkčnost často selektivně přepisován nebo specifikován uživatelským kódem, což poskytuje požadovanou funkcionalitu. Frameworky jsou speciálním případem softwarových knihoven, které zahrnují znovupoužitelnost a jejich kód je odstíněn dobře definovaným API. Od běžných softwarových knihoven se frameworky liší následujícími vlastnostmi. Běh programu řídí framework a nikoliv, část aplikace, která framework volá. Framework má vlastní výchozí chování a nejedná se o volání prázdných příkazů. Framework může být rozšířen uživatelem, který pomocí vhodného kódu určuje specifickou funkčnost. Vlastní kód frameworku není účelem upravovat ale rozšiřovat. \cite{wiki:software-framework} 
+\item \textbf{Framework} je předpřipravený softwarový systém, určený k dokončení a spuštění. Framework určuje architekturu pro skupinu podsystémů a poskytuje základní stavební bloky pro jejich vytvoření. Také definuje své části, které musí být přizpůsobeny pro dosažení požadované funkčnosti. V objektově orientovaném prostředí se framework skládá z \textit{abstraktních} a \textit{konkrétních tříd}. Spuštění takového frameworku spočívá ve skládání a dědění těchto existujících tříd. \cite{POSA}. Podle Wikipedie je abstrakcí, ve které je běžný kód poskytující obecnou funkčnost často selektivně přepisován nebo specifikován uživatelským kódem, což poskytuje požadovanou funkcionalitu. Frameworky jsou speciálním případem softwarových knihoven, které zahrnují znovupoužitelnost a jejich kód je odstíněn dobře definovaným API. Od běžných softwarových knihoven se frameworky liší následujícími vlastnostmi. Běh programu řídí framework a nikoliv, část aplikace, která framework volá. Framework má vlastní výchozí chování a nejedná se o volání prázdných příkazů. Framework může být rozšířen uživatelem, který pomocí vhodného kódu určuje specifickou funkčnost. Není účelem kód frameworku upravovat ale rozšiřovat. \cite{wiki:software-framework} 
 \end{itemize}
 
 \section{Rešeršní zpracování vhodných implementačních prostředí}
@@ -430,10 +430,9 @@ Podle článku IEEE Recommended Practice for Architectural Description of Softwa
 Webové aplikace jsou uloženy na serverech, které je poskytují klientům. Servery přijímají požadavky a většinou odpovídají zasláním stránek HTML v textové podobě, nebo jiných binárních dat, jako jsou obrázky, soubory, atd. Na serveru běží aplikace, která se o vyřizování požadavků stará. Podle programového vybavení serveru je třeba vybrat programovací jazyk či platformu, na kterých jsou webové aplikace postavené.
 
 \subsection{Jazyk PHP a jeho frameworky}
-Jde o skriptovací jazyk, původně navržený pro vývoj dynamických webových stránek.Kód je vkládán do HTML obsahu a je interpretován za běhu, nedochází tedy k překladu.
- Ke svému běhu vyžaduje interpret, který bývá součástí webového serveru a generuje webové stránky za běhu z php skriptů. PHP procesor je dostupný pro většinu webových serverů na všech možných operačních systémech. Syntaxí byl PHP inspirován jazyky C, CGI, Perl a Python. I když šlo zpočátku o procedurální jazyk, od verze 3  je podporován i objektově orientovaný vývoj. Licenčně jde o volný software.\cite{phpmanual}
+Jde o skriptovací jazyk, původně navržený pro vývoj dynamických webových stránek. Kód je kompilován za běhu do bytekódu, který je následně spouštěn pomocí PHP engine\cite{wiki:php}. PHP procesor je dostupný pro většinu webových serverů na všech možných operačních systémech. Syntaxí byl PHP inspirován jazyky C, CGI, Perl a Python. I když šlo zpočátku o procedurální jazyk, od verze 3  je podporován i objektově orientovaný vývoj. Licenčně jde o volný software.\cite{phpmanual}
  
-PHP díky své dostupnosti, praktičnosti a rychlosti umožnil vývoj mnoha frameworků, které nabízejí snadnější vytváření komponent a navrhování struktur pro rychlejší aplikační vývoj. Mnohé frameworky existují dlouho a nabízejí funkčnost podobnou aplikačním platformám od Oracle a Microsoftu. Mezi známé a zavedené frameworky patří například Zend Framework, CakePHP, Symfony a také český Nette. Nejčastější webový server, na kterém je php provozováno je Apache spolu s kombinací databáze MySQL. Na serverech s PHP fungují i významné světové portály jako je Facebook, Wikipedia a další. Použitím PHP vzniklo také plno open source správců obsahu jako je MediaWiki, Drupal, Joomla, Wordpress, či Moodle. Nevýhodou PHP je, že neodděluje serverovou část od klientské a v základu je vývoj webových aplikací komplikovaný. \cite{wiki:frameworks}
+PHP díky své dostupnosti, praktičnosti a rychlosti umožnil vývoj mnoha frameworků, které nabízejí snadnější vytváření komponent a navrhování struktur pro rychlejší aplikační vývoj. Mnohé frameworky existují dlouho a nabízejí funkčnost podobnou aplikačním platformám od Oracle a Microsoftu. Mezi známé a zavedené frameworky patří například Zend Framework, CakePHP, Symfony a také český framework Nette. Nejčastější webový server, na kterém je php provozováno je Apache spolu s kombinací databáze MySQL. Na serverech s PHP fungují i významné světové portály jako je Facebook, Wikipedia a další. Použitím PHP vzniklo také plno open source správců obsahu jako je MediaWiki, Drupal, Joomla, Wordpress, či Moodle. Nevýhodou PHP je, že neodděluje serverovou část od klientské a v základu je vývoj webových aplikací komplikovaný. \cite{wiki:frameworks}
  
 
 \subsection{Platforma Microsoft .NET}
@@ -496,7 +495,7 @@ Další volně dostupná řešení jsou například rozšíření pro známé CM
 
 \subsubsection{CubeCart}
 
-CubeCart\footnote{\url{http://www.cubecart.com/}} je komerční řešení aplikace internetového obchodu chlubící se kvalitním produktem a velkým počtem zákazníků. Aplikace odporuje tvorbu vlastních šablon a zásuvných modulů. Množství hotových modulů lze dokoupit u vývojové firmy i u komunitních vývojářů. Aplikace je opět naprogramována v jazyku PHP.
+CubeCart\footnote{\url{http://www.cubecart.com/}} je komerční řešení aplikace internetového obchodu chlubící se kvalitním produktem a velkým počtem zákazníků. Aplikace podporuje tvorbu vlastních šablon a zásuvných modulů. Množství hotových modulů lze dokoupit u vývojové firmy i u komunitních vývojářů. Aplikace je opět naprogramována v jazyku PHP.
 
 \subsubsection{ShopCentrik}
 Společnost NetDirect nabízí řešení internetových obchodů na klíč\footnote{\url{http://www.shopcentrik.cz/}}. Obchody využívají stejné jádro a jejich produkt je velmi rozšířený zejména v českém prostředí. Jeho možnosti jsou velmi rozsáhlé a většinou se jedná o individuální řešení. Obchod je naprogramovaný na platformě Microsoft.NET a jeho služby využívají firmy jako Adidas, Best či Autobenex.
@@ -526,7 +525,7 @@ Uživatelem e-shopu je každý obchodník, správce,zaměstnanec obchodníka, kt
 
 \subsection{Požadavky obchodníků}
 \label{potreby1}
-Z hlediska přístupu potencionálního obchodníka k aplikaci internetového obchodu lze rozdělit jeho potřeby na základní a pokročilé. Pro realizaci základní aplikace obchodník potřebuje zpřístupnit prezentaci svého zboží, umožnit jeho nákup a doplnit informace o svém podnikání, kontakty, obchodní podmínky a další texty. Celý elektronický obchod musí také mít neveřejnou část, ke které má přístup jen obchodník a která je chráněná přístupovými údaji, přihlašovacím jménem a heslem. V této administrační neveřejné části může spravovat všechno zboží, provedené objednávky a informační texty.
+Z hlediska přístupu potenciálního obchodníka k aplikaci internetového obchodu lze rozdělit jeho potřeby na základní a pokročilé. Pro realizaci základní aplikace obchodník potřebuje zpřístupnit prezentaci svého zboží, umožnit jeho nákup a doplnit informace o svém podnikání, kontakty, obchodní podmínky a další texty. Celý elektronický obchod musí také mít neveřejnou část, ke které má přístup jen obchodník a která je chráněná přístupovými údaji, přihlašovacím jménem a heslem. V této administrační neveřejné části může spravovat všechno zboží, provedené objednávky a informační texty.
 
 Pro minimální běh aplikace potřebuje alespoň spravovat zboží a vyřizovat objednávky. Jako další rozšíření pro obchod splňující doporučení a zároveň certifikaci organizace APEK\footnote{\url{http://www.apek.cz/8482/2061/clanek/certifikacni-pravidla/}} můžeme přidat již zmiňované důležité obchodní informace.
 
@@ -676,8 +675,8 @@ Zákazník získal informace, které hledal.
 \subsubsection*{Možná rozšíření:}
 
 \begin{description}
-\item 1.1 Zákazník vyhledá zboží pomocí hledání
-\item 2.1 Zákazník vyfiltruje zboží pomocí parametrů
+\item 1.1 Zákazník vyhledá zboží pomocí hledání.
+\item 2.1 Zákazník vyfiltruje zboží pomocí parametrů.
 \item 3.1 Zákazník klikne na odkaz \uv{Koupit} a tím vloží zboží do košíku.
 \end{description}
 
@@ -805,7 +804,7 @@ V katalogu je nová kategorie.
 \item Správce klikne na odkaz \uv{Katalog}.
 \item Správce klikne na odkaz \uv{Vložit kategorii}.
 \item Správce vyplní informace o nové kategorii a zvolí nadřazenou kategorii.
-\item Správce potvrdí informace kliknutí na tlačítko \uv{Vložit}.
+\item Správce potvrdí informace kliknutím na tlačítko \uv{Vložit}.
 \end{enumerate}
 
 \subsubsection*{Rozšíření:}
@@ -837,22 +836,22 @@ V katalogu je nové zboží.
 \item Správce klikne na odkaz \uv{Produkty}.
 \item Správce klikne na odkaz \uv{Vložit produkt}.
 \item Správce vyplní informace o novém zboží a zvolí nadřazenou kategorii.
-\item Správce potvrdí informace kliknutí na tlačítko \uv{Vložit}.
+\item Správce potvrdí informace kliknutím na tlačítko \uv{Vložit}.
 \end{enumerate}
 
 \subsubsection*{Rozšíření:}
 
 \begin{description}
-\item  3.1 Klikem s podrženou klávesou CTRL může zvolit správce více kategorií.
+\item  3.1 Kliknutím s podrženou klávesou CTRL může zvolit správce více kategorií.
 \end{description}
 
 \section{Datový model}
 
 Z důvodu uchování informací o zboží, o zákaznících, o objednávkách a dalších; je třeba zavést základní datový model, který se bude moci dále rozšiřovat.
 
-Na Obrázku \ref{fig:datamodel} jsou znázorněné důležité entity propojené vazbami mezi sebou. Diagram pochází z aplikace Visual Studio, ve které byl e-shop kompletně naprogramován včetně návrhu datového modelu, viz. \ref{implprost}. Z diagramu vyplývá, že datový model je pouze minimální. Základní entity jako je  \texttt{BasicProduct} (zboží) a \texttt{BasicCategory} (kategorie) obsahují minimum vlastností pro reprezentaci v e-shopu. Kategorie je organizována ve stromové struktuře katalogu. Zboží je obsaženo v kategoriích a volitelně může být obsaženo ve více kategoriích.
+Na Obrázku \ref{fig:datamodel} jsou znázorněné důležité entity propojené vazbami mezi sebou. Diagram pochází z aplikace Visual Studio, ve kterém byl e-shop kompletně naprogramován včetně návrhu datového modelu, viz. \ref{implprost}. Z diagramu vyplývá, že datový model je pouze minimální. Základní entity jako je  \texttt{BasicProduct} (zboží) a \texttt{BasicCategory} (kategorie) obsahují minimum vlastností pro reprezentaci v e-shopu. Kategorie je organizována ve stromové struktuře katalogu. Zboží je obsaženo v kategoriích a volitelně může být obsaženo ve více kategoriích.
 	
-Zboží se při nákupu ukládá uživateli do košíku \texttt{CartItem} s informacemi o množství a datumu. Při vytvoření objednávky se položky z košíku přesunou do detailu objednávky \texttt{OrderDetail} a ty se pak agregují do samotné entity objednávky \texttt{Order} spolu s informacemi o zákazníkovi. Volitelně, pokud je zákazník přihlášený se objednávka přiřadí k přihlášenému zákazníkovi \texttt{Customer}. 
+Zboží se při nákupu ukládá uživateli do košíku \texttt{CartItem} s informacemi o množství a datu nákupu. Při vytvoření objednávky se položky z košíku přesunou do detailu objednávky \texttt{OrderDetail} a ty se pak agregují do samotné entity objednávky \texttt{Order} spolu s informacemi o zákazníkovi. Volitelně, pokud je zákazník přihlášený, se objednávka přiřadí k přihlášenému zákazníkovi \texttt{Customer}. 
 	
 Poslední důležité entity jsou zdroje \texttt{Resource} obsahující překlady do více jazyků a nastavení \texttt{Setting}, které uchovává obecná nastavení aplikace e-shopu.
 
@@ -869,7 +868,7 @@ Poslední důležité entity jsou zdroje \texttt{Resource} obsahující překlad
 
 \section{Návrhové vzory}
 
-Pro rozsáhlou aplikaci navrženou v objektově orientovaném programovacím jazyce jsou návrhové vzory nutností. Neustále se opakující problémy při návrhu složitých aplikací jako je tato vyžadují analýzu všech známých návrhových vzorů. V následujících sekcích si představíme všechny vhodné vzory a probereme jejich klady, zápory a důvody, proč byly či nebyly vybrány. Všechny vzory jsou čerpány z literatury \cite{GOF} a \cite{PEAA}.
+Pro rozsáhlou aplikaci navrženou v objektově orientovaném programovacím jazyce jsou návrhové vzory nutností. Neustále se opakující problémy při návrhu složitých aplikací, jako je tato, vyžadují analýzu všech známých návrhových vzorů. V následujících sekcích si představíme všechny vhodné vzory a probereme jejich klady, zápory a důvody, proč byly či nebyly vybrány. Všechny vzory jsou čerpány z literatury \cite{GOF} a \cite{PEAA}.
 
 \subsection{Factory method}
 Tento návrhový vzor se uplatní při vytváření instancí různých implementací rozhraní. Patří mezi vytvářecí návrhové vzory. Jeho využití je probíráno už v dalším vzoru \textit{Plugin}. Využití vzoru \textit{Factory method} spočívá v tom, že volaná metoda je továrnou na instance, které nemusí být ve třídě specifikované, ale využívají se pouze jejich předpisy v podobě rozhraní nebo abstraktních tříd. To přináší do kódu flexibilitu. Samotná metoda také nemusí být specifikovaná, její konkrétní podobu jí mohou dát až zdědění potomci.
@@ -902,7 +901,7 @@ Způsob konfigurace se liší implementaci od implementace, ale jednoduchou form
 \subsection{Unit of Work}
 Tento návrhový vzor se hodí na udržování seznamu datových objektů, které byly změněny aplikací a vyřizuje jejich správné zapsání do databáze a zároveň řeší konflikty při paralelních přístupech. Vzor se pro aplikaci hodí vzhledem k objemu předpokládaných transakcí s databází. Zvolená ORM vrstva \textsf{Entity Framework} ho již má implementovaný.
 
-Diagram \ref{fig:uow} popisuje registraci změněného objektu v Unit of Work. Tuto registraci musí uživatel při změně objektu provédst sám. Toto to je volitelné proto, aby objekt Unit of Work nemusel zbytečně zapisovat všechny změny, které se do databáze promítnout nemusí. Objekt Unit of Work takto registruje všechny nové, změněné nebo smazané objekty pro pozdější promítnutí do databáze.
+Diagram \ref{fig:uow} popisuje registraci změněného objektu v Unit of Work. Tuto registraci musí uživatel při změně objektu provést sám. Toto je volitelné proto, aby objekt Unit of Work nemusel zbytečně zapisovat všechny změny, které se do databáze promítnout nemusí. Objekt Unit of Work takto registruje všechny nové, změněné nebo smazané objekty pro pozdější promítnutí do databáze.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.7]{figures/uow}
@@ -914,7 +913,7 @@ Diagram \ref{fig:uow} popisuje registraci změněného objektu v Unit of Work. T
 
 \subsection{Repository}
 
-Jedná se o další návrhový vzor pro odstínění přístupu k databázi. Jeho předností je, že umožní plně objektově orientovaný způsob dotazování a všechno spojené s dotazy na databázi zapouzdřuje v sobě. Různé datové zdroje tak můžou být odstíněny za vrstvou potřebného počtu \textit{repositories}. Programátor používající \textit{repository} se tak může plně soustředit na práci s objekty, které potřebuje. Další výhodou je, že je konkrétní \textit{repository} vyměnitelné za jiné, které poskytuje jiná data nebo nepřistupuje k databázi. Toto je vhodné pro unit testy. Urychlí se tak běh testů. Zároveň je to perfektní příprava pro \textit{Dependency Injection}, které představíme dále. Další informace lze nalézt v \citep{PEAA}.
+Jedná se o další návrhový vzor pro odstínění přístupu k databázi. Jeho předností je, že umožní plně objektově orientovaný způsob dotazování a všechno spojené s dotazy na databázi zapouzdřuje v sobě. Různé datové zdroje tak mohou být odstíněny za vrstvou potřebného počtu \textit{repositories}. Programátor používající \textit{repository} se tak může plně soustředit na práci s objekty, které potřebuje. Další výhodou je, že je konkrétní \textit{repository} vyměnitelné za jiné, které poskytuje jiná data nebo nepřistupuje k databázi. Toto je vhodné pro unit testy. Urychlí se tak běh testů. Zároveň je to perfektní příprava pro \textit{Dependency Injection}, které představíme dále. Další informace lze nalézt v \citep{PEAA}.
 
 Vzor Repository nebyl do aplikace implementován, protože by vytvářel další vrstvu, kterou zastupuje Entity Framework s implementací vzoru Unit of work.
 
@@ -1754,7 +1753,7 @@ Tato varianta testování byla zvolena po neúspěšném nasazení aplikace na w
 
 Dále byl přidán nový \textit{Web}. Byla upravena oprávnění přístupu pro adresáře \texttt{App\_Data}, kvůli přístupu k databázi, a \texttt{extensions/temp}, aby mohl server vytvářet pracovní kopie modulů. Také byla nastavena \textit{Úroveň důvěryhodnosti rozhraní .NET} na \textbf{Full}. \textit{Fond aplikace} byl zvolen \textit{DefaultAppPool} s verzí rozhraní \textbf{v4.0(integrated)}. Aplikace byla nastavena tak, aby byla dostupná na adrese \textit{localhost}.
 
-Při testování byla nejprve spuštěna aplikace s moduly a všechny funkčnosti byly dostupné. V druhém kroku byly pluginy z adresáře odebrány a aplikace byla restartována, všechny funkčnosti také běžely v pořádku.
+Při testování byla nejprve spuštěna aplikace s moduly a všechny funkčnosti byly dostupné. V druhém kroku byly pluginy z adresáře odebrány a aplikace byla restartována, všechny funkčnosti běžely také v pořádku.
 
 \label{test:problem}
 Ve třetím kroku byly opět moduly přidány a aplikace byla restartována, jenže nastala chyba, která naznačovala, že moduly do aplikace nahrány nebyly. Byly prozkoumány všechny způsoby kešování a recyklace keše. Pomohlo až překompilování projektu jádra a přehrání souboru \texttt{Meshop.Core.dll}. Později při uživatelských testech s vývojáři byla nalezena další varianta. Jde o vymazání keše manuálně. Obnoví se tak Fond Aplikací IIS serveru. Keš aplikací je umístěna v adresáři 
@@ -1832,7 +1831,7 @@ Závěrem testování doby odpovědi lze říci, že testovací moduly neprokáz
 \section{Uživatelský test}
 Tento uživatelský test se týkal otestování tvorby modulu zkušenými vývojáři v prostředí platformy .NET a jeho nasazení na vývojové verzi aplikace. Testovaní vývojáři také zkoušeli moduly odebírat a přidávat.
 
-Vývojáři byli dva spolužáci, kteří používají platformu .NET na pokročilé úrovni a mají přehled o platformě i o Visual Studiu. Oba vývojáři dostali instrukce jak moduly instalovat a odebírat. Druhý vývojář také vytvořil základní strukturu modulu a úspěšně jej instaloval do aplikace. Testování probíhalo ve Visual Studiu 2010 a aplikace se spouštěla na vývojovém serveru IIS Express.
+Vývojáři byli dva spolužáci, kteří používají platformu .NET na pokročilé úrovni a mají přehled o platformě i o Visual Studiu. Oba vývojáři dostali instrukce, jak se dají moduly instalovat a odebírat. Druhý vývojář také vytvořil základní strukturu modulu a úspěšně jej instaloval do aplikace. Testování probíhalo ve Visual Studiu 2010 a aplikace se spouštěla na vývojovém serveru IIS Express.
 
 První zkoušený vývojář prošel testem tak, že nainstaloval závislosti do Visual Studia a načetl projekty. Poté provedl spuštění aplikace i s moduly. V dalším kroku moduly odstranil a aplikaci opět spustil. Ve třetím kroku moduly do aplikace přidal a vznikl již dříve popisovaný problém \ref{test:problem}, který se vyřešil překompilováním knihovny jádra. Později bylo nalezeno umístění keše ASP.NET frameworku.
 
@@ -1860,7 +1859,7 @@ Lze konstatovat, že při konstantním vývoji aplikace modulárního e-shopu v�
 
 V této práci byla navrhnuta a úspěšně implementována aplikace e-shopu s využitím modulární architektury. Práce se soustředila na možnosti rozšiřitelnosti aplikace a ověřila, že je tvorba takového internetového obchodu možná. Všechny základní požadavky kladené na aplikaci z hlediska rozšiřitelnosti se podařilo splnit. Zvolená vývojová platforma Microsoft .NET poskytla nejen dostatek funkcí, ale i integrované nástroje v podobě kvalitního vývojového prostředí, jakým je \textit{Visual Studio}.
 
-Rešerše poskytla náhled do prostředí elektronického obchodování a bylo zjištěno, že nabídka elektronických obchodů je doslova obrovská. Byla nalezena velmi kvalitní ale i nekvalitní řešení. V testech bylo ověřeno, že i volně dostupné řešení elektronického obchodu může být kvalitní.
+Rešerše poskytla náhled do prostředí elektronického obchodování a bylo zjištěno, že nabídka elektronických obchodů je doslova obrovská. Byla nalezena velmi kvalitní, ale i nekvalitní řešení. V testech bylo ověřeno, že i volně dostupné řešení elektronického obchodu může být kvalitní.
 
 Pro implementaci byla zvolena architektura MVC, kterou poskytuje platforma Microsoft .NET jako rozšiřující framework ASP.NET MVC ve verzi 3. Framework nabídl mnoho možností pro rozšíření a umožnil tvorbu modulární aplikace ve spolupráci s návrhovým vzorem \textit{Dependency injection} a funkcemi platformy Microsoft .NET. Platforma se ukázala jako dobře zvolená, protože je velmi rozšířená a její vývoj neustále pokračuje. Platforma je dobře zdokumentovaná a pro mnoho problémů je dostupné řešení na oficiálních i komunitních webových stránkách. Učící křivka ale vzhledem k rozsáhlosti platformy z počátku stoupá velmi pozvolna. S pokročilými funkcemi frameworku ASP.NET MVC 3 pomohla i zakoupená kniha \cite{MVC1}.
 
