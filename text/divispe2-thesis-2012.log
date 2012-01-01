@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  1 JAN 2012 16:10
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  1 JAN 2012 18:06
 entering extended mode
 **divispe2-thesis-2012.tex
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.tex
@@ -1080,12 +1080,19 @@ cle.png (PNG copy)>]
 File: figures/modulstruktura.png Graphic file (type png)
 
 <use figures/modulstruktura.png>
-Overfull \hbox (6.07407pt too wide) in paragraph at lines 1484--1485
-\T1/lmr/m/n/10.95 ses-tavení, je²t¥ neº se spustí samotná ap-likace. K tomu slo
-uºí sou-bor \T1/lmtt/m/n/10.95 PreApplicationInit.cs
+Overfull \hbox (12.82587pt too wide) in paragraph at lines 1484--1485
+\T1/lmr/m/n/10.95 as-sem-blies, je²t¥ neº se spustí samotná ap-likace. K tomu s
+louºí sou-bor \T1/lmtt/m/n/10.95 PreApplicationInit.cs
  []
 
-[51 <C:/Dokumenty/diplomka/text/figures/modulstruktura.png>] [52]
+[51 <C:/Dokumenty/diplomka/text/figures/modulstruktura.png>]
+Overfull \hbox (30.12314pt too wide) in paragraph at lines 1486--1487
+\T1/lmr/m/n/10.95 jektu mod-ulu v záloºce Build Events. P°íkaz \T1/lmtt/m/n/10.
+95 rd /s /q "$\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 TargetDir\OT1/lmr/m/n/10.
+95 )\OML/lmm/m/it/10.95 =::=::=temp=$\T1/lmtt/m/n/10.95 (ProjectName)"
+ []
+
+[52]
 Overfull \hbox (14.82289pt too wide) in paragraph at lines 1509--1509
 [][][]\T1/lmr/m/n/9 <[][]$\T1/lmtt/m/n/9 http : / / www . chrisvandesteeg . nl 
 / 2010 / 11 / 22 / embedding-[]pre-[]compiled-[]razor-[]views-[]in-[]your-[]dll
@@ -1101,7 +1108,11 @@ Overfull \hbox (6.37332pt too wide) in paragraph at lines 1542--1543
 né po-mocí t°ídy \T1/lmtt/m/n/10.95 PluginController
  []
 
-[53] [54] [55] <figures/widgety.png, id=1531, 634.37pt x 485.815pt>
+[53] [54]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[55] <figures/widgety.png, id=1526, 634.37pt x 485.815pt>
 File: figures/widgety.png Graphic file (type png)
 
 <use figures/widgety.png>
@@ -1113,22 +1124,16 @@ Overfull \hbox (14.8907pt too wide) in paragraph at lines 1649--1650
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [56] [57 <C:/Dokumenty/diplomka/text/figures/widgety.png (PNG copy)>] [58]
-[59] [60]
-Kapitola 6.
-[61
+[59] [60
 
 ]
+Kapitola 6.
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 1763--1764
 
  []
 
-[62]
-Overfull \hbox (6.28488pt too wide) in paragraph at lines 1821--1822
-\T1/lmr/m/n/10.95 p°i prvním na£ítání a pouºití zkom-pilo-vaného pohledu p°i da
-l²ích na£ítáních. To-muto zpoºd¥ní
- []
-
-[63]
+[62] [63]
 Overfull \hbox (1.20859pt too wide) in paragraph at lines 1849--1850
 \T1/lmr/m/n/10.95 <[][]$\T1/lmtt/m/n/10.95 http : / / www . yourpersonaljewelle
 r . co . uk/$[][]\T1/lmr/m/n/10.95 >, který na£etl stránku bez grafiky v rozmez
@@ -1231,12 +1236,12 @@ File: figures/cd.png Graphic file (type png)
  <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux) ) 
 Here is how much of TeX's memory you used:
- 10435 strings out of 495285
- 143978 string characters out of 3179883
- 403486 words of memory out of 3000000
+ 10436 strings out of 495285
+ 143990 string characters out of 3179883
+ 403499 words of memory out of 3000000
  12840 multiletter control sequences out of 15000+200000
  77223 words of font info for 52 fonts, out of 3000000 for 9000
- 20 hyphenation exceptions out of 8191
+ 21 hyphenation exceptions out of 8191
  38i,10n,51p,1438b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/
 MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.8/
@@ -1257,7 +1262,7 @@ ic/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmro1
 rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files
  (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKT
 eX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (97 pages, 2397916 bytes).
+Output written on divispe2-thesis-2012.pdf (97 pages, 2397967 bytes).
 PDF statistics:
  1934 PDF objects out of 2073 (max. 8388607)
  580 named destinations out of 1000 (max. 500000)

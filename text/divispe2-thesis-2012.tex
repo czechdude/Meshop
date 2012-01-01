@@ -1042,14 +1042,14 @@ Zvoleným prostředím byla po provedení  Rešerše v kapitole \ref{sec:reserse
 V této části budou probrány zajímavé knihovny platformy Microsoft.NET použité v této práci. Některé z těchto knihoven jsou lehce integrovatelné do projektů pomocí speciálního balíčkovacího systému \textbf{NuGet}\footnote{\url{http://nuget.org/}}, který je dostupný jako rozšíření pro Visual Studio. \textit{NuGet} poskytuje rozšíření, která se snadno instalují jedním kliknutím a sám se postará o jejich nastavení. Rozšíření pro systém \textit{NuGet} jsou poskytovány jak nezávislými vývojáři, tak přímo od Microsoftu. Knihovnu pro \textit{NuGet} může napsat každý snadno a rychle.
 
 \subsubsection{ASP.NET MVC 3}
-V první řadě je třeba zmínit hlavní knihovnu, na které je jádro aplikace postavené a tou je framework ASP.NET MVC 3. Něco málo o něm bylo řečeno už v kapitole Rešerše \ref{asp.net} a o jeho architektuře v předchozí sekci \ref{mvc}. Všechny jeho vlastnosti jsou detailně popsány na webových stránkách frameworku\footnote{\url{http://www.asp.net/mvc}} pomocí skvělých videí a textových tutoriálech.
+V první řadě je třeba zmínit hlavní knihovnu, na které je jádro aplikace postavené a tou je framework ASP.NET MVC 3. Něco málo o něm bylo řečeno už v kapitole Rešerše \ref{asp.net} a o jeho architektuře v předchozí sekci \ref{mvc}. Všechny jeho vlastnosti jsou detailně popsány na webových stránkách frameworku\footnote{\url{http://www.asp.net/mvc}} pomocí skvělých videí a v textových tutoriálech.
  
 \subsubsection{Entity Framework - Code First}
 \label{sec:ef}
 Microsoft přišel před několika lety s novým ORM frameworkem, který se stal soupeřem NHibernate. V poslední verzi 4 už je Entity Framework\footnote{\url{http://msdn.com/data/ef}} na použitelné úrovni. Entity Framework nabízí 3 různé způsoby, jak založit databázové úložiště. 
 
 \begin{itemize}
-\item Jedním způsobem je \textit{Code First}. Spočívá v nulovém návrhu databáze. Proto se mu říká \textit{Code First} (\textit{nejdříve kód}). Nejprve se navrhnou entity ve formě tříd a jejich vztahy se navážou přes otypované parametry. Jakákoli změna entit je detekována a databáze se podle pravidel přeorganizuje. V další verzi 4.2 se představí vlastnost zvaná \textit{Migrations}, která dokáže opravit změny v databázi bez nutnosti přehrávání celé databáze, což byla velice kritizovaná vlastnost. Musela se řešit zálohováním dat nebo zapsáním pevných iniciálních dat do kódu. Jinak se Microsoft snaží tento způsob návrhu databáze upřednostňovat ve všech svých tutoriálech.
+\item Jedním způsobem je \textit{Code First}. Spočívá v nulovém návrhu databáze. Proto se mu říká \textit{Code First} (\textit{nejdříve kód}). Nejprve se navrhnou entity ve formě tříd a jejich vztahy se navážou přes otypované parametry. Jakákoli změna entit je detekována a databáze se podle pravidel přeorganizuje. V další verzi 4.2 se představí vlastnost zvaná \textit{Migrations}, která dokáže opravit změny v databázi bez nutnosti přehrávání celé databáze, což byla velice kritizovaná vlastnost. Musela se řešit zálohováním dat nebo zapsáním pevných inicializačních dat do kódu. Jinak se Microsoft snaží tento způsob návrhu databáze upřednostňovat ve všech svých tutoriálech.
 
 \item Další způsob je \textit{Model First}. Jde o způsob, jenž předpokládá, že má programátor již hotový model databáze ve formátu vhodném pro Entity Framework. Z modelu se vygenerují třídy zastupující entity a dále se pokračuje jako při prvním způsobu. 
 
@@ -1061,7 +1061,7 @@ Model, přes který se převádí databáze na entity a naopak se jmenuje \texti
 
 
 \subsubsection{SQL Compact Edition}
-Nejedná se o knihovnu, ale o databázi a je třeba o ní ztratit pár slov, protože byla použita v aplikaci. Je to nejmenší verze z nabízených databází Microsoftu a je přednastavená při vytváření základní šablony aplikace ve frameworku MVC 3 ve Visual Studiu. V projektu jde o verzi SQL Server Compact Edition 4.
+Nejedná se o knihovnu, ale o databázi a je třeba se o ní zmínit, protože byla použita v aplikaci. Je to nejmenší verze z nabízených databází Microsoftu a je přednastavená při vytváření základní šablony aplikace ve frameworku MVC 3 ve Visual Studiu. V projektu jde o verzi SQL Server Compact Edition 4.
 
 Jde o databázi uloženou v jednom souboru společně s aplikací, její možnosti jsou omezené. Nevýhodou je, že nejde profilovat dotazy do databáze pomocí profesionálních databázových nástrojů jako je SQL Server Management Studio. Na druhou stranu je zdarma a obsahuje kompaktní databázový systém přímo v jednom souboru, takže není třeba databázový systém instalovat. Microsoft bohužel nenabízí srovnání s ostatními verzemi, ale našel jsem dokument, který se tímto zabývá \footnote{\url{http://coolthingoftheday.blogspot.com/2011/01/sql-server-compact-4-vs-sql-server.html}}. Srovnání a další dostupné verze (mezi nimiž je třeba zmínit edici Express, která je zdarma) jsou dostupné online na webových stránkách MS SQL Serveru\footnote{\url{http://www.microsoft.com/sqlserver/en/us/product-info/compare.aspx}}.
 
@@ -1074,16 +1074,16 @@ Pro stránkování byla využita knihovna \textit{Paged List}\footnote{\url{http
 
 \subsubsection{Glimpse}
 \label{glimpse}
-Tato vynikající knihovna\footnote{\url{http://getglimpse.com/}} je takový doktor na všechno. Je to diagnostický nástroj zabudovaný přímo do aplikace. Načte se na požádání s rozhraním webové aplikace jako další okno a obsahuje důležité informace, které debugger Visual Studia nezná. Díky němu se dají aplikace napsané v MVC frameworku ladit jednoduše a rychle. Knihovna zamezí spoustu problémům a ušetří pár zničených klávesnic a monitorů u více vznětlivých webových vývojářů.
+Tato vynikající knihovna\footnote{\url{http://getglimpse.com/}} je takový doktor na všechno. Je to diagnostický nástroj zabudovaný přímo do aplikace. Načte se na požádání s rozhraním webové aplikace jako další okno a obsahuje důležité informace, které debugger Visual Studia nezná. Díky němu se dají aplikace napsané v MVC frameworku ladit jednoduše a rychle. Knihovna zamezí spoustě problémů a ušetří pár zničených klávesnic a monitorů u více vznětlivých webových vývojářů.
 
 \subsection{Ostatní použité technologie}
 Ještě stojí krátce za zmínku použité technologie na straně uživatelského rozhraní, které jsou standardně použité už v šabloně projektu MVC frameworku ve Visual Studiu.
 
 \subsubsection*{HTML 5}
-HTML 5 je novou verzí dlouho ctěného standardu HTML 4, který je pro potřeby moderního webu již zastaralý. 5. verze přináší nové tagy pro audio, video a grafiku. Dále se zaměřuje na vylepšení sémantického významu částí stránky pomocí dalších tagů jako je section, article, header a nav. Další změny jsou ve formulářových polích, které by měly podporovat nové způsoby vkládání a nové datové typy. Další je podpora ukládání dat na straně uživatele a jejich zachovávání\footnote{\url{http://en.wikipedia.org/wiki/HTML5}}. HTML 5 bude muset urazit ještě dlouhou cestu standardizačními procesy, než se stane obecně standardem. Naštěstí se Microsoft vzpamatoval a poslední verze Internet Exploreru už nestandardizované HTML 5 podporuje.
+HTML 5 je novou verzí dlouho ctěného standardu HTML 4, který je pro potřeby moderního webu již zastaralý. 5. verze přináší nové tagy pro audio, video a grafiku. Dále se zaměřuje na vylepšení sémantického významu částí stránky pomocí dalších tagů jako je section, article, header a nav. Další změny jsou ve formulářových polích, které by měly podporovat nové způsoby vkládání a nové datové typy. Další je podpora ukládání dat na straně uživatele\footnote{\url{http://en.wikipedia.org/wiki/HTML5}}. HTML 5 bude muset urazit ještě dlouhou cestu standardizačními procesy, než se stane obecně standardem. Naštěstí se Microsoft vzpamatoval a poslední verze Internet Exploreru už nestandardizované HTML 5 podporuje.
 
 \subsubsection*{CSS 3}
-Další verze kaskádových stylů na formátování vzhledu HTML dokumentů. Ve verzi 3 ještě nejsou také standardizované, ale prohlížeče je částečně podporují, nebo lze využít vlastních tagů prohlížečů. Poslední verze nabízí vychytávky jako víceobrázková pozadí, přechody, transparentnost, více-sloupcový layout, média, atd. Bohužel si ještě nějaký rok budeme muset na finální standard počkat.
+Další verze kaskádových stylů na formátování vzhledu HTML dokumentů. Ve verzi 3 ještě nejsou také standardizované, ale prohlížeče je částečně podporují, nebo lze využít vlastních prefixů prohlížečů. Poslední verze nabízí vychytávky jako více obrázková pozadí, přechody, transparentnost, více-sloupcový layout, média, atd. Bohužel si ještě nějaký rok budeme muset na finální standard počkat.
 
 \subsubsection*{Javascript a JQuery}
 Javascript\footnote{\url{http://cs.wikipedia.org/wiki/JavaScript}} tu s námi je už od roku 1997, kdy byl standardizován asociací ECMA. Jde o netypový objektový skriptovací jazyk používaný pro manipulaci se vzhledem a daty na straně uživatele. Přestože je velmi náchylný k chybám, zažil boom s nástupem AJAXu a frameworků jako je \textit{JQuery}\footnote{\url{http://jquery.com}}, které usnadňují skriptování a nabízejí přidané funkce. Díky JQuery bylo napsáno mnoho pluginů, které vylepšují přívětivost webů a usnadňují navigaci. V aplikaci e-shopu je například použit jako standardní validátor uživatelských formulářů JQuery plugin \textit{Validation}\footnote{\url{http://bassistance.de/jquery-plugins/jquery-plugin-validation/}}, který spolupracuje s ASP.NET MVC 3 frameworkem a předává si informace o formulářových políčkách a jejich obsahu.
@@ -1101,14 +1101,14 @@ Ještě k doplnění, experimentální uživatelské rozhraní aplikace využív
 
 Tato kapitola se věnuje rozboru implementace e-shopu. Kromě popisu nestandardních postupů v implementaci také okrajově popisuje standardní způsoby realizace.
 
-Znázornění struktury aplikace podle komponentů v balíčcích je zobrazeno v diagramu \ref{fig:components}. Popis částí komponent následuje v další sekci.
+Znázornění struktury aplikace podle komponent v balíčcích je zobrazeno v diagramu \ref{fig:components}. Popis částí komponent následuje v další sekci.
 
 \section{Komponenty aplikace}
 Z důvodu velké složitosti struktury aplikace je zde popsán diagram komponent, který graficky znázorňuje části aplikace v balíčcích a v nich obsažených komponentách, viz Obrázky \ref{fig:components} a \ref{fig:componentslow}.
 
-První schéma \ref{fig:components} popisuje závislosti mezi sestavením frameworku, jádra a modulů. Všechny tyto části se napojují na Entity Framework pro získání dat z databáze pomocí dotazů v jazyku LINQ. Sestavení \textsf{Framework} obsahuje rozhraní služeb -- \textsf{Services}, datové entity -- \textsf{Entities}, jazykový překladač -- \textsf{Translator}, správu účtů -- \textsf{Account Management} a komponentu pro řešení závislostí -- \textsf{Dependency Injection}.
+První schéma \ref{fig:components} popisuje závislosti mezi projekty frameworku, jádra a modulů. Všechny tyto části se napojují na Entity Framework pro získání dat z databáze pomocí dotazů v jazyku LINQ. Projekt \textsf{Framework} obsahuje rozhraní služeb -- \textsf{Services}, datové entity -- \textsf{Entities}, jazykový překladač -- \textsf{Translator}, správu účtů -- \textsf{Account Management} a komponentu pro řešení závislostí -- \textsf{Dependency Injection}.
 
-Na sestavení \textsf{Framework} závisí pak sestavení jádra -- \textsf{Core} a všechna sestavení modulů \textsf{Module}. Tyto sestavení pak mají další komponenty. Sestavení \textsf{Core} obsahuje kromě společných komponent s \textsf{Modul}y (\textsf{Frontend},\textsf{Backend}, \textsf{Routing}) navíc komponentu \textsf{Startup}, která se stará o inicializaci a spuštění aplikace a používá i funkce komponenty \textsf{Dependency Injection} v sestavení \textsf{Framework}, aby vyřešila závislosti při načítání komponent ze sestavení všech přidaných \textsf{Modulů} do základu aplikace.
+Na projektu \textsf{Framework} závisí pak projekt jádra -- \textsf{Core} a všechny projekty modulů \textsf{Module}. Tyto projekty pak mají další komponenty. Projekt \textsf{Core} obsahuje kromě společných komponent s \textsf{Modul}y (\textsf{Frontend},\textsf{Backend}, \textsf{Routing}) navíc komponentu \textsf{Startup}, která se stará o inicializaci a spuštění aplikace a používá i funkce komponenty \textsf{Dependency Injection} v projektu \textsf{Framework}, aby vyřešila závislosti při načítání komponent z projektů všech přidaných \textsf{Modulů} do základu aplikace.
 
 \begin{figure}[h!]
 \begin{center}
@@ -1126,7 +1126,7 @@ Na sestavení \textsf{Framework} závisí pak sestavení jádra -- \textsf{Core}
 \end{center}
 \end{figure}
 
-Obrázek \ref{fig:components} obsahuje pouze nejdůležitější vazby mezi sestaveními a komponentami. Je to z důvodu přehlednosti. Další obrázek \ref{fig:componentslow} zobrazuje vnořené komponenty v balíčcích \textsf{Frontend} a \textsf{Backend}. Balíčky jsou v diagramu \ref{fig:components} zobrazeny jako komponenty v sestavení \textsf{Core} a \textsf{Module}. Obsahují standardní komponenty MVC architektury, které jsou v balíčku \textsf{Frontend} doplněné o komponentu \textsf{Widgets}. Tu si probereme v sekci \ref{sec:widgets}.
+Obrázek \ref{fig:components} obsahuje pouze nejdůležitější vazby mezi projekty a komponentami. Je to z důvodu přehlednosti. Další obrázek \ref{fig:componentslow} zobrazuje vnořené komponenty v balíčcích \textsf{Frontend} a \textsf{Backend}. Balíčky jsou v diagramu \ref{fig:components} zobrazeny jako komponenty v projektu \textsf{Core} a \textsf{Module}. Obsahují standardní komponenty MVC architektury, které jsou v balíčku \textsf{Frontend} doplněné o komponentu \textsf{Widgets}. Tu si probereme v sekci \ref{sec:widgets}.
 
 
 
@@ -1150,7 +1150,7 @@ V adresářích s předponou \textsf{App\_} jsou zdroje používané pro databá
 
 Ostatní adresáře jsou jasné podle jejich pojmenování a obsahují třídy a prvky popsané níže. Soubor \textsf{Global.asax} je startovním souborem zastupující modul \textsf{Startup}. 
 
-Nepovinný soubor \textsf{PreApplicationInit.cs} obsahuje prvky pro inicializaci sestavení modulů při startu aplikace. Soubor \textsf{Web.config} je XML konfigurace aplikace, kterou používá IIS web server. \textsf{Packages.config} je XML soubor pro systém \textit{NuGet} balíčků s výpisem instalovaných knihoven z \textit{Nuget} repozitáře.
+Nepovinný soubor \textsf{PreApplicationInit.cs} obsahuje prvky pro inicializaci projektů modulů při startu aplikace. Soubor \textsf{Web.config} je XML konfigurace aplikace, kterou používá IIS web server. \textsf{Packages.config} je XML soubor pro systém \textit{NuGet} balíčků s výpisem instalovaných knihoven z \textit{Nuget} repozitáře.
 
 
 \subsection{Global.asax}
@@ -1327,7 +1327,7 @@ Standardní autorizace se dělí na \textsf{Windows} a \textsf{Forms} autentizac
 Pro autentizaci je vhodné mít vyhrazený extra \texttt{controller} propagující komponentu autentizace přes \textsf{pohledy} k uživateli. Jde vlastně o roli \textsf{modelu}. Autorizaci je poté třeba zavést do aplikace pomocí nastavení v hlavním konfiguračním souboru \textsf{Web.config}. Více lze najít v obou knihách \cite{MVC1} \cite{MVC2} i v tutoriálech\footnote{\url{http://www.asp.net/mvc/tutorials}} a detaily v dokumentaci na MSDN\footnote{\url{http://msdn.microsoft.com/en-us/library/6tc47t75.aspx}}.
 
 \subsection{Autentizace}
-Autentizace je složitější nadstavba autorizace. Stará se o řízení přístupu uživatelů k prostředkům. Kontroluje oprávnění uživatelů podle jejich rolí a práv. V ASP.NET je opět standardní implementovaná cesta, která nemusí vyhovovat všem ze stejných důvodů jako v případě autorizace.
+Autentizace je rozdílná od autorizace. Stará se o řízení přístupu uživatelů k prostředkům. Kontroluje oprávnění uživatelů podle jejich rolí a práv. V ASP.NET je opět standardní implementovaná cesta, která nemusí vyhovovat všem ze stejných důvodů jako v případě autorizace.
 
 Při nastavení autentizace jsou potřeba vhodné třídy zapsat do konfiguračního souboru \textsf{Web.config}. Jde o implementace tříd \texttt{RoleProvider} a \texttt{ProfileProvider}. Více se lze o způsobech rozšíření i nasazení hotových řešení dočíst opět v knihách \cite{MVC1} a \cite{MVC2} a na MSDN\footnote{\url{http://msdn.microsoft.com/en-us/library/317sza4k.aspx}}\footnote{\url{http://msdn.microsoft.com/en-us/library/ta63b872.aspx}}.
 
@@ -1337,7 +1337,7 @@ V této části si probereme nutná rozšíření základu aplikace jako jsou sp
 
 
 \subsection{Propojení modelů s databází}
-Již dříve bylo zmíněno, že se modely připojují k databázi přes \textit{objektově-relační mapování}, které zastupuje v Entity Frameworku \textit{Entity Data Model}. Entity Framework kopíruje mechanismus připojení z nižší vrstvy ADO.NET a staví na něm. Jedná se o třídu \texttt{DbContext}, která specifikuje \texttt{ObjectContext} a zpřístupňuje mapování. Ukázka kódu \ref{list:dbcontext} popisuje nutnou část k propojení s databází způsobem \textit{Code First}. Deklarací \textit{properties} generického typu \texttt{DbSet<>} říkáme, které entity chceme namapovat do databáze jako tabulky. Specialitou je přepsání tohoto typu s parametrem dědícím od třídy \texttt{PluginEntity}, který slouží jako místo prostředek pro práci se zásuvnými entitami.
+Již dříve bylo zmíněno, že se modely připojují k databázi přes \textit{objektově-relační mapování}, které zastupuje v Entity Frameworku \textit{Entity Data Model}. Entity Framework kopíruje mechanismus připojení z nižší vrstvy ADO.NET a staví na něm. Jedná se o třídu \texttt{DbContext}, která specifikuje \texttt{ObjectContext} a zpřístupňuje mapování. Ukázka kódu \ref{list:dbcontext} popisuje nutnou část k propojení s databází způsobem \textit{Code First}. Deklarací \textit{properties} generického typu \texttt{DbSet<>} říkáme, které entity chceme namapovat do databáze jako tabulky. Specialitou je přepsání tohoto typu s parametrem, který dědí od třídy \texttt{PluginEntity}. Tímto způsobem se při načítání entit odfiltrují zásuvné entity z modulů.
 
 Metoda \texttt{OnModelCreating} vkládá prostor pro konfiguraci Entity Frameworku pomocí odebírání defaultních nastavení. Entity Framework totiž ctí heslo \uv{konvence nad konfiguraci}, což znamená, že sám od sebe funguje a pouze v případě potřeby změny je možné nastavení odebrat -- což ukazuje řádek \textbf{17}. Další pokračování metody je popsáno v \ref{subsec:pripojenientit}, protože obsahuje část pro připojení entit z modulů.
 
@@ -1369,7 +1369,7 @@ public class DatabaseConnection2 : DbContext
 \label{subsec:lokalizace}
 Standardně se v aplikaci používají statické zdroje, které už uživatel aplikace nemůže dále jednoduše upravovat. Proto byl, z důvodu větší flexibility a možnosti přidání více jazyků do hotové aplikace, předělán celý systém vyhledávání překladů řetězců -- tzv. \textsl{Resources}. Všechny základní aplikace nebo rady na stackoverflow.com řeší lokalizaci pouze pomocí standardní cesty. Aplikace ale potřebuje mít uložené řetězce v databázi a načítat si je do vlastní aplikační cache, aby byly omezeny dotazy na databázi. Jediné možné řešení jsem našel na webu MSDN \cite{resources} pro starou verzi ASP.NET frameworku, která naštěstí ale funguje i v poslední verzi 4.0.
 
-Načítání \texttt{DBResourceProvider} se provádí v konfiguračním souboru \textsf{web.config} hlavního sestavení \textsf{Core} tagem \ref{list:locfig} s nastavením \texttt{Factory}. V tomto nastavení pozná aplikace podle nastaveného jazyka v prohlížeči návštěvníka, jaký má použít překlad.
+Načítání \texttt{DBResourceProvider} se provádí v konfiguračním souboru \textsf{web.config} hlavního projektu \textsf{Core} tagem \ref{list:locfig} s nastavením \texttt{Factory}. V tomto nastavení pozná aplikace podle nastaveného jazyka v prohlížeči návštěvníka, jaký má použít překlad.
 
 \begin{lstlisting}[float=h!,language=XML, caption={Konfigurace DBResourceProvider v lokalizaci}, label=list:locfig]
 <system.web>
@@ -1379,7 +1379,7 @@ Načítání \texttt{DBResourceProvider} se provádí v konfiguračním souboru 
 </system.web>
 \end{lstlisting}
 
-Ostatní implementace, týkající se překládání, se nachází v souborech v adresáři \texttt{Translation} v sestavení \textsf{Framework}. Jde o třídy popisované v tutorialu MSDN\cite{resources}. Další implementace se týká pohledů a popisků v entitách a stavových zpráv v aplikaci.
+Ostatní implementace, týkající se překládání, se nachází v souborech v adresáři \texttt{Translation} v projektu \textsf{Framework}. Jde o třídy popisované v tutorialu MSDN\cite{resources}. Další implementace se týká pohledů a popisků v entitách a stavových zpráv v aplikaci.
 
 Problémem bylo použití lokalizačních atributů pro entity, které jsou kontrolovány při startu aplikace Entity Frameworkem. Ten atributy entit rovnou načítá, pokud se databáze musí vytvářet znova. Proto byla zavedena ještě jedna třída specifikující \texttt{DbContext}, kterou používají \texttt{Resources} jen pro sebe. To ale úplně nezamezilo pádům aplikace, proto byla ve třídě \texttt{DBResourcesModel} do těla metody \texttt{GetResourceByCultureAndKey} načítající překlady pomocí Entity Frameworku přidána klauzule \textit{try-catch} pro odchycení výjimky způsobující pád. Entity tak dostanou původní pojmenování přímo z kódu. To se ale přeloží při použití entit ve formulářích, které jsou generovány podle atributů entit -- tzv. \textit{scaffolding}.
 
@@ -1467,7 +1467,7 @@ Na obrázku \ref{fig:modulstruktura} je struktura vzorového modulu. Projekt je 
 
 Také se musí do \texttt{References} přidat odkaz na projekt \textsf{Framework}, aby se daly využívat jeho třídy a rozhraní. Všem referencím je ale nutné zakázat kopírování na výstup ve vlastnostech. Všechny reference musí být uloženy na jednom místě v adresáři \texttt{bin} hlavního projektu \textsf{Core}. Dále se musí změnit vlastnosti všech souborů, které se nekompilují (zpravidla \texttt{Web.config}, \texttt{*.cshtml}, javacript, CSS a média). Ve vlastnostech u položky \texttt{Copy to Output Directory} je třeba nastavit \texttt{Copy Always}, protože by se jinak samy k aplikaci nepřidaly.
 
-Další nastavení projektu budou ještě postupně přidávány, ale ve stručnosti jsou upraveny všechny soubory \texttt{Web.config}, \texttt{\_ViewStart.cshtml} a nový je soubor \texttt{Routes.cs}. Změny v souborech oproti standardnímu nastavení budou dále popsány. Soubory \texttt{Web.config} jsou v modulech jen pro přepsání rodiče pohledů a na import základních \textit{assemblies} a \textit{namespaces}.
+Další nastavení projektu budou ještě postupně přidávána, ale ve stručnosti jsou upraveny všechny soubory \texttt{Web.config}, \texttt{\_ViewStart.cshtml} a nový je soubor \texttt{Routes.cs}. Změny v souborech oproti standardnímu nastavení budou dále popsány. Soubory \texttt{Web.config} jsou v modulech jen pro přepsání rodiče pohledů a na import základních \textit{assemblies} a \textit{namespaces}.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=1]{figures/modulstruktura}
@@ -1481,13 +1481,13 @@ Další nastavení projektu budou ještě postupně přidávány, ale ve stručn
 
 Připojování modulů je v aplikaci poloautomatické. Ve vývojovém režimu jde zcela automatizovat již výše zmíněným upravením nastavení při kompilování a spouštěním přímo v adresáři celého balíku projektů -- \textit{Solution}. To probíhá automaticky při spouštění při vývoji přímo z Visual Studia na vývojovém serveru IIS Express.
 
-Po dlouhém hledání se mi podařilo najít článek Shannona Deminicka \cite{Shazwazza}, který se zabývá připojováním sestavení do jiných sestavení až po zkompilování. Proto jsem použil postup v něm navržený. Jde o systematické prohledávání daných adresářů a načítání tříd z nalezených sestavení, ještě než se spustí samotná aplikace. K tomu slouží soubor \texttt{PreApplicationInit.cs} popsaný výše v sekci \ref{sec:startapp}. vnitřní metoda celé moduly kopíruje do spouštěcího dočasného adresáře, protože se v původním adresáři zamknou a nejdou otevřít. Zároveň je třeba nastavit v balíčku \textsf{Core} v souboru \texttt{Web.config} v tagu \texttt{probing} atribut \texttt{privatePath} na adresář s dočasně nahranými moduly, aby mělo prostředí .NET informaci o dalším adresáři s dynamickými knihovnami.
+Po dlouhém hledání se mi podařilo najít článek Shannona Deminicka \cite{Shazwazza}, který se zabývá připojováním assemblies do jiných assemblies až po zkompilování. Proto jsem použil postup v něm navržený. Jde o systematické prohledávání daných adresářů a načítání tříd z nalezených assemblies, ještě než se spustí samotná aplikace. K tomu slouží soubor \texttt{PreApplicationInit.cs} popsaný výše v sekci \ref{sec:startapp}. vnitřní metoda celé moduly kopíruje do spouštěcího dočasného adresáře, protože se v původním adresáři zamknou a nejdou otevřít. Zároveň je třeba nastavit v balíčku \textsf{Core} v souboru \texttt{Web.config} v tagu \texttt{probing} atribut \texttt{privatePath} na adresář s dočasně nahranými moduly, aby mělo prostředí .NET informaci o dalším adresáři s dynamickými knihovnami.
 
-Při kopírování sestavení do dočasného adresáře je vhodné ho při každé další kompilaci promazat. To se provede automaticky nastavením v Properties projektu modulu v záložce Build Events. Příkaz \texttt{rd /s /q "$(TargetDir)/../../temp/$(ProjectName)"} provede jeho smazání. Cesta je samozřejmě závislá na umístění projektu a adresáře pro moduly.
+Při kopírování assemblies modulových projektů do dočasného adresáře je vhodné ho při každé další kompilaci promazat. To se provede automaticky nastavením v Properties projektu modulu v záložce Build Events. Příkaz \texttt{rd /s /q "$(TargetDir)/../../temp/$(ProjectName)"} provede jeho smazání. Cesta je samozřejmě závislá na umístění projektu a adresáře pro moduly.
 
 Jenže tím není vyhráno, protože se automaticky nenačtou do aplikace modulární služby, controllery a další implementace. K tomu se využívá IoC Kontejner \textsf{Castle.Windsor}, který třídy inicializuje, když je hledá ve hlavní aplikaci \textit{framework MVC}. Pomocí vlastní továrny je pak frameworku poskytne. Implementace používající kontejner je v souboru \texttt{Modules.cs}. Zdrojem pro načítání controllerů pomocí IoC Kontejneru byl článek od Mika Kolari \cite{kolari}. Staví na něm všechna rozšíření vlastního frameworku načítaná pomocí \textit{Dependency Injection}.
 
-Statická třída \texttt{Modules} v souboru \texttt{Modules.cs} z balíčku \textsf{Framework} obsahuje metody, které jsou volány hlavně ve spouštěcí metodě \texttt{Application\_Start}. Všechny metody využívají společný Windsor IoC Kontejner, systematicky prohledávají všechna sestavení modulů a ukládají si implementace rozhraní a specifikace tříd, které jsou poté do aplikace \textit{injektovány}.
+Statická třída \texttt{Modules} v souboru \texttt{Modules.cs} z balíčku \textsf{Framework} obsahuje metody, které jsou volány hlavně ve spouštěcí metodě \texttt{Application\_Start}. Všechny metody využívají společný Windsor IoC Kontejner systematicky prohledávající všechna assemblies modulů a ukládají si implementace rozhraní a specifikace tříd, které jsou poté do aplikace \textit{injektovány}.
 Metody zároveň hledají Routy pro aplikaci a adaptéry pro validační atributy.
 
 \subsection{Body rozšíření}
@@ -1500,13 +1500,13 @@ Třída obsahuje předepsanou metodu, ve které jsou údaje o routách stejné j
 
 \subsubsection{Pohledy}
 \label{subsec:pohledy}
-Pohledy poskytují místo pro rozšíření pomocí rodičovských tříd, které ale dědí i pohledy v jádru. Pohledy představují v modulech nový problém. Nemohou totiž být vyhledány jako standardní pohledy v původním adresáři \texttt{Views} v jádře. Jsou totiž umístěny spolu se sestaveními v adresáři modulu.
+Pohledy poskytují místo pro rozšíření pomocí rodičovských tříd, které ale dědí i pohledy v jádru. Pohledy představují v modulech nový problém. Nemohou totiž být vyhledány jako standardní pohledy v původním adresáři \texttt{Views} v jádře. Jsou totiž umístěny spolu se souborem assembly v adresáři modulu.
 Řešením je přepsání metod \texttt{View} a \texttt{PartialView} v kontroleru, které cesty k pohledům vracejí. Z tohoto důvodu vznikl controller \texttt{PluginController} určený ke specifikaci modulárními controllery. Idea je opět převzata z článku Mika Kolari\cite{kolari}.
 
 Moduly obsahují shodnou strukturu pohledů jako jádro a musí také obsahovat soubor \texttt{Web.config} s určením, kterou třídu specifikují a jaké \textit{namespaces} implicitně používají. Jde použít i soubor
 \texttt{\_ViewStart.cshtml} v adresáři \texttt{Shared} pro všechny pohledy. Soubor může měnit například základní šablonu \textit{layoutu}.
 
-Také jsem přemýšlel o variantě kompilovat pohledy přímo do sestavení, postup byl ale nutný naučit každého, kdo by vyvíjel nový modul. Šlo o proces popsaný na blogu Chrise van de Steega\footnote{\url{http://www.chrisvandesteeg.nl/2010/11/22/embedding-pre-compiled-razor-views-in-your-dll/}}. Pro opuštění tohoto způsobu nahrává i výhoda možnosti úpravy pohledů v nezkompilovaných \textit{cshtml} souborech přímo na serveru.
+Také jsem přemýšlel o variantě kompilovat pohledy přímo do assembly, postup byl ale nutný naučit každého, kdo by vyvíjel nový modul. Šlo o proces popsaný na blogu Chrise van de Steega\footnote{\url{http://www.chrisvandesteeg.nl/2010/11/22/embedding-pre-compiled-razor-views-in-your-dll/}}. Pro opuštění tohoto způsobu nahrává i výhoda možnosti úpravy pohledů v nezkompilovaných \textit{cshtml} souborech přímo na serveru.
 
 \subsubsection{Formuláře}
 
@@ -1566,7 +1566,7 @@ public abstract class PluginController : Controller
 
 \subsubsection{Služby}
 \label{sec:services}
-Služby jsou určeny pro distribuci dat controllerům a pohledům. Definice jejich rozhraní jsou v sestavení Framework. Služby jsou rozděleny podle zaměření:
+Služby jsou určeny pro distribuci dat controllerům a pohledům. Definice jejich rozhraní jsou v projektu \textsf{Framework}. Služby jsou rozděleny podle zaměření:
 
 \begin{itemize}
 \item \texttt{IProduct} -- služby týkající se produktu. Jde o vyhledávání produktu v seznamu a další funkce. Služby v tomto případě představují příklad modelu.
@@ -1579,7 +1579,7 @@ Služby jsou určeny pro distribuci dat controllerům a pohledům. Definice jeji
 \item \texttt{IListing} -- služby pro seznamy zboží vypsaných z kategorií. Tato služba nemá v základní aplikaci využití, protože zobrazování zboží nebylo nijak rozšiřováno.
 \end{itemize}
  
-Předpisy rozhraní by bylo samozřejmě nutné rozšířit v případě nasazení aplikace v ostrém prostředí. Služby jsou opět do controllerů \textit{injektovány} v třídě \texttt{Modules}. Pokud není implementace nalezena v modulech, použije se implicitní implementace v sestavení \textsf{Core}. Díky funkcím, kterými služby disponují, je možné nahradit modely službami.
+Předpisy rozhraní by bylo samozřejmě nutné rozšířit v případě nasazení aplikace v ostrém prostředí. Služby jsou opět do controllerů \textit{injektovány} v třídě \texttt{Modules}. Pokud není implementace nalezena v modulech, použije se implicitní implementace v projektu \textsf{Core}. Díky funkcím, kterými služby disponují, je možné nahradit modely službami.
  
 \subsubsection{Menu}
 \label{sec:menu}
@@ -1701,7 +1701,7 @@ Omezení byla postupně zmiňována v podsekcích Modulů \ref{sec:moduly}. Zde 
 
 \section{Spuštění aplikace}
 \label{sec:spusteni}
-Spuštění aplikace rozlišuje nejméně dva způsoby. Jedním je debug mód, který se spouští přímo ve Visual Studiu a druhým je mód release, který je určený pro ostrý provoz na serveru.
+Spuštění aplikace rozlišujeme nejméně dva módy. Jedním je debug mód, který se spouští přímo ve Visual Studiu a druhým je mód release, který je určený pro ostrý provoz na serveru.
 
 Pro spuštění ve Visual Studiu je třeba následovat některý z instalačních tutoriálú pro ASP.NET MVC 3. Nejlepší je přímo na oficiální stránce\footnote{\url{http://asp.net/mvc/mvc3}}. Nejlepší volbou je stažení \textit{Web Platform Installer} (WPI) z odkazu v návodu. Ten nabídne instalaci všech základních částí včetně Visual Studia ve verzi zdarma. Poté při otevření \textsf{solution} (balík projektů celé aplikace pro Visual Studio) se vyřeší závislosti na jiných knihovnách potřebných k běhu aplikace.
 
@@ -1818,7 +1818,7 @@ Reviews      & 506  & 146 & -- & -- \\
 \label{tab:testIIS}
 \end{table} 
 
-Při měření dosahovaly další načtení stránek velmi podobných hodnot jako při druhém načtení. Rozdíl byl pouze v milisekundách. To je způsobeno dynamickou kompilací pohledu při prvním načítání a použití zkompilovaného pohledu při dalších načítáních. Tomuto zpoždění lze předejít zkompilováním pohledů přímo do \textit{assembly}, viz. sekce \ref{subsec:pohledy}.
+Vysoké hodnoty prvního načtení stánky Home jsou způsobeny inicializací aplikace, protože jde o první požadavek na načtení stránky a server musí vytvořit databázi a dočasné soubory. Při měření dosahovaly další načtení stránek velmi podobných hodnot jako při druhém načtení. Rozdíl byl pouze v milisekundách. To je způsobeno dynamickou kompilací pohledu při prvním načítání a použití zkompilovaného pohledu při dalších načítáních. Tomuto zpoždění lze předejít zkompilováním pohledů přímo do \textit{assembly}, viz. sekce \ref{subsec:pohledy}.
 
 Další nepatrné zpoždění je pozorovatelné při načítání stránek v IIS Express v aplikaci s moduly a bez modulů. Na IIS serveru se ovšem toto zpoždění již neprojevuje. Pravděpodobně je to díky tomu, že je IIS Express spuštěný v debugovacím módu, aby mohl sledovat výjimky a propagovat je Visual Studiu. 
 
@@ -1829,15 +1829,15 @@ Závěrem testování doby odpovědi lze říci, že testovací moduly neprokáz
 
 
 \section{Uživatelský test}
-Tento uživatelský test se týkal otestování tvorby modulu zkušenými vývojáři v prostředí platformy .NET a jeho nasazení na vývojové verzi aplikace. Testovaní vývojáři také zkoušeli moduly odebírat a přidávat.
+Tento uživatelský test se týkal tvorby modulu zkušenými vývojáři v prostředí platformy .NET a jeho nasazení na vývojové verzi aplikace. Vývojáři také zkoušeli moduly odebírat a přidávat.
 
-Vývojáři byli dva spolužáci, kteří používají platformu .NET na pokročilé úrovni a mají přehled o platformě i o Visual Studiu. Oba vývojáři dostali instrukce, jak se dají moduly instalovat a odebírat. Druhý vývojář také vytvořil základní strukturu modulu a úspěšně jej instaloval do aplikace. Testování probíhalo ve Visual Studiu 2010 a aplikace se spouštěla na vývojovém serveru IIS Express.
+Vývojáři byli dva spolužáci, kteří používají platformu .NET na pokročilé úrovni a mají přehled o platformě i o Visual Studiu. Oba vývojáři dostali instrukce, jak se dají moduly instalovat a odebírat. Druhý vývojář navíc vytvořil základní strukturu modulu a úspěšně jej instaloval do aplikace. Testování probíhalo ve Visual Studiu 2010 a aplikace se spouštěla na vývojovém serveru IIS Express.
 
-První zkoušený vývojář prošel testem tak, že nainstaloval závislosti do Visual Studia a načetl projekty. Poté provedl spuštění aplikace i s moduly. V dalším kroku moduly odstranil a aplikaci opět spustil. Ve třetím kroku moduly do aplikace přidal a vznikl již dříve popisovaný problém \ref{test:problem}, který se vyřešil překompilováním knihovny jádra. Později bylo nalezeno umístění keše ASP.NET frameworku.
+První vývojář prošel testem tak, že nainstaloval závislosti do Visual Studia a načetl projekty. Poté provedl spuštění aplikace i s moduly. V dalším kroku moduly odstranil a aplikaci opět spustil. Ve třetím kroku moduly do aplikace přidal a vznikl již dříve popisovaný problém \ref{test:problem}, který se vyřešil překompilováním knihovny jádra. Teprve poté bylo nalezeno umístění keše ASP.NET frameworku.
 
 Druhý vývojář testoval nasazení aplikace v připraveném Visual Studiu s nainstalovanými závislostmi a prošel všemi kroky stejně. Navíc ještě naprogramoval podle instrukcí vlastní modul, který pak přidal k aplikaci.
 
-Podle reakcí testovaných vývojářů lze říci, že je možné modulární aplikaci publikovat pro další vývojáře, kteří jí budou moci dále rozšířit.
+Podle reakcí vývojářů lze říci, že je možné modulární aplikaci publikovat pro další vývojáře, kteří ji budou moci dále rozšiřovat.
 
 
 \section{Srovnání s existujícími řešeními}
@@ -1867,7 +1867,7 @@ Rozšíření jádra aplikace pomocí modulů bylo dosaženo přes body rozší�
 
 Testování prokázalo, že moduly nemají na aplikaci při načítání webových stránek vliv. Během testů byla objevena omezení, která vyžadují nasazení aplikace na webový server s vlastní správou nebo využití pokročilých webhostingových programů. Omezení se týkají externí knihovny Castle Windsor pro načítání modulů a webového serveru IIS. 
 
-Uživatelský test s vývojáři potvrdil, že je aplikaci možné poskytnout dalším vývojářům, kteří ji dál mohou rozšířit o další moduly a funkce. Dalším vývojem by tak mohl vzniknout z funkčního prototypu plnohodnotný modulární elektronický obchod.
+Uživatelský test s vývojáři potvrdil, že je aplikaci možné poskytnout dalším vývojářům, kteří ji dál mohou rozšiřovat o další moduly a funkce. Dalším vývojem by tak mohl vzniknout z funkčního prototypu plnohodnotný modulární elektronický obchod.
 
 
 
@@ -2003,7 +2003,7 @@ Z důvodu větší přehlednosti by bylo také praktické přesunout základní 
 Instrukce pro instalaci a spuštění aplikace jsou z textu práce pro přehlednost extrahovány do této přílohy.
 
 \section{Instalace prostředí}
-Operační systém musí být nejlépe Windows 7. Jsou možné i starší verze. Musí mít ale nainstalovaný Microsoft .NET 4.
+Minimální konfigurace pro spuštění je operační systém Windows XP. Doporučená konfigurace je operační systém Windows 7. Musí mít ale nainstalovaný Microsoft .NET 4.
 Dále je nutné doinstalovat ASP.NET 4, Visual Studio 2010 nebo Visual Web Developer 2010.
 
 \begin{enumerate}
