@@ -1822,7 +1822,7 @@ Vysoké hodnoty prvního načtení stánky Home jsou způsobeny inicializací ap
 
 Další nepatrné zpoždění je pozorovatelné při načítání stránek v IIS Express v aplikaci s moduly a bez modulů. Na IIS serveru se ovšem toto zpoždění již neprojevuje. Pravděpodobně je to díky tomu, že je IIS Express spuštěný v debugovacím módu, aby mohl sledovat výjimky a propagovat je Visual Studiu. 
 
-V průměru se doba odpovědi pohybuje kolem 200ms u zkompilovaných pohledů, což je rychlá reakce z pohledu uživatele. Stránka \texttt{Home} obsahuje 3 widgety -- jeden z modulu \textsf{Reviews} -- a její doba odpovědi se zásadně neliší. Samozřejmě nelze vyloučit, že se doba odpovědi zvedne při implementaci dalších funkcí do aplikace. Dobu může zvednout i přidávání modulů a narůstání dotazů do databáze. Aplikaci je ale možné dále optimalizovat. 
+V průměru se doba odpovědi pohybuje kolem 200ms u zkompilovaných pohledů, což je z pohledu uživatele rychlá reakce. Stránka \texttt{Home} obsahuje 3 widgety (jeden z modulu \textsf{Reviews}) a její doba odpovědi se tolik neliší například od stránky s obsahem \texttt{1. kategorie}, která žádné widgety neobsahuje. Samozřejmě nelze vyloučit, že se doba odpovědi zvedne při implementaci dalších funkcí do aplikace. Dobu může zvednout i přidávání modulů a narůstání dotazů do databáze. Aplikaci je ale možné dále optimalizovat. 
 
 Závěrem testování doby odpovědi lze říci, že testovací moduly neprokázaly na serveru IIS zvýšenou reakční dobu díky kešování. Také byla vyvrácena hypotéza, že widgety zásadně prodlužují reakční dobu, viz. \ref{sec:widgets}.
 
