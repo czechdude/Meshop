@@ -1001,7 +1001,7 @@ V této architektuře jsou důležité již dříve zmiňované prvky, tentokrá
 \item[Controller] (\textit{řídící část}) se stará o zpracování požadavků přicházejících od uživatele. Po zpracování požadavku změní \textit{model} a nastaví správné zobrazení \textit{pohled}u.
 \end{description}
 
-Další podrobnější informace lze najít v \citep{PEAA}. Vzor MVC je implementován v různých frameworcích třetích stran u většiny zmíněných programovacích platforem v sekci \ref{sec:reserse}.
+Další podrobnější informace lze najít v \citep{PEAA}. Vzor MVC je implementován v různých frameworcích třetích stran u většiny programovacích platforem ze sekce \ref{sec:reserse}.
 
 \subsection{Modularita v Model View Controller}
 
@@ -1010,9 +1010,9 @@ Z pohledu požadavků na aplikaci modulárního e-shopu je nutné uvažovat o vh
 \begin{enumerate}
 \item Rozšíření o další Controllery, které budou ovládat rozšiřující funkce. Tato možnost je samozřejmá ve všech frameworcích podporujících MVC. Controllery jsou věnované vždy několika společným funkcím. Například Controller pro zboží, zákazníky, objednávky, přihlašování, atd. V tomto případě využívají Controllery vlastní Pohledy. Modely mohou používat buď společné nebo opět vlastní. V případě kompilačních jazyků se musí vždy aplikace znovu sestavit a spustit, což je nevýhoda.
 
-\item Rozšíření o skupiny Controllerů. Ve frameworcích se těmto skupinám říká \textit{oblasti} (\texttt{Areas}) nebo \textit{moduly} (\texttt{Modules}). Nejedná se přímo o připravené moduly fungující ihned po připojení k aplikaci. U kompilačních jazyků se musí opět aplikace sestavit a spustit. Rozšiřující oblasti jsou v souborovém systému rozděleny podle adresářů nebo jmenných prostorů (\texttt{namespaces}) a často se jedná o oddělení aplikačních částí frontendu a backendu. V prostředí .NET ve frameworku MVC existují rozšíření, která fungují na tomto principu rozšíření. Jedním je například Portable Areas \footnote{\url{http://portableareas.codeplex.com/}}, projekt se ale dále již nerozvíjí.
+\item Rozšíření o skupiny Controllerů. Ve frameworcích se těmto skupinám říká \textit{oblasti} (\texttt{Areas}) nebo \textit{moduly} (\texttt{Modules}). Nejedná se přímo o připravené moduly fungující ihned po připojení k aplikaci. U kompilačních jazyků se musí opět aplikace sestavit a spustit. Rozšiřující oblasti jsou v souborovém systému rozděleny podle adresářů nebo jmenných prostorů (\texttt{namespaces}) a často se jedná o oddělení aplikačních částí frontendu a backendu. V prostředí .NET ve frameworku MVC existují rozšíření, která fungují na tomto principu rozšíření. Jedním je například Portable Areas \footnote{\url{http://portableareas.codeplex.com/}}, projekt se ale dále již nevyvíjí.
 
-\item Rozšíření o externí balíčky obsahující kompletní rozšiřující funkce včetně Controllerů, Pohledů i Modelů. Jde o nejpokročilejší možnost ze zmiňovaných. Vlastnosti předchozích možností jsou využity i zde. Jde ale o způsob nahrávání a integrace těchto funkcí do již hotového řešení. Aplikaci je třeba navrhnout tak, aby poskytovala body pro rozšíření i mimo předchozí možnost seskupování Controllerů. V této variantě jdou rozšířit i další části hotové aplikace včetně Modelů a Pohledů. Nevýhoda tohoto řešení je složitost. Výhoda je, že se hotová aplikace nemusí znovu sestavovat, stačí dodat jen sestavené moduly a aplikaci spustit.
+\item Rozšíření o externí balíčky obsahující kompletní rozšiřující funkce včetně Controllerů, Pohledů i Modelů. Jde o nejpokročilejší možnost ze zmiňovaných. Vlastnosti předchozích možností jsou využity i zde. Jde ale o způsob nahrávání a integrace těchto funkcí do již hotového řešení. Aplikaci je třeba navrhnout tak, aby poskytovala body pro rozšíření i mimo předchozí možnost seskupování Controllerů. V této variantě lze rozšířit i další části hotové aplikace včetně Modelů a Pohledů. Nevýhoda tohoto řešení je složitost. Výhoda je, že se hotová aplikace nemusí znovu sestavovat, stačí dodat jen sestavené moduly a aplikaci spustit.
 \end{enumerate}
 
 
@@ -1820,7 +1820,7 @@ Reviews      & 506  & 146 & -- & -- \\
 
 Při měření dosahovaly další načtení stránek velmi podobných hodnot jako při druhém načtení. Rozdíl byl pouze v milisekundách. To je způsobeno dynamickou kompilací pohledu při prvním načítání a použití zkompilovaného pohledu při dalších načítáních. Tomuto zpoždění lze předejít zkompilováním pohledů přímo do \textit{assembly}, viz. sekce \ref{subsec:pohledy}.
 
-Další nepatrné zpoždění je pozorovatelné při načítání stránek v IIS Express v aplikaci s moduly a bez modulů. Na IIS serveru se ovšem toto zpoždění již neprojevuje. Pravděpodobně je to díky tomu, že je IIS optimalizovaný pro ostré nasazení. Může jít ovšem také o vytížení procesoru a vznikne tak rozdíl pár desítek ms. 
+Další nepatrné zpoždění je pozorovatelné při načítání stránek v IIS Express v aplikaci s moduly a bez modulů. Na IIS serveru se ovšem toto zpoždění již neprojevuje. Pravděpodobně je to díky tomu, že je IIS Express spuštěný v debugovacím módu, aby mohl sledovat výjimky a propagovat je Visual Studiu. 
 
 V průměru se doba odpovědi pohybuje kolem 200ms u zkompilovaných pohledů, což je rychlá reakce z pohledu uživatele. Stránka \texttt{Home} obsahuje 3 widgety -- jeden z modulu \textsf{Reviews} -- a její doba odpovědi se zásadně neliší. Samozřejmě nelze vyloučit, že se doba odpovědi zvedne při implementaci dalších funkcí do aplikace. Dobu může zvednout i přidávání modulů a narůstání dotazů do databáze. Aplikaci je ale možné dále optimalizovat. 
 
