@@ -71,7 +71,7 @@
 \contentsline {subsection}{\numberline {5.2.3}View}{41}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Model}{42}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Routov\IeC {\'a}n\IeC {\'\i }}{43}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Areas}{44}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.6}Areas}{43}{subsection.5.2.6}
 \contentsline {subsection}{\numberline {5.2.7}Filtry}{44}{subsection.5.2.7}
 \contentsline {subsection}{\numberline {5.2.8}Validace dat}{44}{subsection.5.2.8}
 \contentsline {subsection}{\numberline {5.2.9}Atributy}{44}{subsection.5.2.9}

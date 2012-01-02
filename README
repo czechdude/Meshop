@@ -30,7 +30,7 @@ EN:
 This DVD/repository contains complete source code, text and compiled files.
 
 Complete thesis text is available in Czech in the file 
-text/divispe2-thesis-2012.pdf. English version is not available.
+text/divispe2-thesis-2012.pdf. English version is not available. Contact me for further information.
 
 Structure:
 The directory SRC contains complete solution. It can be opened in Visual Studio
@@ -41,7 +41,7 @@ The directory WEB contains compiled source code ready for deployment to
 a hosting or to own custom IIS server with necessary dependencies resolved.
 
 -----------------
-Requrements: 
+Requirements: 
 Windows XP or above, optionally IIS server.
 
 -----------------
