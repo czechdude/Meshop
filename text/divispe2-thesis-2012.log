@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  1 JAN 2012 18:33
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.10.29)  2 JAN 2012 14:21
 entering extended mode
 **divispe2-thesis-2012.tex
 (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.tex
@@ -908,12 +908,24 @@ File: figures/datamodel.png Graphic file (type png)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Overfull \hbox (4.70569pt too wide) in paragraph at lines 874--876
+\T1/lmr/m/n/10.95 Tento návrhový vzor se up-latní p°i vytvá°ení in-stancí r·zný
+ch im-ple-men-tací ste-jného rozhraní.
+ []
+
 <figures/factorymethod.png, id=1010, 530.98375pt x 268.00125pt>
 File: figures/factorymethod.png Graphic file (type png)
 
 <use figures/factorymethod.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (4.9297pt too wide) in paragraph at lines 889--890
+\T1/lmr/m/n/10.95 provádí po vytvo°ení in-stance im-ple-men-tace rozhraní nap°í
+k-lad po-mocí vzoru \T1/lmr/m/it/10.95 Fac-tory method\T1/lmr/m/n/10.95 .
+ []
 
 <figures/pluginseq.png, id=1013, 533.995pt x 287.0725pt>
 File: figures/pluginseq.png Graphic file (type png)
@@ -922,11 +934,7 @@ File: figures/pluginseq.png Graphic file (type png)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 902.
-
-("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmss.fd"
-File: t1lmss.fd 2007/01/14 v1.3 Font defs for Latin Modern
-) [24]
+[24]
 
 LaTeX Warning: Text page 25 contains only floats.
 
@@ -935,13 +943,19 @@ Overfull \vbox (7.84248pt too high) has occurred while \output is active []
 
 
 [25 <C:/Dokumenty/diplomka/text/figures/datamodel.png>]
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 902.
+
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\lm\t1lmss.fd"
+File: t1lmss.fd 2007/01/14 v1.3 Font defs for Latin Modern
+)
 <figures/uow.png, id=1025, 543.02875pt x 426.59375pt>
 File: figures/uow.png Graphic file (type png)
  <use figures/uow.png>
 [26 <C:/Dokumenty/diplomka/text/figures/factorymethod.png (PNG copy)> <C:/Dokum
 enty/diplomka/text/figures/pluginseq.png (PNG copy)>] [27 <C:/Dokumenty/diplomk
 a/text/figures/uow.png (PNG copy)>]
-<figures/di.png, id=1039, 531.9875pt x 241.90375pt>
+<figures/di.png, id=1038, 531.9875pt x 241.90375pt>
 File: figures/di.png Graphic file (type png)
  <use figures/di.png>
 [28 <C:/Dokumenty/diplomka/text/figures/di.png (PNG copy)>]
@@ -1124,11 +1138,11 @@ Overfull \hbox (14.8907pt too wide) in paragraph at lines 1649--1650
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [56] [57 <C:/Dokumenty/diplomka/text/figures/widgety.png (PNG copy)>] [58]
-[59] [60
+[59] [60]
+Kapitola 6.
+[61
 
 ]
-Kapitola 6.
-[61]
 Underfull \hbox (badness 10000) in paragraph at lines 1763--1764
 
  []
@@ -1145,7 +1159,7 @@ Kapitola 7.
 [65
 
 ] (C:\Dokumenty\diplomka\text\divispe2-thesis-2012.bbl [66]
-Underfull \hbox (badness 7740) in paragraph at lines 86--91
+Underfull \hbox (badness 7740) in paragraph at lines 91--96
 \T1/lmr/m/n/10.95 Dos-tupné z: <[][]$\T1/lmtt/m/n/10.95 http : / / msdn . micro
 soft . com / en-[]us / library / dd381412(v = VS . 98 )
  []
@@ -1153,25 +1167,25 @@ soft . com / en-[]us / library / dd381412(v = VS . 98 )
 [67
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 114--120
+Underfull \hbox (badness 10000) in paragraph at lines 119--125
 \T1/lmr/m/n/10.95 Dos-tupné z: <[][]$\T1/lmtt/m/n/10.95 http : / / www . oracle
  . com / technetwork / articles / javase /
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 180--184
+Underfull \hbox (badness 6236) in paragraph at lines 187--191
 \T1/lmr/m/n/10.95 tupné z: <[][]$\T1/lmtt/m/n/10.95 http : / / www . hostingy .
  cz / navody-[]a-[]tipy-[]jak-[]vybirat-[]webhosting .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--199
-[]\T1/lmr/m/n/10.95 Severns, S.  \T1/lmr/m/it/10.95 nop-Com-merce Plu-gin with 
+Underfull \hbox (badness 10000) in paragraph at lines 200--206
+[]\T1/lmr/m/n/10.95 SEVERNS, S.  \T1/lmr/m/it/10.95 nop-Com-merce Plu-gin with 
 Data Ac-cess \T1/lmr/m/n/10.95 [on-line]. 2011.
  []
 
 
-Underfull \hbox (badness 2735) in paragraph at lines 193--199
+Underfull \hbox (badness 2735) in paragraph at lines 200--206
 \T1/lmr/m/n/10.95 [cit. 9.30.2011].  Dos-tupné z: <[][]$\T1/lmtt/m/n/10.95 http
  : / / blog . csharpwebdeveloper . com / 2011 /
  []
@@ -1197,7 +1211,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figures/backend1.png Graphic file (type png)
 
 <use figures/backend1.png>
-Overfull \hbox (9.76817pt too wide) in paragraph at lines 1988--1989
+Overfull \hbox (9.76817pt too wide) in paragraph at lines 1993--1994
  [] 
  []
 
@@ -1208,7 +1222,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figures/backend2.png Graphic file (type png)
 
 <use figures/backend2.png>
-Overfull \hbox (9.27885pt too wide) in paragraph at lines 1995--1996
+Overfull \hbox (9.27885pt too wide) in paragraph at lines 2000--2001
  [] 
  []
 
@@ -1234,35 +1248,39 @@ File: figures/cd.png Graphic file (type png)
 [79
 
  <C:/Dokumenty/diplomka/text/figures/cd.png (PNG copy)>]
-(C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux) ) 
+(C:\Dokumenty\diplomka\text\divispe2-thesis-2012.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) ) 
 Here is how much of TeX's memory you used:
  10436 strings out of 495285
  143990 string characters out of 3179883
- 403499 words of memory out of 3000000
+ 403514 words of memory out of 3000000
  12840 multiletter control sequences out of 15000+200000
  77223 words of font info for 52 fonts, out of 3000000 for 9000
  21 hyphenation exceptions out of 8191
- 38i,10n,51p,1438b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/
-MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.8/
-fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips
-/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-ec.e
-nc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program
- Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86
-)/MiKTeX 2.8/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.
-8/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/typ
-e1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm
-/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr12.pfb><
-C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr6.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiK
-TeX 2.8/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts
-/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/publ
-ic/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmro1
-0.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmss10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files
- (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKT
-eX 2.8/fonts/type1/public/lm/lmtt9.pfb>
-Output written on divispe2-thesis-2012.pdf (97 pages, 2398065 bytes).
+ 38i,10n,51p,1444b,1471s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Prog
+ram Files (x86)/MiKTeX 2.8/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)
+/MiKTeX 2.8/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.8
+/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvip
+s/lm/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx10
+.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmbx12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTe
+X 2.8/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/
+type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public
+/lm/lmr6.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr8.pfb>
+<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmr9.pfb><C:/Program F
+iles (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/
+MiKTeX 2.8/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.8/
+fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1
+/public/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/
+lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt10.pfb><
+C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/lm/lmtt9.pfb>
+Output written on divispe2-thesis-2012.pdf (97 pages, 2398869 bytes).
 PDF statistics:
  1934 PDF objects out of 2073 (max. 8388607)
  580 named destinations out of 1000 (max. 500000)

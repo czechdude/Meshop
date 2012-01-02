@@ -12,6 +12,11 @@ APEK.
 \newblock Dostupn{\'{e}} z:
   \url{http://www.apek.cz/8477/2176/clanek/rekordni-vanoce-na-internetu/}.
 
+\bibitem[{Autoři dokumentace PHP}(2011)]{phpmanual}
+{Autoři dokumentace PHP}.
+\newblock \emph{PHP History} [online]. 2011. [cit.~8.\,12.\,2011].
+\newblock Dostupn{\'{e}} z: \url{http://www.php.net/manual/en/history.php.php}.
+
 \bibitem[Buschmann et~al.(1996)Buschmann, Meunier, Rohnert, Sommerlad,,
   Stal]{POSA}
 BUSCHMANN, F. et~al.
@@ -20,8 +25,8 @@ BUSCHMANN, F. et~al.
 \newblock John Wiley \& Sons, 1996.
 \newblock In English.
 
-\bibitem[{Bustamante}(2006)]{resources}
-{Bustamante}, M.~L.
+\bibitem[{BUSTAMANTE}(2006)]{resources}
+{BUSTAMANTE}, M.~L.
 \newblock \emph{Extending the ASP.NET 2.0 Resource-Provider Model} [online].
   2006. [cit.~5.\,21.\,2011].
 \newblock Dostupn{\'{e}} z:
@@ -35,21 +40,28 @@ DEMINICK, S.
   \url{http://shazwazza.com/post/Developing-a-plugin-framework-in-ASPNET-with-%
 medium-trust.aspx}.
 
+\bibitem[{FOWLER}(2011)]{injection}
+{FOWLER}, M.
+\newblock \emph{Inversion of Control Containers and the Dependency Injection
+  pattern} [online]. 2011. [cit.~15.\,12.\,2011].
+\newblock Dostupn{\'{e}} z:
+  \url{http://martinfowler.com/articles/injection.html}.
+
 \bibitem[Fowler -- {et. al.}(2002)Fowler, {et. al.}]{PEAA}
 FOWLER, M. -- {et. al.}
 \newblock \emph{Patterns of Enterprise Aplication Architecture}.
 \newblock Addison Wesley, 1st edition, 2002.
 \newblock In English.
 
-\bibitem[{Galloway} et~al.(2011){Galloway}, {Haack}, {Wilson},, {Allen}]{MVC1}
-{Galloway}, J. et~al.
+\bibitem[{GALLOWAY} et~al.(2011){GALLOWAY}, {Haack}, {Wilson},, {Allen}]{MVC1}
+{GALLOWAY}, J. et~al.
 \newblock \emph{Professional ASP.NET MVC 3}.
 \newblock WROX, 1st edition, 2011.
 \newblock In English.
 \newblock ISBN 1118076583.
 
-\bibitem[{Gamma} et~al.(1998){Gamma}, {Helm}, {Johnson},, {Vlissides}]{GOF}
-{Gamma}, E. et~al.
+\bibitem[{GAMMA} et~al.(1998){GAMMA}, {Helm}, {Johnson},, {Vlissides}]{GOF}
+{GAMMA}, E. et~al.
 \newblock \emph{Design Patterns - Elements of Reusable Object-Oriented
   Software}.
 \newblock Addison Wesley, 1998.
@@ -61,10 +73,10 @@ HANSELMAN, S. -- GALLOWAY, J.
 \newblock Dostupn{\'{e}} z:
   \url{http://www.asp.net/mvc/tutorials/mvc-music-store/}.
 
-\bibitem[{IEEE Std 1471-2000}(2000)]{IEEE1471}
-{IEEE Std 1471-2000}.
-\newblock IEEE Recommended Practice for Architectural Description of
-  Software-Intensive Systems.
+\bibitem[{IEEE-SA Standards Board}(2000)]{IEEE1471}
+{IEEE-SA Standards Board}.
+\newblock IEEE Std 1471-2000, IEEE Recommended Practice for Architectural
+  Description of Software-Intensive Systems.
 \newblock 2000.
 
 \bibitem[Kolari(2011)]{kolari}
@@ -74,13 +86,6 @@ KOLARI, M.
 \newblock Dostupn{\'{e}} z:
   \url{http://mikakolari.fi/2011/02/aspnetmvc-3-plugin-architecture-with-embed%
 ded-razor-views/}.
-
-\bibitem[{Martin Fowler}(2011)]{injection}
-{Martin Fowler}.
-\newblock \emph{Inversion of Control Containers and the Dependency Injection
-  pattern} [online]. 2011. [cit.~15.\,12.\,2011].
-\newblock Dostupn{\'{e}} z:
-  \url{http://martinfowler.com/articles/injection.html}.
 
 \bibitem[{Microsoft}(2011{\natexlab{a}})]{asp_net_mvc}
 {Microsoft}.
@@ -118,11 +123,6 @@ NOURIE, D.
   \url{http://www.oracle.com/technetwork/articles/javase/webapps-1-138794.html%
 }.
 
-\bibitem[{PHP Documentation authors, see Credits}(2011)]{phpmanual}
-{PHP Documentation authors, see Credits}.
-\newblock \emph{PHP History} [online]. 2011. [cit.~8.\,12.\,2011].
-\newblock Dostupn{\'{e}} z: \url{http://www.php.net/manual/en/history.php.php}.
-
 \bibitem[{Přispěvatelé
   Wikipedie}(2011{\natexlab{a}})]{wiki:design-pattern-computer-science}
 {Přispěvatelé Wikipedie}.
@@ -131,47 +131,54 @@ NOURIE, D.
 \newblock Dostupn{\'{e}} z:
   \url{http://en.wikipedia.org/wiki/Design_pattern_(computer_science)}.
 
-\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{b}})]{wiki:ide}
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{b}})]{wiki:frameworks}
+{Přispěvatelé Wikipedie}.
+\newblock \emph{Comparison of Web Application Frameworks} [online].
+  2011{\natexlab{b}}. [cit.~8.\,12.\,2011].
+\newblock Dostupn{\'{e}} z:
+  \url{http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks}.
+
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{c}})]{wiki:ide}
 {Přispěvatelé Wikipedie}.
 \newblock \emph{Comparison of integrated development environments} [online].
-  2011{\natexlab{b}}. [cit.~29.\,11.\,2011].
+  2011{\natexlab{c}}. [cit.~29.\,11.\,2011].
 \newblock Dostupn{\'{e}} z:
   \url{http://en.wikipedia.org/wiki/Comparison_of_integrated_development_envir%
 onments\#Java}.
 
 \bibitem[{Přispěvatelé
-  Wikipedie}(2011{\natexlab{c}})]{wiki:modular-programming}
+  Wikipedie}(2011{\natexlab{d}})]{wiki:modular-programming}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Modular Programming} [online]. 2011{\natexlab{c}}.
+\newblock \emph{Modular Programming} [online]. 2011{\natexlab{d}}.
   [cit.~25.\,2.\,2011].
 \newblock Dostupn{\'{e}} z:
   \url{http://en.wikipedia.org/wiki/Modular_programming}.
 
-\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{d}})]{wiki:perl}
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{e}})]{wiki:perl}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Perl} [online]. 2011{\natexlab{d}}. [cit.~25.\,2.\,2011].
+\newblock \emph{Perl} [online]. 2011{\natexlab{e}}. [cit.~25.\,2.\,2011].
 \newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/Perl}.
 
-\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{e}})]{wiki:php}
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{f}})]{wiki:php}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{PHP} [online]. 2011{\natexlab{e}}. [cit.~18.\,2.\,2011].
+\newblock \emph{PHP} [online]. 2011{\natexlab{f}}. [cit.~18.\,2.\,2011].
 \newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/PHP}.
 
-\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{f}})]{wiki:python}
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{g}})]{wiki:python}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Python} [online]. 2011{\natexlab{f}}. [cit.~13.\,10.\,2011].
+\newblock \emph{Python} [online]. 2011{\natexlab{g}}. [cit.~13.\,10.\,2011].
 \newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/Python}.
 
-\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{g}})]{wiki:ror}
+\bibitem[{Přispěvatelé Wikipedie}(2011{\natexlab{h}})]{wiki:ror}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Ruby on rails} [online]. 2011{\natexlab{g}}.
+\newblock \emph{Ruby on rails} [online]. 2011{\natexlab{h}}.
   [cit.~13.\,10.\,2011].
 \newblock Dostupn{\'{e}} z: \url{http://en.wikipedia.org/wiki/Ruby_on_Rails}.
 
 \bibitem[{Přispěvatelé
-  Wikipedie}(2011{\natexlab{h}})]{wiki:software-framework}
+  Wikipedie}(2011{\natexlab{i}})]{wiki:software-framework}
 {Přispěvatelé Wikipedie}.
-\newblock \emph{Software framework} [online]. 2011{\natexlab{h}}.
+\newblock \emph{Software framework} [online]. 2011{\natexlab{i}}.
   [cit.~25.\,2.\,2011].
 \newblock Dostupn{\'{e}} z:
   \url{http://en.wikipedia.org/wiki/Software_framework}.
@@ -182,26 +189,19 @@ onments\#Java}.
 \newblock Dostupn{\'{e}} z:
   \url{http://www.hostingy.cz/navody-a-tipy-jak-vybirat-webhosting.html}.
 
-\bibitem[{Sanderson} -- {Freeman}(2011){Sanderson}, {Freeman}]{MVC2}
-{Sanderson}, S. -- {Freeman}, A.
+\bibitem[{SANDERSON} -- {Freeman}(2011){SANDERSON}, {Freeman}]{MVC2}
+{SANDERSON}, S. -- {Freeman}, A.
 \newblock \emph{Pro ASP.NET MVC 3 Framework}.
 \newblock Apress, 3rd edition, 2011.
 \newblock In English.
 \newblock ISBN 1430234040.
 
-\bibitem[{Severns}(2011)]{NOPE}
-{Severns}, S.
+\bibitem[{SEVERNS}(2011)]{NOPE}
+{SEVERNS}, S.
 \newblock \emph{nopCommerce Plugin with Data Access} [online]. 2011.
   [cit.~9.\,30.\,2011].
 \newblock Dostupn{\'{e}} z:
   \url{http://blog.csharpwebdeveloper.com/2011/09/23/nopcommerce-plugin-with-d%
 ata-access/}.
-
-\bibitem[{Wikipedia Contributors}(2011)]{wiki:frameworks}
-{Wikipedia Contributors}.
-\newblock \emph{Comparison of Web Application Frameworks} [online]. 2011.
-  [cit.~8.\,12.\,2011].
-\newblock Dostupn{\'{e}} z:
-  \url{http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks}.
 
 \end{thebibliography}
